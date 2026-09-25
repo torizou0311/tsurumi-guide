@@ -21,7 +21,7 @@
 
 ## 未完了（2026-09-24時点）
 - [ ] オーナーによる見本の確認・修正依頼待ち
-- [ ] 公開方法の決定待ち: GitHub Pages で A=publicリポジトリ(無料・推奨) / B=private(GitHub Pro有料)。リポジトリ名案 `tsurumi-guide`。git init〜pushはオーナー承認後
+- [x] 公開済み（2026-09-25）: GitHub Pages / publicリポジトリ https://github.com/torizou0311/tsurumi-guide → https://torizou0311.github.io/tsurumi-guide/ （main に push すると1〜2分で自動反映）
 - [ ] 201号室: Wi-Fi(SSID/PASS)・キーボックスの左右・写真・家電差分が未確定（rooms.jsで null、画面は「準備中」表示）
 - [ ] 写真が無い箇所（「写真準備中」表示）: タクシー右折地点（赤丸）の地図、駅のタクシー乗り場、103の目印サイン、ゴミ置き場、202のスチームアイロン
 - [ ] 公開後: 部屋ごとのURLをAirbnbのメッセージ/ハウスマニュアル欄に差し替え
