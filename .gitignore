@@ -1,0 +1,8 @@
+# 自動生成物・ローカル設定（公開しない）
+.DS_Store
+Thumbs.db
+__pycache__/
+node_modules/
+.claude/
+.playwright-mcp/
+*.log

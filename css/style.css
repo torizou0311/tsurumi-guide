@@ -1,0 +1,749 @@
+/* ==========================================================================
+   YOKOHAMA Still Retreat — ゲスト向けハウスガイド
+   デザインの方向性（2026-09-25更新）: 白基調＋淡いクールグレーの面に、
+   チャコールの文字。部屋ごとに用意したテーマカラー（103=オリーブグリーン／
+   201=セージグリーン／202=マスタード）を <html data-room="..."> で切替え、
+   明るく親しみやすい雰囲気にする。見出しは丸ゴシック（Zen Maru Gothic）、
+   本文はゴシック体（Noto Sans JP）。明朝体・生成り背景・和紙調は使わない。
+   カードは角丸を大きめに、ボタンはピル型、影は柔らかく控えめにする。
+   ========================================================================== */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f6f7;
+  --surface-raised: #ffffff;
+  --ink: #22262a;
+  --ink-soft: #5c6266;
+  --ink-faint: #90959a;
+  --line: #e4e6e8;
+  --line-soft: #edeeef;
+  --danger: #c0392b;
+
+  /* 部屋未選択（中立）時のテーマカラー: チャコール系グレー */
+  --accent: #454b50;
+  --accent-ink: #33383c;
+
+  --tint: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  --tint-strong: color-mix(in srgb, var(--accent) 22%, var(--surface));
+
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 20px;
+  --radius-pill: 999px;
+
+  --shadow-1: 0 1px 3px rgba(20, 22, 24, 0.05), 0 1px 2px rgba(20, 22, 24, 0.04);
+  --shadow-2: 0 12px 28px rgba(20, 22, 24, 0.10);
+
+  --font-heading: 'Zen Maru Gothic', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Malgun Gothic', 'Microsoft JhengHei', sans-serif;
+  --header-h: 108px;
+  --bottom-nav-h: 64px;
+  color-scheme: light;
+}
+
+/* ---- 部屋ごとのテーマカラー（内装の差し色から採取） ---- */
+:root[data-room="202"] { --accent: #5b6b3a; --accent-ink: #46542c; } /* オリーブグリーン */
+:root[data-room="201"] { --accent: #4f7d74; --accent-ink: #3f665e; } /* セージ/ミントグリーン寄りの青緑 */
+:root[data-room="103"] { --accent: #c07a1e; --accent-ink: #8f5711; } /* マスタード/オレンジ（文字用は濃いめのink） */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17191b;
+    --surface: #1f2224;
+    --surface-raised: #242729;
+    --ink: #eceeef;
+    --ink-soft: #b9bdc0;
+    --ink-faint: #888d90;
+    --line: #2f3335;
+    --line-soft: #292c2e;
+    --danger: #e0847a;
+
+    --accent: #b0b6ba;
+    --accent-ink: #c7ccce;
+
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.35);
+    --shadow-2: 0 14px 30px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+  :root:not([data-theme="light"])[data-room="202"] { --accent: #93a86a; --accent-ink: #a8bb84; }
+  :root:not([data-theme="light"])[data-room="201"] { --accent: #7fada3; --accent-ink: #93bcb3; }
+  :root:not([data-theme="light"])[data-room="103"] { --accent: #e0a24f; --accent-ink: #e8b46c; }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  margin: 0 0 0.6em;
+}
+
+p { margin: 0 0 1em; }
+a { color: var(--accent-ink); }
+ul { margin: 0 0 1em; padding-left: 1.3em; }
+li { margin-bottom: 0.4em; }
+
+img { max-width: 100%; display: block; }
+
+button { font-family: inherit; }
+
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+}
+
+/* 見出し横の小さなテーマ色ドット */
+.h-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+/* ---------------------------- レイアウト全体 ---------------------------- */
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 18px calc(var(--bottom-nav-h) + 32px);
+}
+
+/* ------------------------------- ヘッダー ------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__top {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.brand__mark {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--accent-ink);
+}
+
+.brand__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  line-height: 1.25;
+}
+
+/* 言語切替: コンパクトな1ボタン+ドロップダウンメニュー（<details>を使用、追加JS不要） */
+.lang-switch {
+  position: relative;
+  flex: none;
+}
+
+.lang-switch__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  background: var(--surface-raised);
+  color: var(--ink);
+  border-radius: var(--radius-pill);
+  padding: 7px 12px;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  min-height: 36px;
+  list-style: none;
+  user-select: none;
+}
+.lang-switch__btn::-webkit-details-marker { display: none; }
+.lang-switch__btn::marker { content: ''; }
+.lang-switch__btn .icon { width: 16px; height: 16px; color: var(--accent-ink); }
+
+.lang-switch[open] .lang-switch__btn {
+  border-color: var(--accent-ink);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 128px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-2);
+  padding: 6px;
+}
+
+.lang-menu__item {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  text-align: left;
+  border-radius: var(--radius-s);
+  padding: 9px 10px;
+  font-size: 13.5px;
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.lang-menu__item.is-active {
+  background: var(--tint);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.site-header__bottom {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 18px 10px;
+}
+
+.room-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  min-height: 36px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.room-tag__num {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.room-tag__icon {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-ink);
+}
+
+.room-tag__change {
+  font-size: 12px;
+  color: var(--ink-soft);
+  border-left: 1px solid var(--line);
+  padding-left: 8px;
+}
+
+/* ------------------------------ ボトムナビ ------------------------------ */
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  background: var(--surface-raised);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.05);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: var(--bottom-nav-h);
+  text-decoration: none;
+  color: var(--ink-faint);
+  font-size: 11px;
+  white-space: nowrap;
+  padding: 0 2px;
+}
+
+.bottom-nav__item .icon { width: 21px; height: 21px; }
+
+.bottom-nav__item.is-active {
+  color: var(--accent-ink);
+}
+
+/* -------------------------------- ホーム -------------------------------- */
+
+.hero {
+  padding: 6px 2px 18px;
+}
+.hero--intro h1 {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero--intro p { color: var(--ink-soft); margin: 0; }
+
+/* ヒーロー写真（部屋のトップ画面上部） */
+.hero--photo {
+  position: relative;
+  margin: 2px 0 6px;
+  padding: 0;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  aspect-ratio: 4 / 3;
+  max-height: 300px;
+}
+.hero__media,
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 45%, rgba(15, 15, 15, 0.62) 100%);
+}
+.hero__caption {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hero__roomtag {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+.hero__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.quick-section, .menu-section { margin-top: 8px; padding: 4px 2px; }
+.quick-section h2, .menu-section h2 {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 14px;
+  text-decoration: none;
+  color: var(--ink);
+  min-height: 96px;
+  box-shadow: var(--shadow-1);
+}
+
+.quick-card--wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+}
+.quick-card--wide .quick-card__label { min-width: max-content; }
+.quick-card--wide .quick-card__value { flex: 1; }
+
+.quick-card__icon { color: var(--accent-ink); }
+.quick-card__icon .icon { width: 20px; height: 20px; }
+.quick-card__label { font-size: 12px; color: var(--ink-faint); }
+.quick-card__value {
+  font-size: 13.5px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  min-height: 56px;
+  box-shadow: var(--shadow-1);
+}
+
+.menu-item__icon { color: var(--accent-ink); flex: none; }
+.menu-item__label { font-size: 13.5px; line-height: 1.35; }
+
+/* ------------------------------ セクション ------------------------------ */
+
+.section-header {
+  padding: 4px 2px 10px;
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 16px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-faint);
+  text-decoration: none;
+  font-size: 12.5px;
+  margin-bottom: 8px;
+  min-height: 32px;
+}
+.back-link .icon { width: 16px; height: 16px; }
+
+.section-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin: 0;
+}
+.section-header h1 .icon { width: 22px; height: 22px; color: var(--accent-ink); flex: none; }
+
+.section-body { padding: 0 2px; }
+
+.section-lead { color: var(--ink-soft); }
+
+.block {
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px dashed var(--line-soft);
+}
+.block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.block-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--accent-ink);
+  margin-bottom: 10px;
+}
+
+.block-text p:last-child { margin-bottom: 0; }
+.block-text strong { color: var(--ink); }
+
+.notice {
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* -------------------------------- 写真 -------------------------------- */
+
+.guide-photo {
+  margin: 12px 0 4px;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface-raised);
+}
+.guide-photo img { width: 100%; height: auto; }
+
+.guide-photo--pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  color: var(--ink-faint);
+  font-size: 13px;
+  background: repeating-linear-gradient(135deg, var(--line-soft), var(--line-soft) 10px, var(--surface-raised) 10px, var(--surface-raised) 20px);
+}
+
+.guide-photo--qr {
+  max-width: 200px;
+}
+
+/* ------------------------------ コピー行 ------------------------------ */
+
+.copy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+
+.copy-row__label {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-bottom: 2px;
+}
+
+.copy-row__value {
+  font-size: 14.5px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.copy-btn {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: var(--tint);
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.copy-btn.is-copied {
+  background: var(--accent-ink);
+  color: var(--bg);
+  border-color: var(--accent-ink);
+}
+
+/* ------------------------------ 住所ブロック ------------------------------ */
+
+.address-block {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+}
+.address-block__local {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.address-block__ja-label {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-bottom: 2px;
+}
+.address-block__ja {
+  font-size: 15.5px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn--outline {
+  border-color: var(--accent-ink);
+  color: var(--accent-ink);
+  background: transparent;
+}
+.btn--block { width: 100%; margin-top: 10px; }
+.btn .icon { width: 16px; height: 16px; }
+
+/* -------------------------------- Wi-Fi -------------------------------- */
+
+.wifi-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.wifi-card__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--accent-ink);
+}
+
+/* ------------------------------ 部屋選択 ------------------------------ */
+
+.page--roomselect {
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+}
+.roomselect { width: 100%; text-align: center; padding: 24px 4px 60px; }
+.roomselect h1 {
+  font-size: 21px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.roomselect__subtitle { color: var(--ink-soft); margin-bottom: 26px; }
+
+.room-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  color: var(--ink);
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+}
+.room-card__photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+}
+.room-card__photo { overflow: hidden; }
+.room-card__photo img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.room-card__photo--pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-faint);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+.room-card__body {
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+.room-card__num {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.room-card__floor { font-size: 11.5px; color: var(--ink-faint); }
+
+/* -------------------------------- 幅広画面 -------------------------------- */
+
+@media (min-width: 480px) {
+  .quick-grid { grid-template-columns: repeat(3, 1fr); }
+  .room-card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 700px) {
+  .site-header__top, .main { max-width: 720px; }
+}
+
+/* -------------------------------- 印刷など -------------------------------- */
+
+@media (max-width: 359px) {
+  .main { padding-left: 14px; padding-right: 14px; }
+  .site-header__top { padding-left: 14px; padding-right: 14px; }
+}
