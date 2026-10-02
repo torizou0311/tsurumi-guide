@@ -65,12 +65,18 @@ window.ROOMS = [
     hero: 'images/listing/201/01.jpg', // トップ画面に大きく出す部屋写真
     // TODO: 要記入 - 201号室のキーボックスの位置がまだ確認できていません
     keyboxSide: null,
-    // TODO: 要記入 - 201号室のWi-Fi情報（SSID・パスワード）がまだ確認できていません
-    wifi: null,
+    wifi: {
+      ssid5: 'BCW720J-F04F6-A',
+      ssid24: 'BCW720J-F04F6-G',
+      pass: '8e8aaa7a4383a'
+    },
     hasRiceCooker: false,
     microwaveWattageKnown: false,
-    // TODO: 要記入 - 201号室の写真がまだありません（撮影・追加してください）
-    photos: {}
+    // TODO: 要記入 - Wi-Fi QR以外の写真がまだありません（撮影・追加してください）
+    photos: {
+      wifiQr5: 'images/201/wifi-qr-5g.png',
+      wifiQr24: 'images/201/wifi-qr-24g.png'
+    }
   }
 ];
 
