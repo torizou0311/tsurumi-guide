@@ -445,18 +445,19 @@ button { font-family: inherit; }
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   background: var(--surface-raised);
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
-  padding: 12px;
+  padding: 12px 8px;
   text-decoration: none;
   color: var(--ink);
   min-height: 56px;
   box-shadow: var(--shadow-1);
 }
 
-.menu-item__icon { color: var(--accent-ink); flex: none; }
+.menu-item__icon { color: var(--accent-ink); flex: none; display: flex; }
+.menu-item__icon .icon { width: 18px; height: 18px; }
 .menu-item__label { font-size: 13px; line-height: 1.35; overflow-wrap: anywhere; text-wrap: balance; }
 /* 「チェックイン・」「チェックアウト」のように「・」で区切ったかたまり。かたまりの途中ではなるべく改行しない */
 .label-chunk { display: inline-block; }
