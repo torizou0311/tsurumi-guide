@@ -64,7 +64,7 @@ window.I18N = {
     checkin: {
       intro: `<p>This is a self check-in property with no staff on site, so please review the steps below in advance.</p>`,
       times: `<p><strong>Check-in:</strong> from 4:00 PM<br><strong>Check-out:</strong> until 10:00 AM</p><p>Our cleaning staff arrive at 10:10 AM, so please vacate the room by 10:00 AM. Checking out later than 10:00 AM may result in an additional night's fee.</p>`,
-      steps: `<p>Your room is <strong>Room {room}</strong>, on floor {floor}. The door has an electronic lock.</p><ul><li>Enter the passcode and press the unlock button. (The passcode is also sent via Airbnb message on the morning of your stay.)</li></ul>`,
+      steps: `<p>Your room is <strong>Room {room}</strong>, on floor {floor}. The door has an electronic lock.</p><ul><li>Enter the passcode and press the unlock button. (The passcode is sent via Airbnb message on the morning of your check-in day.)</li></ul>`,
       stepsLock: `<p>Please lock the door whenever you go out, and again at check-out.</p>`,
       keybox: `<p>If the electronic lock does not work, you can take the key from the key box and use it instead. The key box is at the gas meter on the <strong>{keyboxSide}</strong> side of the door. There are two key boxes — either one will work. The key box code is the same as the electronic lock passcode.</p>`
     },
@@ -173,7 +173,7 @@ window.I18N = {
     checkin: {
       intro: `<p>スタッフが常駐しないセルフチェックイン方式です。事前に下記の手順をご確認ください。</p>`,
       times: `<p><strong>チェックイン：</strong>16:00〜<br><strong>チェックアウト：</strong>〜10:00</p><p>清掃スタッフは10:10に到着しますので、10:00までにお部屋を出ていただくようお願いします。10:00を過ぎてのチェックアウトは、延泊料金が発生する場合があります。</p>`,
-      steps: `<p>お部屋は<strong>{room}号室</strong>、{floor}階です。ドアの鍵は電子錠です。</p><ul><li>パスワードを入力して解錠ボタンを押してください（パスワードはチェックイン当日の朝にもAirbnbメッセージでお送りします）。</li></ul>`,
+      steps: `<p>お部屋は<strong>{room}号室</strong>、{floor}階です。ドアの鍵は電子錠です。</p><ul><li>パスワードを入力して解錠ボタンを押してください（パスワードはチェックイン当日の朝にAirbnbメッセージでお送りします）。</li></ul>`,
       stepsLock: `<p>外出時・チェックアウト時は必ず施錠をお願いします。</p>`,
       keybox: `<p>電子錠がうまく作動しない場合は、キーボックスから鍵を取り出してお使いください。キーボックスはドアの<strong>{keyboxSide}側</strong>のガスメーターのところにあります。キーボックスは2つありますが、どちらでも構いません。キーボックスの暗証番号は電子錠と同じです。</p>`
     },
@@ -282,7 +282,7 @@ window.I18N = {
     checkin: {
       intro: `<p>本住宿採自助入住，現場無工作人員常駐，請提前確認以下步驟。</p>`,
       times: `<p><strong>入住：</strong>16:00起<br><strong>退房：</strong>10:00前</p><p>清潔人員將於10:10抵達，請於10:00前退房。若逾10:00退房，可能會加收一晚的費用。</p>`,
-      steps: `<p>您的房間是<strong>{room}號房</strong>，位於{floor}樓。房門為電子鎖。</p><ul><li>輸入密碼並按下解鎖按鈕（密碼也會在入住當天早上透過Airbnb訊息傳送給您）。</li></ul>`,
+      steps: `<p>您的房間是<strong>{room}號房</strong>，位於{floor}樓。房門為電子鎖。</p><ul><li>輸入密碼並按下解鎖按鈕（密碼會在入住當天早上透過Airbnb訊息傳送給您）。</li></ul>`,
       stepsLock: `<p>外出或退房時請務必將門鎖上。</p>`,
       keybox: `<p>若電子鎖無法使用，可從鑰匙盒中取出鑰匙使用。鑰匙盒位於房門<strong>{keyboxSide}側</strong>的瓦斯錶處。共有兩個鑰匙盒，使用任一個皆可。鑰匙盒密碼與電子鎖相同。</p>`
     },
@@ -391,7 +391,7 @@ window.I18N = {
     checkin: {
       intro: `<p>상주 직원이 없는 셀프 체크인 숙소입니다. 아래 절차를 미리 확인해 주세요.</p>`,
       times: `<p><strong>체크인:</strong> 16:00부터<br><strong>체크아웃:</strong> 10:00까지</p><p>청소 스태프가 10:10에 도착하므로 10:00까지 퇴실해 주세요. 10:00 이후 체크아웃 시 추가 숙박 요금이 발생할 수 있습니다.</p>`,
-      steps: `<p>객실은 <strong>{room}호</strong>, {floor}층입니다. 출입문은 전자 잠금장치입니다.</p><ul><li>비밀번호를 입력하고 잠금 해제 버튼을 눌러주세요 (비밀번호는 체크인 당일 아침 Airbnb 메시지로도 전달드립니다).</li></ul>`,
+      steps: `<p>객실은 <strong>{room}호</strong>, {floor}층입니다. 출입문은 전자 잠금장치입니다.</p><ul><li>비밀번호를 입력하고 잠금 해제 버튼을 눌러주세요 (비밀번호는 체크인 당일 아침에 Airbnb 메시지로 전달드립니다).</li></ul>`,
       stepsLock: `<p>외출 시와 체크아웃 시에는 반드시 문을 잠가주세요.</p>`,
       keybox: `<p>전자 잠금장치가 작동하지 않을 경우, 키박스에서 열쇠를 꺼내 사용하실 수 있습니다. 키박스는 문 <strong>{keyboxSide}편</strong>의 가스 계량기 쪽에 있습니다. 키박스는 두 개가 있으며 어느 쪽을 사용하셔도 됩니다. 키박스 비밀번호는 전자 잠금장치와 동일합니다.</p>`
     },
