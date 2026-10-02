@@ -11,6 +11,7 @@
 - 建物共通の文章は `js/i18n.js` に1か所だけ。部屋ごとの差分は `data/rooms.js`、セクション構成と写真の紐付けは `data/content.js`
 - 写真は `images/common/`（全部屋共通。チェックイン/困ったときの写真 unlock1・unlock2・keybox・keybox-troubleshoot・hotwater-panel・breaker、共通家電の appliance-ac・appliance-induction、ゴミ置き場 garbage.jpg も1組だけここ）, `images/103/`, `images/202/`, `images/201/`（部屋別: Wi-Fi QR・家電）
 - content.js の写真指定: 共通は `images/common/…` を直接書く／部屋別だけ `room:xxx`／特定部屋だけに出す項目は `rooms: [...]`
+- ホームの「よく使う情報」は、メニュー一覧の一部を上に並べているだけ（2026-10-02変更）。出す項目は `data/content.js` 末尾の `QUICK_SECTIONS`（セクションidの配列、6個で2行×3列のタイル表示）。当面はオーナー指定の6個（access/checkin/wifi/garbage/trouble/emergency の順）。GA4のデータが溜まったら、よく見られているページに入れ替える方針
 - 元原稿（Canvaから抽出した英文）: `docs/manual-source.md`
 - 使い方の説明（オーナー向け）: `README.md`
 - noindex と robots.txt で検索エンジン除外済み
@@ -28,7 +29,14 @@
 - [ ] 201号室: エアコン・IH以外の家電（レンジ・ケトル・コーヒー・洗濯機・ワイヤー・サーキュレーター・アイロン）は写真が無く非表示中。写真が入ったら rooms.js に登録し content.js の rooms に '201' を追加
 - [ ] 103号室: 上記と同じ家電7点も写真が無く非表示中（レンジのワット数説明 microwaveWattage も content.js でコメントアウト中。レンジを出すときに戻す）
 - [ ] 写真が無い箇所（「写真準備中」表示）: タクシー右折地点（赤丸）の地図、202のスチームアイロン（駅のタクシー乗り場2か所は写真の入手に時間がかかるため、写真枠を一旦外して文章のみ表示。入手できたら content.js の該当ブロックに image を戻す）
-- [ ] 公開後: 部屋ごとのURLをAirbnbのメッセージ/ハウスマニュアル欄に差し替え
+- [ ] 公開後: 部屋ごとのURLをAirbnbのメッセージ/ハウスマニュアル欄に差し替え（新URL: https://ysr-guide.neconote.net/index.html?room=103 / 201 / 202）
+- [ ] アクセス計測（GA4）: オーナーのGA4登録待ち（2026-10-02 中断。時間が取れるときに再開）
+  - 目的: 「どの言語で・どのページが・どの部屋で」見られているかを知る
+  - 実装済み・公開済み（2026-10-02。ただし測定IDが空なので計測は止まっている）: `js/analytics.js`（新規）、`js/app.js`（render の最後で trackPage を呼ぶ）、`index.html`（script タグ追加）
+  - 仕組み: 画面切替ごとに page_view を手動送信。page_location を仮のパス `/言語/ページ?room=部屋`（例 `/ja/wifi?room=103`）にして、GA4標準の「ページとスクリーン」で言語×ページが見えるようにしている。追加パラメータ guide_lang / guide_page / room も送信（カスタムディメンションは未登録）
+  - 自分のアクセス除外: その端末で一度 `?notrack=1` を付けて開く（解除は `?notrack=0`）
+  - 再開手順: ①オーナーが https://analytics.google.com/ でプロパティ作成（ウェブ、URL `ysr-guide.neconote.net`。利用規約の同意は本人操作）→ ②測定ID（G-…）を `js/analytics.js` の `GA_MEASUREMENT_ID` に入れる → ③GA4のデータストリーム「拡張計測機能 > ページビュー数 > ブラウザの履歴イベントに基づくページの変更」をオフ（二重計測防止）→ ④公開し、GA4のリアルタイムで言語・ページ・部屋が届くか確認
+  - 未対応の論点: GA4はCookieを使うため、欧州からのゲスト向けには本来同意バナーが必要（オーナーには説明済み。バナーは未実装）
 
 ## 動作確認の注意
 - 確認で `python -m http.server` を起動した場合は、終わったら必ず止める（起動したままだとフォルダが移動・削除できなくなる）

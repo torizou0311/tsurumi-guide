@@ -231,26 +231,33 @@
       '</div>';
   }
 
+  // メニューのラベル。長いときは「・」の後ろで改行し、単語の途中では切れないようにする
+  function labelHtml(text) {
+    var parts = String(text).split('・');
+    if (parts.length < 2) return esc(text);
+    return parts.map(function (p, i) {
+      return '<span class="label-chunk">' + esc(p) + (i < parts.length - 1 ? '・' : '') + '</span>';
+    }).join('');
+  }
+
   // ---------- ホーム画面 ----------
   function renderHome(room) {
     var d = t(state.lang);
-    var quickWifi = room.wifi
-      ? esc(room.wifi.ssid5)
-      : esc(d.common.pendingInfo);
-
-    var checkValueHtml = esc(d.home.quickCheckIn) + '<br>' + esc(d.home.quickCheckOut);
-
-    var quickCards = '' +
-      quickCard('wifi', d.nav.wifi, quickWifi, '#/wifi') +
-      quickCardHtml('key', d.home.quickCheckLabel, checkValueHtml, '#/checkin') +
-      quickCard('map', d.home.quickAddressLabel, d.common.addressLocal, '#/access') +
-      quickCard('help', d.home.quickHelpLabel, d.home.quickHelpValue, '#/trouble') +
-      quickCard('emergency', d.home.quickEmergencyLabel, d.home.quickEmergencyValue, '#/emergency', true);
+    // 「よく使う情報」は、メニュー一覧の中から data/content.js の QUICK_SECTIONS で
+    // 指定したものを上に並べているだけです（中身はメニュー一覧と同じ項目）。
+    var quickCards = (window.QUICK_SECTIONS || []).map(function (id) {
+      var s = window.SECTIONS.filter(function (x) { return x.id === id; })[0];
+      if (!s) return '';
+      return '<a class="quick-card" href="#/' + s.id + '">' +
+        '<span class="quick-card__icon">' + icon(s.icon) + '</span>' +
+        '<span class="quick-card__label">' + labelHtml(d.menu[s.id]) + '</span>' +
+      '</a>';
+    }).join('');
 
     var menuItems = window.SECTIONS.filter(function (s) { return s.inMenu; }).map(function (s) {
       return '<a class="menu-item" href="#/' + s.id + '">' +
         '<span class="menu-item__icon">' + icon(s.icon) + '</span>' +
-        '<span class="menu-item__label">' + esc(d.menu[s.id]) + '</span>' +
+        '<span class="menu-item__label">' + labelHtml(d.menu[s.id]) + '</span>' +
       '</a>';
     }).join('');
 
@@ -281,18 +288,6 @@
           '<div class="menu-grid">' + menuItems + '</div>' +
         '</section>' +
       '</div>';
-  }
-
-  function quickCard(iconName, label, value, href, wide) {
-    return quickCardHtml(iconName, label, esc(value), href, wide);
-  }
-
-  function quickCardHtml(iconName, label, valueHtml, href, wide) {
-    return '<a class="quick-card' + (wide ? ' quick-card--wide' : '') + '" href="' + href + '">' +
-      '<span class="quick-card__icon">' + icon(iconName) + '</span>' +
-      '<span class="quick-card__label">' + esc(label) + '</span>' +
-      '<span class="quick-card__value">' + valueHtml + '</span>' +
-    '</a>';
   }
 
   // ---------- Wi-Fiセクション（部屋データに依存する特殊セクション） ----------
@@ -396,26 +391,39 @@
       app.innerHTML = renderHeader(null) + renderRoomSelect();
       bindGlobalEvents();
       window.scrollTo(0, 0);
+      trackPage(null, 'roomselect');
       return;
     }
 
     var hash = currentHash();
     var body;
+    var pageId = 'home';
     if (hash === '#/' || hash === '#/home') {
       body = renderHome(room);
     } else if (hash === '#/wifi') {
       body = renderWifiSection(room);
+      pageId = 'wifi';
     } else if (hash === '#/roomselect') {
       body = renderRoomSelect();
+      pageId = 'roomselect';
     } else {
       var sectionId = hash.replace('#/', '');
       var section = window.SECTIONS.filter(function (s) { return s.id === sectionId; })[0];
       body = section ? renderSection(section, room) : renderHome(room);
+      if (section) pageId = section.id;
     }
 
     app.innerHTML = renderHeader(room) + '<main class="main">' + body + '</main>' + renderBottomNav(hash);
     bindGlobalEvents();
     window.scrollTo(0, 0);
+    trackPage(room.id, pageId);
+  }
+
+  // アクセス計測（js/analytics.js）。計測が無効・読み込み失敗でも表示には影響させない
+  function trackPage(roomId, pageId) {
+    try {
+      if (window.trackPage) window.trackPage(state.lang, roomId, pageId);
+    } catch (e) { /* ignore */ }
   }
 
   // ---------- イベント ----------

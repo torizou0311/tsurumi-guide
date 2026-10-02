@@ -404,7 +404,7 @@ button { font-family: inherit; }
 
 .quick-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: 8px;
 }
@@ -412,35 +412,28 @@ button { font-family: inherit; }
 .quick-card {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: var(--surface-raised);
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
-  padding: 14px;
+  padding: 14px 4px;
   text-decoration: none;
   color: var(--ink);
-  min-height: 96px;
+  text-align: center;
+  min-height: 92px;
   box-shadow: var(--shadow-1);
 }
 
-.quick-card--wide {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  min-height: 64px;
-}
-.quick-card--wide .quick-card__label { min-width: max-content; }
-.quick-card--wide .quick-card__value { flex: 1; }
-
 .quick-card__icon { color: var(--accent-ink); }
-.quick-card__icon .icon { width: 20px; height: 20px; }
-.quick-card__label { font-size: 12px; color: var(--ink-faint); }
-.quick-card__value {
-  font-size: 13.5px;
+.quick-card__icon .icon { width: 24px; height: 24px; }
+.quick-card__label {
+  font-size: 12px;
   font-weight: 500;
-  overflow-wrap: break-word;
-  line-height: 1.4;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  text-wrap: balance; /* 2行になるとき、行の長さを揃えて読みやすくする */
 }
 
 .menu-grid {
@@ -464,7 +457,10 @@ button { font-family: inherit; }
 }
 
 .menu-item__icon { color: var(--accent-ink); flex: none; }
-.menu-item__label { font-size: 13.5px; line-height: 1.35; }
+.menu-item__label { font-size: 13px; line-height: 1.35; overflow-wrap: anywhere; text-wrap: balance; }
+/* 「チェックイン・」「チェックアウト」のように「・」で区切ったかたまり。かたまりの途中ではなるべく改行しない */
+.label-chunk { display: inline-block; }
+.quick-card__label:has(.label-chunk), .menu-item__label:has(.label-chunk) { text-wrap: wrap; }
 
 /* ------------------------------ セクション ------------------------------ */
 
@@ -733,7 +729,6 @@ button { font-family: inherit; }
 /* -------------------------------- 幅広画面 -------------------------------- */
 
 @media (min-width: 480px) {
-  .quick-grid { grid-template-columns: repeat(3, 1fr); }
   .room-card-grid { grid-template-columns: repeat(3, 1fr); }
 }
 

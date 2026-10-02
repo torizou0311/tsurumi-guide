@@ -130,3 +130,9 @@ window.SECTIONS = [
     ]
   }
 ];
+
+// ホーム画面の「よく使う情報」に出す項目（上の SECTIONS の id を並べるだけ）。
+// 並べた順に、左上から右へ3つずつ表示されます。6個で「2行×3列」になります。
+// 入れ替えたいときは、ここの id を書き換えてください（例: 'garbage' を 'nearby' に）。
+// アクセス計測のデータが溜まったら、よく見られているページに入れ替える予定です。
+window.QUICK_SECTIONS = ['access', 'checkin', 'wifi', 'garbage', 'trouble', 'emergency'];

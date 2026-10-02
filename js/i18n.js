@@ -30,14 +30,6 @@ window.I18N = {
       greeting: `Welcome to YOKOHAMA Still Retreat`,
       subtitle: `We hope you enjoy a quiet stay in Tsurumi, Yokohama.`,
       quickTitle: `Quick Info`,
-      quickCheckLabel: `Check-in / Check-out`,
-      quickCheckIn: `IN 4:00 PM〜`,
-      quickCheckOut: `OUT 〜10:00 AM`,
-      quickAddressLabel: `Address`,
-      quickHelpLabel: `Need help?`,
-      quickHelpValue: `See "If Something Goes Wrong"`,
-      quickEmergencyLabel: `Emergency`,
-      quickEmergencyValue: `Ambulance / Fire 119 · Police 110`,
       menuTitle: `All Guides`
     },
     roomselect: {
@@ -147,14 +139,6 @@ window.I18N = {
       greeting: `YOKOHAMA Still Retreatへようこそ`,
       subtitle: `横浜・鶴見での静かなご滞在をお楽しみください。`,
       quickTitle: `よく使う情報`,
-      quickCheckLabel: `チェックイン・チェックアウト`,
-      quickCheckIn: `IN 16:00〜`,
-      quickCheckOut: `OUT 〜10:00`,
-      quickAddressLabel: `住所`,
-      quickHelpLabel: `困ったときは`,
-      quickHelpValue: `「困ったとき」を見る`,
-      quickEmergencyLabel: `緊急連絡先`,
-      quickEmergencyValue: `救急・火事 119 ／ 警察 110`,
       menuTitle: `メニュー一覧`
     },
     roomselect: {
@@ -264,14 +248,6 @@ window.I18N = {
       greeting: `歡迎入住 YOKOHAMA Still Retreat`,
       subtitle: `祝您在橫濱鶴見度過寧靜舒適的時光。`,
       quickTitle: `常用資訊`,
-      quickCheckLabel: `入住・退房時間`,
-      quickCheckIn: `IN 16:00 起`,
-      quickCheckOut: `OUT 10:00 前`,
-      quickAddressLabel: `住址`,
-      quickHelpLabel: `遇到問題？`,
-      quickHelpValue: `請參閱「常見問題排解」`,
-      quickEmergencyLabel: `緊急聯絡`,
-      quickEmergencyValue: `救護車・火警 119／警察 110`,
       menuTitle: `完整選單`
     },
     roomselect: {
@@ -381,14 +357,6 @@ window.I18N = {
       greeting: `YOKOHAMA Still Retreat에 오신 것을 환영합니다`,
       subtitle: `요코하마 쓰루미에서 조용하고 편안한 시간을 보내시길 바랍니다.`,
       quickTitle: `자주 찾는 정보`,
-      quickCheckLabel: `체크인 · 체크아웃`,
-      quickCheckIn: `IN 16:00부터`,
-      quickCheckOut: `OUT 10:00까지`,
-      quickAddressLabel: `주소`,
-      quickHelpLabel: `문제가 있으신가요?`,
-      quickHelpValue: `'문제 해결' 항목을 확인해 주세요`,
-      quickEmergencyLabel: `긴급 연락처`,
-      quickEmergencyValue: `구급・화재 119 / 경찰 110`,
       menuTitle: `전체 메뉴`
     },
     roomselect: {
