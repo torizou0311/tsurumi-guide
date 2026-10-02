@@ -181,7 +181,7 @@
       '<header class="site-header">' +
         '<div class="site-header__top">' +
           '<a class="brand" href="#/">' +
-            '<span class="brand__mark">静</span>' +
+            '<img class="brand__mark" src="images/common/logo.png" alt="" width="40" height="40">' +
             '<span class="brand__name">' + esc(d.common.brand) + '</span>' +
           '</a>' +
           langSwitch +

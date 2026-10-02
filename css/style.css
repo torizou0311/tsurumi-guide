@@ -73,6 +73,10 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
+/* iPhoneで一番下まで行ったあと更に引っ張ると、ページ全体がゴムのように持ち上がり、
+   下に白い余白が出て画面下のメニューも一緒に浮き上がる。その「引っ張り」を止める */
+html, body { overscroll-behavior-y: none; }
+
 body {
   background: var(--bg);
   color: var(--ink);
@@ -155,7 +159,7 @@ button { font-family: inherit; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   color: var(--ink);
   min-width: 0;
@@ -164,17 +168,9 @@ button { font-family: inherit; }
 
 .brand__mark {
   flex: none;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--tint);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--accent-ink);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .brand__name {
