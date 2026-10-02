@@ -23,7 +23,7 @@
 
 ## 未完了（2026-09-24時点）
 - [ ] オーナーによる見本の確認・修正依頼待ち
-- [x] 公開済み（2026-09-25）: GitHub Pages / publicリポジトリ https://github.com/torizou0311/tsurumi-guide → https://torizou0311.github.io/tsurumi-guide/ （main に push すると1〜2分で自動反映）
+- [x] 公開済み（2026-09-25）: GitHub Pages / publicリポジトリ https://github.com/torizou0311/tsurumi-guide → 独自ドメイン https://ysr-guide.neconote.net/ （2026-10-02設定。お名前.comのDNSに CNAME ysr-guide → torizou0311.github.io。リポジトリ直下の CNAME ファイルは消さないこと。旧URL https://torizou0311.github.io/tsurumi-guide/ は自動転送。main に push すると1〜2分で自動反映）
 - [x] 201号室: キーボックスは右で確定・Wi-Fi登録済み（チェックイン/困ったときの写真は共通のものを使用）
 - [ ] 201号室: エアコン・IH以外の家電（レンジ・ケトル・コーヒー・洗濯機・ワイヤー・サーキュレーター・アイロン）は写真が無く非表示中。写真が入ったら rooms.js に登録し content.js の rooms に '201' を追加
 - [ ] 103号室: 上記と同じ家電7点も写真が無く非表示中（レンジのワット数説明 microwaveWattage も content.js でコメントアウト中。レンジを出すときに戻す）
