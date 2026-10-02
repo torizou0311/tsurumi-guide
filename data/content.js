@@ -5,7 +5,10 @@
 // blocks の各項目:
 //   key: i18n.js の中の文章キー（セクションIDと結合して "section.key" として参照）
 //   rooms: 指定した部屋番号のときだけ表示する（省略時は全部屋共通）
-//   image: 共通写真は images/common/、部屋別写真は room.photos.xxx を使う
+//   image: 写真の指定方法は次の2通りです
+//     ・全部屋共通の写真 … 'images/common/ファイル名' のように、場所を直接書く
+//     ・部屋ごとに違う写真 … 'room:xxx' と書く（写真の場所は data/rooms.js の photos に書く）
+//   rooms: [...] を付けると、その部屋だけに出す項目になります（例: rooms: ['202']）
 //
 // 新しいセクションを足したいときは、この配列に1項目追加してください。
 
@@ -24,12 +27,11 @@ window.SECTIONS = [
     inMenu: true,
     blocks: [
       { key: 'mapIntro', showAddress: true, image: 'images/common/access-walking-map.png' },
-      { key: 'signNote', rooms: ['103'], image: true },
       { key: 'haneda', image: 'images/common/access-route-haneda.png' },
       { key: 'narita', image: 'images/common/access-route-narita.png' },
       { key: 'taxi' },
-      { key: 'taxiStandKeikyu', image: true },
-      { key: 'taxiStandJR', image: true },
+      { key: 'taxiStandKeikyu' },
+      { key: 'taxiStandJR' },
       { key: 'exterior', image: 'images/common/exterior.jpg' }
     ]
   },
@@ -40,9 +42,9 @@ window.SECTIONS = [
     blocks: [
       { key: 'intro' },
       { key: 'times' },
-      { key: 'steps', image: 'room:unlock1' },
-      { key: 'stepsLock', image: 'room:unlock2' },
-      { key: 'keybox', image: 'room:keybox' }
+      { key: 'steps', image: 'images/common/unlock1.png' },
+      { key: 'stepsLock', image: 'images/common/unlock2.png' },
+      { key: 'keybox', image: 'images/common/keybox.jpg' }
     ]
   },
   {
@@ -55,18 +57,19 @@ window.SECTIONS = [
     id: 'appliances',
     icon: 'appliance',
     inMenu: true,
+    // エアコンとIHは全部屋共通。それ以外は rooms で出す部屋を指定（103・201は写真が揃うまで非表示）
     blocks: [
-      { key: 'ac', image: 'room:applianceAc' },
-      { key: 'induction', image: 'room:applianceInduction' },
-      { key: 'microwave', image: 'room:applianceMicrowave' },
-      { key: 'microwaveWattage', rooms: ['103'] },
-      { key: 'kettle', image: 'room:applianceKettle' },
-      { key: 'coffee', image: 'room:applianceCoffee' },
+      { key: 'ac', image: 'images/common/appliance-ac.png' },
+      { key: 'induction', image: 'images/common/appliance-induction.png' },
+      { key: 'microwave', rooms: ['202'], image: 'room:applianceMicrowave' },
+      // { key: 'microwaveWattage', rooms: ['103'] }, // 103のレンジのワット数説明。103でレンジの項目を出すときに戻す
+      { key: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
+      { key: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
       { key: 'riceCooker', rooms: ['202'], image: 'room:applianceRiceCooker' },
-      { key: 'washer', image: 'room:applianceWasher' },
-      { key: 'wire', image: 'room:applianceWire' },
-      { key: 'circulator', image: 'room:applianceCirculator' },
-      { key: 'iron', image: 'room:applianceIron' }
+      { key: 'washer', rooms: ['202'], image: 'room:applianceWasher' },
+      { key: 'wire', rooms: ['202'], image: 'room:applianceWire' },
+      { key: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
+      { key: 'iron', rooms: ['202'], image: 'room:applianceIron' }
     ]
   },
   {
@@ -74,7 +77,7 @@ window.SECTIONS = [
     icon: 'trash',
     inMenu: true,
     blocks: [
-      { key: 'body', image: true }
+      { key: 'body', image: 'images/common/garbage.jpg' }
     ]
   },
   {
@@ -109,9 +112,9 @@ window.SECTIONS = [
     icon: 'help',
     inMenu: true,
     blocks: [
-      { key: 'keypad', image: 'room:keyboxTrouble' },
-      { key: 'hotwater', image: 'room:hotwaterPanel' },
-      { key: 'power', image: 'room:breaker' },
+      { key: 'keypad', image: 'images/common/keybox-troubleshoot.jpg' },
+      { key: 'hotwater', image: 'images/common/hotwater-panel.png' },
+      { key: 'power', image: 'images/common/breaker.png' },
       { key: 'lostFound' }
     ]
   },

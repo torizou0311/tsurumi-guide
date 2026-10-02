@@ -62,7 +62,6 @@ window.I18N = {
     },
     access: {
       mapIntro: `<p>Tap the address below to open it in Google Maps.</p>`,
-      signNote: `<p>Look for this sign near the entrance — it marks Room 103.</p>`,
       haneda: `<p>From <strong>Haneda Airport</strong> by train to Keikyu-Tsurumi Station: about 20 minutes. From Keikyu-Tsurumi Station to the property: about 18 minutes on foot.</p>`,
       narita: `<p>From <strong>Narita Airport</strong> by train to Tsurumi Station (JR Line): about 90 minutes. From JR Tsurumi Station to the property: about 12 minutes on foot.</p>`,
       taxi: `<p>By taxi, please show the driver the address below.</p><ul><li>From Haneda Airport: about 30 minutes, approximately ¥6,000–7,000</li><li>From JR Tsurumi Station: about 3 minutes, approximately ¥500</li><li>A 20% late-night surcharge applies between 10:00 PM and 5:00 AM</li></ul><p><strong>Important:</strong> please ask the driver to turn right at the red-circled spot on the map. If the driver continues straight on the main road instead, you will need to walk up a flight of stairs to reach the building.</p>`,
@@ -95,7 +94,7 @@ window.I18N = {
       iron: `<p>A <strong>steam iron</strong> is on the shelf in the bathroom. Please use the ironing board in the bathroom when ironing.</p>`
     },
     garbage: {
-      body: `<p>When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, either container is fine.</p>`
+      body: `<p>When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, any of the containers is fine.</p>`
     },
     rules: {
       important: `<p><strong>Important:</strong> if the room is not left in a reasonably clean condition and requires extra cleaning time, an additional cleaning fee of ¥20,000 will be charged.</p>`,
@@ -180,7 +179,6 @@ window.I18N = {
     },
     access: {
       mapIntro: `<p>下の住所をタップするとGoogleマップが開きます。</p>`,
-      signNote: `<p>入口付近でこのサインを探してください。103号室の目印です。</p>`,
       haneda: `<p><strong>羽田空港</strong>から電車で京急鶴見駅まで約20分。京急鶴見駅から施設までは徒歩約18分です。</p>`,
       narita: `<p><strong>成田空港</strong>から電車でJR鶴見駅まで約90分。JR鶴見駅から施設までは徒歩約12分です。</p>`,
       taxi: `<p>タクシーをご利用の場合は、運転手さんに下の住所を見せてください。</p><ul><li>羽田空港から：約30分、およそ6,000〜7,000円</li><li>JR鶴見駅から：約3分、およそ500円</li><li>22時〜翌5時は深夜割増料金（2割増）がかかります</li></ul><p><strong>重要：</strong>地図の赤丸の地点で右折するよう運転手さんにお伝えください。そのまま大通りを直進してしまうと、建物まで階段を上る必要があります。</p>`,
@@ -213,7 +211,7 @@ window.I18N = {
       iron: `<p>浴室の棚にスチームアイロンがあります。ご使用の際は浴室内のアイロン台をお使いください。</p>`
     },
     garbage: {
-      body: `<p>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どちらの容器に入れても構いません。</p>`
+      body: `<p>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どの容器に入れても構いません。</p>`
     },
     rules: {
       important: `<p><strong>重要：</strong>お部屋の使用状況によっては、通常より清掃に時間がかかる場合があり、その際は追加清掃費として20,000円を申し受けます。</p>`,
@@ -298,7 +296,6 @@ window.I18N = {
     },
     access: {
       mapIntro: `<p>點選下方住址即可開啟Google地圖。</p>`,
-      signNote: `<p>請在入口附近尋找這個標誌，這是103號房的標記。</p>`,
       haneda: `<p>從<strong>羽田機場</strong>搭電車到京急鶴見站約需20分鐘。從京急鶴見站步行到本住宿約18分鐘。</p>`,
       narita: `<p>從<strong>成田機場</strong>搭電車到JR鶴見站約需90分鐘。從JR鶴見站步行到本住宿約12分鐘。</p>`,
       taxi: `<p>搭乘計程車時，請將下方住址出示給司機看。</p><ul><li>從羽田機場出發：約30分鐘，車資約6,000〜7,000日圓</li><li>從JR鶴見站出發：約3分鐘，車資約500日圓</li><li>22:00〜翌5:00會加收兩成深夜加成費用</li></ul><p><strong>重要提醒：</strong>請告知司機在地圖上紅色圈起處右轉。若直接沿大馬路直行，需要走樓梯才能抵達建築物。</p>`,
@@ -416,7 +413,6 @@ window.I18N = {
     },
     access: {
       mapIntro: `<p>아래 주소를 탭하면 구글 지도가 열립니다.</p>`,
-      signNote: `<p>입구 근처에서 이 표지판을 찾아주세요. 103호실 표시입니다.</p>`,
       haneda: `<p><strong>하네다 공항</strong>에서 전철로 게이큐 쓰루미역까지 약 20분. 게이큐 쓰루미역에서 숙소까지는 도보 약 18분입니다.</p>`,
       narita: `<p><strong>나리타 공항</strong>에서 전철로 JR 쓰루미역까지 약 90분. JR 쓰루미역에서 숙소까지는 도보 약 12분입니다.</p>`,
       taxi: `<p>택시를 이용하실 경우 아래 주소를 기사님께 보여주세요.</p><ul><li>하네다 공항에서: 약 30분, 약 6,000〜7,000엔</li><li>JR 쓰루미역에서: 약 3분, 약 500엔</li><li>22시〜다음날 5시에는 심야 할증(20%)이 적용됩니다</li></ul><p><strong>중요:</strong> 지도에 빨간 원으로 표시된 지점에서 우회전하도록 기사님께 말씀해 주세요. 그대로 큰길을 직진하면 건물까지 계단을 올라가야 합니다.</p>`,
@@ -449,7 +445,7 @@ window.I18N = {
       iron: `<p>욕실 선반에 스팀다리미가 있습니다. 사용하실 때는 욕실 내 다리미판을 이용해 주세요.</p>`
     },
     garbage: {
-      body: `<p>쓰레기통이 가득 찼을 때나 체크아웃 시에는 분리수거한 쓰레기를 객실 밖 쓰레기 보관함에 넣어주세요. 분리수거만 되어 있다면 어느 쪽 용기에 넣으셔도 괜찮습니다.</p>`
+      body: `<p>쓰레기통이 가득 찼을 때나 체크아웃 시에는 분리수거한 쓰레기를 객실 밖 쓰레기 보관함에 넣어주세요. 분리수거만 되어 있다면 어느 용기에 넣으셔도 괜찮습니다.</p>`
     },
     rules: {
       important: `<p><strong>중요:</strong> 객실이 적절히 정돈되지 않아 평소보다 청소 시간이 더 필요한 경우, 추가 청소비 20,000엔이 청구됩니다.</p>`,
