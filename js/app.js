@@ -353,6 +353,8 @@
       var photo = photoHtml(block.image, room, lang, d.menu[section.id]);
       // narrow: true の項目は、縦長の図が大きくなりすぎないよう小さめに出す
       if (block.narrow) photo = photo.replace('class="guide-photo', 'class="guide-photo guide-photo--narrow');
+      // medium: true の項目は、小さめの図が画面いっぱいに引き伸ばされてぼやけないよう中くらいで出す
+      if (block.medium) photo = photo.replace('class="guide-photo', 'class="guide-photo guide-photo--medium');
 
       if (block.heading) {
         return '<div class="block"><h3 class="block-heading"><span class="h-dot"></span>' + esc(text) + '</h3></div>';

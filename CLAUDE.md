@@ -32,7 +32,7 @@
 - [x] 公開済み（2026-09-25）: GitHub Pages / publicリポジトリ https://github.com/torizou0311/tsurumi-guide → 独自ドメイン https://ysr-guide.neconote.net/ （2026-10-02設定。お名前.comのDNSに CNAME ysr-guide → torizou0311.github.io。リポジトリ直下の CNAME ファイルは消さないこと。旧URL https://torizou0311.github.io/tsurumi-guide/ は自動転送。main に push すると1〜2分で自動反映）
 - [x] 201号室: キーボックスは右で確定・Wi-Fi登録済み（チェックイン/困ったときの写真は共通のものを使用）
 - [ ] 201号室: エアコン・IH以外の家電（レンジ・ケトル・コーヒー・洗濯機・ワイヤー・サーキュレーター・アイロン）は写真が無く非表示中。写真が入ったら rooms.js に登録し content.js の rooms に '201' を追加
-- [x] 201号室: カプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）の使い方を追加（2026-10-06）。図は公式の取扱説明書PDF（https://shop.nestle.jp/contents/pdf/brand/ndg/product/pdf/genio2.pdf 、型番MD9771、2018年3月版）から切り出した `images/201/dolcegusto-*.png`。文章の①〜⑦は図の中の番号と合わせてある。図の中の文字は日本語のみ（4言語の本文で補っている）。`dolcegusto-parts.png`・`dolcegusto-capsule.png` は保存のみで未使用。実機の色・カプセルの置き場所・使用済みカプセルの捨て場所は未確認のため本文に書いていない
+- [x] 201号室: カプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）の使い方を追加（2026-10-06）。図は公式の取扱説明書PDF（https://shop.nestle.jp/contents/pdf/brand/ndg/product/pdf/genio2.pdf 、型番MD9771、2018年3月版）の図から、イラスト部分だけを切り出した `images/201/dolcegusto-fig-*.png`（2026-10-06 オーナー指示: 図の中の日本語は外国語ゲストにわかりにくいので、文字を含めず絵だけにし、4言語の本文と併せて読む形にする）。`dolcegusto-parts.png`・`dolcegusto-capsule.png` は保存のみで未使用。実機の色・カプセルの置き場所・使用済みカプセルの捨て場所は未確認のため本文に書いていない
 - [ ] 103号室: 上記と同じ家電7点も写真が無く非表示中（レンジのワット数説明 microwaveWattage も content.js でコメントアウト中。レンジを出すときに戻す）
 - [ ] 写真が無い箇所（「写真準備中」表示）: タクシー右折地点（赤丸）の地図、202のスチームアイロン（駅のタクシー乗り場2か所は写真の入手に時間がかかるため、写真枠を一旦外して文章のみ表示。入手できたら content.js の該当ブロックに image を戻す）
 - [ ] 公開後: 部屋ごとのURLをAirbnbのメッセージ/ハウスマニュアル欄に差し替え（新URL: https://ysr-guide.neconote.net/index.html?room=103 / 201 / 202）
