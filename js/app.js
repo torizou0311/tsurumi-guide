@@ -114,6 +114,8 @@
   function photoHtml(spec, room, lang, altText) {
     if (!spec) return '';
     var src = resolveImage(spec, room);
+    // パスの中の {lang} は表示中の言語（en / ja / zh-Hant / ko）に置き換える（図の中に文字がある画像用）
+    if (src) src = src.replace('{lang}', lang);
     if (src) {
       return '<div class="guide-photo"><img src="' + esc(src) + '" alt="' + esc(altText || '') + '" loading="lazy"></div>';
     }

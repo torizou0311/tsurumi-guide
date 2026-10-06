@@ -70,16 +70,16 @@ window.SECTIONS = [
       { key: 'wire', rooms: ['202'], image: 'room:applianceWire' },
       { key: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
       { key: 'iron', rooms: ['202'], image: 'room:applianceIron' },
-      // 201のカプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（文字なし）。
+      // 201のカプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（電源と目盛りの図だけ、図の中の文字を4言語で入れてある）。
       // narrow: true は図を小さめに、medium: true は中くらいに出す指定（小さい図が引き伸ばされてぼやけるのを防ぐ）
       { key: 'dolceIntro', rooms: ['201'], image: 'room:dolceMachine', narrow: true },
       { key: 'dolceWater', rooms: ['201'], image: 'room:dolceWater', medium: true },
       { key: 'dolcePower', rooms: ['201'], image: 'room:dolcePower', medium: true },
+      { key: 'dolceCup', rooms: ['201'] },
       { key: 'dolceLevel', rooms: ['201'], image: 'room:dolceLevel', medium: true },
       { key: 'dolceCapsule', rooms: ['201'], image: 'room:dolceCapsule', medium: true },
       { key: 'dolceBrew', rooms: ['201'], image: 'room:dolceBrew', narrow: true },
-      { key: 'dolceFinish', rooms: ['201'], image: 'room:dolceFinish', narrow: true },
-      { key: 'dolceTwo', rooms: ['201'], image: 'room:dolceTwo' }
+      { key: 'dolceFinish', rooms: ['201'], image: 'room:dolceFinish', narrow: true }
     ]
   },
   {
