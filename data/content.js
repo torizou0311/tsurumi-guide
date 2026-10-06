@@ -72,7 +72,11 @@ window.SECTIONS = [
       { key: 'microwaveIris', rooms: ['202'] },
       { key: 'microwaveNitori', rooms: ['103', '201'] },
       { key: 'microwaveCaution' },
-      { key: 'kettle', anchor: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
+      // 電気ケトルは部屋で機種が違う（103・202＝ニトリ AB2G01、201＝アイリスオーヤマ IKE-C601T）。
+      // 図は data/rooms.js の applianceKettle、使い方の文章は機種ごとに出し分ける
+      { key: 'kettle', anchor: 'kettle', image: 'room:applianceKettle' },
+      { key: 'kettleNitori', rooms: ['103', '202'] },
+      { key: 'kettleIris', rooms: ['201'], image: 'images/201/appliance-kettle-level.png', medium: true },
       { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
       { key: 'riceCooker', anchor: 'ricecooker', rooms: ['202'], image: 'room:applianceRiceCooker' },
       // ドラム式洗濯乾燥機。全部屋共通（103・201はシャープ ES-S7G、202は ES-S7F。操作パネルと使い方は同じ）。図は tools/make-washer-panel.py で作る

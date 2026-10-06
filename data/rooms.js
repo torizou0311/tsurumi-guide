@@ -16,6 +16,7 @@ window.ROOMS = [
     microwaveWattageKnown: true, // 103号室のみ、レンジのワット数を確認済み
     photos: {
       wifiQr5: 'images/103/wifi-qr-5g.png',
+      applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceMicrowave: 'images/common/appliance-microwave-nitori-{lang}.png', // ニトリ BK2G02（103と201で共通）
       wifiQr24: 'images/103/wifi-qr-24g.png'
     }
@@ -35,7 +36,7 @@ window.ROOMS = [
     photos: {
       wifiQr: 'images/202/wifi-qr.png',
       applianceMicrowave: 'images/202/appliance-microwave-{lang}.png', // アイリスオーヤマ IMB-T178（{lang} は表示中の言語に置き換わる）
-      applianceKettle: 'images/202/appliance-kettle.png',
+      applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceCoffee: 'images/202/appliance-coffee.png',
       applianceRiceCooker: 'images/202/appliance-ricecooker.png',
       applianceWasher: 'images/202/appliance-washer.png'
@@ -58,6 +59,7 @@ window.ROOMS = [
     //       （写真を追加したら、ここに登録し、data/content.js の rooms に '201' を足してください）
     photos: {
       wifiQr5: 'images/201/wifi-qr-5g.png',
+      applianceKettle: 'images/201/appliance-kettle-{lang}.png', // アイリスオーヤマ IKE-C601T
       applianceMicrowave: 'images/common/appliance-microwave-nitori-{lang}.png', // ニトリ BK2G02（103と201で共通）
       wifiQr24: 'images/201/wifi-qr-24g.png',
       // カプセル式コーヒーメーカー（ドルチェ グスト ジェニオ2）。公式の取扱説明書の図から、イラスト部分だけを切り出したもの。
