@@ -368,7 +368,15 @@
           photo +
         '</div>';
       }
-      return '<div class="block"><div class="block-text">' + text + '</div>' + photo + '</div>';
+      // anchor 付きの項目（各家電）: 家電名の見出しを出す。見出しはその項目へのページ内リンクにもなる
+      var headingHtml = '';
+      if (block.anchor) {
+        var title = (dict.titles && dict.titles[block.anchor]) || '';
+        headingHtml = '<h2 class="item-heading" id="item-' + esc(block.anchor) + '">' +
+          '<a href="#/' + esc(section.id) + '/' + esc(block.anchor) + '">' + esc(title) + '</a></h2>';
+      }
+      var textHtml = text ? '<div class="block-text">' + text + '</div>' : '';
+      return '<div class="block">' + headingHtml + textHtml + photo + '</div>';
     }).join('');
 
     return '' +
@@ -403,6 +411,7 @@
     }
 
     var hash = currentHash();
+    var anchorId = null;
     var body;
     var pageId = 'home';
     if (hash === '#/' || hash === '#/home') {
@@ -414,7 +423,10 @@
       body = renderRoomSelect();
       pageId = 'roomselect';
     } else {
-      var sectionId = hash.replace('#/', '');
+      // 「#/appliances/dolcegusto」のように、セクション名の後ろに項目名（anchor）が付くことがある
+      var hashParts = hash.replace('#/', '').split('/');
+      var sectionId = hashParts[0];
+      anchorId = hashParts[1] || null;
       var section = window.SECTIONS.filter(function (s) { return s.id === sectionId; })[0];
       body = section ? renderSection(section, room) : renderHome(room);
       if (section) pageId = section.id;
@@ -423,7 +435,29 @@
     app.innerHTML = renderHeader(room) + '<main class="main">' + body + '</main>' + renderBottomNav(hash);
     bindGlobalEvents();
     window.scrollTo(0, 0);
+    if (anchorId) scrollToItem(anchorId);
     trackPage(room.id, pageId);
+  }
+
+  // 項目（家電など）の見出しの位置までスクロールする。QRコードから直接開いたとき用。
+  // 上にある写真が後から読み込まれると位置がずれるので、読み込みのたびに合わせ直す
+  // （ゲストが自分でスクロールし始めたら、それ以降は動かさない）。
+  function scrollToItem(anchorId) {
+    var target = document.getElementById('item-' + anchorId);
+    if (!target) return;
+    var userMoved = false;
+    function stop() { userMoved = true; }
+    ['touchstart', 'wheel', 'keydown', 'mousedown'].forEach(function (ev) {
+      window.addEventListener(ev, stop, { once: true, passive: true });
+    });
+    function go() {
+      if (!userMoved && document.body.contains(target)) target.scrollIntoView();
+    }
+    go();
+    var imgs = document.querySelectorAll('.section-body img');
+    for (var i = 0; i < imgs.length; i++) {
+      if (!imgs[i].complete) imgs[i].addEventListener('load', go, { once: true });
+    }
   }
 
   // アクセス計測（js/analytics.js）。計測が無効・読み込み失敗でも表示には影響させない

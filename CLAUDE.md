@@ -12,6 +12,7 @@
 - 写真は `images/common/`（全部屋共通。チェックイン/困ったときの写真 unlock1・unlock2・keybox・keybox-troubleshoot・hotwater-panel・breaker、共通家電の appliance-ac・appliance-induction、ゴミ置き場 garbage.jpg も1組だけここ）, `images/103/`, `images/202/`, `images/201/`（部屋別: Wi-Fi QR・家電）
 - content.js の写真指定: 共通は `images/common/…` を直接書く／部屋別だけ `room:xxx`／特定部屋だけに出す項目は `rooms: [...]`
 - ホームの「よく使う情報」は、メニュー一覧の一部を上に並べているだけ（2026-10-02変更）。出す項目は `data/content.js` 末尾の `QUICK_SECTIONS`（セクションidの配列、6個で2行×3列のタイル表示）。当面はオーナー指定の6個（access/checkin/wifi/garbage/trouble/emergency の順）。GA4のデータが溜まったら、よく見られているページに入れ替える方針
+- 家電ごとの見出しとQR用リンク（2026-10-06追加）: `data/content.js` の家電の項目に `anchor: '名前'` を付けると、家電名の見出し（文字は `js/i18n.js` の `appliances.titles`）が出て、`…/index.html?room=201#/appliances/名前` でその家電の位置を直接開ける。家電のそばに貼るQRはこのURLで作る（部屋番号 `?room=` も必ず入れる）。**anchor の名前は貼ったQRが使えなくなるので変えない**。現在の名前: ac / induction / microwave / kettle / coffee / ricecooker / washer / wire / circulator / iron / dolcegusto
 - 元原稿（Canvaから抽出した英文）: `docs/manual-source.md`
 - 使い方の説明（オーナー向け）: `README.md`
 - noindex と robots.txt で検索エンジン除外済み

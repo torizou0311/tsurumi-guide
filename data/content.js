@@ -57,22 +57,26 @@ window.SECTIONS = [
     id: 'appliances',
     icon: 'appliance',
     inMenu: true,
+    // anchor を付けた項目には、家電名の見出しが付きます（見出しの文字は js/i18n.js の appliances.titles）。
+    // 見出しはページ内リンクになっていて、URL の最後に「/anchorの名前」を付けると、その家電の位置を直接開けます。
+    //   例: https://ysr-guide.neconote.net/index.html?room=201#/appliances/dolcegusto
+    // 家電のそばに貼るQRコードはこのURLで作ります。anchor の名前を変えるとQRが使えなくなるので、変えないでください。
     // エアコンとIHは全部屋共通。それ以外は rooms で出す部屋を指定（103・201は写真が揃うまで非表示）
     blocks: [
-      { key: 'ac', image: 'images/common/appliance-ac.png' },
-      { key: 'induction', image: 'images/common/appliance-induction.png' },
-      { key: 'microwave', rooms: ['202'], image: 'room:applianceMicrowave' },
+      { key: 'ac', anchor: 'ac', image: 'images/common/appliance-ac.png' },
+      { key: 'induction', anchor: 'induction', image: 'images/common/appliance-induction.png' },
+      { key: 'microwave', anchor: 'microwave', rooms: ['202'], image: 'room:applianceMicrowave' },
       // { key: 'microwaveWattage', rooms: ['103'] }, // 103のレンジのワット数説明。103でレンジの項目を出すときに戻す
-      { key: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
-      { key: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
-      { key: 'riceCooker', rooms: ['202'], image: 'room:applianceRiceCooker' },
-      { key: 'washer', rooms: ['202'], image: 'room:applianceWasher' },
-      { key: 'wire', rooms: ['202'], image: 'room:applianceWire' },
-      { key: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
-      { key: 'iron', rooms: ['202'], image: 'room:applianceIron' },
+      { key: 'kettle', anchor: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
+      { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
+      { key: 'riceCooker', anchor: 'ricecooker', rooms: ['202'], image: 'room:applianceRiceCooker' },
+      { key: 'washer', anchor: 'washer', rooms: ['202'], image: 'room:applianceWasher' },
+      { key: 'wire', anchor: 'wire', rooms: ['202'], image: 'room:applianceWire' },
+      { key: 'circulator', anchor: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
+      { key: 'iron', anchor: 'iron', rooms: ['202'], image: 'room:applianceIron' },
       // 201のカプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（電源と目盛りの図だけ、図の中の文字を4言語で入れてある）。
       // narrow: true は図を小さめに、medium: true は中くらいに出す指定（小さい図が引き伸ばされてぼやけるのを防ぐ）
-      { key: 'dolceIntro', rooms: ['201'], image: 'room:dolceMachine', narrow: true },
+      { key: 'dolceIntro', anchor: 'dolcegusto', rooms: ['201'], image: 'room:dolceMachine', narrow: true },
       { key: 'dolceWater', rooms: ['201'], image: 'room:dolceWater', medium: true },
       { key: 'dolcePower', rooms: ['201'], image: 'room:dolcePower', medium: true },
       { key: 'dolceCup', rooms: ['201'] },

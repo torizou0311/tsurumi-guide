@@ -510,6 +510,20 @@ button { font-family: inherit; }
   margin-bottom: 10px;
 }
 
+/* 項目（各家電）の見出し。ページ内リンクにもなっている */
+.item-heading {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 0 10px;
+  padding-left: 11px;
+  border-left: 5px solid var(--accent);
+  scroll-margin-top: 124px; /* 上に固定されているヘッダーに隠れないように */
+}
+.item-heading a { color: var(--ink); text-decoration: none; }
+.item-heading + .guide-photo { margin-top: 0; }
+
 .block-text p:last-child { margin-bottom: 0; }
 .block-text strong { color: var(--ink); }
 
