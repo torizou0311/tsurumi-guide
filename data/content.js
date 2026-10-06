@@ -66,8 +66,12 @@ window.SECTIONS = [
       { key: 'ac', anchor: 'ac', image: 'images/common/appliance-ac-{lang}.png' }, // {lang} は表示中の言語に置き換わる（図は tools/make-ac-remote.py で作る）
       { key: 'induction', anchor: 'induction', image: 'images/common/appliance-induction-{lang}.png' }, // 図は tools/make-ih-panel.py で作る
       { key: 'inductionSteps' },
-      { key: 'microwave', anchor: 'microwave', rooms: ['202'], image: 'room:applianceMicrowave' },
-      // { key: 'microwaveWattage', rooms: ['103'] }, // 103のレンジのワット数説明。103でレンジの項目を出すときに戻す
+      // 電子レンジは部屋で機種が違う（202＝アイリスオーヤマ IMB-T178、103・201＝ニトリ BK2G02）。
+      // 図は data/rooms.js の applianceMicrowave、使い方の文章は機種ごとに出し分ける
+      { key: 'microwave', anchor: 'microwave', image: 'room:applianceMicrowave' },
+      { key: 'microwaveIris', rooms: ['202'] },
+      { key: 'microwaveNitori', rooms: ['103', '201'] },
+      { key: 'microwaveCaution' },
       { key: 'kettle', anchor: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
       { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
       { key: 'riceCooker', anchor: 'ricecooker', rooms: ['202'], image: 'room:applianceRiceCooker' },

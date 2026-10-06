@@ -16,6 +16,7 @@ window.ROOMS = [
     microwaveWattageKnown: true, // 103号室のみ、レンジのワット数を確認済み
     photos: {
       wifiQr5: 'images/103/wifi-qr-5g.png',
+      applianceMicrowave: 'images/common/appliance-microwave-nitori-{lang}.png', // ニトリ BK2G02（103と201で共通）
       wifiQr24: 'images/103/wifi-qr-24g.png'
     }
   },
@@ -33,7 +34,7 @@ window.ROOMS = [
     microwaveWattageKnown: false,
     photos: {
       wifiQr: 'images/202/wifi-qr.png',
-      applianceMicrowave: 'images/202/appliance-microwave.png',
+      applianceMicrowave: 'images/202/appliance-microwave-{lang}.png', // アイリスオーヤマ IMB-T178（{lang} は表示中の言語に置き換わる）
       applianceKettle: 'images/202/appliance-kettle.png',
       applianceCoffee: 'images/202/appliance-coffee.png',
       applianceRiceCooker: 'images/202/appliance-ricecooker.png',
@@ -59,6 +60,7 @@ window.ROOMS = [
     //       （写真を追加したら、ここに登録し、data/content.js の rooms に '201' を足してください）
     photos: {
       wifiQr5: 'images/201/wifi-qr-5g.png',
+      applianceMicrowave: 'images/common/appliance-microwave-nitori-{lang}.png', // ニトリ BK2G02（103と201で共通）
       wifiQr24: 'images/201/wifi-qr-24g.png',
       // カプセル式コーヒーメーカー（ドルチェ グスト ジェニオ2）。公式の取扱説明書の図から、イラスト部分だけを切り出したもの。
       // {lang} の付いた図は、図の中の文字を言語ごとに入れた4枚（-en / -ja / -zh-Hant / -ko）がある
