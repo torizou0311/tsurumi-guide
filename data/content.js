@@ -81,7 +81,9 @@ window.SECTIONS = [
       { key: 'washerDetergent', image: 'images/common/appliance-washer-detergent.png', narrow: true },
       { key: 'washerAdjust', image: 'images/common/appliance-washer-sub-{lang}.png' },
       { key: 'washerNotes' },
-      { key: 'wire', anchor: 'wire', rooms: ['202'], image: 'room:applianceWire' },
+      // 室内物干しワイヤー（Remarks Japan）。全部屋共通。図は tools/make-wire-figure.py で作る（番号だけなので全言語で同じ図）
+      { key: 'wire', anchor: 'wire', image: 'images/common/appliance-wire.png' },
+      { key: 'wireSteps' },
       // サーキュレーター（アイリスオーヤマ PCF-SCC15T）。全部屋共通。図は tools/make-circulator-panel.py で作る
       { key: 'circulator', anchor: 'circulator', image: 'images/common/appliance-circulator-{lang}.png' },
       { key: 'circulatorSteps' },
