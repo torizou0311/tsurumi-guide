@@ -92,6 +92,7 @@ window.I18N = {
       washerNotes: `<p><strong>Please note</strong></p><ul><li>The door locks while the machine is running. To open it midway, press Start / Pause (スタート／一時停止) to pause, then press Unlock (ロック解除).</li><li>The drum is hot after drying. After you press Unlock (ロック解除), it can take 10–20 minutes to cool down before the door opens.</li><li>When drying, load no more than half of a full wash load (3.5 kg). If it is too full, the laundry will not dry.</li><li>Holding Unlock (ロック解除) for 3 seconds or more turns on the child lock (the display shows “L”) and the door will not open. Hold it for 3 seconds again to release.</li></ul>`,
       wire: `<p>A drying wire is provided in the room for hanging laundry.</p>`,
       circulator: `<p>The ceilings are high, so cool air tends to settle near the floor while warm air rises. If the air conditioner doesn't feel effective, run the circulator to help circulate the air.</p>`,
+      circulatorSteps: `<p><strong>How to use</strong></p><ul><li><strong>① Power (電源 切/入):</strong> press to start; press again to stop.</li><li><strong>② Fan speed (風量):</strong> press &lt; or &gt; to change the strength (5 levels; the strongest is ターボ = turbo).</li><li><strong>③ Swing (首ふり):</strong> each press switches between up-down (上下), left-right (左右), both, and off. The lamps show which is on.</li><li>Off timer (切タイマー): stops automatically after 1, 2 or 4 hours.</li><li>Rhythm (リズム): the strength changes gently, like a natural breeze.</li></ul><p><strong>Caution:</strong> do not move the head by hand. To change the direction, press Swing (首ふり) to let it move, then press again to stop it where you like.</p>`,
       iron: `<p>A <strong>steam iron</strong> is on the shelf in the bathroom. Please use the ironing board in the bathroom when ironing.</p>`,
       dolceIntro: `<p>Insert a capsule and push the lever to make coffee, one cup at a time. Follow steps 1–7 below.</p>`,
       dolceWater: `<p><strong>1. Fill the water tank</strong></p><ul><li>Remove the water tank from the back of the machine and fill it with tap water. <strong>Do not fill above the “MAX” line.</strong></li><li>Put the tank back on the machine.</li><li>Do not put in anything other than water (no hot water, milk, etc.).</li></ul>`,
@@ -218,6 +219,7 @@ window.I18N = {
       washerNotes: `<p><strong>ご注意</strong></p><ul><li>運転中はドアにロックがかかります。途中で開けたいときは「スタート／一時停止」を押して止め、「ロック解除」を押してください。</li><li>乾燥のあとはドラムの中が熱くなっています。「ロック解除」を押してから、冷めてドアが開くまで10〜20分ほどかかることがあります。</li><li>乾燥まで行うときは、洗濯物を洗濯のときの半分（3.5kg）までにしてください。入れすぎると乾きません。</li><li>「ロック解除」を3秒以上押すとチャイルドロックがかかり（表示部に「L」）、ドアが開かなくなります。解除するときも3秒以上押してください。</li></ul>`,
       wire: `<p>室内に洗濯物を干すためのワイヤーがあります。</p>`,
       circulator: `<p>天井が高いため、冷たい空気は下に、暖かい空気は上にたまりやすくなっています。エアコンの効きが弱く感じるときは、サーキュレーターで空気を循環させてください。</p>`,
+      circulatorSteps: `<p><strong>使い方</strong></p><ul><li><strong>「電源 切/入」</strong>を押すと動きます。もう一度押すと止まります。</li><li><strong>「＜ 風量 ＞」</strong>で風の強さを変えます（5段階。いちばん強いのが「ターボ」）。</li><li><strong>「首ふり」</strong>を押すたびに、上下・左右・両方・止まる、が切り替わります。どれになっているかはランプでわかります。</li><li>「切タイマー」を押すと、1・2・4時間後に自動で止まります。</li><li>「リズム」は、風の強さがゆっくり変わる、自然の風に近いモードです。</li></ul><p><strong>ご注意：</strong>向きを手で動かさないでください。向きを変えたいときは「首ふり」を押して動かし、好きな位置でもう一度押して止めてください。</p>`,
       iron: `<p>浴室の棚にスチームアイロンがあります。ご使用の際は浴室内のアイロン台をお使いください。</p>`,
       dolceIntro: `<p>専用カプセルをセットしてレバーを倒すだけで、コーヒーを1杯ずつ作れます。下の ①〜⑦ の順にお使いください。</p>`,
       dolceWater: `<p><strong>① 水を入れる</strong></p><ul><li>本体の後ろにある給水タンクを取り外し、水道水を入れます。<strong>「MAX」の線を超えないように</strong>入れてください。</li><li>タンクを本体に戻します。</li><li>お湯や牛乳など、水以外のものは入れないでください。</li></ul>`,
@@ -352,6 +354,7 @@ window.I18N = {
       washerNotes: `<p><strong>注意事項</strong></p><ul><li>運轉中門會上鎖。中途想開門時，請先按「スタート／一時停止」（開始／暫停）暫停，再按「ロック解除」（解除門鎖）。</li><li>烘乾後滾筒內很燙。按下「ロック解除」後，可能需要10～20分鐘冷卻，門才會打開。</li><li>要烘乾時，衣物量請不要超過洗衣時的一半（3.5公斤）。放太多會烘不乾。</li><li>長按「ロック解除」3秒以上會啟動兒童安全鎖（顯示幕顯示「L」），門將無法打開。解除時同樣長按3秒以上。</li></ul>`,
       wire: `<p>房內設有曬衣繩，可用來晾曬衣物。</p>`,
       circulator: `<p>由於天花板較高，冷空氣容易堆積在下方、暖空氣則聚集在上方。若感覺冷氣效果不佳，可開啟循環扇幫助空氣循環。</p>`,
+      circulatorSteps: `<p><strong>使用方法</strong></p><ul><li><strong>① 電源（電源 切/入）：</strong>按一下啟動，再按一下停止。</li><li><strong>② 風量（風量）：</strong>按 &lt; 或 &gt; 調整風力（共5段，最強為「ターボ」＝渦輪）。</li><li><strong>③ 擺頭（首ふり）：</strong>每按一次，會在上下（上下）、左右（左右）、同時、停止之間切換。可由指示燈確認目前狀態。</li><li>關機定時（切タイマー）：1、2或4小時後自動停止。</li><li>自然風（リズム）：風力會緩慢變化，接近自然的風。</li></ul><p><strong>注意：</strong>請勿用手扳動機頭。想改變方向時，請按「首ふり」讓它擺動，到想要的位置再按一次停止。</p>`,
       iron: `<p>浴室層架上備有蒸氣熨斗，使用時請搭配浴室內的燙衣板。</p>`
     },
     garbage: {
@@ -478,6 +481,7 @@ window.I18N = {
       washerNotes: `<p><strong>주의</strong></p><ul><li>운전 중에는 문이 잠깁니다. 도중에 열고 싶을 때는 「スタート／一時停止」(시작/일시정지)를 눌러 멈춘 뒤 「ロック解除」(잠금 해제)를 눌러 주세요.</li><li>건조 후에는 드럼 안이 뜨겁습니다. 「ロック解除」를 누른 뒤 식어서 문이 열릴 때까지 10~20분 정도 걸릴 수 있습니다.</li><li>건조까지 할 때는 세탁물을 세탁할 때의 절반（3.5kg）까지만 넣어 주세요. 너무 많이 넣으면 마르지 않습니다.</li><li>「ロック解除」를 3초 이상 누르면 어린이 보호 잠금이 걸려（표시창에 「L」） 문이 열리지 않습니다. 해제할 때도 3초 이상 눌러 주세요.</li></ul>`,
       wire: `<p>객실 내에 빨래를 널 수 있는 빨랫줄이 있습니다.</p>`,
       circulator: `<p>천장이 높아 찬 공기는 아래로, 따뜻한 공기는 위로 모이기 쉽습니다. 에어컨 효과가 약하게 느껴지면 서큘레이터로 공기를 순환시켜 주세요.</p>`,
+      circulatorSteps: `<p><strong>사용 방법</strong></p><ul><li><strong>① 전원（電源 切/入）:</strong> 누르면 작동하고, 다시 누르면 멈춥니다.</li><li><strong>② 풍량（風量）:</strong> &lt; 또는 &gt; 를 눌러 바람 세기를 바꿉니다（5단계, 가장 강한 것이 「ターボ」= 터보）.</li><li><strong>③ 회전（首ふり）:</strong> 누를 때마다 상하（上下）, 좌우（左右）, 둘 다, 정지로 바뀝니다. 램프로 현재 상태를 확인할 수 있습니다.</li><li>꺼짐 타이머（切タイマー）: 1, 2 또는 4시간 뒤에 자동으로 멈춥니다.</li><li>리듬풍（リズム）: 바람 세기가 천천히 바뀌는, 자연 바람에 가까운 모드입니다.</li></ul><p><strong>주의:</strong> 손으로 머리 부분의 방향을 움직이지 마세요. 방향을 바꾸려면 「首ふり」를 눌러 움직이게 한 뒤, 원하는 위치에서 다시 눌러 멈춰 주세요.</p>`,
       iron: `<p>욕실 선반에 스팀다리미가 있습니다. 사용하실 때는 욕실 내 다리미판을 이용해 주세요.</p>`
     },
     garbage: {

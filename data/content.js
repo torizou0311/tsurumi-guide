@@ -82,7 +82,9 @@ window.SECTIONS = [
       { key: 'washerAdjust', image: 'images/common/appliance-washer-sub-{lang}.png' },
       { key: 'washerNotes' },
       { key: 'wire', anchor: 'wire', rooms: ['202'], image: 'room:applianceWire' },
-      { key: 'circulator', anchor: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
+      // サーキュレーター（アイリスオーヤマ PCF-SCC15T）。全部屋共通。図は tools/make-circulator-panel.py で作る
+      { key: 'circulator', anchor: 'circulator', image: 'images/common/appliance-circulator-{lang}.png' },
+      { key: 'circulatorSteps' },
       { key: 'iron', anchor: 'iron', rooms: ['202'], image: 'room:applianceIron' },
       // 201のカプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（電源と目盛りの図だけ、図の中の文字を4言語で入れてある）。
       // narrow: true は図を小さめに、medium: true は中くらいに出す指定（小さい図が引き伸ばされてぼやけるのを防ぐ）

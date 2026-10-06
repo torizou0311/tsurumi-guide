@@ -39,8 +39,7 @@ window.ROOMS = [
       applianceCoffee: 'images/202/appliance-coffee.png',
       applianceRiceCooker: 'images/202/appliance-ricecooker.png',
       applianceWasher: 'images/202/appliance-washer.png',
-      applianceWire: 'images/202/appliance-wire.png',
-      applianceCirculator: 'images/202/appliance-circulator.png'
+      applianceWire: 'images/202/appliance-wire.png'
       // 注: アイロンの写真は元サイトに見つかりませんでした（準備中と表示されます）
     }
   },
