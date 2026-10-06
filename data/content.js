@@ -71,7 +71,12 @@ window.SECTIONS = [
       { key: 'kettle', anchor: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
       { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
       { key: 'riceCooker', anchor: 'ricecooker', rooms: ['202'], image: 'room:applianceRiceCooker' },
-      { key: 'washer', anchor: 'washer', rooms: ['202'], image: 'room:applianceWasher' },
+      // ドラム式洗濯乾燥機（シャープ ES-S7G）。図は tools/make-washer-panel.py で作る
+      { key: 'washer', anchor: 'washer', rooms: ['201', '202'], image: 'images/common/appliance-washer-main-{lang}.png' },
+      { key: 'washerSteps', rooms: ['201', '202'] },
+      { key: 'washerDetergent', rooms: ['201', '202'], image: 'images/common/appliance-washer-detergent.png', narrow: true },
+      { key: 'washerAdjust', rooms: ['201', '202'], image: 'images/common/appliance-washer-sub-{lang}.png' },
+      { key: 'washerNotes', rooms: ['201', '202'] },
       { key: 'wire', anchor: 'wire', rooms: ['202'], image: 'room:applianceWire' },
       { key: 'circulator', anchor: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
       { key: 'iron', anchor: 'iron', rooms: ['202'], image: 'room:applianceIron' },
