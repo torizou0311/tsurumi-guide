@@ -83,7 +83,15 @@ window.I18N = {
       washer: `<p><strong>Washing machine</strong> with both washing and drying functions.</p>`,
       wire: `<p>A drying wire is provided in the room for hanging laundry.</p>`,
       circulator: `<p><strong>Air circulator:</strong> the ceilings are high, so cool air tends to settle near the floor while warm air rises. If the air conditioner doesn't feel effective, run the circulator to help circulate the air.</p>`,
-      iron: `<p>A <strong>steam iron</strong> is on the shelf in the bathroom. Please use the ironing board in the bathroom when ironing.</p>`
+      iron: `<p>A <strong>steam iron</strong> is on the shelf in the bathroom. Please use the ironing board in the bathroom when ironing.</p>`,
+      dolceIntro: `<p><strong>Capsule coffee machine</strong> (Nescafé Dolce Gusto Genio 2)</p><p>Insert a capsule and push the lever to make coffee, latte and more, one cup at a time. Follow steps 1–7 below. (The diagrams are from the Japanese manual; the step numbers match.)</p>`,
+      dolceWater: `<p><strong>1. Fill the water tank</strong></p><ul><li>Remove the water tank from the back of the machine and fill it with tap water (up to the “MAX” line).</li><li>Put the tank back on the machine.</li><li>Do not put in anything other than water (no hot water, milk, etc.).</li></ul>`,
+      dolcePower: `<p><strong>2. Switch on</strong></p><ul><li>Plug in the machine and press the power button on top.</li><li>While the button <strong>blinks red</strong>, the machine is heating up (about 30 seconds). When it turns <strong>steady green</strong>, it is ready.</li></ul><p><strong>3. Place your cup</strong></p><ul><li>Put a cup on the tray under the outlet.</li></ul>`,
+      dolceLevel: `<p><strong>4. Set the number of bars</strong></p><ul><li>The lid of each capsule shows a number of <strong>bars</strong>.</li><li>Move the small lever on top of the machine <strong>up or down</strong> until the number of green lights matches the bars on your capsule.</li></ul>`,
+      dolceCapsule: `<p><strong>5. Insert the capsule</strong></p><ul><li>Lift the silver handle on the front and pull out the capsule holder.</li><li>Place the capsule in the holder, slide it back into the machine, and lower the handle.</li></ul>`,
+      dolceBrew: `<p><strong>6. Push the lever to brew</strong></p><ul><li>Push the lever to the <strong>right (red)</strong> for a hot drink.</li><li>It stops automatically at the set amount and the lever returns to the centre. To stop earlier, move the lever back to the centre by hand.</li><li>Pushing the lever to the <strong>left (blue)</strong> dispenses water at tank temperature (the machine does not chill it). For a cold drink, brew into a cup with ice.</li></ul>`,
+      dolceFinish: `<p><strong>7. Remove the capsule</strong></p><ul><li>Wait until the power button changes from blinking red to <strong>steady green</strong> (about 5 seconds).</li><li>Lift the handle, take out the holder and throw away the used capsule.</li><li>Rinse the holder with water, put it back and lower the handle.</li></ul><p><strong>Caution:</strong> <strong>never lift the handle while the power button is blinking red</strong> — hot water may spray out. The capsule is hot right after brewing, so do not touch it with your hands. The machine switches off automatically after about 5 minutes without use.</p>`,
+      dolceTwo: `<p><strong>Drinks that use two capsules (latte, cappuccino, etc.)</strong></p><ul><li>First do steps 4–7 with the <strong>milk capsule</strong> (the white one).</li><li>Then do steps 4–7 again with the <strong>coffee capsule</strong>, into the same cup. Set the bars again for each capsule.</li></ul>`
     },
     garbage: {
       body: `<p>When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, any of the containers is fine.</p>`
@@ -192,7 +200,15 @@ window.I18N = {
       washer: `<p><strong>洗濯機</strong>（洗濯・乾燥機能付き）</p>`,
       wire: `<p>室内に洗濯物を干すためのワイヤーがあります。</p>`,
       circulator: `<p><strong>サーキュレーター：</strong>天井が高いため、冷たい空気は下に、暖かい空気は上にたまりやすくなっています。エアコンの効きが弱く感じるときは、サーキュレーターで空気を循環させてください。</p>`,
-      iron: `<p>浴室の棚にスチームアイロンがあります。ご使用の際は浴室内のアイロン台をお使いください。</p>`
+      iron: `<p>浴室の棚にスチームアイロンがあります。ご使用の際は浴室内のアイロン台をお使いください。</p>`,
+      dolceIntro: `<p><strong>カプセル式コーヒーメーカー</strong>（ネスカフェ ドルチェ グスト ジェニオ2）</p><p>専用カプセルをセットしてレバーを倒すだけで、コーヒーやラテを1杯ずつ作れます。下の ①〜⑦ の順にお使いください。</p>`,
+      dolceWater: `<p><strong>① 水を入れる</strong></p><ul><li>本体の後ろにある給水タンクを取り外し、水道水を入れます（「MAX」の線まで）。</li><li>タンクを本体に戻します。</li><li>お湯や牛乳など、水以外のものは入れないでください。</li></ul>`,
+      dolcePower: `<p><strong>② 電源を入れる</strong></p><ul><li>プラグをコンセントに差し、本体の上にある電源ボタンを押します。</li><li>ボタンが<strong>赤く点滅</strong>している間は準備中です（約30秒）。<strong>緑の点灯</strong>に変わったら使えます。</li></ul><p><strong>③ カップを置く</strong></p><ul><li>抽出口の下のトレイにカップを置きます。</li></ul>`,
+      dolceLevel: `<p><strong>④ 目盛りを合わせる</strong></p><ul><li>カプセルのふたに、線の数で<strong>目盛り</strong>が描かれています。</li><li>本体の上にある小さなレバーを<strong>上下</strong>に動かし、緑のランプの数をカプセルの目盛りと同じ数に合わせます。</li></ul>`,
+      dolceCapsule: `<p><strong>⑤ カプセルをセットする</strong></p><ul><li>前面の銀色のハンドルを上げ、カプセルホルダーを手前に引き出します。</li><li>ホルダーにカプセルを入れて本体に戻し、ハンドルを下げます。</li></ul>`,
+      dolceBrew: `<p><strong>⑥ レバーを倒していれる</strong></p><ul><li>レバーを<strong>右（赤）</strong>に倒すと、温かい飲み物が出ます。</li><li>設定した量が出ると自動で止まり、レバーが真ん中に戻ります。途中で止めたいときは、手でレバーを真ん中に戻してください。</li><li>レバーを<strong>左（青）</strong>に倒すと、タンクの水がそのままの温度で出ます（冷やす機能はありません）。冷たい飲み物は、氷を入れたカップにいれてください。</li></ul>`,
+      dolceFinish: `<p><strong>⑦ カプセルを捨てる</strong></p><ul><li>電源ボタンが赤い点滅から<strong>緑の点灯</strong>に変わるまで待ちます（約5秒）。</li><li>ハンドルを上げてホルダーを取り出し、使い終わったカプセルを捨てます。</li><li>ホルダーを水ですすいで本体に戻し、ハンドルを下げます。</li></ul><p><strong>ご注意：</strong>電源ボタンが<strong>赤く点滅している間は、絶対にハンドルを上げないでください</strong>（熱いお湯が噴き出すおそれがあります）。使った直後のカプセルは熱いので、手で触らないでください。約5分操作しないと、電源は自動で切れます。</p>`,
+      dolceTwo: `<p><strong>ラテ・カプチーノなど、カプセルを2個使う飲み物</strong></p><ul><li>先に<strong>ミルクのカプセル</strong>（白いカプセル）で ④〜⑦ を行います。</li><li>続けて同じカップに、<strong>コーヒーのカプセル</strong>で ④〜⑦ を行います。目盛りはカプセルごとに合わせ直してください。</li></ul>`
     },
     garbage: {
       body: `<p>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どの容器に入れても構いません。</p>`
@@ -297,6 +313,14 @@ window.I18N = {
       microwaveWattage: `<p>功率：200W（解凍）／500W、700W（加熱）。內側旋鈕設定時間，外側旋鈕設定解凍重量。</p>`,
       kettle: `<p><strong>電熱水壺</strong> — 請注意：水煮沸後，除握把外的壺身也會變燙，請小心使用。</p>`,
       coffee: `<p>廚房設有掛耳式咖啡架，歡迎享用手沖咖啡！</p>`,
+      dolceIntro: `<p><strong>膠囊咖啡機</strong>（雀巢 Dolce Gusto Genio 2）</p><p>放入專用膠囊、撥動撥桿，即可一杯一杯地沖煮咖啡、拿鐵等飲品。請依照下方步驟 1～7 使用。（圖片取自日文說明書，步驟編號相同。）</p>`,
+      dolceWater: `<p><strong>1. 加水</strong></p><ul><li>取下機身後方的水箱，裝入自來水（最多到「MAX」線）。</li><li>將水箱裝回機身。</li><li>請勿加入水以外的東西（熱水、牛奶等）。</li></ul>`,
+      dolcePower: `<p><strong>2. 開啟電源</strong></p><ul><li>插上插頭，按下機身上方的電源鍵。</li><li>電源鍵<strong>紅燈閃爍</strong>時表示正在加熱（約30秒），變成<strong>綠燈恆亮</strong>後即可使用。</li></ul><p><strong>3. 放置杯子</strong></p><ul><li>將杯子放在出水口下方的托盤上。</li></ul>`,
+      dolceLevel: `<p><strong>4. 調整刻度</strong></p><ul><li>膠囊的上蓋印有以橫線數量表示的<strong>刻度</strong>。</li><li>將機身上方的小撥桿<strong>上下</strong>撥動，使綠燈的數量與膠囊上的刻度相同。</li></ul>`,
+      dolceCapsule: `<p><strong>5. 放入膠囊</strong></p><ul><li>抬起正面的銀色把手，將膠囊托架向外拉出。</li><li>把膠囊放入托架，推回機身，再把把手壓下。</li></ul>`,
+      dolceBrew: `<p><strong>6. 撥動撥桿沖煮</strong></p><ul><li>將撥桿撥向<strong>右側（紅色）</strong>，即可沖出熱飲。</li><li>達到設定的水量後會自動停止，撥桿回到中間。若想中途停止，請用手將撥桿撥回中間。</li><li>將撥桿撥向<strong>左側（藍色）</strong>，會流出水箱內原本溫度的水（本機沒有冷卻功能）。想喝冰飲時，請沖入放有冰塊的杯子。</li></ul>`,
+      dolceFinish: `<p><strong>7. 取出膠囊</strong></p><ul><li>請等到電源鍵由紅燈閃爍變為<strong>綠燈恆亮</strong>（約5秒）。</li><li>抬起把手，取出托架，丟棄用過的膠囊。</li><li>用水沖洗托架後裝回機身，並壓下把手。</li></ul><p><strong>注意：</strong><strong>電源鍵紅燈閃爍時，請絕對不要抬起把手</strong>（熱水可能噴出）。剛沖煮完的膠囊很燙，請勿用手觸摸。約5分鐘未操作，電源會自動關閉。</p>`,
+      dolceTwo: `<p><strong>拿鐵、卡布奇諾等需要兩顆膠囊的飲品</strong></p><ul><li>先用<strong>牛奶膠囊</strong>（白色膠囊）進行步驟 4～7。</li><li>接著用<strong>咖啡膠囊</strong>，在同一個杯子再進行一次步驟 4～7。每顆膠囊都請重新調整刻度。</li></ul>`,
       riceCooker: `<p><strong>電子鍋</strong></p>`,
       washer: `<p><strong>洗衣機</strong>（具備洗衣與烘乾功能）</p>`,
       wire: `<p>房內設有曬衣繩，可用來晾曬衣物。</p>`,
@@ -406,6 +430,14 @@ window.I18N = {
       microwaveWattage: `<p>출력: 200W(해동) / 500W・700W(데우기). 안쪽 다이얼은 시간, 바깥쪽 다이얼은 해동할 중량을 설정합니다.</p>`,
       kettle: `<p><strong>전기 주전자</strong> — 물이 끓으면 손잡이를 제외한 본체도 뜨거워지니 주의해 주세요.</p>`,
       coffee: `<p>주방에 드립백 거치대가 있습니다. 드립 커피를 즐겨보세요!</p>`,
+      dolceIntro: `<p><strong>캡슐 커피 머신</strong>（네스카페 돌체구스토 지니오 2）</p><p>전용 캡슐을 넣고 레버를 밀기만 하면 커피, 라테 등을 한 잔씩 만들 수 있습니다. 아래 1~7 순서대로 사용해 주세요. (그림은 일본어 설명서의 것이며, 단계 번호는 같습니다.)</p>`,
+      dolceWater: `<p><strong>1. 물 넣기</strong></p><ul><li>본체 뒤쪽의 물탱크를 분리해 수돗물을 넣습니다（「MAX」 선까지）.</li><li>물탱크를 본체에 다시 끼웁니다.</li><li>뜨거운 물, 우유 등 물 이외의 것은 넣지 마세요.</li></ul>`,
+      dolcePower: `<p><strong>2. 전원 켜기</strong></p><ul><li>플러그를 콘센트에 꽂고 본체 위쪽의 전원 버튼을 누릅니다.</li><li>버튼이 <strong>빨간색으로 깜빡이는</strong> 동안은 예열 중입니다（약 30초）. <strong>초록색으로 켜지면</strong> 사용할 수 있습니다.</li></ul><p><strong>3. 컵 놓기</strong></p><ul><li>추출구 아래 받침대에 컵을 놓습니다.</li></ul>`,
+      dolceLevel: `<p><strong>4. 눈금 맞추기</strong></p><ul><li>캡슐 뚜껑에 줄의 개수로 <strong>눈금</strong>이 표시되어 있습니다.</li><li>본체 위쪽의 작은 레버를 <strong>위아래</strong>로 움직여, 초록색 램프의 개수를 캡슐의 눈금과 같게 맞춥니다.</li></ul>`,
+      dolceCapsule: `<p><strong>5. 캡슐 넣기</strong></p><ul><li>앞쪽의 은색 손잡이를 올리고 캡슐 홀더를 앞으로 빼냅니다.</li><li>홀더에 캡슐을 넣어 본체에 다시 끼우고 손잡이를 내립니다.</li></ul>`,
+      dolceBrew: `<p><strong>6. 레버를 밀어 추출하기</strong></p><ul><li>레버를 <strong>오른쪽（빨간색）</strong>으로 밀면 따뜻한 음료가 나옵니다.</li><li>설정한 양이 나오면 자동으로 멈추고 레버가 가운데로 돌아옵니다. 중간에 멈추려면 손으로 레버를 가운데로 되돌려 주세요.</li><li>레버를 <strong>왼쪽（파란색）</strong>으로 밀면 물탱크의 물이 그대로의 온도로 나옵니다（냉각 기능은 없습니다）. 차가운 음료는 얼음을 넣은 컵에 추출해 주세요.</li></ul>`,
+      dolceFinish: `<p><strong>7. 캡슐 버리기</strong></p><ul><li>전원 버튼이 빨간색 깜빡임에서 <strong>초록색 점등</strong>으로 바뀔 때까지 기다립니다（약 5초）.</li><li>손잡이를 올리고 홀더를 꺼내 사용한 캡슐을 버립니다.</li><li>홀더를 물로 헹군 뒤 본체에 다시 끼우고 손잡이를 내립니다.</li></ul><p><strong>주의:</strong> <strong>전원 버튼이 빨간색으로 깜빡이는 동안에는 절대로 손잡이를 올리지 마세요</strong>（뜨거운 물이 뿜어져 나올 수 있습니다）. 추출 직후의 캡슐은 뜨거우니 손으로 만지지 마세요. 약 5분간 조작하지 않으면 전원이 자동으로 꺼집니다.</p>`,
+      dolceTwo: `<p><strong>라테·카푸치노 등 캡슐을 2개 사용하는 음료</strong></p><ul><li>먼저 <strong>우유 캡슐</strong>（흰색 캡슐）로 4~7을 진행합니다.</li><li>이어서 같은 컵에 <strong>커피 캡슐</strong>로 4~7을 한 번 더 진행합니다. 눈금은 캡슐마다 다시 맞춰 주세요.</li></ul>`,
       riceCooker: `<p><strong>전기밥솥</strong></p>`,
       washer: `<p><strong>세탁기</strong> (세탁・건조 기능 포함)</p>`,
       wire: `<p>객실 내에 빨래를 널 수 있는 빨랫줄이 있습니다.</p>`,

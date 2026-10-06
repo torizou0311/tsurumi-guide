@@ -59,7 +59,16 @@ window.ROOMS = [
     //       （写真を追加したら、ここに登録し、data/content.js の rooms に '201' を足してください）
     photos: {
       wifiQr5: 'images/201/wifi-qr-5g.png',
-      wifiQr24: 'images/201/wifi-qr-24g.png'
+      wifiQr24: 'images/201/wifi-qr-24g.png',
+      // カプセル式コーヒーメーカー（ドルチェ グスト ジェニオ2）。公式の取扱説明書の図
+      dolceMachine: 'images/201/dolcegusto-machine.png',
+      dolceWater: 'images/201/dolcegusto-step1.png',
+      dolcePower: 'images/201/dolcegusto-step2.png',
+      dolceLevel: 'images/201/dolcegusto-step3.png',
+      dolceCapsule: 'images/201/dolcegusto-step4.png',
+      dolceBrew: 'images/201/dolcegusto-step5.png',
+      dolceTwo: 'images/201/dolcegusto-step6.png',
+      dolceFinish: 'images/201/dolcegusto-step7.png'
     }
   }
 ];

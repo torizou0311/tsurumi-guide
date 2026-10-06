@@ -547,6 +547,11 @@ button { font-family: inherit; }
   max-width: 200px;
 }
 
+/* 縦長の図（取扱説明書の図など）を小さめに出す */
+.guide-photo--narrow {
+  max-width: 280px;
+}
+
 /* ------------------------------ コピー行 ------------------------------ */
 
 .copy-row {
