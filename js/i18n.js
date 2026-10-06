@@ -76,7 +76,8 @@ window.I18N = {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
       titles: { ac: `Air conditioner`, induction: `Induction cooktop`, microwave: `Microwave`, kettle: `Electric kettle`, coffee: `Drip coffee`, ricecooker: `Rice cooker`, washer: `Washing machine`, wire: `Indoor drying wire`, circulator: `Air circulator`, iron: `Steam iron`, dolcegusto: `Capsule coffee machine (Nescafé Dolce Gusto Genio 2)` },
       ac: `<p>Operate using the remote control provided.</p>`,
-      induction: `<p>In the kitchen.</p>`,
+      induction: `<p>In the kitchen. The picture below shows the control panel.</p>`,
+      inductionSteps: `<p><strong>How to use</strong></p><ul><li>Place a pan in the centre of the cooktop (it will not heat without a pan).</li><li><strong>① Power:</strong> press and hold for at least 2 seconds.</li><li><strong>② Heating ON / OFF:</strong> press it, then press <strong>③ ◀ or ▶</strong> to start heating.</li><li>Use ◀ ▶ to adjust the heat (5 levels: 弱 = low, 1, 2, 3, 強 = high).</li><li>When finished, press “Heating ON / OFF” to stop, then press “Power” to switch off.</li></ul><p><strong>Suitable pans:</strong> flat-bottomed pans that a magnet sticks to, such as iron or stainless steel (base about 12–24 cm across). Clay pots, glass, aluminium and copper pans do not work. If all the heat-level lamps blink and nothing heats, the pan is unsuitable or not in the centre.</p><p><strong>Caution:</strong> the cooktop stays hot after use. Do not touch it until the “Hot surface” lamp (高温注意) goes off. Do not leave it unattended while cooking.</p>`,
       microwave: ``,
       microwaveWattage: `<p>Power levels: 200W (defrost) / 500W and 700W (reheat). The inner dial sets the timer; the outer dial sets the defrost weight.</p>`,
       kettle: `<p>Please note: once the water boils, the body of the kettle (except the handle) becomes hot too.</p>`,
@@ -195,7 +196,8 @@ window.I18N = {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
       titles: { ac: `エアコン`, induction: `IHクッキングヒーター`, microwave: `電子レンジ`, kettle: `電気ケトル`, coffee: `ドリップコーヒー`, ricecooker: `炊飯器`, washer: `洗濯機`, wire: `室内物干しワイヤー`, circulator: `サーキュレーター`, iron: `スチームアイロン`, dolcegusto: `カプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）` },
       ac: `<p>付属のリモコンで操作してください。</p>`,
-      induction: `<p>キッチンにあります。</p>`,
+      induction: `<p>キッチンにあります。下の図は操作パネルです。</p>`,
+      inductionSteps: `<p><strong>使い方</strong></p><ul><li>鍋をプレートの中央に置きます（鍋を置かないと加熱できません）。</li><li><strong>「電源」</strong>を2秒以上長押しします。</li><li><strong>「加熱 入/切」</strong>を押し、続けて <strong>◀ か ▶</strong> を押すと加熱が始まります。</li><li>◀ ▶ で火力を調節します（弱・1・2・3・強の5段階）。</li><li>終わったら「加熱 入/切」を押して止め、「電源」を押して切ります。</li></ul><p><strong>使える鍋：</strong>鉄やステンレスなど磁石がつく、底が平らな鍋（底の直径 約12〜24cm）。土鍋・ガラス・アルミ・銅の鍋は使えません。火力のランプが全部点滅して加熱されないときは、鍋が合っていないか、中央に置かれていません。</p><p><strong>ご注意：</strong>使用後もプレートは熱くなっています。「高温注意」ランプが消えるまで触らないでください。使用中はそばを離れないでください。</p>`,
       microwave: ``,
       microwaveWattage: `<p>出力：200W（解凍）／500W・700W（温め）。内側のダイヤルでタイマー、外側のダイヤルで解凍する重さを設定します。</p>`,
       kettle: `<p>お湯が沸くと、持ち手以外の本体部分も熱くなりますのでご注意ください。</p>`,
@@ -314,7 +316,8 @@ window.I18N = {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
       titles: { ac: `冷氣`, induction: `IH電磁爐`, microwave: `微波爐`, kettle: `電熱水壺`, coffee: `掛耳式咖啡`, ricecooker: `電子鍋`, washer: `洗衣機`, wire: `室內曬衣繩`, circulator: `循環扇`, iron: `蒸氣熨斗`, dolcegusto: `膠囊咖啡機（雀巢 Dolce Gusto Genio 2）` },
       ac: `<p>請使用附贈的遙控器操作。</p>`,
-      induction: `<p>位於廚房。</p>`,
+      induction: `<p>位於廚房。下圖為操作面板。</p>`,
+      inductionSteps: `<p><strong>使用方法</strong></p><ul><li>將鍋子放在面板中央（沒有放鍋子時無法加熱）。</li><li><strong>① 電源：</strong>長按2秒以上。</li><li><strong>② 加熱 開／關：</strong>按下後，再按 <strong>③ ◀ 或 ▶</strong> 即開始加熱。</li><li>用 ◀ ▶ 調整火力（共5段：弱、1、2、3、強）。</li><li>使用完畢後，按「加熱 開／關」停止，再按「電源」關閉。</li></ul><p><strong>可使用的鍋具：</strong>磁鐵可吸附的平底鍋，例如鐵鍋、不鏽鋼鍋（鍋底直徑約12～24公分）。砂鍋、玻璃、鋁、銅製鍋具無法使用。若火力指示燈全部閃爍且無法加熱，表示鍋具不適用或沒有放在中央。</p><p><strong>注意：</strong>使用後面板仍然很燙，請在「高溫注意」（高温注意）指示燈熄滅前不要觸摸。使用中請勿離開。</p>`,
       microwave: ``,
       microwaveWattage: `<p>功率：200W（解凍）／500W、700W（加熱）。內側旋鈕設定時間，外側旋鈕設定解凍重量。</p>`,
       kettle: `<p>請注意：水煮沸後，除握把外的壺身也會變燙，請小心使用。</p>`,
@@ -433,7 +436,8 @@ window.I18N = {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
       titles: { ac: `에어컨`, induction: `인덕션 쿡탑`, microwave: `전자레인지`, kettle: `전기 주전자`, coffee: `드립 커피`, ricecooker: `전기밥솥`, washer: `세탁기`, wire: `실내 빨랫줄`, circulator: `서큘레이터`, iron: `스팀다리미`, dolcegusto: `캡슐 커피 머신（네스카페 돌체구스토 지니오 2）` },
       ac: `<p>제공된 리모컨으로 작동하세요.</p>`,
-      induction: `<p>주방에 있습니다.</p>`,
+      induction: `<p>주방에 있습니다. 아래 그림은 조작 패널입니다.</p>`,
+      inductionSteps: `<p><strong>사용 방법</strong></p><ul><li>냄비를 상판 중앙에 올려놓습니다（냄비가 없으면 가열되지 않습니다）.</li><li><strong>① 전원:</strong> 2초 이상 길게 누릅니다.</li><li><strong>② 가열 켜기 / 끄기:</strong> 누른 다음 <strong>③ ◀ 또는 ▶</strong> 를 누르면 가열이 시작됩니다.</li><li>◀ ▶ 로 화력을 조절합니다（5단계: 弱 = 약, 1, 2, 3, 強 = 강）.</li><li>사용이 끝나면 「가열 켜기 / 끄기」를 눌러 멈추고, 「전원」을 눌러 끕니다.</li></ul><p><strong>사용할 수 있는 냄비:</strong> 자석이 붙는 바닥이 평평한 냄비（철, 스테인리스 등, 바닥 지름 약 12~24cm）. 뚝배기, 유리, 알루미늄, 구리 냄비는 사용할 수 없습니다. 화력 램프가 모두 깜빡이고 가열되지 않으면 냄비가 맞지 않거나 중앙에 놓이지 않은 것입니다.</p><p><strong>주의:</strong> 사용 후에도 상판은 뜨겁습니다. 「고온 주의」（高温注意） 램프가 꺼질 때까지 만지지 마세요. 사용 중에는 자리를 비우지 마세요.</p>`,
       microwave: ``,
       microwaveWattage: `<p>출력: 200W(해동) / 500W・700W(데우기). 안쪽 다이얼은 시간, 바깥쪽 다이얼은 해동할 중량을 설정합니다.</p>`,
       kettle: `<p>물이 끓으면 손잡이를 제외한 본체도 뜨거워지니 주의해 주세요.</p>`,

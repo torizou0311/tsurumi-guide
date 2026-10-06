@@ -64,7 +64,8 @@ window.SECTIONS = [
     // エアコンとIHは全部屋共通。それ以外は rooms で出す部屋を指定（103・201は写真が揃うまで非表示）
     blocks: [
       { key: 'ac', anchor: 'ac', image: 'images/common/appliance-ac-{lang}.png' }, // {lang} は表示中の言語に置き換わる（図は tools/make-ac-remote.py で作る）
-      { key: 'induction', anchor: 'induction', image: 'images/common/appliance-induction.png' },
+      { key: 'induction', anchor: 'induction', image: 'images/common/appliance-induction-{lang}.png' }, // 図は tools/make-ih-panel.py で作る
+      { key: 'inductionSteps' },
       { key: 'microwave', anchor: 'microwave', rooms: ['202'], image: 'room:applianceMicrowave' },
       // { key: 'microwaveWattage', rooms: ['103'] }, // 103のレンジのワット数説明。103でレンジの項目を出すときに戻す
       { key: 'kettle', anchor: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
