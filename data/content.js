@@ -71,12 +71,12 @@ window.SECTIONS = [
       { key: 'kettle', anchor: 'kettle', rooms: ['202'], image: 'room:applianceKettle' },
       { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
       { key: 'riceCooker', anchor: 'ricecooker', rooms: ['202'], image: 'room:applianceRiceCooker' },
-      // ドラム式洗濯乾燥機（シャープ ES-S7G）。図は tools/make-washer-panel.py で作る
-      { key: 'washer', anchor: 'washer', rooms: ['201', '202'], image: 'images/common/appliance-washer-main-{lang}.png' },
-      { key: 'washerSteps', rooms: ['201', '202'] },
-      { key: 'washerDetergent', rooms: ['201', '202'], image: 'images/common/appliance-washer-detergent.png', narrow: true },
-      { key: 'washerAdjust', rooms: ['201', '202'], image: 'images/common/appliance-washer-sub-{lang}.png' },
-      { key: 'washerNotes', rooms: ['201', '202'] },
+      // ドラム式洗濯乾燥機。全部屋共通（103・201はシャープ ES-S7G、202は ES-S7F。操作パネルと使い方は同じ）。図は tools/make-washer-panel.py で作る
+      { key: 'washer', anchor: 'washer', image: 'images/common/appliance-washer-main-{lang}.png' },
+      { key: 'washerSteps' },
+      { key: 'washerDetergent', image: 'images/common/appliance-washer-detergent.png', narrow: true },
+      { key: 'washerAdjust', image: 'images/common/appliance-washer-sub-{lang}.png' },
+      { key: 'washerNotes' },
       { key: 'wire', anchor: 'wire', rooms: ['202'], image: 'room:applianceWire' },
       { key: 'circulator', anchor: 'circulator', rooms: ['202'], image: 'room:applianceCirculator' },
       { key: 'iron', anchor: 'iron', rooms: ['202'], image: 'room:applianceIron' },
