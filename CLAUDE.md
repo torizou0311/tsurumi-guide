@@ -9,10 +9,11 @@
 - 4言語: en / ja / zh-Hant / ko（ヘッダーのドロップダウンで切替）
 - 部屋: 103(1F) / 201(2F) / 202(2F)。URL `?room=103` で部屋が決まる。なしなら部屋選択画面
 - 建物共通の文章は `js/i18n.js` に1か所だけ。部屋ごとの差分は `data/rooms.js`、セクション構成と写真の紐付けは `data/content.js`
-- 写真は `images/common/`（全部屋共通。チェックイン/困ったときの写真 unlock1・unlock2・keybox・keybox-troubleshoot・hotwater-panel・breaker、共通家電の appliance-ac・appliance-induction、ゴミ置き場 garbage.jpg も1組だけここ）, `images/103/`, `images/202/`, `images/201/`（部屋別: Wi-Fi QR・家電）
+- 写真は `images/common/`（全部屋共通。チェックイン/困ったときの写真 unlock1・unlock2・keybox・keybox-troubleshoot・hotwater-panel・breaker、共通家電の appliance-ac-{lang}（言語別）・appliance-induction、ゴミ置き場 garbage.jpg も1組だけここ）, `images/103/`, `images/202/`, `images/201/`（部屋別: Wi-Fi QR・家電）
 - content.js の写真指定: 共通は `images/common/…` を直接書く／部屋別だけ `room:xxx`／特定部屋だけに出す項目は `rooms: [...]`
 - ホームの「よく使う情報」は、メニュー一覧の一部を上に並べているだけ（2026-10-02変更）。出す項目は `data/content.js` 末尾の `QUICK_SECTIONS`（セクションidの配列、6個で2行×3列のタイル表示）。当面はオーナー指定の6個（access/checkin/wifi/garbage/trouble/emergency の順）。GA4のデータが溜まったら、よく見られているページに入れ替える方針
 - 家電ごとの見出しとQR用リンク（2026-10-06追加）: `data/content.js` の家電の項目に `anchor: '名前'` を付けると、家電名の見出し（文字は `js/i18n.js` の `appliances.titles`）が出て、`…/index.html?room=201#/appliances/名前` でその家電の位置を直接開ける。家電のそばに貼るQRはこのURLで作る（部屋番号 `?room=` も必ず入れる）。**anchor の名前は貼ったQRが使えなくなるので変えない**。現在の名前: ac / induction / microwave / kettle / coffee / ricecooker / washer / wire / circulator / iron / dolcegusto
+- エアコンのリモコンの図（2026-10-06作り直し）: `images/common/appliance-ac-{lang}.png`（ja はリモコンの図だけ、en / zh-Hant / ko は各ボタンの訳付き）。元の図 `images/common/ac-remote-base.png` は、三菱電機公式の取扱説明書（MSZ-GVxx3、https://dl.mitsubishielectric.co.jp/dl/ldg/wink/ssl/wink_doc/m_contents/k_ibim/MSZ-GVxx3_H01.pdf の6ページ）のリモコン図から説明用の線を消したもの。訳の文言や配置を直すときは `tools/make-ac-remote.py` の LABELS を書き換えて `python tools/make-ac-remote.py` を実行する（Windowsのフォントを使う）。現物のリモコンは RH151 系と推定（裏のシールでは未確認）。図は「入/切」、現物は「切/入」と表記の順が違うが、ボタンの配置は同じ。「電流切換」「リセット」はゲストが触る必要がないので訳を付けていない。以前の図（オーナーが写真に英語を入れたもの、appliance-ac.png）は削除済み（git の履歴には残っている）
 - 元原稿（Canvaから抽出した英文）: `docs/manual-source.md`
 - 使い方の説明（オーナー向け）: `README.md`
 - noindex と robots.txt で検索エンジン除外済み
