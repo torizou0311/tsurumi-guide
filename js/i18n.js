@@ -109,7 +109,7 @@ window.I18N = {
     },
     projector: {
       titles: { basics: `Power and remote`, youtube: `Watching YouTube`, streaming: `Watching Netflix and Prime Video`, cast: `Showing your phone's screen`, hdmi: `Connecting by HDMI`, logout: `Before you check out`, trouble: `If something doesn't work` },
-      intro: `<p>Room 201 has a projector (JMGO PicoPlay+) that shows video on the wall. You can watch YouTube, Netflix, Prime Video and more.</p><div class="notice notice--warn"><p><strong>Please note</strong></p><ul><li>Do not look into the lens; the light is very bright.</li><li>While it is projecting, do not stand the projector on its end. The air vent is on the bottom, and if it is blocked the projector overheats and shuts off automatically.</li></ul></div>`,
+      intro: `<p>Room 201 has a projector (JMGO PicoPlay+) that shows video on the wall. You can watch YouTube, Netflix, Prime Video and more.</p><div class="notice notice--warn"><p><strong>Please note</strong></p><ul><li>Do not look into the lens; the light is very bright.</li><li>While it is projecting, do not stand the projector on its end directly on a table or shelf. The air vent is on the bottom, and if it is blocked the projector overheats and shuts off automatically.</li><li>When someone passes in front of the lens, the picture dims automatically to protect eyes. This is not a fault.</li></ul></div>`,
       basics: `<p>The picture below shows the remote control. The numbers ①–⑬ on this page match the numbers in the picture.</p>`,
       basicsSteps: `<p><strong>Turn on</strong></p><ul><li>Press <strong>① Power</strong> on the remote.</li><li>If it does not turn on, press the power button on the projector itself (see "Power button" in the picture under "Connecting by HDMI" on this page).</li></ul><p><strong>Turn off</strong></p><ul><li>Press <strong>① Power</strong> on the remote.</li></ul><p><strong>How to operate</strong></p><ul><li>Focus and the shape of the picture adjust automatically.</li><li>Use <strong>② Arrow keys</strong> to choose and <strong>⑨ OK</strong> to confirm.</li><li><strong>③ Back</strong> goes back one step.</li><li><strong>⑩ Home</strong> returns to the home screen.</li></ul>`,
       youtube: `<p>Press the <strong>⑥ YouTube</strong> button on the remote. You can watch without logging in.</p><p>If you log in to your own account, be sure to log out before you check out (see <a href="#/projector/logout">Before you check out</a>).</p>`,
@@ -252,7 +252,7 @@ window.I18N = {
     },
     projector: {
       titles: { basics: `電源とリモコン`, youtube: `YouTubeを見る`, streaming: `Netflix・Prime Videoを見る`, cast: `スマホの映像を映す`, hdmi: `HDMIでつなぐ`, logout: `チェックアウトの前に`, trouble: `うまくいかないとき` },
-      intro: `<p>201号室には、壁に映像を映せるプロジェクター（JMGO PicoPlay+）があります。YouTube・Netflix・Prime Video などをご覧いただけます。</p><div class="notice notice--warn"><p><strong>ご注意</strong></p><ul><li>レンズから出る強い光をのぞき込まないでください。</li><li>映している間は、本体を立てて置かないでください。本体の底に通気口があり、ふさぐと熱で自動的に止まります。</li></ul></div>`,
+      intro: `<p>201号室には、壁に映像を映せるプロジェクター（JMGO PicoPlay+）があります。YouTube・Netflix・Prime Video などをご覧いただけます。</p><div class="notice notice--warn"><p><strong>ご注意</strong></p><ul><li>レンズから出る強い光をのぞき込まないでください。</li><li>映している間は、本体をテーブルや台に直接立てて置かないでください。本体の底に通気口があり、ふさぐと熱で自動的に止まります。</li><li>レンズの前を人が横切ると、目を守るために映像が自動で暗くなります。故障ではありません。</li></ul></div>`,
       basics: `<p>下の図は、付属のリモコンです。このページの ①〜⑬ は、図の番号です。</p>`,
       basicsSteps: `<p><strong>つける</strong></p><ul><li>リモコンの<strong>①電源</strong>ボタンを押します。</li><li>つかないときは、本体の電源ボタンを押します（場所は、このページの「HDMIでつなぐ」の図の「電源ボタン」です）。</li></ul><p><strong>消す</strong></p><ul><li>リモコンの<strong>①電源</strong>ボタンを押します。</li></ul><p><strong>操作のしかた</strong></p><ul><li>ピントと画面の形は自動で合います。</li><li><strong>②方向キー</strong>で選び、<strong>⑨決定</strong>で決めます。</li><li><strong>③戻る</strong>で1つ前に戻ります。</li><li><strong>⑩ホーム</strong>でホーム画面に戻ります。</li></ul>`,
       youtube: `<p>リモコンの<strong>⑥YouTube</strong>ボタンを押します。ログインしなくても見られます。</p><p>ご自身のアカウントでログインした場合は、チェックアウトの前に必ずログアウトしてください（<a href="#/projector/logout">チェックアウトの前に</a>をご覧ください）。</p>`,
@@ -395,7 +395,7 @@ window.I18N = {
     },
     projector: {
       titles: { basics: `電源與遙控器`, youtube: `觀看 YouTube`, streaming: `觀看 Netflix 與 Prime Video`, cast: `投放手機畫面`, hdmi: `以 HDMI 連接`, logout: `退房前`, trouble: `遇到問題時` },
-      intro: `<p>201 號房有一台可將影像投射到牆上的投影機（JMGO PicoPlay+）。您可以觀看 YouTube、Netflix、Prime Video 等。</p><div class="notice notice--warn"><p><strong>注意事項</strong></p><ul><li>請勿直視鏡頭，光線非常強。</li><li>投影時，請勿將機身直立擺放。機身底部有散熱孔，一旦被擋住，會因過熱而自動停止運作。</li></ul></div>`,
+      intro: `<p>201 號房有一台可將影像投射到牆上的投影機（JMGO PicoPlay+）。您可以觀看 YouTube、Netflix、Prime Video 等。</p><div class="notice notice--warn"><p><strong>注意事項</strong></p><ul><li>請勿直視鏡頭，光線非常強。</li><li>投影時，請勿將機身直接直立擺放在桌面或檯面上。機身底部有散熱孔，一旦被擋住，會因過熱而自動停止運作。</li><li>有人經過鏡頭前方時，為了保護眼睛，畫面會自動變暗。這不是故障。</li></ul></div>`,
       basics: `<p>下圖為隨附的遙控器。本頁中的 ①〜⑬ 對應圖中的編號。</p>`,
       basicsSteps: `<p><strong>開機</strong></p><ul><li>按下遙控器的<strong>①電源</strong>鍵。</li><li>若無法開機，請按投影機機身上的電源按鈕（位置請見本頁「以 HDMI 連接」圖中的「電源按鈕」）。</li></ul><p><strong>關機</strong></p><ul><li>按下遙控器的<strong>①電源</strong>鍵。</li></ul><p><strong>操作方式</strong></p><ul><li>對焦與畫面形狀會自動調整。</li><li>用<strong>②方向鍵</strong>選擇，按<strong>⑨確認</strong>決定。</li><li>按<strong>③返回</strong>可回到上一步。</li><li>按<strong>⑩主畫面</strong>可回到主畫面。</li></ul>`,
       youtube: `<p>按下遙控器的<strong>⑥YouTube</strong>鍵。不需登入即可觀看。</p><p>若您登入了自己的帳號，退房前請務必登出（請見<a href="#/projector/logout">退房前</a>）。</p>`,
@@ -538,7 +538,7 @@ window.I18N = {
     },
     projector: {
       titles: { basics: `전원과 리모컨`, youtube: `YouTube 보기`, streaming: `Netflix·Prime Video 보기`, cast: `스마트폰 화면 띄우기`, hdmi: `HDMI로 연결하기`, logout: `체크아웃 전에`, trouble: `문제가 생겼을 때` },
-      intro: `<p>201호에는 벽에 영상을 비출 수 있는 프로젝터(JMGO PicoPlay+)가 있습니다. YouTube, Netflix, Prime Video 등을 보실 수 있습니다.</p><div class="notice notice--warn"><p><strong>주의사항</strong></p><ul><li>렌즈에서 나오는 강한 빛을 들여다보지 마세요.</li><li>영상을 비추는 동안에는 본체를 세워 두지 마세요. 본체 바닥에 환기구가 있어, 막히면 열 때문에 자동으로 꺼집니다.</li></ul></div>`,
+      intro: `<p>201호에는 벽에 영상을 비출 수 있는 프로젝터(JMGO PicoPlay+)가 있습니다. YouTube, Netflix, Prime Video 등을 보실 수 있습니다.</p><div class="notice notice--warn"><p><strong>주의사항</strong></p><ul><li>렌즈에서 나오는 강한 빛을 들여다보지 마세요.</li><li>영상을 비추는 동안에는 본체를 테이블이나 선반 위에 직접 세워 두지 마세요. 본체 바닥에 환기구가 있어, 막히면 열 때문에 자동으로 꺼집니다.</li><li>렌즈 앞을 사람이 지나가면 눈을 보호하기 위해 화면이 자동으로 어두워집니다. 고장이 아닙니다.</li></ul></div>`,
       basics: `<p>아래 그림은 함께 놓여 있는 리모컨입니다. 이 페이지의 ①〜⑬은 그림의 번호입니다.</p>`,
       basicsSteps: `<p><strong>켜기</strong></p><ul><li>리모컨의 <strong>①전원</strong> 버튼을 누릅니다.</li><li>켜지지 않으면 본체의 전원 버튼을 누릅니다(위치는 이 페이지 「HDMI로 연결하기」 그림의 「전원 버튼」입니다).</li></ul><p><strong>끄기</strong></p><ul><li>리모컨의 <strong>①전원</strong> 버튼을 누릅니다.</li></ul><p><strong>조작 방법</strong></p><ul><li>초점과 화면 모양은 자동으로 맞춰집니다.</li><li><strong>②방향 키</strong>로 선택하고 <strong>⑨확인</strong>으로 결정합니다.</li><li><strong>③뒤로</strong>를 누르면 한 단계 전으로 돌아갑니다.</li><li><strong>⑩홈</strong>을 누르면 홈 화면으로 돌아갑니다.</li></ul>`,
       youtube: `<p>리모컨의 <strong>⑥YouTube</strong> 버튼을 누르세요. 로그인하지 않아도 볼 수 있습니다.</p><p>본인 계정으로 로그인했다면 체크아웃 전에 반드시 로그아웃해 주세요(<a href="#/projector/logout">체크아웃 전에</a> 참고).</p>`,
