@@ -763,3 +763,15 @@ button { font-family: inherit; }
   .main { padding-left: 14px; padding-right: 14px; }
   .site-header__top { padding-left: 14px; padding-right: 14px; }
 }
+
+/* 目立たせたい注意書き（プロジェクターのログアウトのお願いなど）。.notice の色違い */
+.notice--warn {
+  background: color-mix(in srgb, #d9822b 14%, var(--surface));
+  border: 1px solid color-mix(in srgb, #d9822b 45%, var(--line));
+  border-left: 5px solid #d9822b;
+  color: var(--ink);
+  font-size: 15px;
+}
+.notice--warn p { margin: 0 0 8px; }
+.notice--warn p:last-child, .notice--warn ul:last-child { margin-bottom: 0; }
+.notice--warn strong { color: var(--ink); }

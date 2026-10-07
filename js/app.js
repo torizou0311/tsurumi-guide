@@ -76,11 +76,18 @@
     external: '<path d="M9 5.5h9.5V15"/><path d="M18.5 5.5 5.5 18.5"/><path d="M14 18.5H5.5V10"/>',
     pin: '<path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/>',
     translate: '<path d="M3 6h10"/><path d="M8 3.5V6"/><path d="M11 6c-.8 3.6-3.4 6.6-7.5 8.5"/><path d="M5.5 9.5c1.3 2.2 3.3 3.9 6 5"/><path d="m12.5 20.5 4.2-9.5 4.3 9.5"/><path d="M14 17.3h5.5"/>',
+    projector: '<rect x="3" y="8" width="18" height="8.5" rx="2"/><circle cx="15.5" cy="12.25" r="2.6"/><path d="M6.5 12.25h2.5"/><path d="M6 16.5v1.8M18 16.5v1.8"/>',
     globe: '<circle cx="12" cy="12" r="8.3"/><path d="M3.7 12h16.6"/><path d="M12 3.7c2.4 2.3 3.7 5.3 3.7 8.3s-1.3 6-3.7 8.3c-2.4-2.3-3.7-5.3-3.7-8.3S9.6 6 12 3.7Z"/>'
   };
   function icon(name, cls) {
     var body = ICONS[name] || '';
     return '<svg class="icon' + (cls ? ' ' + cls : '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + body + '</svg>';
+  }
+
+  // ---------- 部屋ごとに出すセクション ----------
+  // セクションに rooms: ['201'] のように書くと、その部屋だけに出す（メニュー・よく使う情報・URL直接指定のすべて）
+  function sectionVisible(s, room) {
+    return !(s.rooms && room && s.rooms.indexOf(room.id) === -1);
   }
 
   // ---------- ユーティリティ ----------
@@ -250,14 +257,14 @@
     // 指定したものを上に並べているだけです（中身はメニュー一覧と同じ項目）。
     var quickCards = (window.QUICK_SECTIONS || []).map(function (id) {
       var s = window.SECTIONS.filter(function (x) { return x.id === id; })[0];
-      if (!s) return '';
+      if (!s || !sectionVisible(s, room)) return '';
       return '<a class="quick-card" href="#/' + s.id + '">' +
         '<span class="quick-card__icon">' + icon(s.icon) + '</span>' +
         '<span class="quick-card__label">' + labelHtml(d.menu[s.id]) + '</span>' +
       '</a>';
     }).join('');
 
-    var menuItems = window.SECTIONS.filter(function (s) { return s.inMenu; }).map(function (s) {
+    var menuItems = window.SECTIONS.filter(function (s) { return s.inMenu && sectionVisible(s, room); }).map(function (s) {
       return '<a class="menu-item" href="#/' + s.id + '">' +
         '<span class="menu-item__icon">' + icon(s.icon) + '</span>' +
         '<span class="menu-item__label">' + labelHtml(d.menu[s.id]) + '</span>' +
@@ -428,6 +435,7 @@
       var sectionId = hashParts[0];
       anchorId = hashParts[1] || null;
       var section = window.SECTIONS.filter(function (s) { return s.id === sectionId; })[0];
+      if (section && !sectionVisible(section, room)) section = null; // その部屋に無いセクションはホームを表示
       body = section ? renderSection(section, room) : renderHome(room);
       if (section) pageId = section.id;
     }

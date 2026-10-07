@@ -105,6 +105,27 @@ window.SECTIONS = [
     ]
   },
   {
+    // 201号室だけのプロジェクター（JMGO PicoPlay+）。rooms: ['201'] を付けたセクションは、その部屋のメニュー・URLだけに出る
+    // anchor（見出しの名前）は、QRなどで直接開けるように決めてあります。変えないでください。
+    //   例: https://ysr-guide.neconote.net/index.html?room=201#/projector/cast
+    // 図は tools/make-projector-remote.py と tools/make-projector-ports.py で作る（data/rooms.js の photos に登録）
+    id: 'projector',
+    icon: 'projector',
+    inMenu: true,
+    rooms: ['201'],
+    blocks: [
+      { key: 'intro' },
+      { key: 'basics', anchor: 'basics', image: 'room:projectorRemote' },
+      { key: 'basicsSteps' },
+      { key: 'youtube', anchor: 'youtube' },
+      { key: 'streaming', anchor: 'streaming' },
+      { key: 'cast', anchor: 'cast' },
+      { key: 'hdmi', anchor: 'hdmi', image: 'room:projectorPorts' },
+      { key: 'logout', anchor: 'logout' },
+      { key: 'trouble', anchor: 'trouble' }
+    ]
+  },
+  {
     id: 'garbage',
     icon: 'trash',
     inMenu: true,

@@ -42,6 +42,7 @@ window.I18N = {
       checkin: `Check-in & Check-out`,
       wifi: `Wi-Fi`,
       appliances: `Appliances & Facilities`,
+      projector: `Projector`,
       garbage: `Taking Out the Trash`,
       rules: `House Rules`,
       nearby: `Nearby Stores`,
@@ -105,6 +106,18 @@ window.I18N = {
       dolceCapsule: `<p><strong>5. Insert the capsule</strong></p><ul><li>Lift the silver handle on the front and pull out the capsule holder.</li><li>Place the capsule in the holder, slide it back into the machine, and lower the handle.</li></ul>`,
       dolceBrew: `<p><strong>6. Push the lever to brew</strong></p><ul><li>Push the lever to the <strong>right (red)</strong> for a hot drink.</li><li>It stops automatically at the set amount and the lever returns to the centre. To stop earlier, move the lever back to the centre by hand.</li><li>Pushing the lever to the <strong>left (blue)</strong> dispenses water at tank temperature (the machine does not chill it). For a cold drink, brew into a cup with ice.</li></ul>`,
       dolceFinish: `<p><strong>7. Remove the capsule</strong></p><ul><li>Wait until the power button changes from blinking red to <strong>steady green</strong> (about 5 seconds).</li><li>Lift the handle, take out the holder and throw away the used capsule.</li><li>Rinse the holder with water, put it back and lower the handle.</li></ul><p><strong>Caution:</strong> <strong>never lift the handle while the power button is blinking red</strong> — hot water may spray out. The capsule is hot right after brewing, so do not touch it with your hands. The machine switches off automatically after about 5 minutes without use.</p>`,
+    },
+    projector: {
+      titles: { basics: `Power and remote`, youtube: `Watching YouTube`, streaming: `Watching Netflix and Prime Video`, cast: `Showing your phone's screen`, hdmi: `Connecting by HDMI`, logout: `Before you check out`, trouble: `If something doesn't work` },
+      intro: `<p>Room 201 has a projector (JMGO PicoPlay+) that shows video on the wall. You can watch YouTube, Netflix, Prime Video and more.</p><div class="notice notice--warn"><p><strong>Please note</strong></p><ul><li>Do not look into the lens; the light is very bright.</li><li>While it is projecting, do not stand the projector on its end. The air vent is on the bottom, and if it is blocked the projector overheats and shuts off automatically.</li></ul></div>`,
+      basics: `<p>The picture below shows the remote control. The numbers ①–⑬ on this page match the numbers in the picture.</p>`,
+      basicsSteps: `<p><strong>Turn on</strong></p><ul><li>Press <strong>① Power</strong> on the remote.</li><li>If it does not turn on, press the power button on the projector itself (see "Power button" in the picture under "Connecting by HDMI" on this page).</li></ul><p><strong>Turn off</strong></p><ul><li>Press <strong>① Power</strong> on the remote.</li></ul><p><strong>How to operate</strong></p><ul><li>Focus and the shape of the picture adjust automatically.</li><li>Use <strong>② Arrow keys</strong> to choose and <strong>⑨ OK</strong> to confirm.</li><li><strong>③ Back</strong> goes back one step.</li><li><strong>⑩ Home</strong> returns to the home screen.</li></ul>`,
+      youtube: `<p>Press the <strong>⑥ YouTube</strong> button on the remote. You can watch without logging in.</p><p>If you log in to your own account, be sure to log out before you check out (see <a href="#/projector/logout">Before you check out</a>).</p>`,
+      streaming: `<p>Press the <strong>⑦ Netflix</strong> or <strong>⑬ Prime Video</strong> button on the remote and log in with <strong>your own account</strong> (we do not provide an account).</p><p>Be sure to log out before you check out (see <a href="#/projector/logout">Before you check out</a>).</p>`,
+      cast: `<p>First, connect your phone to the <strong>Wi-Fi of this room</strong>. It must be the same Wi-Fi as the projector. The Wi-Fi details are on the <a href="#/wifi">Wi-Fi page</a>.</p><p><strong>Casting from an app</strong></p><ul><li>In apps such as YouTube, Prime Video or Disney+, tap the <strong>Cast icon</strong> and choose <strong>"ysr201"</strong>.</li></ul><p><strong>Mirroring your iPhone screen</strong></p><ul><li>On the projector's home screen, open the <strong>"Screen Casting"</strong> app.</li><li>On your iPhone, open Control Center, tap the <strong>Screen Mirroring</strong> icon, and choose <strong>"ysr201-0101"</strong>.</li></ul><p><strong>Mirroring an Android screen</strong></p><ul><li>You need to install the <strong>"JMGO" app</strong> on your phone. Casting from an app, or connecting by HDMI, is easier.</li></ul><p><strong>Netflix:</strong> don't cast it from your phone. Use the projector's own Netflix app (the ⑦ button on the remote).</p>`,
+      hdmi: `<p>To show video from a laptop or similar, plug an HDMI cable into the HDMI port on the back of the projector ("HDMI" in the picture below).</p><ul><li>If the screen does not switch, press <strong>⑫ Input source</strong> on the remote.</li><li>To return to the projector's home screen, press <strong>⑩ Home</strong>.</li></ul>`,
+      logout: `<div class="notice notice--warn"><p><strong>Please log out before you check out.</strong></p><p>Before you check out, be sure to log out of every app you logged in to (YouTube, Netflix, Prime Video, etc.). If you don't, the next guest can use your account.</p><p>You can log out from the account or settings menu of each app.</p></div>`,
+      trouble: `<ul><li><strong>The remote doesn't work:</strong> hold the remote close to the projector and press and hold <strong>③ Back</strong> and <strong>⑩ Home</strong> together for about 5 seconds. When a "connected" message appears at the bottom of the screen, it is ready to use.</li><li><strong>The picture suddenly gets dark:</strong> when someone walks in front of the lens, the projector dims automatically to protect eyes. It is not broken.</li><li><strong>The picture is out of focus:</strong> if the light falls on the table, focus may not work. Move the projector toward the front edge of the table, or tilt it up a little. If that doesn't help, try <strong>⑤ Settings（設定）</strong> &gt; Projector Settings（プロジェクター設定） &gt; Focus（フォーカス） &gt; Auto Focus（オートフォーカス）.</li><li><strong>It turned off by itself:</strong> it switches off automatically after a while without any operation. Turn it on again with the power button on the projector.</li><li><strong>It behaves strangely:</strong> press and hold <strong>① Power</strong> and choose <strong>Restart（再起動）</strong>.</li></ul><p><strong>Please do not choose "Reset" (Factory reset（出荷時設定にリセット）).</strong> It erases all settings. If the problem continues, message the host on Airbnb.</p>`
     },
     garbage: {
       body: `<p>When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, any of the containers is fine.</p>`
@@ -172,6 +185,7 @@ window.I18N = {
       checkin: `チェックイン・チェックアウト`,
       wifi: `Wi-Fi`,
       appliances: `家電・設備`,
+      projector: `プロジェクター`,
       garbage: `ゴミの出し方`,
       rules: `ハウスルール・禁止事項`,
       nearby: `周辺のお店`,
@@ -235,6 +249,18 @@ window.I18N = {
       dolceCapsule: `<p><strong>⑤ カプセルをセットする</strong></p><ul><li>前面の銀色のハンドルを上げ、カプセルホルダーを手前に引き出します。</li><li>ホルダーにカプセルを入れて本体に戻し、ハンドルを下げます。</li></ul>`,
       dolceBrew: `<p><strong>⑥ レバーを倒していれる</strong></p><ul><li>レバーを<strong>右（赤）</strong>に倒すと、温かい飲み物が出ます。</li><li>設定した量が出ると自動で止まり、レバーが真ん中に戻ります。途中で止めたいときは、手でレバーを真ん中に戻してください。</li><li>レバーを<strong>左（青）</strong>に倒すと、タンクの水がそのままの温度で出ます（冷やす機能はありません）。冷たい飲み物は、氷を入れたカップにいれてください。</li></ul>`,
       dolceFinish: `<p><strong>⑦ カプセルを捨てる</strong></p><ul><li>電源ボタンが赤い点滅から<strong>緑の点灯</strong>に変わるまで待ちます（約5秒）。</li><li>ハンドルを上げてホルダーを取り出し、使い終わったカプセルを捨てます。</li><li>ホルダーを水ですすいで本体に戻し、ハンドルを下げます。</li></ul><p><strong>ご注意：</strong>電源ボタンが<strong>赤く点滅している間は、絶対にハンドルを上げないでください</strong>（熱いお湯が噴き出すおそれがあります）。使った直後のカプセルは熱いので、手で触らないでください。約5分操作しないと、電源は自動で切れます。</p>`,
+    },
+    projector: {
+      titles: { basics: `電源とリモコン`, youtube: `YouTubeを見る`, streaming: `Netflix・Prime Videoを見る`, cast: `スマホの映像を映す`, hdmi: `HDMIでつなぐ`, logout: `チェックアウトの前に`, trouble: `うまくいかないとき` },
+      intro: `<p>201号室には、壁に映像を映せるプロジェクター（JMGO PicoPlay+）があります。YouTube・Netflix・Prime Video などをご覧いただけます。</p><div class="notice notice--warn"><p><strong>ご注意</strong></p><ul><li>レンズから出る強い光をのぞき込まないでください。</li><li>映している間は、本体を立てて置かないでください。本体の底に通気口があり、ふさぐと熱で自動的に止まります。</li></ul></div>`,
+      basics: `<p>下の図は、付属のリモコンです。このページの ①〜⑬ は、図の番号です。</p>`,
+      basicsSteps: `<p><strong>つける</strong></p><ul><li>リモコンの<strong>①電源</strong>ボタンを押します。</li><li>つかないときは、本体の電源ボタンを押します（場所は、このページの「HDMIでつなぐ」の図の「電源ボタン」です）。</li></ul><p><strong>消す</strong></p><ul><li>リモコンの<strong>①電源</strong>ボタンを押します。</li></ul><p><strong>操作のしかた</strong></p><ul><li>ピントと画面の形は自動で合います。</li><li><strong>②方向キー</strong>で選び、<strong>⑨決定</strong>で決めます。</li><li><strong>③戻る</strong>で1つ前に戻ります。</li><li><strong>⑩ホーム</strong>でホーム画面に戻ります。</li></ul>`,
+      youtube: `<p>リモコンの<strong>⑥YouTube</strong>ボタンを押します。ログインしなくても見られます。</p><p>ご自身のアカウントでログインした場合は、チェックアウトの前に必ずログアウトしてください（<a href="#/projector/logout">チェックアウトの前に</a>をご覧ください）。</p>`,
+      streaming: `<p>リモコンの<strong>⑦Netflix</strong>または<strong>⑬Prime Video</strong>ボタンを押し、<strong>ご自身のアカウント</strong>でログインしてご覧ください（アカウントのご用意はありません）。</p><p>チェックアウトの前に、必ずログアウトしてください（<a href="#/projector/logout">チェックアウトの前に</a>をご覧ください）。</p>`,
+      cast: `<p>まず、スマートフォンを<strong>お部屋のWi-Fi</strong>につないでください。プロジェクターと同じWi-Fiにつながっている必要があります。Wi-Fiの情報は<a href="#/wifi">Wi-Fiのページ</a>にあります。</p><p><strong>アプリから映す</strong></p><ul><li>YouTube・Prime Video・Disney+ などのアプリに表示される<strong>キャストのアイコン</strong>をタップし、<strong>「ysr201」</strong>を選びます。</li></ul><p><strong>iPhoneの画面をそのまま映す</strong></p><ul><li>プロジェクターのホーム画面で、<strong>「Screen Casting」</strong>アプリを開きます。</li><li>iPhoneのコントロールセンターで<strong>画面ミラーリング</strong>のアイコンをタップし、<strong>「ysr201-0101」</strong>を選びます。</li></ul><p><strong>Androidの画面をそのまま映す</strong></p><ul><li>スマホに<strong>「JMGO」アプリ</strong>のインストールが必要です。アプリからのキャストか、HDMIでつなぐほうがかんたんです。</li></ul><p><strong>Netflix</strong>は、スマホから映さず、プロジェクターのアプリ（リモコンの⑦ボタン）でご覧ください。</p>`,
+      hdmi: `<p>パソコンなどの映像を映したいときは、本体の後ろ（下の図の「HDMI」）のHDMI端子にケーブルをつなぎます。</p><ul><li>画面が切り替わらないときは、リモコンの<strong>⑫入力切替</strong>ボタンを押します。</li><li>元の画面（プロジェクターのホーム画面）に戻るときは、<strong>⑩ホーム</strong>ボタンを押します。</li></ul>`,
+      logout: `<div class="notice notice--warn"><p><strong>チェックアウトの前に、必ずログアウトしてください。</strong></p><p>ログインしたアプリ（YouTube・Netflix・Prime Video など）から、チェックアウトの前に必ずログアウトしてください。ログアウトしないと、次のゲストの方があなたのアカウントを使えてしまいます。</p><p>ログアウトは、各アプリのアカウントまたは設定のメニューからできます。</p></div>`,
+      trouble: `<ul><li><strong>リモコンが効かないとき：</strong>リモコンを本体に近づけ、<strong>③戻る</strong>と<strong>⑩ホーム</strong>を同時に約5秒長押ししてください。画面の下に接続完了のメッセージが出れば、使えるようになります。</li><li><strong>画面が急に暗くなったとき：</strong>レンズの前を人が通ると、目を守るために自動で暗くなります。故障ではありません。</li><li><strong>ピントが合わないとき：</strong>光が机に当たっていると、ピントが合わないことがあります。本体を机の前のほうに置くか、少し上に向けてください。直らないときは、<strong>⑤設定</strong> →「プロジェクター設定」→「フォーカス」→「オートフォーカス」をお試しください。</li><li><strong>勝手に電源が切れたとき：</strong>しばらく操作しないと、自動で切れます。本体の電源ボタンでもう一度つけてください。</li><li><strong>動きがおかしいとき：</strong><strong>①電源</strong>ボタンを長押しし、<strong>「再起動」</strong>を選んでください。</li></ul><p><strong>「リセット」（出荷時設定にリセット）は行わないでください。</strong>設定がすべて消えてしまいます。解決しないときは、Airbnbのメッセージでホストにご連絡ください。</p>`
     },
     garbage: {
       body: `<p>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どの容器に入れても構いません。</p>`
@@ -302,6 +328,7 @@ window.I18N = {
       checkin: `入住與退房`,
       wifi: `Wi-Fi`,
       appliances: `家電與設備`,
+      projector: `投影機`,
       garbage: `垃圾丟棄方式`,
       rules: `住宿規則與禁止事項`,
       nearby: `附近店家`,
@@ -365,6 +392,18 @@ window.I18N = {
       circulator: `<p>由於天花板較高，冷空氣容易堆積在下方、暖空氣則聚集在上方。若感覺冷氣效果不佳，可開啟循環扇幫助空氣循環。</p>`,
       circulatorSteps: `<p><strong>使用方法</strong></p><ul><li><strong>① 電源（電源 切/入）：</strong>按一下啟動，再按一下停止。</li><li><strong>② 風量（風量）：</strong>按 &lt; 或 &gt; 調整風力（共5段，最強為「ターボ」＝渦輪）。</li><li><strong>③ 擺頭（首ふり）：</strong>每按一次，會在上下（上下）、左右（左右）、同時、停止之間切換。可由指示燈確認目前狀態。</li><li>關機定時（切タイマー）：1、2或4小時後自動停止。</li><li>自然風（リズム）：風力會緩慢變化，接近自然的風。</li></ul><p><strong>注意：</strong>請勿用手扳動機頭。想改變方向時，請按「首ふり」讓它擺動，到想要的位置再按一次停止。</p>`,
       iron: `<p>浴室層架上備有蒸氣熨斗，使用時請搭配浴室內的燙衣板。</p>`
+    },
+    projector: {
+      titles: { basics: `電源與遙控器`, youtube: `觀看 YouTube`, streaming: `觀看 Netflix 與 Prime Video`, cast: `投放手機畫面`, hdmi: `以 HDMI 連接`, logout: `退房前`, trouble: `遇到問題時` },
+      intro: `<p>201 號房有一台可將影像投射到牆上的投影機（JMGO PicoPlay+）。您可以觀看 YouTube、Netflix、Prime Video 等。</p><div class="notice notice--warn"><p><strong>注意事項</strong></p><ul><li>請勿直視鏡頭，光線非常強。</li><li>投影時，請勿將機身直立擺放。機身底部有散熱孔，一旦被擋住，會因過熱而自動停止運作。</li></ul></div>`,
+      basics: `<p>下圖為隨附的遙控器。本頁中的 ①〜⑬ 對應圖中的編號。</p>`,
+      basicsSteps: `<p><strong>開機</strong></p><ul><li>按下遙控器的<strong>①電源</strong>鍵。</li><li>若無法開機，請按投影機機身上的電源按鈕（位置請見本頁「以 HDMI 連接」圖中的「電源按鈕」）。</li></ul><p><strong>關機</strong></p><ul><li>按下遙控器的<strong>①電源</strong>鍵。</li></ul><p><strong>操作方式</strong></p><ul><li>對焦與畫面形狀會自動調整。</li><li>用<strong>②方向鍵</strong>選擇，按<strong>⑨確認</strong>決定。</li><li>按<strong>③返回</strong>可回到上一步。</li><li>按<strong>⑩主畫面</strong>可回到主畫面。</li></ul>`,
+      youtube: `<p>按下遙控器的<strong>⑥YouTube</strong>鍵。不需登入即可觀看。</p><p>若您登入了自己的帳號，退房前請務必登出（請見<a href="#/projector/logout">退房前</a>）。</p>`,
+      streaming: `<p>按下遙控器的<strong>⑦Netflix</strong>或<strong>⑬Prime Video</strong>鍵，並以<strong>您自己的帳號</strong>登入觀看（本民宿不提供帳號）。</p><p>退房前請務必登出（請見<a href="#/projector/logout">退房前</a>）。</p>`,
+      cast: `<p>首先，請將手機連上<strong>房間的 Wi-Fi</strong>。必須與投影機連上同一個 Wi-Fi。Wi-Fi 資訊請見 <a href="#/wifi">Wi-Fi 頁面</a>。</p><p><strong>從應用程式投放</strong></p><ul><li>在 YouTube、Prime Video、Disney+ 等應用程式中，點選<strong>投放圖示</strong>，再選擇<strong>「ysr201」</strong>。</li></ul><p><strong>直接投放 iPhone 的畫面</strong></p><ul><li>在投影機的主畫面開啟<strong>「Screen Casting」</strong>應用程式。</li><li>在 iPhone 的控制中心點選<strong>螢幕鏡像</strong>圖示，再選擇<strong>「ysr201-0101」</strong>。</li></ul><p><strong>直接投放 Android 的畫面</strong></p><ul><li>需要在手機上安裝<strong>「JMGO」應用程式</strong>。從應用程式投放，或以 HDMI 連接會比較簡單。</li></ul><p><strong>Netflix：</strong>請勿從手機投放，請使用投影機內建的 Netflix 應用程式（遙控器的⑦鍵）觀看。</p>`,
+      hdmi: `<p>若想播放電腦等裝置的影像，請將 HDMI 線接到投影機背面的 HDMI 埠（下圖的「HDMI」）。</p><ul><li>畫面沒有切換時，請按遙控器的<strong>⑫切換輸入</strong>鍵。</li><li>要回到投影機的主畫面時，請按<strong>⑩主畫面</strong>鍵。</li></ul>`,
+      logout: `<div class="notice notice--warn"><p><strong>退房前，請務必登出。</strong></p><p>退房前，請務必登出您登入過的所有應用程式（YouTube、Netflix、Prime Video 等）。若未登出，下一位住客就能使用您的帳號。</p><p>登出可在各應用程式的帳號或設定選單中進行。</p></div>`,
+      trouble: `<ul><li><strong>遙控器沒反應：</strong>請將遙控器靠近投影機，同時長按<strong>③返回</strong>與<strong>⑩主畫面</strong>約 5 秒。畫面下方出現「連線完成」的訊息，就可以使用了。</li><li><strong>畫面突然變暗：</strong>有人經過鏡頭前方時，為了保護眼睛，畫面會自動變暗。這不是故障。</li><li><strong>對不到焦：</strong>若光線照到桌面，可能無法對焦。請將投影機移到桌子前緣，或稍微向上傾斜。若仍無法改善，請試試<strong>⑤設定（設定）</strong> &gt; 投影機設定（プロジェクター設定） &gt; 對焦（フォーカス） &gt; 自動對焦（オートフォーカス）。</li><li><strong>自己關機了：</strong>一段時間沒有操作會自動關機。請按投影機機身的電源按鈕重新開機。</li><li><strong>運作怪怪的：</strong>長按<strong>①電源</strong>鍵，選擇<strong>「Restart（再起動）」</strong>，即「重新啟動」。</li></ul><p><strong>請勿執行「重設」（恢復原廠設定，出荷時設定にリセット）。</strong>所有設定都會被清除。若問題仍未解決，請透過 Airbnb 訊息聯絡房東。</p>`
     },
     garbage: {
       body: `<p>垃圾桶滿了或退房時，請將分類好的垃圾放入房外的垃圾置放處。只要有確實分類，放入哪一個垃圾桶皆可。</p>`
@@ -432,6 +471,7 @@ window.I18N = {
       checkin: `체크인 · 체크아웃`,
       wifi: `Wi-Fi`,
       appliances: `가전・시설`,
+      projector: `프로젝터`,
       garbage: `쓰레기 배출 방법`,
       rules: `하우스 룰・금지 사항`,
       nearby: `주변 편의시설`,
@@ -495,6 +535,18 @@ window.I18N = {
       circulator: `<p>천장이 높아 찬 공기는 아래로, 따뜻한 공기는 위로 모이기 쉽습니다. 에어컨 효과가 약하게 느껴지면 서큘레이터로 공기를 순환시켜 주세요.</p>`,
       circulatorSteps: `<p><strong>사용 방법</strong></p><ul><li><strong>① 전원（電源 切/入）:</strong> 누르면 작동하고, 다시 누르면 멈춥니다.</li><li><strong>② 풍량（風量）:</strong> &lt; 또는 &gt; 를 눌러 바람 세기를 바꿉니다（5단계, 가장 강한 것이 「ターボ」= 터보）.</li><li><strong>③ 회전（首ふり）:</strong> 누를 때마다 상하（上下）, 좌우（左右）, 둘 다, 정지로 바뀝니다. 램프로 현재 상태를 확인할 수 있습니다.</li><li>꺼짐 타이머（切タイマー）: 1, 2 또는 4시간 뒤에 자동으로 멈춥니다.</li><li>리듬풍（リズム）: 바람 세기가 천천히 바뀌는, 자연 바람에 가까운 모드입니다.</li></ul><p><strong>주의:</strong> 손으로 머리 부분의 방향을 움직이지 마세요. 방향을 바꾸려면 「首ふり」를 눌러 움직이게 한 뒤, 원하는 위치에서 다시 눌러 멈춰 주세요.</p>`,
       iron: `<p>욕실 선반에 스팀다리미가 있습니다. 사용하실 때는 욕실 내 다리미판을 이용해 주세요.</p>`
+    },
+    projector: {
+      titles: { basics: `전원과 리모컨`, youtube: `YouTube 보기`, streaming: `Netflix·Prime Video 보기`, cast: `스마트폰 화면 띄우기`, hdmi: `HDMI로 연결하기`, logout: `체크아웃 전에`, trouble: `문제가 생겼을 때` },
+      intro: `<p>201호에는 벽에 영상을 비출 수 있는 프로젝터(JMGO PicoPlay+)가 있습니다. YouTube, Netflix, Prime Video 등을 보실 수 있습니다.</p><div class="notice notice--warn"><p><strong>주의사항</strong></p><ul><li>렌즈에서 나오는 강한 빛을 들여다보지 마세요.</li><li>영상을 비추는 동안에는 본체를 세워 두지 마세요. 본체 바닥에 환기구가 있어, 막히면 열 때문에 자동으로 꺼집니다.</li></ul></div>`,
+      basics: `<p>아래 그림은 함께 놓여 있는 리모컨입니다. 이 페이지의 ①〜⑬은 그림의 번호입니다.</p>`,
+      basicsSteps: `<p><strong>켜기</strong></p><ul><li>리모컨의 <strong>①전원</strong> 버튼을 누릅니다.</li><li>켜지지 않으면 본체의 전원 버튼을 누릅니다(위치는 이 페이지 「HDMI로 연결하기」 그림의 「전원 버튼」입니다).</li></ul><p><strong>끄기</strong></p><ul><li>리모컨의 <strong>①전원</strong> 버튼을 누릅니다.</li></ul><p><strong>조작 방법</strong></p><ul><li>초점과 화면 모양은 자동으로 맞춰집니다.</li><li><strong>②방향 키</strong>로 선택하고 <strong>⑨확인</strong>으로 결정합니다.</li><li><strong>③뒤로</strong>를 누르면 한 단계 전으로 돌아갑니다.</li><li><strong>⑩홈</strong>을 누르면 홈 화면으로 돌아갑니다.</li></ul>`,
+      youtube: `<p>리모컨의 <strong>⑥YouTube</strong> 버튼을 누르세요. 로그인하지 않아도 볼 수 있습니다.</p><p>본인 계정으로 로그인했다면 체크아웃 전에 반드시 로그아웃해 주세요(<a href="#/projector/logout">체크아웃 전에</a> 참고).</p>`,
+      streaming: `<p>리모컨의 <strong>⑦Netflix</strong> 또는 <strong>⑬Prime Video</strong> 버튼을 누르고, <strong>본인 계정</strong>으로 로그인해서 시청하세요(숙소에서는 계정을 제공하지 않습니다).</p><p>체크아웃 전에 반드시 로그아웃해 주세요(<a href="#/projector/logout">체크아웃 전에</a> 참고).</p>`,
+      cast: `<p>먼저 스마트폰을 <strong>객실 Wi-Fi</strong>에 연결하세요. 프로젝터와 같은 Wi-Fi여야 합니다. Wi-Fi 정보는 <a href="#/wifi">Wi-Fi 페이지</a>에 있습니다.</p><p><strong>앱에서 띄우기</strong></p><ul><li>YouTube, Prime Video, Disney+ 등의 앱에 나오는 <strong>캐스트 아이콘</strong>을 누르고 <strong>「ysr201」</strong>를 선택하세요.</li></ul><p><strong>iPhone 화면을 그대로 띄우기</strong></p><ul><li>프로젝터의 홈 화면에서 <strong>「Screen Casting」</strong> 앱을 엽니다.</li><li>iPhone의 제어 센터에서 <strong>화면 미러링</strong> 아이콘을 누르고 <strong>「ysr201-0101」</strong>를 선택하세요.</li></ul><p><strong>Android 화면을 그대로 띄우기</strong></p><ul><li>스마트폰에 <strong>「JMGO」 앱</strong>을 설치해야 합니다. 앱에서 캐스트하거나 HDMI로 연결하는 쪽이 더 간단합니다.</li></ul><p><strong>Netflix:</strong> 스마트폰에서 띄우지 말고 프로젝터의 Netflix 앱(리모컨의 ⑦ 버튼)으로 시청하세요.</p>`,
+      hdmi: `<p>노트북 등의 영상을 띄우려면 본체 뒷면의 HDMI 단자(아래 그림의 「HDMI」)에 케이블을 연결하세요.</p><ul><li>화면이 바뀌지 않으면 리모컨의 <strong>⑫입력 전환</strong> 버튼을 누르세요.</li><li>프로젝터의 홈 화면으로 돌아가려면 <strong>⑩홈</strong> 버튼을 누르세요.</li></ul>`,
+      logout: `<div class="notice notice--warn"><p><strong>체크아웃 전에 반드시 로그아웃해 주세요.</strong></p><p>체크아웃 전에, 로그인한 모든 앱(YouTube, Netflix, Prime Video 등)에서 반드시 로그아웃해 주세요. 로그아웃하지 않으면 다음 투숙객이 회원님의 계정을 사용할 수 있습니다.</p><p>로그아웃은 각 앱의 계정 또는 설정 메뉴에서 할 수 있습니다.</p></div>`,
+      trouble: `<ul><li><strong>리모컨이 작동하지 않을 때:</strong> 리모컨을 본체에 가까이 대고 <strong>③뒤로</strong>와 <strong>⑩홈</strong>을 동시에 약 5초 동안 길게 누르세요. 화면 아래에 연결 완료 메시지가 나타나면 사용할 수 있습니다.</li><li><strong>화면이 갑자기 어두워질 때:</strong> 렌즈 앞을 사람이 지나가면 눈을 보호하기 위해 자동으로 어두워집니다. 고장이 아닙니다.</li><li><strong>초점이 맞지 않을 때:</strong> 빛이 책상에 닿으면 초점이 맞지 않을 수 있습니다. 본체를 책상 앞쪽에 두거나 조금 위로 향하게 해 주세요. 그래도 안 되면 <strong>⑤설정（設定）</strong> &gt; 프로젝터 설정（プロジェクター設定） &gt; 포커스（フォーカス） &gt; 오토 포커스（オートフォーカス）를 시도해 보세요.</li><li><strong>저절로 꺼졌을 때:</strong> 한동안 조작하지 않으면 자동으로 꺼집니다. 본체의 전원 버튼으로 다시 켜 주세요.</li><li><strong>작동이 이상할 때:</strong> <strong>①전원</strong> 버튼을 길게 누르고 <strong>「Restart（再起動）」</strong>(다시 시작)를 선택하세요.</li></ul><p><strong>「리셋」(출고 시 설정으로 리셋, 出荷時設定にリセット)은 하지 마세요.</strong> 모든 설정이 지워집니다. 해결되지 않으면 Airbnb 메시지로 호스트에게 연락해 주세요.</p>`
     },
     garbage: {
       body: `<p>쓰레기통이 가득 찼을 때나 체크아웃 시에는 분리수거한 쓰레기를 객실 밖 쓰레기 보관함에 넣어주세요. 분리수거만 되어 있다면 어느 용기에 넣으셔도 괜찮습니다.</p>`

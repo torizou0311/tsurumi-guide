@@ -70,7 +70,10 @@ window.ROOMS = [
       dolceLevel: 'images/201/dolcegusto-fig-level-{lang}.png',
       dolceCapsule: 'images/201/dolcegusto-fig-capsule.png',
       dolceBrew: 'images/201/dolcegusto-fig-brew.png',
-      dolceFinish: 'images/201/dolcegusto-fig-finish.png'
+      dolceFinish: 'images/201/dolcegusto-fig-finish.png',
+      // プロジェクター（JMGO PicoPlay+）のリモコンと本体の端子の図（言語別。tools/make-projector-*.py で作る）
+      projectorRemote: 'images/201/projector-remote-{lang}.png',
+      projectorPorts: 'images/201/projector-ports-{lang}.png'
     }
   }
 ];
