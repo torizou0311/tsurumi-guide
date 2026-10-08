@@ -121,6 +121,7 @@ window.SECTIONS = [
       { key: 'streaming', anchor: 'streaming' },
       { key: 'cast', anchor: 'cast' },
       { key: 'hdmi', anchor: 'hdmi', image: 'room:projectorPorts' },
+      { key: 'speaker', anchor: 'speaker' },
       { key: 'logout', anchor: 'logout' },
       { key: 'trouble', anchor: 'trouble' }
     ]
