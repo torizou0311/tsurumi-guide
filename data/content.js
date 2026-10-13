@@ -141,6 +141,10 @@ window.SECTIONS = [
     blocks: [
       { key: 'important' },
       { key: 'packages' },
+      { key: 'neighborsTitle', heading: true },
+      { key: 'neighbors' },
+      { key: 'fireTitle', heading: true },
+      { key: 'fire' },
       { key: 'prohibitedTitle', heading: true },
       { key: 'prohibitedList' }
     ]

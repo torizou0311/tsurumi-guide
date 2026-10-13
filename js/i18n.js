@@ -121,11 +121,15 @@ window.I18N = {
       trouble: `<ul><li><strong>The remote doesn't work:</strong> hold the remote close to the projector and press and hold <strong>③ Back</strong> and <strong>⑩ Home</strong> together for about 5 seconds. When a "connected" message appears at the bottom of the screen, it is ready to use.</li><li><strong>The picture suddenly disappears:</strong> when someone walks in front of the lens, the picture goes off and only a message saying that eye protection is active is shown. It is not broken. Move away from the lens and wait a moment, and the picture comes back automatically (or press ③ Back on the remote).</li><li><strong>The picture is out of focus:</strong> if the light falls on the table, focus may not work. Move the projector toward the front edge of the table, or tilt it up a little. If that doesn't help, try <strong>⑤ Settings（設定）</strong> &gt; Projector Settings（プロジェクター設定） &gt; Focus（フォーカス） &gt; Auto Focus（オートフォーカス）.</li><li><strong>It turned off by itself:</strong> it switches off automatically after a while without any operation. Turn it on again with the power button on the projector.</li><li><strong>It behaves strangely:</strong> press and hold <strong>① Power</strong> and choose <strong>Restart（再起動）</strong>.</li></ul><p><strong>Please do not choose "Reset" (Factory reset（出荷時設定にリセット）).</strong> It erases all settings. If the problem continues, message the host on Airbnb.</p>`
     },
     garbage: {
-      body: `<p>When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, any of the containers is fine.</p>`
+      body: `<p>When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, any of the containers is fine.</p><p><strong>How to sort (2 types)</strong></p><ul><li>Burnable trash</li><li>Cans, bottles &amp; PET bottles</li></ul><p>Please do not put trash at neighborhood collection points or on the street (it will not be collected).</p>`
     },
     rules: {
       important: `<p><strong>Important:</strong> if the room is not left in a reasonably clean condition and requires extra cleaning time, an additional cleaning fee of ¥20,000 will be charged.</p>`,
       packages: `<p>As this property has no on-site staff, we are unable to receive packages before your stay. Receiving packages during your stay is not a problem.</p>`,
+      neighborsTitle: `Being Considerate of Neighbors`,
+      neighbors: `<p>This is a quiet residential area. Please help our neighbors live in peace.</p><ul><li><strong>Noise:</strong> Please avoid loud voices and loud music. After 9:00 PM, please close the windows and keep quiet. At night, please open and close the entrance door quietly.</li><li><strong>Outdoors:</strong> Please do not gather outdoors to eat, drink, or hold parties, such as in front of the building or in the walkways.</li><li><strong>Musical instruments:</strong> Musical instruments cannot be played inside the room.</li><li><strong>Trash:</strong> Please sort your trash into "Burnable trash" and "Cans, bottles &amp; PET bottles" and place it in the building's trash area. Please do not put it at neighborhood collection points or on the street.</li><li><strong>Smoking:</strong> The room and the entire premises are non-smoking. Please do not smoke on the roads around the building or throw cigarette butts on the ground.</li><li><strong>Cars:</strong> Please do not park on the street. Please use a coin parking lot.</li></ul>`,
+      fireTitle: `Preventing Fires`,
+      fire: `<ul><li><strong>Stove:</strong> It is an IH (electric) stove. You do not need to touch the gas main valve. Do not leave it while cooking, and turn it off when you are done.</li><li><strong>Open flames:</strong> Candles, incense, fireworks, and other things that use fire cannot be used inside the room.</li><li><strong>Fire extinguisher:</strong> It is in the shared area outside the room (near the hallway and stairs).<br>(1) Pull out the yellow safety pin → (2) Point the hose at the fire → (3) Squeeze the lever firmly</li><li><strong>Evacuation:</strong> If the fire is large (about to reach the ceiling), do not try to put it out. Leave right away. Go outside through the entrance. If your room is on the 2nd floor, use the outside stairs.</li><li><strong>Calling for help:</strong> Call 119. The address to tell them is on the "<a href="#/emergency">Emergency Contacts &amp; Evacuation</a>" page.</li></ul>`,
       prohibitedTitle: `Prohibited (additional charges may apply)`,
       prohibitedList: `<ul><li>Wearing shoes inside the room</li><li>Smoking — the room and the entire premises are strictly non-smoking</li><li>Excessive alcohol consumption</li><li>Making noise after 9:00 PM or late at night</li><li>Bringing in or hosting guests who are not registered on the reservation</li><li>Disturbing neighbors</li><li>Losing the key (if a physical key was used)</li><li>Intentionally damaging the room or its facilities, or failing to report damage</li></ul><p>Violating these rules may result in a penalty of ¥15,000 plus the actual cost of any damage.</p>`
     },
@@ -265,11 +269,15 @@ window.I18N = {
       trouble: `<ul><li><strong>リモコンが効かないとき：</strong>リモコンを本体に近づけ、<strong>③戻る</strong>と<strong>⑩ホーム</strong>を同時に約5秒長押ししてください。画面の下に接続完了のメッセージが出れば、使えるようになります。</li><li><strong>映像が急に消えたとき：</strong>レンズの前を人が通ると、目を守るために映像が消え、「視力保護機能が稼働しています」という文字だけが表示されます。故障ではありません。レンズの前から離れて少し待つと、自動で元に戻ります（リモコンの③戻るボタンを押しても戻ります）。</li><li><strong>ピントが合わないとき：</strong>光が机に当たっていると、ピントが合わないことがあります。本体を机の前のほうに置くか、少し上に向けてください。直らないときは、<strong>⑤設定</strong> →「プロジェクター設定」→「フォーカス」→「オートフォーカス」をお試しください。</li><li><strong>勝手に電源が切れたとき：</strong>しばらく操作しないと、自動で切れます。本体の電源ボタンでもう一度つけてください。</li><li><strong>動きがおかしいとき：</strong><strong>①電源</strong>ボタンを長押しし、<strong>「再起動」</strong>を選んでください。</li></ul><p><strong>「リセット」（出荷時設定にリセット）は行わないでください。</strong>設定がすべて消えてしまいます。解決しないときは、Airbnbのメッセージでホストにご連絡ください。</p>`
     },
     garbage: {
-      body: `<p>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どの容器に入れても構いません。</p>`
+      body: `<p>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どの容器に入れても構いません。</p><p><strong>分け方（2種類）</strong></p><ul><li>燃えるゴミ</li><li>缶・びん・ペットボトル</li></ul><p>近所のゴミ集積所や道路には出さないでください（収集されません）。</p>`
     },
     rules: {
       important: `<p><strong>重要：</strong>お部屋の使用状況によっては、通常より清掃に時間がかかる場合があり、その際は追加清掃費として20,000円を申し受けます。</p>`,
       packages: `<p>当施設はスタッフが常駐していないため、ご宿泊前の荷物のお受け取りはできません。ご滞在中の荷物受け取りは問題ございません。</p>`,
+      neighborsTitle: `ご近所へのご配慮`,
+      neighbors: `<p>ここは静かな住宅地です。近隣の方が安心して暮らせるよう、ご協力をお願いします。</p><ul><li><strong>音：</strong>大きな声での会話や音楽はお控えください。21時以降は窓を閉めて、お静かにお過ごしください。夜は玄関ドアの開け閉めも静かにお願いします。</li><li><strong>屋外：</strong>建物の前や通路など、屋外で集まっての飲食・宴会はご遠慮ください。</li><li><strong>楽器：</strong>室内で楽器は演奏できません。</li><li><strong>ゴミ：</strong>「燃えるゴミ」と「缶・びん・ペットボトル」に分けて、建物のゴミ置き場に出してください。近所のゴミ集積所や道路には出さないでください。</li><li><strong>たばこ：</strong>室内・敷地内は禁煙です。建物のまわりの道路での喫煙や、吸い殻のポイ捨てもおやめください。</li><li><strong>お車：</strong>路上駐車はせず、コインパーキングをご利用ください。</li></ul>`,
+      fireTitle: `火事を防ぐために`,
+      fire: `<ul><li><strong>コンロ：</strong>IH（電気）です。ガスの元栓の操作は必要ありません。調理中はそばを離れず、使い終わったら電源を切ってください。</li><li><strong>火気：</strong>室内では、ろうそく・お香・花火など火を使うものは使用できません。</li><li><strong>消火器：</strong>部屋の外の共用部（廊下・階段付近）にあります。<br>①黄色い安全ピンを抜く → ②ホースを火元に向ける → ③レバーを強く握る</li><li><strong>避難：</strong>火が大きいとき（天井に届きそうなとき）は、消そうとせずにすぐ逃げてください。玄関から外に出ます。2階のお部屋は外階段で下りてください。</li><li><strong>通報：</strong>119 に電話してください。伝える住所は「<a href="#/emergency">緊急連絡先・避難場所</a>」のページにあります。</li></ul>`,
       prohibitedTitle: `禁止事項（違反すると追加料金が発生する場合があります）`,
       prohibitedList: `<ul><li>室内での土足での使用</li><li>喫煙（室内および敷地内は全面禁煙です）</li><li>過度の飲酒</li><li>21時以降・深夜の騒音</li><li>宿泊者登録のない方の同伴・宿泊</li><li>近隣住民への迷惑行為</li><li>鍵の紛失（物理鍵をご利用の場合）</li><li>設備の故意の破損、または破損を報告しないこと</li></ul><p>これらに違反した場合、15,000円の違約金に加え、実際の損害額をご負担いただきます。</p>`
     },
@@ -409,11 +417,15 @@ window.I18N = {
       trouble: `<ul><li><strong>遙控器沒反應：</strong>請將遙控器靠近投影機，同時長按<strong>③返回</strong>與<strong>⑩主畫面</strong>約 5 秒。畫面下方出現「連線完成」的訊息，就可以使用了。</li><li><strong>影像突然消失：</strong>有人經過鏡頭前方時，為了保護眼睛，影像會消失，只顯示護眼功能已啟動的提示訊息。這不是故障。離開鏡頭前方後稍等一下，影像就會自動恢復（也可以按遙控器的③返回鍵）。</li><li><strong>對不到焦：</strong>若光線照到桌面，可能無法對焦。請將投影機移到桌子前緣，或稍微向上傾斜。若仍無法改善，請試試<strong>⑤設定（設定）</strong> &gt; 投影機設定（プロジェクター設定） &gt; 對焦（フォーカス） &gt; 自動對焦（オートフォーカス）。</li><li><strong>自己關機了：</strong>一段時間沒有操作會自動關機。請按投影機機身的電源按鈕重新開機。</li><li><strong>運作怪怪的：</strong>長按<strong>①電源</strong>鍵，選擇<strong>「Restart（再起動）」</strong>，即「重新啟動」。</li></ul><p><strong>請勿執行「重設」（恢復原廠設定，出荷時設定にリセット）。</strong>所有設定都會被清除。若問題仍未解決，請透過 Airbnb 訊息聯絡房東。</p>`
     },
     garbage: {
-      body: `<p>垃圾桶滿了或退房時，請將分類好的垃圾放入房外的垃圾置放處。只要有確實分類，放入哪一個垃圾桶皆可。</p>`
+      body: `<p>垃圾桶滿了或退房時，請將分類好的垃圾放入房外的垃圾置放處。只要有確實分類，放入哪一個垃圾桶皆可。</p><p><strong>分類方式（2種）</strong></p><ul><li>可燃垃圾</li><li>罐子・玻璃瓶・寶特瓶</li></ul><p>請勿丟到附近的垃圾集中點或馬路上（不會被收走）。</p>`
     },
     rules: {
       important: `<p><strong>重要提醒：</strong>若房間未保持在應有的整潔狀態、需要額外的清潔時間，將酌收20,000日圓的額外清潔費。</p>`,
       packages: `<p>由於本住宿無現場工作人員，恕無法於入住前代收包裹。入住期間收取包裹則沒有問題。</p>`,
+      neighborsTitle: `請體諒左鄰右舍`,
+      neighbors: `<p>這裡是安靜的住宅區。為了讓附近居民能安心生活，懇請您配合。</p><ul><li><strong>聲音：</strong>請避免大聲交談或播放音樂。晚上9點以後，請關上窗戶，保持安靜。夜間開關玄關門時也請放輕動作。</li><li><strong>戶外：</strong>請勿在建築物前或通道等戶外聚集飲食、舉辦聚會。</li><li><strong>樂器：</strong>室內不可演奏樂器。</li><li><strong>垃圾：</strong>請分為「可燃垃圾」與「罐子・玻璃瓶・寶特瓶」，並放到建築物的垃圾置放處。請勿丟到附近的垃圾集中點或馬路上。</li><li><strong>吸菸：</strong>室內及整個館區皆禁菸。也請勿在建築物周圍的馬路上吸菸或亂丟菸蒂。</li><li><strong>車輛：</strong>請勿在路邊停車，請使用投幣式停車場。</li></ul>`,
+      fireTitle: `預防火災`,
+      fire: `<ul><li><strong>爐具：</strong>為IH（電磁）爐，不需要操作瓦斯總開關。烹調時請勿離開，使用完畢後請關閉電源。</li><li><strong>明火：</strong>室內不可使用蠟燭、線香、煙火等會用到火的物品。</li><li><strong>滅火器：</strong>放在房間外的共用空間（走廊・樓梯附近）。<br>①拔掉黃色安全插銷 → ②將噴管對準起火處 → ③用力握緊握把</li><li><strong>避難：</strong>火勢很大時（快要燒到天花板時），請不要嘗試滅火，立刻逃生。請從玄關出去。2樓的房間請走室外樓梯下樓。</li><li><strong>報案：</strong>請撥打119。要告知的地址在「<a href="#/emergency">緊急聯絡方式・避難地點</a>」頁面。</li></ul>`,
       prohibitedTitle: `禁止事項（違反者可能需支付額外費用）`,
       prohibitedList: `<ul><li>穿鞋進入室內</li><li>吸菸（房間內及整棟建築範圍皆全面禁菸）</li><li>過度飲酒</li><li>晚上9點後或深夜製造噪音</li><li>攜入或留宿未登記的訪客</li><li>造成鄰居困擾</li><li>遺失鑰匙（若使用實體鑰匙）</li><li>故意損壞房間或設備，或未通報損壞情況</li></ul><p>違反上述規定，將收取15,000日圓的違約金，並需負擔實際損害費用。</p>`
     },
@@ -553,11 +565,15 @@ window.I18N = {
       trouble: `<ul><li><strong>리모컨이 작동하지 않을 때:</strong> 리모컨을 본체에 가까이 대고 <strong>③뒤로</strong>와 <strong>⑩홈</strong>을 동시에 약 5초 동안 길게 누르세요. 화면 아래에 연결 완료 메시지가 나타나면 사용할 수 있습니다.</li><li><strong>영상이 갑자기 사라질 때:</strong> 렌즈 앞을 사람이 지나가면 눈을 보호하기 위해 영상이 사라지고 시력 보호 기능이 작동 중이라는 안내문만 표시됩니다. 고장이 아닙니다. 렌즈 앞에서 비켜서 잠시 기다리면 자동으로 원래대로 돌아옵니다(리모컨의 ③ 뒤로 버튼을 눌러도 됩니다).</li><li><strong>초점이 맞지 않을 때:</strong> 빛이 책상에 닿으면 초점이 맞지 않을 수 있습니다. 본체를 책상 앞쪽에 두거나 조금 위로 향하게 해 주세요. 그래도 안 되면 <strong>⑤설정（設定）</strong> &gt; 프로젝터 설정（プロジェクター設定） &gt; 포커스（フォーカス） &gt; 오토 포커스（オートフォーカス）를 시도해 보세요.</li><li><strong>저절로 꺼졌을 때:</strong> 한동안 조작하지 않으면 자동으로 꺼집니다. 본체의 전원 버튼으로 다시 켜 주세요.</li><li><strong>작동이 이상할 때:</strong> <strong>①전원</strong> 버튼을 길게 누르고 <strong>「Restart（再起動）」</strong>(다시 시작)를 선택하세요.</li></ul><p><strong>「리셋」(출고 시 설정으로 리셋, 出荷時設定にリセット)은 하지 마세요.</strong> 모든 설정이 지워집니다. 해결되지 않으면 Airbnb 메시지로 호스트에게 연락해 주세요.</p>`
     },
     garbage: {
-      body: `<p>쓰레기통이 가득 찼을 때나 체크아웃 시에는 분리수거한 쓰레기를 객실 밖 쓰레기 보관함에 넣어주세요. 분리수거만 되어 있다면 어느 용기에 넣으셔도 괜찮습니다.</p>`
+      body: `<p>쓰레기통이 가득 찼을 때나 체크아웃 시에는 분리수거한 쓰레기를 객실 밖 쓰레기 보관함에 넣어주세요. 분리수거만 되어 있다면 어느 용기에 넣으셔도 괜찮습니다.</p><p><strong>분리 방법 (2종류)</strong></p><ul><li>타는 쓰레기</li><li>캔・병・페트병</li></ul><p>동네 쓰레기 집하장이나 도로에는 내놓지 말아주세요 (수거되지 않습니다).</p>`
     },
     rules: {
       important: `<p><strong>중요:</strong> 객실이 적절히 정돈되지 않아 평소보다 청소 시간이 더 필요한 경우, 추가 청소비 20,000엔이 청구됩니다.</p>`,
       packages: `<p>본 숙소는 상주 직원이 없어 체크인 전 택배 수령이 불가합니다. 숙박 중 택배 수령은 문제없습니다.</p>`,
+      neighborsTitle: `이웃을 배려해 주세요`,
+      neighbors: `<p>이곳은 조용한 주택가입니다. 이웃분들이 편안히 지내실 수 있도록 협조 부탁드립니다.</p><ul><li><strong>소음:</strong> 큰 소리로 대화하거나 음악을 크게 트는 것은 삼가주세요. 밤 9시 이후에는 창문을 닫고 조용히 지내주세요. 밤에는 현관문도 조용히 여닫아 주세요.</li><li><strong>실외:</strong> 건물 앞이나 통로 등 실외에서 모여서 먹고 마시거나 파티를 하는 것은 삼가주세요.</li><li><strong>악기:</strong> 실내에서는 악기를 연주할 수 없습니다.</li><li><strong>쓰레기:</strong> 「타는 쓰레기」와 「캔・병・페트병」으로 나누어 건물의 쓰레기 보관함에 넣어주세요. 동네 쓰레기 집하장이나 도로에는 내놓지 말아주세요.</li><li><strong>흡연:</strong> 실내와 부지 내 전체가 금연입니다. 건물 주변 도로에서의 흡연이나 담배꽁초 무단 투기도 하지 말아주세요.</li><li><strong>차량:</strong> 길가에 주차하지 말고 코인 주차장을 이용해 주세요.</li></ul>`,
+      fireTitle: `화재 예방`,
+      fire: `<ul><li><strong>조리기구:</strong> IH(전기) 레인지입니다. 가스 밸브를 조작할 필요가 없습니다. 조리 중에는 자리를 비우지 말고, 다 쓰면 전원을 꺼주세요.</li><li><strong>불:</strong> 실내에서는 초, 향, 폭죽 등 불을 사용하는 물건을 사용할 수 없습니다.</li><li><strong>소화기:</strong> 객실 밖 공용 공간(복도・계단 근처)에 있습니다.<br>①노란색 안전핀을 뽑는다 → ②호스를 불이 난 곳으로 향한다 → ③레버를 세게 쥔다</li><li><strong>대피:</strong> 불이 클 때(천장에 닿을 것 같을 때)는 끄려고 하지 말고 바로 대피하세요. 현관으로 나가시면 됩니다. 2층 객실은 외부 계단으로 내려가세요.</li><li><strong>신고:</strong> 119에 전화하세요. 알려야 할 주소는 「<a href="#/emergency">긴급 연락처・대피 장소</a>」 페이지에 있습니다.</li></ul>`,
       prohibitedTitle: `금지 사항 (위반 시 추가 요금이 발생할 수 있습니다)`,
       prohibitedList: `<ul><li>실내에서 신발을 신는 행위</li><li>흡연 (객실 내 및 부지 전체 전면 금연)</li><li>과도한 음주</li><li>밤 9시 이후 또는 심야 시간대의 소음</li><li>예약자로 등록되지 않은 인원의 출입 또는 숙박</li><li>이웃에게 피해를 주는 행위</li><li>열쇠 분실 (실물 열쇠를 사용한 경우)</li><li>객실 또는 시설의 고의적인 파손, 또는 파손 사실을 알리지 않는 행위</li></ul><p>위 사항을 위반할 경우 위약금 15,000엔과 실제 손해 비용이 청구됩니다.</p>`
     },
