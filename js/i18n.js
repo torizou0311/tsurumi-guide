@@ -122,7 +122,7 @@ window.I18N = {
     },
     garbage: {
       sorting: `<p><strong>How to sort in the room:</strong> The trash cans in the room have labels. Please sort your trash according to the labels.</p><ul><li><strong>Burnable</strong></li><li><strong>PET-Bottles</strong></li><li><strong>Bottles &amp; Cans</strong></li></ul>`,
-      body: `<p><strong>When taking it out of the room:</strong> When the trash can is full, or when you check out, please place your sorted trash in the container outside the room. As long as it is sorted correctly, any of the containers is fine.</p><p>Please do not put trash at neighborhood collection points or on the street (it will not be collected).</p>`
+      body: `<p><strong>When a trash can is full:</strong> Please take your sorted trash to the metal containers in the trash area outside the room. As long as it is sorted, you may use any of the containers.</p><p>When you check out, you can leave your trash in the trash cans in the room.</p><p>Please do not put trash at neighborhood collection points or on the street (it will not be collected).</p>`
     },
     rules: {
       important: `<p><strong>Important:</strong> if the room is not left in a reasonably clean condition and requires extra cleaning time, an additional cleaning fee of ¥20,000 will be charged.</p>`,
@@ -271,7 +271,7 @@ window.I18N = {
     },
     garbage: {
       sorting: `<p><strong>お部屋での分け方：</strong>室内のゴミ箱にラベルが貼ってあります。ラベルのとおりに分けて捨ててください。</p><ul><li><strong>可燃ごみ</strong>（Burnable）</li><li><strong>ペットボトル</strong>（PET-Bottles）</li><li><strong>ビン・カン</strong>（Bottles &amp; Cans）</li></ul>`,
-      body: `<p><strong>部屋の外に出すとき：</strong>ゴミ箱がいっぱいになったとき、またはチェックアウトの際は、分別した上で、部屋の外にあるゴミ置き場に出してください。分別さえしていれば、どの容器に入れても構いません。</p><p>近所のゴミ集積所や道路には出さないでください（収集されません）。</p>`
+      body: `<p><strong>ゴミ箱がいっぱいになったら：</strong>分別した上で、部屋の外にあるゴミ置き場の金属製コンテナに入れてください。分別してあれば、どのコンテナに入れても構いません。</p><p>チェックアウトの際は、ゴミは部屋のゴミ箱に入れたままで構いません。</p><p>近所のゴミ集積所や道路には出さないでください（収集されません）。</p>`
     },
     rules: {
       important: `<p><strong>重要：</strong>お部屋の使用状況によっては、通常より清掃に時間がかかる場合があり、その際は追加清掃費として20,000円を申し受けます。</p>`,
@@ -420,7 +420,7 @@ window.I18N = {
     },
     garbage: {
       sorting: `<p><strong>房內的分類方式：</strong>房內的垃圾桶貼有標籤。請依照標籤分類丟棄。</p><ul><li><strong>可燃垃圾</strong>（Burnable）</li><li><strong>寶特瓶</strong>（PET-Bottles）</li><li><strong>玻璃瓶・罐子</strong>（Bottles &amp; Cans）</li></ul>`,
-      body: `<p><strong>拿到房外時：</strong>垃圾桶滿了或退房時，請將分類好的垃圾放入房外的垃圾置放處。只要有確實分類，放入哪一個垃圾桶皆可。</p><p>請勿丟到附近的垃圾集中點或馬路上（不會被收走）。</p>`
+      body: `<p><strong>垃圾桶滿了時：</strong>請將分類好的垃圾放入房外垃圾置放處的金屬製收納箱。只要已分類，放入哪一個收納箱皆可。</p><p>退房時，垃圾留在房內的垃圾桶即可。</p><p>請勿丟到附近的垃圾集中點或馬路上（不會被收走）。</p>`
     },
     rules: {
       important: `<p><strong>重要提醒：</strong>若房間未保持在應有的整潔狀態、需要額外的清潔時間，將酌收20,000日圓的額外清潔費。</p>`,
@@ -569,7 +569,7 @@ window.I18N = {
     },
     garbage: {
       sorting: `<p><strong>객실 안에서 분리하는 방법:</strong> 객실 안 쓰레기통에는 라벨이 붙어 있습니다. 라벨에 따라 분리해서 버려주세요.</p><ul><li><strong>타는 쓰레기</strong> (Burnable)</li><li><strong>페트병</strong> (PET-Bottles)</li><li><strong>병・캔</strong> (Bottles &amp; Cans)</li></ul>`,
-      body: `<p><strong>객실 밖으로 내놓을 때:</strong> 쓰레기통이 가득 찼을 때나 체크아웃 시에는 분리수거한 쓰레기를 객실 밖 쓰레기 보관함에 넣어주세요. 분리수거만 되어 있다면 어느 용기에 넣으셔도 괜찮습니다.</p><p>동네 쓰레기 집하장이나 도로에는 내놓지 말아주세요 (수거되지 않습니다).</p>`
+      body: `<p><strong>쓰레기통이 가득 찼을 때:</strong> 분리수거한 쓰레기를 객실 밖에 있는 금속제 쓰레기 보관함에 넣어주세요. 분리수거가 되어 있다면 어느 보관함에 넣으셔도 괜찮습니다.</p><p>체크아웃 시에는 쓰레기를 객실 안 쓰레기통에 그대로 두셔도 됩니다.</p><p>동네 쓰레기 집하장이나 도로에는 내놓지 말아주세요 (수거되지 않습니다).</p>`
     },
     rules: {
       important: `<p><strong>중요:</strong> 객실이 적절히 정돈되지 않아 평소보다 청소 시간이 더 필요한 경우, 추가 청소비 20,000엔이 청구됩니다.</p>`,
