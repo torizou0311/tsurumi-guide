@@ -140,14 +140,15 @@ window.SECTIONS = [
     icon: 'rules',
     inMenu: true,
     blocks: [
-      { key: 'important' },
       { key: 'packages' },
       { key: 'neighborsTitle', heading: true },
       { key: 'neighbors' },
       { key: 'fireTitle', heading: true },
       { key: 'fire' },
       { key: 'prohibitedTitle', heading: true },
-      { key: 'prohibitedList' }
+      { key: 'prohibitedList' },
+      { key: 'penaltyTitle', heading: true },
+      { key: 'penaltyList' }
     ]
   },
   {
