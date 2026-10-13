@@ -131,6 +131,7 @@ window.SECTIONS = [
     icon: 'trash',
     inMenu: true,
     blocks: [
+      { key: 'sorting', image: 'images/common/garbage-labels.png' },
       { key: 'body', image: 'images/common/garbage.jpg' }
     ]
   },
