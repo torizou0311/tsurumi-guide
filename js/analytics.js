@@ -15,7 +15,7 @@
   'use strict';
 
   // GA4の測定ID（G- で始まる文字列）。空のままなら計測は一切行いません。
-  var GA_MEASUREMENT_ID = '';
+  var GA_MEASUREMENT_ID = 'G-J7SJNN0LLN';
 
   var lastPath = null;
 
