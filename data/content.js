@@ -27,8 +27,10 @@ window.SECTIONS = [
     inMenu: true,
     blocks: [
       { key: 'mapIntro', showAddress: true, image: 'images/common/access-walking-map.png' },
-      { key: 'haneda', image: 'images/common/access-route-haneda.png' },
-      { key: 'narita', image: 'images/common/access-route-narita.png' },
+      { key: 'haneda' },
+      { key: 'narita' },
+      { key: 'naritaA' },
+      { key: 'naritaB' },
       { key: 'taxi' },
       { key: 'taxiStandKeikyu' },
       { key: 'taxiStandJR' },

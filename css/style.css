@@ -775,3 +775,119 @@ button { font-family: inherit; }
 .notice--warn p { margin: 0 0 8px; }
 .notice--warn p:last-child, .notice--warn ul:last-child { margin-bottom: 0; }
 .notice--warn strong { color: var(--ink); }
+
+/* ------------------------ 乗り換えの流れ（路線図風） ------------------------ */
+
+.route {
+  list-style: none;
+  margin: 12px 0 4px;
+  padding: 0;
+}
+.route li {
+  position: relative;
+  padding-left: 40px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+/* 駅：丸印 */
+.route__stop {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+}
+.route__stop::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--surface-raised);
+  border: 3px solid var(--accent-ink);
+  z-index: 1;
+}
+.route__stop--goal::before {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--tint-strong);
+}
+.route__en, .route__ja {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+/* 乗車：路線色の縦線 */
+.route__ride {
+  --rc: var(--accent);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--ink);
+}
+.route__ride::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: -8px;
+  bottom: -8px;
+  width: 6px;
+  border-radius: 3px;
+  background: var(--rc);
+}
+.route__ride:has(.route__line--keikyu) { --rc: #e5171f; }
+.route__ride:has(.route__line--skyliner) { --rc: #1d4b9b; }
+.route__ride:has(.route__line--jr) { --rc: #00b2e5; }
+.route__ride:has(.route__line--nex) { --rc: #b5121b; }
+.route__line {
+  display: inline-block;
+  margin: 0 6px 2px 0;
+  padding: 1px 10px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+  background: var(--accent);
+}
+.route__line--keikyu { background: #e5171f; }
+.route__line--skyliner { background: #1d4b9b; }
+.route__line--jr { background: #00b2e5; }
+.route__line--nex { background: #b5121b; }
+/* 徒歩：点線 */
+.route__walk {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--ink);
+}
+.route__walk::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: -8px;
+  bottom: -8px;
+  border-left: 4px dotted var(--ink-faint);
+}
+.route__time {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--accent-ink);
+  background: var(--tint);
+  border-radius: var(--radius-s);
+  padding: 0 8px;
+  margin-left: 2px;
+  font-size: 13px;
+}
+.route__note {
+  display: block;
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.route__stop .route__note { font-family: var(--font-sans); font-weight: 400; }
