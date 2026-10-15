@@ -4,6 +4,16 @@
 //
 // {room} {floor} {keyboxSide} などの { } で囲まれた部分は、表示するときに
 // 自動で部屋ごとの値に置き換わります（js/app.js が置き換えます）。
+// 「運転手さんへ」ページ（#/taxi）の日本語。運転手さんに見せる部分なので、どの言語でも同じ日本語を使う
+var TAXI_JA = {
+  card: `<div class="taxi-card" lang="ja"><p class="taxi-card__title">運転手さんへ</p><p class="taxi-card__dest"><span class="taxi-card__label">行き先</span>横浜市鶴見区寺谷1-7-40（レイズ寺谷）</p><p>鶴見獅子ヶ谷通りを上り、<strong>On cuesta（オンクエスタ、ピンクの建物）</strong>の信号を過ぎてすぐ右。<strong>白いマンションと茶色いマンションの間の細い上り坂</strong>に入ってください（入口は見落としやすいです）。</p><p>道なりに<strong>約300m</strong>、突き当たりの広い場所が建物の前です（転回できます）。</p><div class="notice notice--warn taxi-card__warn"><p>⚠ 大通り（鶴見獅子ヶ谷通り）では降ろさないでください。下からは急な階段になります。</p></div></div>`,
+  p1: `<p class="taxi-photo-cap" lang="ja">① 大通りを上ってくると、右に白いマンション（生垣）、その先に茶色いマンションが見えます。</p>`,
+  p2: `<p class="taxi-photo-cap" lang="ja">② 生垣が終わったところで、右へ上がる細い坂に入ります。</p>`,
+  p3: `<p class="taxi-photo-cap" lang="ja">③ 細い道を、道なりに約300m進みます。</p>`,
+  turn: `<p class="taxi-photo-cap" lang="ja">④ 突き当たりの広い場所が建物の前です。ここで転回して、元の道を戻れます。</p>`,
+  map: `<p class="taxi-photo-cap" lang="ja">地図（青い線が行き方、赤い×は降ろさない場所）</p>`
+};
+
 window.I18N = {
   en: {
     meta: { name: 'English' },
@@ -48,7 +58,17 @@ window.I18N = {
       nearby: `Nearby Stores`,
       parking: `Coin Parking`,
       trouble: `If Something Goes Wrong`,
-      emergency: `Emergency Contacts & Evacuation`
+      emergency: `Emergency Contacts & Evacuation`,
+      taxi: `Show to Your Taxi Driver`
+    },
+    taxi: {
+      intro: `<p class="taxi-lead">Show this screen to your taxi driver.</p>`,
+      card: TAXI_JA.card,
+      p1: TAXI_JA.p1,
+      p2: TAXI_JA.p2,
+      p3: TAXI_JA.p3,
+      turn: TAXI_JA.turn,
+      map: TAXI_JA.map
     },
     translation: {
       intro: `<p>We recommend <strong>Google Lens</strong> for real-time translation during your stay — just point your camera at any text and it will translate it for you.</p><ul><li>Install the Google app</li><li>Tap the Google Lens icon</li><li>Tap <strong>Translate</strong></li><li>Point your camera at the text you want to translate</li></ul>`
@@ -59,7 +79,7 @@ window.I18N = {
       narita: `<p><strong>From Narita Airport</strong> there are two routes (both take about 1 hour 40 minutes to 2 hours).</p>`,
       naritaA: `<p><strong>Route A: Keisei Skyliner + JR</strong> (fastest)</p><ol class="route"><li class="route__stop">Narita Airport<span class="route__ja">成田空港</span></li><li class="route__ride"><span class="route__line route__line--skyliner">Keisei Skyliner</span>To Nippori<span class="route__time">about 40 min</span><span class="route__note">All seats are reserved.</span></li><li class="route__stop">Nippori<span class="route__ja">日暮里</span><span class="route__note">Transfer to JR</span></li><li class="route__ride"><span class="route__line route__line--jr">JR Keihin-Tohoku Line</span>Bound for Ofuna / Isogo<span class="route__time">about 45 min</span></li><li class="route__stop">JR Tsurumi<span class="route__ja">JR鶴見</span></li><li class="route__walk">Walk <span class="route__time">about 11 min</span><span class="route__note">Leave by the West Exit and continue. The road is almost flat.</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">Walking directions in Google Maps</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol>`,
       naritaB: `<p><strong>Route B: JR Narita Express</strong> (fewer transfers, with space for large luggage)</p><ol class="route"><li class="route__stop">Narita Airport<span class="route__ja">成田空港</span></li><li class="route__ride"><span class="route__line route__line--nex">JR Narita Express</span>To Yokohama<span class="route__time">about 1 hr 30 min</span><span class="route__note">All seats are reserved. Only some trains, such as those bound for Ofuna, stop at Yokohama. If your train does not stop at Yokohama, get off at Shinagawa and transfer to the Keihin-Tohoku Line bound for Ofuna.</span></li><li class="route__stop">Yokohama<span class="route__ja">横浜</span><span class="route__note">Transfer</span></li><li class="route__ride"><span class="route__line route__line--jr">JR Keihin-Tohoku Line</span>Bound for Tokyo / Omiya<span class="route__time">about 10 min</span></li><li class="route__stop">JR Tsurumi<span class="route__ja">JR鶴見</span></li><li class="route__walk">Walk <span class="route__time">about 11 min (West Exit)</span><span class="route__note">Leave by the West Exit and continue. The road is almost flat.</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">Walking directions in Google Maps</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol><a class="btn btn--outline btn--block" href="https://www.google.com/maps/dir/?api=1&origin=Narita%20Airport&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&travelmode=transit" target="_blank" rel="noopener"><span>Check current transfers in Google Maps</span></a>`,
-      taxi: `<p>By taxi, please show the driver the address below.</p><ul><li>From Haneda Airport: about 30 minutes, approximately ¥6,000–7,000</li><li>From JR Tsurumi Station: about 3 minutes, approximately ¥500</li><li>A 20% late-night surcharge applies between 10:00 PM and 5:00 AM</li></ul><p><strong>Important:</strong> if you continue straight along the main road, you will have to walk up a flight of stairs to reach the building. Please show the driver the address and ask them to take the route that lets the car <strong>drive right up to the building</strong>.</p>`,
+      taxi: `<p>By taxi, please show the driver the address below.</p><ul><li>From Haneda Airport: about 30 minutes, approximately ¥6,000–7,000</li><li>From JR Tsurumi Station: about 3 minutes, approximately ¥500</li><li>A 20% late-night surcharge applies between 10:00 PM and 5:00 AM</li></ul><p><strong>Important:</strong> the building is on a narrow side street off the main road, and drivers often miss the entrance. Once you are in the taxi, please show the driver <a href="#/taxi">this screen for taxi drivers</a>.</p>`,
       taxiStandKeikyu: `<p><strong>Taxi stand at Keikyu-Tsurumi Station:</strong> go to the West Exit, turn left, and go down the stairs — you will see the TAXI sign.</p>`,
       taxiStandJR: `<p><strong>Taxi stand at JR Tsurumi Station:</strong> cross the crosswalk at the bottom of the stairs and turn left — you will see the TAXI sign.</p>`,
       exterior: `<p>The building, seen from outside.</p>`
@@ -203,7 +223,17 @@ window.I18N = {
       nearby: `周辺のお店`,
       parking: `コインパーキング`,
       trouble: `困ったとき`,
-      emergency: `緊急連絡先・避難場所`
+      emergency: `緊急連絡先・避難場所`,
+      taxi: `タクシーの運転手さんへ`
+    },
+    taxi: {
+      intro: `<p class="taxi-lead">この画面を運転手さんに見せてください。</p>`,
+      card: TAXI_JA.card,
+      p1: TAXI_JA.p1,
+      p2: TAXI_JA.p2,
+      p3: TAXI_JA.p3,
+      turn: TAXI_JA.turn,
+      map: TAXI_JA.map
     },
     translation: {
       intro: `<p>滞在中の翻訳には<strong>Googleレンズ</strong>が便利です。カメラを文字にかざすだけで、その場で翻訳できます。</p><ul><li>Googleアプリをインストールする</li><li>Googleレンズのアイコンをタップする</li><li><strong>「翻訳」</strong>をタップする</li><li>翻訳したい文字にカメラを向ける</li></ul>`
@@ -214,7 +244,7 @@ window.I18N = {
       narita: `<p><strong>成田空港から</strong>は、次の2つのルートがあります（どちらも約1時間40分〜2時間）。</p>`,
       naritaA: `<p><strong>ルートA：京成スカイライナー＋JR</strong>（いちばん速い）</p><ol class="route"><li class="route__stop">成田空港<span class="route__en">Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--skyliner">京成スカイライナー</span>日暮里まで<span class="route__time">約40分</span><span class="route__note">全席指定です。</span></li><li class="route__stop">日暮里<span class="route__en">Nippori</span><span class="route__note">JRに乗り換え</span></li><li class="route__ride"><span class="route__line route__line--jr">JR京浜東北線</span>「大船」「磯子」方面<span class="route__time">約45分</span></li><li class="route__stop">JR鶴見<span class="route__en">JR Tsurumi</span></li><li class="route__walk">徒歩 <span class="route__time">約11分</span><span class="route__note">西口を出て進みます。ほぼ平らな道です。</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">Googleマップで道順を見る</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol>`,
       naritaB: `<p><strong>ルートB：JR成田エクスプレス</strong>（乗り換えが少なく、大きな荷物も置けます）</p><ol class="route"><li class="route__stop">成田空港<span class="route__en">Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--nex">JR成田エクスプレス</span>横浜まで<span class="route__time">約1時間30分</span><span class="route__note">全席指定です。横浜に止まるのは「大船」行きなど一部の列車だけです。横浜に止まらない列車のときは、品川で降りて京浜東北線の「大船」方面に乗り換えてください。</span></li><li class="route__stop">横浜<span class="route__en">Yokohama</span><span class="route__note">乗り換え</span></li><li class="route__ride"><span class="route__line route__line--jr">JR京浜東北線</span>「東京」「大宮」方面<span class="route__time">約10分</span></li><li class="route__stop">JR鶴見<span class="route__en">JR Tsurumi</span></li><li class="route__walk">徒歩 <span class="route__time">約11分（西口）</span><span class="route__note">西口を出て進みます。ほぼ平らな道です。</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">Googleマップで道順を見る</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol><a class="btn btn--outline btn--block" href="https://www.google.com/maps/dir/?api=1&origin=Narita%20Airport&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&travelmode=transit" target="_blank" rel="noopener"><span>Googleマップで今の乗り換えを調べる</span></a>`,
-      taxi: `<p>タクシーをご利用の場合は、運転手さんに下の住所を見せてください。</p><ul><li>羽田空港から：約30分、およそ6,000〜7,000円</li><li>JR鶴見駅から：約3分、およそ500円</li><li>22時〜翌5時は深夜割増料金（2割増）がかかります</li></ul><p><strong>重要：</strong>大通りをそのまま直進すると、建物まで階段を上ることになります。運転手さんに住所を見せて、<strong>建物の前まで車で行ける道</strong>を通るようお伝えください。</p>`,
+      taxi: `<p>タクシーをご利用の場合は、運転手さんに下の住所を見せてください。</p><ul><li>羽田空港から：約30分、およそ6,000〜7,000円</li><li>JR鶴見駅から：約3分、およそ500円</li><li>22時〜翌5時は深夜割増料金（2割増）がかかります</li></ul><p><strong>重要：</strong>建物は大通りから1本入った細い道沿いにあり、運転手さんが入口を見落としやすい場所です。乗車したら、<a href="#/taxi">運転手さんに見せる画面</a>を見せてください。</p>`,
       taxiStandKeikyu: `<p><strong>京急鶴見駅のタクシー乗り場：</strong>西口を出て左に曲がり、階段を下りると「TAXI」の看板が見えます。</p>`,
       taxiStandJR: `<p><strong>JR鶴見駅のタクシー乗り場：</strong>階段下の横断歩道を渡って左に曲がると「TAXI」の看板が見えます。</p>`,
       exterior: `<p>建物の外観です。</p>`
@@ -358,7 +388,17 @@ window.I18N = {
       nearby: `附近店家`,
       parking: `投币式停车场`,
       trouble: `常见问题排解`,
-      emergency: `紧急联络方式・避难地点`
+      emergency: `紧急联络方式・避难地点`,
+      taxi: `给出租车司机看`
+    },
+    taxi: {
+      intro: `<p class="taxi-lead">请将此画面出示给出租车司机。</p>`,
+      card: TAXI_JA.card,
+      p1: TAXI_JA.p1,
+      p2: TAXI_JA.p2,
+      p3: TAXI_JA.p3,
+      turn: TAXI_JA.turn,
+      map: TAXI_JA.map
     },
     translation: {
       intro: `<p>建议使用<strong>Google 镜头</strong>进行即时翻译，只要用相机对准文本，就能立即翻译。</p><ul><li>安装Google App</li><li>点击Google镜头图标</li><li>点击<strong>「翻译」</strong></li><li>将相机对准想翻译的文本</li></ul>`
@@ -369,7 +409,7 @@ window.I18N = {
       narita: `<p><strong>从成田机场出发</strong>有以下两条路线（均约需1小时40分钟至2小时）。</p>`,
       naritaA: `<p><strong>路线A：京成Skyliner＋JR</strong>（最快）</p><ol class="route"><li class="route__stop">成田机场<span class="route__ja">成田空港 / Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--skyliner">京成Skyliner</span>到日暮里<span class="route__time">约40分钟</span><span class="route__note">全部为指定座位。</span></li><li class="route__stop">日暮里<span class="route__ja">日暮里 / Nippori</span><span class="route__note">换乘JR</span></li><li class="route__ride"><span class="route__line route__line--jr">JR京滨东北线</span>开往“大船”“矶子”方向<span class="route__time">约45分钟</span></li><li class="route__stop">JR鹤见<span class="route__ja">JR鶴見 / JR Tsurumi</span></li><li class="route__walk">步行 <span class="route__time">约11分钟</span><span class="route__note">从西口出站后前行。道路基本平坦。</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">在Google地图中查看步行路线</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol>`,
       naritaB: `<p><strong>路线B：JR成田特快（N'EX）</strong>（换乘少，可放大件行李）</p><ol class="route"><li class="route__stop">成田机场<span class="route__ja">成田空港 / Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--nex">JR成田特快</span>到横滨<span class="route__time">约1小时30分钟</span><span class="route__note">全部为指定座位。只有开往“大船”等部分列车会在横滨停车。若乘坐的列车不在横滨停车，请在品川下车，换乘京滨东北线开往“大船”方向的列车。</span></li><li class="route__stop">横滨<span class="route__ja">横浜 / Yokohama</span><span class="route__note">换乘</span></li><li class="route__ride"><span class="route__line route__line--jr">JR京滨东北线</span>开往“东京”“大宫”方向<span class="route__time">约10分钟</span></li><li class="route__stop">JR鹤见<span class="route__ja">JR鶴見 / JR Tsurumi</span></li><li class="route__walk">步行 <span class="route__time">约11分钟（西口）</span><span class="route__note">从西口出站后前行。道路基本平坦。</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">在Google地图中查看步行路线</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol><a class="btn btn--outline btn--block" href="https://www.google.com/maps/dir/?api=1&origin=Narita%20Airport&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&travelmode=transit" target="_blank" rel="noopener"><span>在Google地图中查询当前换乘方式</span></a>`,
-      taxi: `<p>搭乘出租车时，请将下方地址出示给司机看。</p><ul><li>从羽田机场出发：约30分钟，车费约6,000〜7,000日圆</li><li>从JR鹤见站出发：约3分钟，车费约500日圆</li><li>22:00〜翌5:00会加收两成深夜加成费用</li></ul><p><strong>重要提醒：</strong>若沿大马路直行，需要走楼梯才能抵达建筑物。请向司机出示地址，并告知请走<strong>车子能直接开到建筑物前的路线</strong>。</p>`,
+      taxi: `<p>搭乘出租车时，请将下方地址出示给司机看。</p><ul><li>从羽田机场出发：约30分钟，车费约6,000〜7,000日圆</li><li>从JR鹤见站出发：约3分钟，车费约500日圆</li><li>22:00〜翌5:00会加收两成深夜加成费用</li></ul><p><strong>重要提醒：</strong>建筑物位于离开大马路后的一条窄路旁，司机很容易错过入口。上车后，请向司机出示<a href="#/taxi">给司机看的画面</a>。</p>`,
       taxiStandKeikyu: `<p><strong>京急鹤见站出租车乘车点：</strong>从西口出站后左转，走下楼梯即可看到「TAXI」的招牌。</p>`,
       taxiStandJR: `<p><strong>JR鹤见站出租车乘车点：</strong>走下楼梯后穿越斑马线并左转，即可看到「TAXI」的招牌。</p>`,
       exterior: `<p>建筑物外观。</p>`
@@ -513,7 +553,17 @@ window.I18N = {
       nearby: `附近店家`,
       parking: `投幣式停車場`,
       trouble: `常見問題排解`,
-      emergency: `緊急聯絡方式・避難地點`
+      emergency: `緊急聯絡方式・避難地點`,
+      taxi: `給計程車司機看`
+    },
+    taxi: {
+      intro: `<p class="taxi-lead">請將此畫面出示給計程車司機。</p>`,
+      card: TAXI_JA.card,
+      p1: TAXI_JA.p1,
+      p2: TAXI_JA.p2,
+      p3: TAXI_JA.p3,
+      turn: TAXI_JA.turn,
+      map: TAXI_JA.map
     },
     translation: {
       intro: `<p>建議使用<strong>Google 鏡頭</strong>進行即時翻譯，只要用相機對準文字，就能立即翻譯。</p><ul><li>安裝Google App</li><li>點選Google鏡頭圖示</li><li>點選<strong>「翻譯」</strong></li><li>將相機對準想翻譯的文字</li></ul>`
@@ -524,7 +574,7 @@ window.I18N = {
       narita: `<p><strong>從成田機場出發</strong>有以下兩條路線（皆約需1小時40分鐘至2小時）。</p>`,
       naritaA: `<p><strong>路線A：京成Skyliner＋JR</strong>（最快）</p><ol class="route"><li class="route__stop">成田機場<span class="route__ja">成田空港 / Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--skyliner">京成Skyliner</span>到日暮里<span class="route__time">約40分鐘</span><span class="route__note">全為指定席。</span></li><li class="route__stop">日暮里<span class="route__ja">日暮里 / Nippori</span><span class="route__note">轉乘JR</span></li><li class="route__ride"><span class="route__line route__line--jr">JR京濱東北線</span>往「大船」「磯子」方向<span class="route__time">約45分鐘</span></li><li class="route__stop">JR鶴見<span class="route__ja">JR鶴見 / JR Tsurumi</span></li><li class="route__walk">步行 <span class="route__time">約11分鐘</span><span class="route__note">從西口出站後直走。路面幾乎平坦。</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">在Google地圖中查看步行路線</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol>`,
       naritaB: `<p><strong>路線B：JR成田特快（N'EX）</strong>（轉乘少，可放大件行李）</p><ol class="route"><li class="route__stop">成田機場<span class="route__ja">成田空港 / Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--nex">JR成田特快</span>到橫濱<span class="route__time">約1小時30分鐘</span><span class="route__note">全為指定席。只有開往「大船」等部分列車會停靠橫濱。若搭乘的列車不停橫濱，請在品川下車，轉乘京濱東北線往「大船」方向的列車。</span></li><li class="route__stop">橫濱<span class="route__ja">横浜 / Yokohama</span><span class="route__note">轉乘</span></li><li class="route__ride"><span class="route__line route__line--jr">JR京濱東北線</span>往「東京」「大宮」方向<span class="route__time">約10分鐘</span></li><li class="route__stop">JR鶴見<span class="route__ja">JR鶴見 / JR Tsurumi</span></li><li class="route__walk">步行 <span class="route__time">約11分鐘（西口）</span><span class="route__note">從西口出站後直走。路面幾乎平坦。</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">在Google地圖中查看步行路線</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol><a class="btn btn--outline btn--block" href="https://www.google.com/maps/dir/?api=1&origin=Narita%20Airport&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&travelmode=transit" target="_blank" rel="noopener"><span>在Google地圖查詢目前的轉乘方式</span></a>`,
-      taxi: `<p>搭乘計程車時，請將下方住址出示給司機看。</p><ul><li>從羽田機場出發：約30分鐘，車資約6,000〜7,000日圓</li><li>從JR鶴見站出發：約3分鐘，車資約500日圓</li><li>22:00〜翌5:00會加收兩成深夜加成費用</li></ul><p><strong>重要提醒：</strong>若沿大馬路直行，需要走樓梯才能抵達建築物。請向司機出示住址，並告知請走<strong>車子能直接開到建築物前的路線</strong>。</p>`,
+      taxi: `<p>搭乘計程車時，請將下方住址出示給司機看。</p><ul><li>從羽田機場出發：約30分鐘，車資約6,000〜7,000日圓</li><li>從JR鶴見站出發：約3分鐘，車資約500日圓</li><li>22:00〜翌5:00會加收兩成深夜加成費用</li></ul><p><strong>重要提醒：</strong>建築物位於離開大馬路後的一條窄路旁，司機很容易錯過入口。上車後，請向司機出示<a href="#/taxi">給司機看的畫面</a>。</p>`,
       taxiStandKeikyu: `<p><strong>京急鶴見站計程車招呼站：</strong>從西口出站後左轉，走下樓梯即可看到「TAXI」的招牌。</p>`,
       taxiStandJR: `<p><strong>JR鶴見站計程車招呼站：</strong>走下樓梯後穿越斑馬線並左轉，即可看到「TAXI」的招牌。</p>`,
       exterior: `<p>建築物外觀。</p>`
@@ -668,7 +718,17 @@ window.I18N = {
       nearby: `주변 편의시설`,
       parking: `코인 주차장`,
       trouble: `문제 해결`,
-      emergency: `긴급 연락처・대피 장소`
+      emergency: `긴급 연락처・대피 장소`,
+      taxi: `택시 기사님께 보여주세요`
+    },
+    taxi: {
+      intro: `<p class="taxi-lead">이 화면을 택시 기사님께 보여주세요.</p>`,
+      card: TAXI_JA.card,
+      p1: TAXI_JA.p1,
+      p2: TAXI_JA.p2,
+      p3: TAXI_JA.p3,
+      turn: TAXI_JA.turn,
+      map: TAXI_JA.map
     },
     translation: {
       intro: `<p>체류 중에는 <strong>구글 렌즈</strong>를 이용한 실시간 번역을 추천드립니다. 카메라를 텍스트에 비추기만 하면 바로 번역해 줍니다.</p><ul><li>구글 앱 설치</li><li>구글 렌즈 아이콘 탭</li><li><strong>'번역'</strong> 탭</li><li>번역하고 싶은 글자에 카메라를 비추기</li></ul>`
@@ -679,7 +739,7 @@ window.I18N = {
       narita: `<p><strong>나리타 공항에서</strong>는 다음 두 가지 경로가 있습니다 (둘 다 약 1시간 40분~2시간).</p>`,
       naritaA: `<p><strong>경로 A: 게이세이 스카이라이너 + JR</strong> (가장 빠름)</p><ol class="route"><li class="route__stop">나리타 공항<span class="route__ja">成田空港 / Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--skyliner">게이세이 스카이라이너</span>닛포리까지<span class="route__time">약 40분</span><span class="route__note">전석 지정석입니다.</span></li><li class="route__stop">닛포리<span class="route__ja">日暮里 / Nippori</span><span class="route__note">JR로 환승</span></li><li class="route__ride"><span class="route__line route__line--jr">JR 게이힌도호쿠선</span>「오후나」「이소고」 방면<span class="route__time">약 45분</span></li><li class="route__stop">JR 쓰루미<span class="route__ja">JR鶴見 / JR Tsurumi</span></li><li class="route__walk">도보 <span class="route__time">약 11분</span><span class="route__note">서쪽 출구로 나와 직진하세요. 거의 평탄한 길입니다.</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">구글 지도에서 도보 경로 보기</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol>`,
       naritaB: `<p><strong>경로 B: JR 나리타 익스프레스</strong> (환승이 적고 큰 짐도 둘 수 있음)</p><ol class="route"><li class="route__stop">나리타 공항<span class="route__ja">成田空港 / Narita Airport</span></li><li class="route__ride"><span class="route__line route__line--nex">JR 나리타 익스프레스</span>요코하마까지<span class="route__time">약 1시간 30분</span><span class="route__note">전석 지정석입니다. 요코하마에 정차하는 것은 「오후나」행 등 일부 열차뿐입니다. 요코하마에 정차하지 않는 열차라면 시나가와에서 내려 게이힌도호쿠선 「오후나」 방면으로 환승하세요.</span></li><li class="route__stop">요코하마<span class="route__ja">横浜 / Yokohama</span><span class="route__note">환승</span></li><li class="route__ride"><span class="route__line route__line--jr">JR 게이힌도호쿠선</span>「도쿄」「오미야」 방면<span class="route__time">약 10분</span></li><li class="route__stop">JR 쓰루미<span class="route__ja">JR鶴見 / JR Tsurumi</span></li><li class="route__walk">도보 <span class="route__time">약 11분 (서쪽 출구)</span><span class="route__note">서쪽 출구로 나와 직진하세요. 거의 평탄한 길입니다.</span><a class="route__link" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E9%B6%B4%E8%A6%8B%E9%A7%85%20%E8%A5%BF%E5%8F%A3&amp;destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&amp;travelmode=walking" target="_blank" rel="noopener">구글 지도에서 도보 경로 보기</a></li><li class="route__stop route__stop--goal">YOKOHAMA Still Retreat</li></ol><a class="btn btn--outline btn--block" href="https://www.google.com/maps/dir/?api=1&origin=Narita%20Airport&destination=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-7-40&travelmode=transit" target="_blank" rel="noopener"><span>구글 지도에서 현재 환승 경로 확인</span></a>`,
-      taxi: `<p>택시를 이용하실 경우 아래 주소를 기사님께 보여주세요.</p><ul><li>하네다 공항에서: 약 30분, 약 6,000〜7,000엔</li><li>JR 쓰루미역에서: 약 3분, 약 500엔</li><li>22시〜다음날 5시에는 심야 할증(20%)이 적용됩니다</li></ul><p><strong>중요:</strong> 큰길을 그대로 직진하면 건물까지 계단을 올라가야 합니다. 기사님께 주소를 보여드리고, <strong>건물 앞까지 차로 갈 수 있는 길</strong>로 가 달라고 말씀해 주세요.</p>`,
+      taxi: `<p>택시를 이용하실 경우 아래 주소를 기사님께 보여주세요.</p><ul><li>하네다 공항에서: 약 30분, 약 6,000〜7,000엔</li><li>JR 쓰루미역에서: 약 3분, 약 500엔</li><li>22시〜다음날 5시에는 심야 할증(20%)이 적용됩니다</li></ul><p><strong>중요:</strong> 건물은 큰길에서 한 블록 들어간 좁은 길가에 있어 기사님이 입구를 지나치기 쉽습니다. 택시에 타시면 <a href="#/taxi">기사님께 보여드리는 화면</a>을 보여 주세요.</p>`,
       taxiStandKeikyu: `<p><strong>게이큐 쓰루미역 택시 승강장:</strong> 서쪽 출구로 나와 왼쪽으로 돌아 계단을 내려가면 'TAXI' 표지판이 보입니다.</p>`,
       taxiStandJR: `<p><strong>JR 쓰루미역 택시 승강장:</strong> 계단 아래 횡단보도를 건너 왼쪽으로 돌면 'TAXI' 표지판이 보입니다.</p>`,
       exterior: `<p>건물 외관입니다.</p>`

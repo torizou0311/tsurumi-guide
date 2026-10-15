@@ -901,3 +901,34 @@ button { font-family: inherit; }
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/* ------------------------ 運転手さんへ（#/taxi） ------------------------ */
+/* タクシーの運転手さんにスマホを見せるページ。文字は大きめ、太い枠で目立たせる */
+.taxi-lead { font-size: 17px; font-weight: 700; color: var(--ink); margin: 0 0 4px; }
+.taxi-card {
+  background: var(--surface-raised);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-m);
+  padding: 16px 16px 18px;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.65;
+}
+.taxi-card p { margin: 0 0 12px; }
+.taxi-card strong { background: color-mix(in srgb, #ffd60a 55%, transparent); padding: 0 2px; }
+.taxi-card__title { font-size: 26px; font-weight: 800; border-bottom: 2px solid var(--line); padding-bottom: 8px; }
+.taxi-card__dest { font-size: 22px; font-weight: 800; }
+.taxi-card__label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 10px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: 2px;
+}
+.taxi-card__warn { margin-top: 6px; font-size: 20px; font-weight: 800; }
+.taxi-card__warn p { font-size: 20px; margin: 0; }
+.taxi-photo-cap { font-size: 17px; font-weight: 700; margin: 0 0 6px; }
