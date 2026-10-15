@@ -1,4 +1,4 @@
-// 4か国語の文章はすべてこのファイルにまとまっています。
+// 5か国語の文章はすべてこのファイルにまとまっています。
 // 文章を直したいときは、ここだけを直せばOKです（建物共通の文章は1回書くだけで、
 // 103・201・202のどの部屋のページにも反映されます）。
 //
@@ -302,6 +302,156 @@ window.I18N = {
       addressToTell: `<p>助けを呼ぶときは、この住所を伝えてください。</p>`,
       evacuation: `<p><strong>避難場所</strong>（地震・洪水・土砂災害）：豊岡小学校（横浜市鶴見区豊岡町27-1）— 徒歩約11分</p>`,
       hostContact: `<p>その他のお問い合わせはAirbnbメッセージでホストまでご連絡ください。</p>`
+    }
+  },
+
+  'zh-Hans': {
+    meta: { name: '简体中文' },
+    common: {
+      brand: `YOKOHAMA Still Retreat`,
+      tagline: `横滨鹤见的静谧隐居之所`,
+      addressLocal: `日本 邮政编码230-0015 神奈川县横滨市鹤见区寺谷1-7-40 Raise寺谷`,
+      addressJaLabel: `日文地址（请出示给出租车司机看）`,
+      copy: `复制`,
+      copied: `已复制`,
+      openMaps: `在Google地图中打开`,
+      changeRoom: `更换房间`,
+      room: `房间`,
+      photoPending: `照片准备中`,
+      pendingInfo: `此信息仍在准备中，请通过Airbnb消息联系房东，我们会尽快回复您。`,
+      ssid5: `5GHz网络名称（SSID）`,
+      ssid24: `2.4GHz网络名称（SSID）`,
+      password: `密码`,
+      side: { left: `左`, right: `右` },
+      backHome: `回到首页`
+    },
+    nav: { home: `首页`, wifi: `Wi-Fi`, checkout: `入住退房`, emergency: `紧急` },
+    home: {
+      greeting: `欢迎入住 YOKOHAMA Still Retreat`,
+      subtitle: `祝您在横滨鹤见度过宁静舒适的时光。`,
+      quickTitle: `常用信息`,
+      menuTitle: `完整菜单`
+    },
+    roomselect: {
+      title: `请问您入住哪个房间？`,
+      subtitle: `请选择您的房间，查看专属入住指南。`
+    },
+    menu: {
+      translation: `翻译工具`,
+      access: `交通方式`,
+      checkin: `入住与退房`,
+      wifi: `Wi-Fi`,
+      appliances: `家电与设备`,
+      projector: `投影仪`,
+      garbage: `垃圾丢弃方式`,
+      rules: `住宿规则与禁止事项`,
+      nearby: `附近店家`,
+      parking: `投币式停车场`,
+      trouble: `常见问题排解`,
+      emergency: `紧急联络方式・避难地点`
+    },
+    translation: {
+      intro: `<p>建议使用<strong>Google 镜头</strong>进行即时翻译，只要用相机对准文本，就能立即翻译。</p><ul><li>安装Google App</li><li>点击Google镜头图标</li><li>点击<strong>「翻译」</strong></li><li>将相机对准想翻译的文本</li></ul>`
+    },
+    access: {
+      mapIntro: `<p>点击下方地址即可打开Google地图。</p>`,
+      haneda: `<p>从<strong>羽田机场</strong>搭电车到京急鹤见站约需20分钟。从京急鹤见站步行到本住宿约18分钟。</p>`,
+      narita: `<p>从<strong>成田机场</strong>搭电车到JR鹤见站约需90分钟。从JR鹤见站步行到本住宿约12分钟。</p>`,
+      taxi: `<p>搭乘出租车时，请将下方地址出示给司机看。</p><ul><li>从羽田机场出发：约30分钟，车费约6,000〜7,000日圆</li><li>从JR鹤见站出发：约3分钟，车费约500日圆</li><li>22:00〜翌5:00会加收两成深夜加成费用</li></ul><p><strong>重要提醒：</strong>请告知司机在地图上红色圈起处右转。若直接沿大马路直行，需要走楼梯才能抵达建筑物。</p>`,
+      taxiStandKeikyu: `<p><strong>京急鹤见站出租车乘车点：</strong>从西口出站后左转，走下楼梯即可看到「TAXI」的招牌。</p>`,
+      taxiStandJR: `<p><strong>JR鹤见站出租车乘车点：</strong>走下楼梯后穿越斑马线并左转，即可看到「TAXI」的招牌。</p>`,
+      exterior: `<p>建筑物外观。</p>`
+    },
+    checkin: {
+      intro: `<p>本住宿采自助入住，现场无工作人员常驻，请提前确认以下步骤。</p>`,
+      times: `<p><strong>入住：</strong>16:00起<br><strong>退房：</strong>10:00前</p><p>清洁人员将于10:10抵达，请于10:00前退房。若逾10:00退房，可能会加收一晚的费用。</p>`,
+      steps: `<p>您的房间是<strong>{room}号房</strong>，位于{floor}楼。房门为电子锁。</p><ul><li>输入密码并按下解锁按钮（密码会在入住当天早上通过Airbnb消息发送给您）。</li></ul>`,
+      stepsLock: `<p>外出或退房时请务必将门锁上。</p>`,
+      keybox: `<p>若电子锁无法使用，可从钥匙盒中取出钥匙使用。钥匙盒位于房门<strong>{keyboxSide}侧</strong>的燃气表处。共有两个钥匙盒，使用任一个皆可。钥匙盒密码与电子锁相同。</p>`
+    },
+    wifi: {
+      title: `Wi-Fi`,
+      scanOrType: `请扫描QR code，或直接输入下方信息连接。`
+    },
+    appliances: {
+      // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
+      titles: { ac: `空调`, induction: `IH电磁炉`, microwave: `微波炉`, kettle: `电热水壶`, coffee: `挂耳式咖啡`, ricecooker: `电饭煲`, washer: `洗衣机`, wire: `室内晒衣绳`, circulator: `循环扇`, iron: `蒸汽熨斗`, dolcegusto: `胶囊咖啡机（雀巢 Dolce Gusto Genio 2）` },
+      ac: `<p>请使用附赠的遥控器操作。</p>`,
+      induction: `<p>位于厨房。下图为操作面板。</p>`,
+      inductionSteps: `<p><strong>使用方法</strong></p><ul><li>将锅子放在面板中央（没有放锅子时无法加热）。</li><li><strong>① 电源：</strong>长按2秒以上。</li><li><strong>② 加热 开／关：</strong>按下后，再按 <strong>③ ◀ 或 ▶</strong> 即开始加热。</li><li>用 ◀ ▶ 调整火力（共5段：弱、1、2、3、强）。</li><li>使用完毕后，按「加热 开／关」停止，再按「电源」关闭。</li></ul><p><strong>可使用的锅具：</strong>磁铁可吸附的平底锅，例如铁锅、不锈钢锅（锅底直径约12～24厘米）。砂锅、玻璃、铝、铜制锅具无法使用。若火力指示灯全部闪烁且无法加热，表示锅具不适用或没有放在中央。</p><p><strong>注意：</strong>使用后面板仍然很烫，请在「高温注意」（高温注意）指示灯熄灭前不要触摸。使用中请勿离开。</p>`,
+      microwave: ``,
+      microwaveIris: `<p><strong>最简单的用法</strong></p><ul><li>放入食物、关上门后，按下 <strong>③ 开始（あたためスタート）</strong>，即以500W加热30秒。每多按一次增加30秒（最长5分钟）。</li></ul><p><strong>自行设置时间</strong></p><ul><li><strong>① 火力（レンジ）：</strong>按一次为500W（再按一次为200W）。</li><li><strong>② 时间：</strong>按「＋1分钟（1分）」与「＋10秒（10秒）」设置时间。</li><li><strong>③ 开始（あたためスタート）：</strong>按下。</li><li>中途想停止时，请按「取消（とりけし）」。</li></ul><p><strong>其他按键</strong></p><ul><li>饮料（飲み物）：按一次为1杯、按两次为2杯，再按「开始」。</li><li>白饭（ごはん）：按下后再按「开始」。</li><li>解凍（解凍）：按下后，用「1分/100g」「10秒/10g」设置重量（100～500克），再按「开始」。</li></ul>`,
+      microwaveNitori: `<p><strong>使用方法</strong></p><ul><li>将食物放在中央，关上门。</li><li><strong>① 上方旋钮（火力）：</strong>一般加热请转到「500W」，解冻请转到「200W」。</li><li><strong>② 下方旋钮（定时）：</strong>向右转动设置时间。设置后约3秒会自动开始（没有开始键）。</li><li>中途想停止时，请将下方旋钮转回「切」（关），或把门打开。</li><li>结束时会响三声。</li></ul><p>定时刻度中，最前面的「20」「40」是秒，从「1」开始是分钟。请在设置时间之前先选好火力（之后无法更改）。</p>`,
+      microwaveCaution: `<p><strong>注意：</strong>不可使用金属容器、铝箔纸，以及有金银花纹的器皿。带壳的蛋、水煮蛋、密封的容器、罐头、调理包请勿直接加热。请勿空烧。</p>`,
+      kettle: `<p>请注意：水煮沸后，除握把外的壶身也会变烫，请小心使用。</p>`,
+      kettleNitori: `<p><strong>使用方法</strong></p><ul><li>将水壶从底座上取下。</li><li><strong>①</strong> 转动壶盖，使壶盖上的记号对准「开锁」图标，再把壶盖向上取下。</li><li>加水。请勿超过内侧的「MAX」标示（约0.8升），水量也不可太少（至少150毫升）。</li><li>盖回壶盖，转动使记号对准「上锁」图标。将水壶放回底座。</li><li><strong>②</strong> 将电源开关往下压即为「ON」，指示灯亮起。</li><li>水煮沸后，开关会自动弹回，指示灯熄灭。</li></ul><p>装满（0.8升）约5分钟，一杯份（0.15升）约1分半钟即可煮沸。</p><p><strong>注意：</strong>壶盖若未盖紧，煮沸后可能不会自动断电。加热中与刚煮沸时请勿打开壶盖，并小心壶嘴冒出的蒸汽。请勿放入水以外的东西。</p>`,
+      kettleIris: `<p><strong>使用方法</strong></p><ul><li>将水壶从底座上取下，拿开壶盖并加水。水量请介于内侧的「MIN」与「MAX」线之间（0.3～0.6升）。</li><li>将壶盖盖紧，把水壶放回底座。</li><li><strong>① 电源：</strong>按下电源键。</li><li><strong>② MODE：</strong>按下选择温度：100℃（煮沸）／Coffee（90℃）／Green Tea（70℃）。</li><li><strong>③ START：</strong>按下。完成后会响三声并自动停止。</li><li>中途想停止时，请再按一次「START」。</li></ul><p>按「−」「＋」可在60～100℃之间以5℃为单位调整温度。加热完成后按「KEEP WARM」，最长可保温1小时。</p><p><strong>注意：</strong>加热中与刚煮沸时请勿打开壶盖。壶身的金属部分会变烫，请握住把手。请勿放入水以外的东西。</p>`,
+      coffee: `<p>厨房设有挂耳式咖啡架，欢迎享用手冲咖啡！</p>`,
+      dolceIntro: `<p>放入专用胶囊、拨动拨杆，即可一杯一杯地冲煮咖啡。请依照下方步骤 1～7 使用。</p>`,
+      dolceWater: `<p><strong>1. 加水</strong></p><ul><li>取下机身后方的水箱，装入自来水。<strong>请勿超过「MAX」线。</strong></li><li>将水箱装回机身。</li><li>请勿加入水以外的东西（热水、牛奶等）。</li></ul>`,
+      dolcePower: `<p><strong>2. 打开电源</strong></p><ul><li>插上插头，按下机身上方的电源键。</li><li>电源键<strong>红灯闪烁</strong>时表示正在加热（约30秒），变成<strong>绿灯常亮</strong>后即可使用。</li></ul>`,
+      dolceCup: `<p><strong>3. 放置杯子</strong></p><ul><li>将杯子放在出水口下方的托盘上。</li></ul>`,
+      dolceLevel: `<p><strong>4. 调整刻度</strong></p><ul><li>胶囊的上盖印有以横线数量表示的<strong>刻度</strong>。</li><li>将机身上方的小拨杆<strong>上下</strong>拨动，使绿灯的数量与胶囊上的刻度相同。</li></ul>`,
+      dolceCapsule: `<p><strong>5. 放入胶囊</strong></p><ul><li>抬起正面的银色把手，将胶囊托架向外拉出。</li><li>把胶囊放入托架，推回机身，再把把手压下。</li></ul>`,
+      dolceBrew: `<p><strong>6. 拨动拨杆冲煮</strong></p><ul><li>将拨杆拨向<strong>右侧（红色）</strong>，即可冲出热饮。</li><li>达到设置的水量后会自动停止，拨杆回到中间。若想中途停止，请用手将拨杆拨回中间。</li><li>将拨杆拨向<strong>左侧（蓝色）</strong>，会流出水箱内原本温度的水（本机没有冷却功能）。想喝冰饮时，请冲入放有冰块的杯子。</li></ul>`,
+      dolceFinish: `<p><strong>7. 取出胶囊</strong></p><ul><li>请等到电源键由红灯闪烁变为<strong>绿灯常亮</strong>（约5秒）。</li><li>抬起把手，取出托架，丢弃用过的胶囊。</li><li>用水冲洗托架后装回机身，并压下把手。</li></ul><p><strong>注意：</strong><strong>电源键红灯闪烁时，请绝对不要抬起把手</strong>（热水可能喷出）。刚冲煮完的胶囊很烫，请勿用手触摸。约5分钟未操作，电源会自动关闭。</p>`,
+      riceCooker: ``,
+      washer: `<p>可从洗衣一路到烘干的滚筒式洗烘一体机（洗衣最多7公斤，烘干最多3.5公斤）。烘干时也会用水，请让连接洗衣机的水龙头保持打开。</p>`,
+      washerSteps: `<p><strong>使用方法</strong></p><ul><li>将衣物放入滚筒深处，并把门确实关好。</li><li><strong>① 电源：</strong>按「入」（开）。</li><li><strong>② 程序（コース）：</strong>按到 <strong>標準</strong> 的灯亮起。一般衣物用「標準」即可。</li><li><strong>③ 洗衣／烘干切换（運転切換）：</strong>按下选择。<br>洗濯 = 只洗衣<br>洗～乾 = 洗衣加烘干<br>乾燥 = 只烘干</li><li><strong>④ 开始（スタート）：</strong>按下。</li><li>显示屏会显示建议的洗涤剂用量（例如 0.5 = 半杯盖）约20秒，请在此时放入洗涤剂（洗涤剂不会自动投入）。</li><li>结束后电源会自动关闭。剩余时间显示在显示屏的「残り」旁。</li></ul><p><strong>其他程序指示灯：</strong>時短 = 快洗、部屋干し = 室内晾干用、毛布 = 毛毯、槽洗浄 = 洗衣槽清洁（不放衣物）、おうち流 = 自订。<strong>其他模式指示灯：</strong>除菌・消臭 = 不用水的除臭。</p>`,
+      washerDetergent: `<p><strong>放入洗涤剂</strong></p><ul><li>将机身左上方的洗涤剂盒向外拉出。</li><li>洗涤剂请放入后方较大的区域（洗衣粉放中间，洗衣液放右侧）。</li><li>柔顺剂请倒入左前方的小格（标示「柔軟剤」），最多到「満量」线。</li><li>洗衣凝珠请直接放入滚筒内，不要放进洗涤剂盒。</li></ul>`,
+      washerAdjust: `<p><strong>想调整时间或次数时</strong></p><p>先按「洗い」（洗涤）、「すすぎ」（漂洗）、「脱水」（脱水）或「乾かす」（烘干），再用 ∨ ∧ 调整。一般情况下不需要更改。</p>`,
+      washerNotes: `<p><strong>注意事项</strong></p><ul><li>运转中门会上锁。中途想开门时，请先按「スタート／一時停止」（开始／暂停）暂停，再按「ロック解除」（解除门锁）。</li><li>烘干后滚筒内很烫。按下「ロック解除」后，可能需要10～20分钟冷却，门才会打开。</li><li>要烘干时，衣物量请不要超过洗衣时的一半（3.5公斤）。放太多会烘不干。</li><li>长按「ロック解除」3秒以上会启动儿童安全锁（显示屏显示「L」），门将无法打开。解除时同样长按3秒以上。</li></ul>`,
+      wire: `<p>房内设有晒衣绳，可用来晾晒衣物。</p>`,
+      wireSteps: `<p><strong>使用方法</strong></p><ul><li><strong>①</strong> 握住钢丝绳前端的圆形旋钮，从墙上的白色主机拉出钢丝绳。</li><li><strong>②</strong> 将旋钮挂入对面墙上固定片的孔中。</li><li><strong>③</strong> 把主机上的圆形旋钮转向「LOCK」，将钢丝绳固定。</li></ul><p><strong>收纳时：</strong>将主机的旋钮往反方向转以解除锁定，把前端从固定片取下，再让钢丝绳慢慢收回主机。</p><p><strong>注意：</strong>承重约20公斤为止。请勿向下拉扯钢丝绳或悬挂在上面。</p>`,
+      circulator: `<p>由于天花板较高，冷空气容易堆积在下方、暖空气则聚集在上方。若感觉空调效果不佳，可打开循环扇帮助空气循环。</p>`,
+      circulatorSteps: `<p><strong>使用方法</strong></p><ul><li><strong>① 电源（電源 切/入）：</strong>按一下启动，再按一下停止。</li><li><strong>② 风量（風量）：</strong>按 &lt; 或 &gt; 调整风力（共5段，最强为「ターボ」＝涡轮）。</li><li><strong>③ 摆头（首ふり）：</strong>每按一次，会在上下（上下）、左右（左右）、同时、停止之间切换。可由指示灯确认目前状态。</li><li>关机定时（切タイマー）：1、2或4小时后自动停止。</li><li>自然风（リズム）：风力会缓慢变化，接近自然的风。</li></ul><p><strong>注意：</strong>请勿用手扳动机头。想改变方向时，请按「首ふり」让它摆动，到想要的位置再按一次停止。</p>`,
+      iron: `<p>浴室层架上备有蒸汽熨斗，使用时请搭配浴室内的烫衣板。</p>`
+    },
+    projector: {
+      titles: { basics: `电源与遥控器`, youtube: `观看 YouTube`, streaming: `观看 Netflix 与 Prime Video`, cast: `投放手机画面`, hdmi: `以 HDMI 连接`, speaker: `当作蓝牙音箱使用`, logout: `退房前`, trouble: `遇到问题时` },
+      intro: `<p>201 号房有一台可将影像投射到墙上的投影仪（JMGO PicoPlay+）。您可以观看 YouTube、Netflix、Prime Video 等。</p><div class="notice notice--warn"><p><strong>注意事项</strong></p><ul><li>请勿直视镜头，光线非常强。</li><li>投影时，请勿将机身直接直立摆放在桌面或台面上。要直立投影时，请务必装在房内备有的支架上。机身底部有散热孔，一旦被挡住，会因过热而自动停止运作。</li><li>有人经过镜头前方时，为了保护眼睛，影像会消失，只显示护眼功能已启动的提示消息。这不是故障。离开镜头前方后稍等一下，影像就会自动恢复（也可以按遥控器的③返回键）。</li></ul></div>`,
+      basics: `<p>下图为随附的遥控器。本页中的 ①〜⑬ 对应图中的编号。</p>`,
+      basicsSteps: `<p><strong>开机</strong></p><ul><li>按下遥控器的<strong>①电源</strong>键。</li><li>若无法开机，请按投影仪机身上的电源按钮（位置请见本页「以 HDMI 连接」图中的「电源按钮」）。</li></ul><p><strong>关机</strong></p><ul><li>按下遥控器的<strong>①电源</strong>键。</li></ul><p><strong>操作方式</strong></p><ul><li>对焦与画面形状会自动调整。</li><li>用<strong>②方向键</strong>选择，按<strong>⑨确认</strong>决定。</li><li>按<strong>③返回</strong>可回到上一步。</li><li>按<strong>⑩主画面</strong>可回到主画面。</li></ul>`,
+      youtube: `<p>按下遥控器的<strong>⑥YouTube</strong>键。不需登录即可观看。</p><p>若您登录了自己的账号，退房前请务必注销（请见<a href="#/projector/logout">退房前</a>）。</p>`,
+      streaming: `<p>按下遥控器的<strong>⑦Netflix</strong>或<strong>⑬Prime Video</strong>键，并以<strong>您自己的账号</strong>登录观看（本民宿不提供账号）。</p><p>退房前请务必注销（请见<a href="#/projector/logout">退房前</a>）。</p>`,
+      cast: `<p>首先，请将手机连上<strong>房间的 5GHz Wi-Fi（名称结尾为「-A」的那一个）</strong>。必须与投影仪连上同一个 Wi-Fi（连上名称结尾为「-G」的 Wi-Fi 时，可能无法投放）。Wi-Fi 信息请见 <a href="#/wifi">Wi-Fi 页面</a>。</p><p><strong>从应用程序投放</strong></p><ul><li>在 YouTube、Prime Video、Disney+ 等应用程序中，点击<strong>投放图标</strong>，再选择<strong>「ysr201」</strong>。</li></ul><p><strong>直接投放 iPhone 的画面</strong></p><ul><li>在投影仪的主画面打开<strong>「Screen Casting」</strong>应用程序。</li><li>在 iPhone 的控制中心点击<strong>屏幕镜像</strong>图标，再选择<strong>「ysr201-0101」</strong>。</li></ul><p><strong>直接投放 Android 的画面</strong></p><ul><li>需要在手机上安装<strong>「JMGO」应用程序</strong>。从应用程序投放，或以 HDMI 连接会比较简单。</li></ul><p><strong>放大播放竖屏视频（Shorts、Reels 等）</strong></p><ul><li>请将机身装在<strong>房内备有的支架</strong>上。</li><li>依照上方「直接投放画面」的方式投放手机画面（从应用程序投放时，不会切换为竖屏）。</li><li>将机身旋转 90 度直立后，画面会切换为竖屏。</li><li>请勿在不使用支架的情况下，将机身直接直立摆放在桌面或台面上。</li></ul><p><strong>Netflix：</strong>请勿从手机投放，请使用投影仪内置的 Netflix 应用程序（遥控器的⑦键）观看。</p>`,
+      hdmi: `<p>若想播放电脑等设备的影像，请将 HDMI 线接到投影仪背面的 HDMI 端口（下图的「HDMI」）。</p><ul><li>画面没有切换时，请按遥控器的<strong>⑫切换输入</strong>键。</li><li>要回到投影仪的主画面时，请按<strong>⑩主画面</strong>键。</li></ul>`,
+      speaker: `<p>可以不投射影像，只用来播放手机里的音乐。</p><ul><li><strong>长按</strong>机身上的<strong>动作按钮</strong>（有三个点的按钮，位置请见「以 HDMI 连接」的图）。若出现菜单，请选择<strong>蓝牙音箱（Bluetoothスピーカー）</strong>。影像会停止，并切换为音箱。</li><li>在手机的蓝牙设置中选择<strong>「ysr201」</strong>进行连接。</li><li>当作音箱使用时，可以将机身直立摆放。</li><li>要回到影像时，请按遥控器的<strong>③返回</strong>，并将机身横放回原状。</li></ul>`,
+      logout: `<div class="notice notice--warn"><p><strong>退房前，请务必注销。</strong></p><p>退房前，请务必注销您登录过的所有应用程序（YouTube、Netflix、Prime Video 等）。若未注销，下一位住客就能使用您的账号。</p><p>注销可在各应用程序的账号或设置菜单中进行。</p></div>`,
+      trouble: `<ul><li><strong>遥控器没反应：</strong>请将遥控器靠近投影仪，同时长按<strong>③返回</strong>与<strong>⑩主画面</strong>约 5 秒。画面下方出现「连接完成」的消息，就可以使用了。</li><li><strong>影像突然消失：</strong>有人经过镜头前方时，为了保护眼睛，影像会消失，只显示护眼功能已启动的提示消息。这不是故障。离开镜头前方后稍等一下，影像就会自动恢复（也可以按遥控器的③返回键）。</li><li><strong>无法对焦：</strong>若光线照到桌面，可能无法对焦。请将投影仪移到桌子前缘，或稍微向上倾斜。若仍无法改善，请试试<strong>⑤设置（設定）</strong> &gt; 投影仪设置（プロジェクター設定） &gt; 对焦（フォーカス） &gt; 自动对焦（オートフォーカス）。</li><li><strong>自己关机了：</strong>一段时间没有操作会自动关机。请按投影仪机身的电源按钮重新开机。</li><li><strong>运行不正常：</strong>长按<strong>①电源</strong>键，选择<strong>「Restart（再起動）」</strong>，即「重新启动」。</li></ul><p><strong>请勿运行「重设」（恢复原厂设置，出荷時設定にリセット）。</strong>所有设置都会被清除。若问题仍未解决，请通过 Airbnb 消息联系房东。</p>`
+    },
+    garbage: {
+      sorting: `<p><strong>房内的分类方式：</strong>房内的垃圾桶贴有标签。请依照标签分类丢弃。</p><ul><li><strong>可燃垃圾</strong>（Burnable）</li><li><strong>塑料瓶</strong>（PET-Bottles）</li><li><strong>玻璃瓶・罐子</strong>（Bottles &amp; Cans）</li></ul>`,
+      body: `<p><strong>垃圾桶满了时：</strong>请将分类好的垃圾放入房外垃圾置放处的金属制收纳箱。只要已分类，放入哪一个收纳箱皆可。</p><p>退房时，垃圾留在房内的垃圾桶即可。</p><p>请勿丢到附近的垃圾集中点或马路上（不会被收走）。</p>`
+    },
+    rules: {
+      packages: `<p>由于本住宿无现场工作人员，恕无法于入住前代收包裹。入住期间收取包裹则没有问题。</p>`,
+      neighborsTitle: `请体谅左邻右舍`,
+      neighbors: `<p>这里是安静的住宅区。为了让附近居民能安心生活，恳请您配合。</p><ul><li><strong>声音：</strong>请避免大声交谈或播放音乐。晚上9点以后，请关上窗户，保持安静。夜间开关玄关门时也请放轻动作。</li><li><strong>户外：</strong>请勿在建筑物前或通道等户外聚集饮食、举办聚会。</li><li><strong>乐器：</strong>室内不可演奏乐器。</li><li><strong>垃圾：</strong>请依照房内垃圾桶上的标签，分为「可燃垃圾」「塑料瓶」「玻璃瓶・罐子」。垃圾桶满了时，请放入房外垃圾置放处的金属制收纳箱。请勿丢到附近的垃圾集中点或马路上。</li><li><strong>吸烟：</strong>室内及整个馆区皆禁烟。也请勿在建筑物周围的马路上吸烟或乱丢烟蒂。</li><li><strong>车辆：</strong>请勿在路边停车，请使用投币式停车场。</li></ul>`,
+      fireTitle: `预防火灾`,
+      fire: `<ul><li><strong>炉具：</strong>为IH（电磁）炉，不需要操作燃气总阀。烹调时请勿离开，使用完毕后请关闭电源。</li><li><strong>明火：</strong>室内不可使用蜡烛、线香、烟火等会用到火的物品。</li><li><strong>灭火器：</strong>放在房间外的共用空间（走廊・楼梯附近）。<br>①拔掉黄色安全插销 → ②将喷管对准起火处 → ③用力握紧握把</li><li><strong>避难：</strong>火势很大时（快要烧到天花板时），请不要尝试灭火，立刻逃生。请从玄关出去。2楼的房间请走室外楼梯下楼。</li><li><strong>报案：</strong>请拨打119。要告知的地址在「<a href="#/emergency">紧急联络方式・避难地点</a>」页面。</li></ul>`,
+      prohibitedTitle: `禁止事项`,
+      prohibitedList: `<ul><li>穿鞋进入室内</li><li>吸烟（房间内及整栋建筑范围皆全面禁烟）</li><li>晚上9点后或深夜制造噪音</li><li>造成邻居困扰</li><li>携入或留宿未登记的访客</li><li>故意损坏房间或设备，或未通报损坏情况</li></ul>`,
+      penaltyTitle: `若有违反规定或造成损害`,
+      penaltyList: `<ul><li><strong>吸烟：</strong>一经确认，将终止住宿并请您退房（不予退款）。除臭及清洁所需的实际费用，也请您负担。</li><li><strong>噪音、对邻居造成困扰：</strong>我们会先向您发出提醒。若未改善，将终止住宿并请您退房（不予退款）。</li><li><strong>未登记的人员留宿：</strong>将酌收额外的住宿费用，或终止住宿。</li><li><strong>严重脏污：</strong>若因一般清洁无法去除的脏污等而需要额外清洁，请负担该清洁的实际费用。</li><li><strong>遗失钥匙、损坏设备或物品：</strong>请负担更换、修理所需的实际费用。若有损坏，请立即告知我们。</li></ul>`
+    },
+    nearby: {
+      intro: `<p>以下为从JR鹤见站及从本住宿出发的步行时间。</p><ul><li><strong>全家便利店 鹤见西口店</strong>（24小时）— 距JR鹤见站2分钟／距本住宿8分钟</li><li><strong>罗森 鹤见站西口店</strong>（24小时）— 距JR鹤见站1分钟／距本住宿9分钟</li><li><strong>7-Eleven 横滨丰冈町中央店</strong>（24小时）— 距JR鹤见站2分钟／距本住宿9分钟</li><li><strong>SEIYU超市 鹤见店</strong>（9:00〜23:00）— 距JR鹤见站2分钟／距本住宿9分钟</li><li><strong>京急超市 鹤见西口店</strong>（平日10:00〜23:00，假日10:00〜21:00）— 距JR鹤见站1分钟／距本住宿10分钟</li></ul>`
+    },
+    parking: {
+      intro: `<p>以下为邻近的投币式停车场（皆位于车站往本住宿的上坡路段）。点击地址即可打开Google地图。费用可能调整，请以现场告示为准。</p><ul><li><strong>Times鹤见寺谷第3</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%E7%AC%AC3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-6" target="_blank" rel="noopener">鹤见区寺谷2-6</a>。步行4分钟（290米）。220日圆/30分。最高1,000日圆/24小时，19:00〜8:00最高440日圆（最长可停48小时）。</li><li><strong>Shinkou Park鹤见寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%B3%E3%82%B3%E3%82%A6%E3%83%91%E3%83%BC%E3%82%AF%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-1-21" target="_blank" rel="noopener">寺谷2-1-21</a>。步行4分钟（290米）。200日圆/30分。9:00〜18:00最高900日圆，18:00〜9:00最高400日圆。</li><li><strong>Times鹤见寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-3&amp;query_place_id=ChIJc75tnRJeGGARwiIxxipn0bg" target="_blank" rel="noopener">寺谷1-3</a>。步行4分钟（350米）。200日圆/20分。最高1,200日圆/24小时，19:00〜8:00最高500日圆。</li><li><strong>Time Parking鹤见</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E9%B6%B4%E8%A6%8B%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E9%B6%B4%E8%A6%8B2-3-45" target="_blank" rel="noopener">鹤见2-3-45</a>。步行4分钟（230米），有陡峭楼梯。8:00〜20:00：300日圆/30分，最高1,200日圆/12小时。20:00〜8:00：100日圆/1小时，最高400日圆/12小时。</li></ul>`
+    },
+    trouble: {
+      keypad: `<p><strong>玄关电子锁无法使用时：</strong>玄关旁有一个放置备用钥匙的盒子。若电子锁故障，请通过Airbnb聊天室联系我们，我们会提供盒子的密码。</p>`,
+      hotwater: `<p><strong>淋浴间没有热水时：</strong>请按下热水控制面板左上方的电源按钮。若电源按钮的绿灯亮起，即使没有显示数字，热水仍在供应中。</p>`,
+      power: `<p><strong>停电时：</strong>电源总开关位于玄关处，请打开盖子并将开关往上扳起。</p>`,
+      lostFound: `<p><strong>遗失物品时：</strong>请通过预订平台传消息联系我们，清洁人员会协助确认，若寻获会以货到付款方式为您寄送。退房后3天内若未收到您的联系，遗失物将不另行通知径行处理。雨伞、毛巾等低价值物品将不另行通知直接处理。</p>`
+    },
+    emergency: {
+      numbers: `<p><strong>救护车・火警：</strong>119<br><strong>警察：</strong>110</p>`,
+      addressToTell: `<p>如需报案或求助，请告知这个地址：</p>`,
+      evacuation: `<p><strong>避难地点</strong>（地震、水灾、土石流）：丰冈小学（横浜市鶴見区豊岡町27-1）— 步行约11分钟</p>`,
+      hostContact: `<p>其他事宜请通过Airbnb消息联系房东。</p>`
     }
   },
 

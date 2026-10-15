@@ -5,6 +5,7 @@
 # 作られる図: images/common/appliance-induction-ja.png      … 操作パネルの図だけ（日本語はそのまま読めるので訳なし）
 #             images/common/appliance-induction-en.png      … 各ボタンに英語の訳を付けたもの
 #             images/common/appliance-induction-zh-Hant.png … 中国語（繁体字）
+#             images/common/appliance-induction-zh-Hans.png … 中国語（簡体字）
 #             images/common/appliance-induction-ko.png      … 韓国語
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
@@ -33,6 +34,14 @@ LABELS = {
         'fry': '油炸模式 開／關',
         'heat': '加熱 開／關',
         'power': '電源：長按2秒',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'hot': '高温警示灯（面板很烫）',
+        'level': '火力调整： ◀ 调弱   ▶ 调强',
+        'fry': '油炸模式 开／关',
+        'heat': '加热 开／关',
+        'power': '电源：长按2秒',
     },
     'ko': {
         'font': 'malgunbd.ttf',

@@ -2,7 +2,7 @@
 #
 # 元になる図: images/common/microwave-nitori-base.png
 #   （ニトリ公式の取扱説明書の操作部の図から、説明用の線と保護フィルムの絵を消したもの）
-# 作られる図: images/common/appliance-microwave-nitori-{ja,en,zh-Hant,ko}.png（ja は訳なし）
+# 作られる図: images/common/appliance-microwave-nitori-{ja,en,zh-Hant,zh-Hans,ko}.png（ja は訳なし）
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
 #   python tools/make-microwave-nitori.py
@@ -28,6 +28,12 @@ LABELS = {
         'defrost': '解凍', 'high': '強（520W）',
         'off': '關', 'sec': '秒', 'min': '分鐘',
         'power': '火力', 'timer': '定時', 'timerHint': '轉動即開始',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'defrost': '解冻', 'high': '强（520W）',
+        'off': '关', 'sec': '秒', 'min': '分钟',
+        'power': '火力', 'timer': '定时', 'timerHint': '转动即开始',
     },
     'ko': {
         'font': 'malgunbd.ttf',

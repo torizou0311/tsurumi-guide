@@ -4,7 +4,7 @@
 #   images/201/kettle-iris-panel-base.png … 台座の操作パネル
 #   images/201/kettle-iris-level-base.png … ケトルの内側の水量の目盛り
 # 作られる図:
-#   images/201/appliance-kettle-{ja,en,zh-Hant,ko}.png … 操作パネルに各言語の説明を付けたもの
+#   images/201/appliance-kettle-{ja,en,zh-Hant,zh-Hans,ko}.png … 操作パネルに各言語の説明を付けたもの
 #       （パネルの文字が英語なので、日本語にも説明を付けている）
 #   images/201/appliance-kettle-level.png              … 水量の目盛り（MAX / MIN。全言語で同じ図）
 #
@@ -44,6 +44,14 @@ LABELS = {
         'keep': '保溫',
         'temp': '調整溫度（－／＋）',
         'start': '開始／停止',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'mode': '选择温度（每按一次切换）',
+        'power': '电源',
+        'keep': '保温',
+        'temp': '调整温度（－／＋）',
+        'start': '开始／停止',
     },
     'ko': {
         'font': 'malgunbd.ttf',

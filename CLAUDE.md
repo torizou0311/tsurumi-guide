@@ -6,7 +6,9 @@
 - 参考にした構成: https://ebisu-guide.sllstay.com/index.html（デザインは真似しない方針）
 
 ## 仕組み
-- 4言語: en / ja / zh-Hant / ko（ヘッダーのドロップダウンで切替）
+- 5言語: en / ja / zh-Hans / zh-Hant / ko（ヘッダーのドロップダウンで切替。2026-10-15 にゲストフォームに合わせて簡体字 zh-Hans を追加。zh-Hans の文章は zh-Hant を OpenCC(tw2sp) で変換して手直ししたもの。図の中の日本語の実物表記（ボタン名など）は簡体字にせず日本語のまま）
+- 図の中に文字がある画像（`*-{lang}.png`）は zh-Hans 版もある（2026-10-15追加）。tools/ の各スクリプトの LABELS に 'zh-Hans'（フォント msyhbd.ttc）。ドルチェグストの2枚（dolcegusto-fig-power / level）はスクリプトが無く、zh-Hant 版の文字を白で消して簡体字を描き直したもの。以下の各図の説明で「en / zh-Hant / ko は訳付き」とあるものは zh-Hans も同様
+- 初期言語: 一度選んだ言語（localStorage の tg_lang）があればそれ。なければ端末の言語で決める（ja→日本語、ko→韓国語、zh-TW/zh-HK/zh-MO/zh-Hant→繁体字、その他の zh→簡体字、それ以外→英語）。ゲストフォームと同じ判定
 - 部屋: 103(1F) / 201(2F) / 202(2F)。URL `?room=103` で部屋が決まる。なしなら部屋選択画面
 - 建物共通の文章は `js/i18n.js` に1か所だけ。部屋ごとの差分は `data/rooms.js`、セクション構成と写真の紐付けは `data/content.js`
 - 写真は `images/common/`（全部屋共通。チェックイン/困ったときの写真 unlock1・unlock2・keybox・keybox-troubleshoot・hotwater-panel・breaker、共通家電の appliance-ac-{lang}・appliance-induction-{lang}（どちらも言語別）、ゴミ置き場 garbage.jpg も1組だけここ）, `images/103/`, `images/202/`, `images/201/`（部屋別: Wi-Fi QR・家電）

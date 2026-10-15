@@ -2,7 +2,7 @@
 #
 # 元になる図: images/common/circulator-base.png
 #   （アイリスオーヤマ公式の取扱説明書の操作部の図から、ボタンとランプの部分だけを取り出したもの）
-# 作られる図: images/common/appliance-circulator-{ja,en,zh-Hant,ko}.png（ja は訳なし）
+# 作られる図: images/common/appliance-circulator-{ja,en,zh-Hant,zh-Hans,ko}.png（ja は訳なし）
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
 #   python tools/make-circulator-panel.py
@@ -32,6 +32,14 @@ LABELS = {
         'power': '電源 開／關',
         'rhythm': '自然風',
         'swing': '擺頭：上下／左右',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'timer': '关机定时：1／2／4小时',
+        'fan': '风量： < 调弱   > 调强',
+        'power': '电源 开／关',
+        'rhythm': '自然风',
+        'swing': '摆头：上下／左右',
     },
     'ko': {
         'font': 'malgunbd.ttf',

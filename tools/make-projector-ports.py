@@ -4,7 +4,7 @@
 #   （JMGO公式の取扱説明書 PicoPlay User Manual Ver.1.1.31.35 の10ページ下の図から、
 #    説明用の線と日本語を消したもの。
 #    https://cdn.shopify.com/s/files/1/0571/2933/6915/files/JMGO_PicoPlay_User_Manual_Ver.1.1.31.35.pdf?v=1750657659 ）
-# 作られる図: images/201/projector-ports-{en,ja,zh-Hant,ko}.png
+# 作られる図: images/201/projector-ports-{en,ja,zh-Hant,zh-Hans,ko}.png
 #   端子とボタンに ①〜⑤ の番号を付け、図の下に各言語の名称の一覧を付けたもの。
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
@@ -30,6 +30,10 @@ LABELS = {
     'zh-Hant': {
         'font': 'msjhbd.ttc',
         'items': ['電源按鈕', '動作按鈕', 'USB', 'HDMI', '電源插孔（USB Type-C）'],
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'items': ['电源按钮', '操作按钮', 'USB', 'HDMI', '电源插孔（USB Type-C）'],
     },
     'ko': {
         'font': 'malgunbd.ttf',

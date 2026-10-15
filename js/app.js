@@ -7,8 +7,8 @@
 (function () {
   'use strict';
 
-  var LANGS = ['en', 'ja', 'zh-Hant', 'ko'];
-  var LANG_SHORT = { en: 'EN', ja: '日本語', 'zh-Hant': '中文', ko: '한국어' };
+  var LANGS = ['en', 'ja', 'zh-Hans', 'zh-Hant', 'ko'];
+  var LANG_SHORT = { en: 'EN', ja: '日本語', 'zh-Hans': '简体中文', 'zh-Hant': '繁體中文', ko: '한국어' };
   var VALID_ROOMS = ['103', '201', '202'];
 
   var JP_ADDRESS_FULL = '神奈川県横浜市鶴見区寺谷1-7-40 レイズ寺谷';
@@ -35,7 +35,9 @@
     var nav = (window.navigator.language || window.navigator.userLanguage || 'en').toLowerCase();
     if (nav.indexOf('ja') === 0) return 'ja';
     if (nav.indexOf('ko') === 0) return 'ko';
-    if (nav.indexOf('zh') === 0) return 'zh-Hant';
+    // 中国語は、台湾・香港・マカオと「繁体字」指定なら繁体字、それ以外（中国本土・シンガポールなど）は簡体字
+    if (nav.indexOf('zh-tw') === 0 || nav.indexOf('zh-hk') === 0 || nav.indexOf('zh-mo') === 0 || nav.indexOf('zh-hant') !== -1) return 'zh-Hant';
+    if (nav.indexOf('zh') === 0) return 'zh-Hans';
     return 'en';
   }
 
@@ -121,7 +123,7 @@
   function photoHtml(spec, room, lang, altText) {
     if (!spec) return '';
     var src = resolveImage(spec, room);
-    // パスの中の {lang} は表示中の言語（en / ja / zh-Hant / ko）に置き換える（図の中に文字がある画像用）
+    // パスの中の {lang} は表示中の言語（en / ja / zh-Hans / zh-Hant / ko）に置き換える（図の中に文字がある画像用）
     if (src) src = src.replace('{lang}', lang);
     if (src) {
       return '<div class="guide-photo"><img src="' + esc(src) + '" alt="' + esc(altText || '') + '" loading="lazy"></div>';

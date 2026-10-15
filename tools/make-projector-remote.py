@@ -4,7 +4,7 @@
 #   （JMGO公式の取扱説明書 PicoPlay User Manual Ver.1.1.31.35 の11ページのリモコン図から、
 #    説明用の線・番号・日本語を消したもの。
 #    https://cdn.shopify.com/s/files/1/0571/2933/6915/files/JMGO_PicoPlay_User_Manual_Ver.1.1.31.35.pdf?v=1750657659 ）
-# 作られる図: images/201/projector-remote-{en,ja,zh-Hant,ko}.png
+# 作られる図: images/201/projector-remote-{en,ja,zh-Hant,zh-Hans,ko}.png
 #   リモコンの各ボタンに ①〜⑬ の番号と、その言語の名称を付けたもの。
 #   番号は公式の取扱説明書と同じ（本文の「①電源」などと対応します）。
 #
@@ -37,6 +37,12 @@ LABELS = {
         1: '電源', 2: '方向鍵', 3: '返回', 4: '選單', 5: '設定',
         6: 'YouTube', 7: 'Netflix', 8: 'Google 助理\n（語音）', 9: '確認',
         10: '主畫面', 11: '音量', 12: '切換輸入', 13: 'Prime Video',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        1: '电源', 2: '方向键', 3: '返回', 4: '菜单', 5: '设置',
+        6: 'YouTube', 7: 'Netflix', 8: 'Google 助理\n（语音）', 9: '确认',
+        10: '主页', 11: '音量', 12: '切换输入', 13: 'Prime Video',
     },
     'ko': {
         'font': 'malgunbd.ttf',

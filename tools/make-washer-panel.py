@@ -4,8 +4,8 @@
 #   images/common/washer-main-base.png … 右側（電源・コース・運転切換・スタート・ロック解除）
 #   images/common/washer-sub-base.png  … 左側（予約・槽クリーン・おしゃれ着、洗い〜乾かす、∨∧、表示部）
 # 作られる図（言語ごとに2枚ずつ。ja は訳なし）:
-#   images/common/appliance-washer-main-{ja,en,zh-Hant,ko}.png
-#   images/common/appliance-washer-sub-{ja,en,zh-Hant,ko}.png
+#   images/common/appliance-washer-main-{ja,en,zh-Hant,zh-Hans,ko}.png
+#   images/common/appliance-washer-sub-{ja,en,zh-Hant,zh-Hans,ko}.png
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
 #   python tools/make-washer-panel.py
@@ -46,6 +46,18 @@ LABELS = {
         'wash': '洗滌', 'rinse': '清洗', 'spin': '脫水', 'dry': '烘乾',
         'less': '減少', 'more': '增加',
         'display': '顯示：剩餘時間／洗劑用量',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'power': ['电源', '入 = 开   切 = 关'],
+        'course': '程序（每按一次切换）',
+        'mode': '洗衣／烘干 切换',
+        'start': ['开始／', '暂停'],
+        'unlock': ['解除', '门锁'],
+        'reserve': '预约', 'clean': '防霉', 'delicate': '精细衣物',
+        'wash': '洗涤', 'rinse': '漂洗', 'spin': '脱水', 'dry': '烘干',
+        'less': '减少', 'more': '增加',
+        'display': '显示：剩余时间／洗涤剂用量',
     },
     'ko': {
         'font': 'malgunbd.ttf',

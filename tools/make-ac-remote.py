@@ -5,6 +5,7 @@
 # 作られる図: images/common/appliance-ac-ja.png      … リモコンの図だけ（日本語はそのまま読めるので訳なし）
 #             images/common/appliance-ac-en.png      … 各ボタンに英語の訳を付けたもの
 #             images/common/appliance-ac-zh-Hant.png … 中国語（繁体字）
+#             images/common/appliance-ac-zh-Hans.png … 中国語（簡体字）
 #             images/common/appliance-ac-ko.png      … 韓国語
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
@@ -43,6 +44,19 @@ LABELS = {
         'fan': '風速',
         'direction': '風向',
         'clean': '內部清潔',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'display': ['当前模式', '制冷', '除湿', '制热'],
+        'power': '电源 开／关',
+        'mode': '切换模式',
+        'dry': '除湿强度',
+        'powerful': '强力模式',
+        'timer': '定时\n上：定时设置\n中：时间 ＋\n下：时间 －',
+        'temp': '温度\n▼ 调低   ▲ 调高',
+        'fan': '风速',
+        'direction': '风向',
+        'clean': '内部清洁',
     },
     'ko': {
         'font': 'malgunbd.ttf',

@@ -2,7 +2,7 @@
 #
 # 元になる図: images/202/microwave-iris-base.png
 #   （アイリスオーヤマ公式の取扱説明書の操作パネルの図から、ボタンと文字の部分だけを取り出したもの）
-# 作られる図: images/202/appliance-microwave-{ja,en,zh-Hant,ko}.png（ja は訳なし）
+# 作られる図: images/202/appliance-microwave-{ja,en,zh-Hant,zh-Hans,ko}.png（ja は訳なし）
 #
 # 訳の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
 #   python tools/make-microwave-iris.py
@@ -30,6 +30,13 @@ LABELS = {
         'min': '＋1分鐘', 'sec': '＋10秒',
         'range': '火力', 'defrost': '解凍',
         'cancel': '取消／停止', 'start': '開始',
+    },
+    'zh-Hans': {
+        'font': 'msyhbd.ttc',
+        'drink': '饮料（自动）', 'rice': '米饭（自动）', 'auto': '自动烹调',
+        'min': '＋1分钟', 'sec': '＋10秒',
+        'range': '火力', 'defrost': '解冻',
+        'cancel': '取消／停止', 'start': '开始',
     },
     'ko': {
         'font': 'malgunbd.ttf',

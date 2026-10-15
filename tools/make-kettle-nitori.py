@@ -6,7 +6,7 @@
 #   images/common/kettle-nitori-unlock-base.png … ふたの印が「開いた鍵」に合っている状態（ロック解除）
 #   images/common/kettle-nitori-switch-base.png … 電源スイッチの OFF / ON
 #   images/common/kettle-nitori-max-base.png    … 内側の MAX の表示
-# 作られる図: images/common/appliance-kettle-nitori-{ja,en,zh-Hant,ko}.png
+# 作られる図: images/common/appliance-kettle-nitori-{ja,en,zh-Hant,zh-Hans,ko}.png
 #   （図の中に日本語がないので、日本語にも説明を付けている）
 #
 # 説明の文言を直したいときは、下の LABELS を書き換えて、このファイルを実行してください。
@@ -27,6 +27,8 @@ LABELS = {
            'switch': 'Power switch', 'lamp': 'Lamp'},
     'zh-Hant': {'font': 'msjhbd.ttc', 'locked': '鎖定', 'unlocked': '解鎖 → 向上取下蓋子',
                 'switch': '電源開關', 'lamp': '指示燈'},
+    'zh-Hans': {'font': 'msyhbd.ttc', 'locked': '锁定', 'unlocked': '解锁 → 向上取下盖子',
+                'switch': '电源开关', 'lamp': '指示灯'},
     'ko': {'font': 'malgunbd.ttf', 'locked': '잠금', 'unlocked': '잠금 해제 → 들어 올림',
            'switch': '전원 스위치', 'lamp': '램프'},
 }
