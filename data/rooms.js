@@ -38,7 +38,7 @@ window.ROOMS = [
       applianceMicrowave: 'images/202/appliance-microwave-{lang}.png', // アイリスオーヤマ IMB-T178（{lang} は表示中の言語に置き換わる）
       applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceCoffee: 'images/202/appliance-coffee.png',
-      applianceRiceCooker: 'images/202/appliance-ricecooker.png',
+      applianceRiceCooker: 'images/202/appliance-ricecooker.jpg',
       applianceWasher: 'images/202/appliance-washer.png'
       // 注: アイロンの写真は元サイトに見つかりませんでした（準備中と表示されます）
     }

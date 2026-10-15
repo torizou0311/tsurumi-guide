@@ -25,7 +25,7 @@ window.I18N = {
       side: { left: `left`, right: `right` },
       backHome: `Back to Home`
     },
-    nav: { home: `Home`, wifi: `Wi-Fi`, checkout: `Check-in`, emergency: `Emergency` },
+    nav: { home: `Home`, wifi: `Wi-Fi`, checkout: `Check-in/out`, emergency: `Emergency` },
     home: {
       greeting: `Welcome to YOKOHAMA Still Retreat`,
       subtitle: `We hope you enjoy a quiet stay in Tsurumi, Yokohama.`,
@@ -57,7 +57,7 @@ window.I18N = {
       mapIntro: `<p>Tap the address below to open it in Google Maps.</p>`,
       haneda: `<p>From <strong>Haneda Airport</strong> by train to Keikyu-Tsurumi Station: about 20 minutes. From Keikyu-Tsurumi Station to the property: about 18 minutes on foot.</p>`,
       narita: `<p>From <strong>Narita Airport</strong> by train to Tsurumi Station (JR Line): about 90 minutes. From JR Tsurumi Station to the property: about 12 minutes on foot.</p>`,
-      taxi: `<p>By taxi, please show the driver the address below.</p><ul><li>From Haneda Airport: about 30 minutes, approximately ¥6,000–7,000</li><li>From JR Tsurumi Station: about 3 minutes, approximately ¥500</li><li>A 20% late-night surcharge applies between 10:00 PM and 5:00 AM</li></ul><p><strong>Important:</strong> please ask the driver to turn right at the red-circled spot on the map. If the driver continues straight on the main road instead, you will need to walk up a flight of stairs to reach the building.</p>`,
+      taxi: `<p>By taxi, please show the driver the address below.</p><ul><li>From Haneda Airport: about 30 minutes, approximately ¥6,000–7,000</li><li>From JR Tsurumi Station: about 3 minutes, approximately ¥500</li><li>A 20% late-night surcharge applies between 10:00 PM and 5:00 AM</li></ul><p><strong>Important:</strong> if you continue straight along the main road, you will have to walk up a flight of stairs to reach the building. Please show the driver the address and ask them to take the route that lets the car <strong>drive right up to the building</strong>.</p>`,
       taxiStandKeikyu: `<p><strong>Taxi stand at Keikyu-Tsurumi Station:</strong> go to the West Exit, turn left, and go down the stairs — you will see the TAXI sign.</p>`,
       taxiStandJR: `<p><strong>Taxi stand at JR Tsurumi Station:</strong> cross the crosswalk at the bottom of the stairs and turn left — you will see the TAXI sign.</p>`,
       exterior: `<p>The building, seen from outside.</p>`
@@ -65,13 +65,16 @@ window.I18N = {
     checkin: {
       intro: `<p>This is a self check-in property with no staff on site, so please review the steps below in advance.</p>`,
       times: `<p><strong>Check-in:</strong> from 4:00 PM<br><strong>Check-out:</strong> until 10:00 AM</p><p>Our cleaning staff arrive at 10:10 AM, so please vacate the room by 10:00 AM. Checking out later than 10:00 AM may result in an additional night's fee.</p>`,
+      checkout: `<p><strong>Before you check out (by 10:00 AM)</strong></p><ul><li>Turn off the air conditioner and lights.</li><li>Close the windows.</li><li>Please sort your trash and leave it in the trash bins in the room (<a href="#/garbage">How to dispose of trash</a>).</li><li>If you used the key from the key box, please put it back in the key box.</li><li>After leaving, lock the door with the electronic lock.</li></ul>`,
+      checkoutProjector: `<p>If you logged in to YouTube, Netflix, etc. on the Room 201 projector, be sure to log out (<a href="#/projector/logout">How to log out</a>).</p>`,
       steps: `<p>Your room is <strong>Room {room}</strong>, on floor {floor}. The door has an electronic lock.</p><ul><li>Enter the passcode and press the unlock button. (The passcode is sent via Airbnb message on the morning of your check-in day.)</li></ul>`,
       stepsLock: `<p>Please lock the door whenever you go out, and again at check-out.</p>`,
       keybox: `<p>If the electronic lock does not work, you can take the key from the key box and use it instead. The key box is at the gas meter on the <strong>{keyboxSide}</strong> side of the door. There are two key boxes — either one will work. The key box code is the same as the electronic lock passcode.</p>`
     },
     wifi: {
       title: `Wi-Fi`,
-      scanOrType: `Scan the QR code, or enter the details below.`
+      scanOrType: `Scan the QR code, or enter the details below.`,
+      tip: `Not sure which to choose? Connect to <strong>5GHz (name ends with "-A")</strong>. If it won't connect or the signal is weak, try <strong>2.4GHz (name ends with "-G")</strong>.`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -142,7 +145,7 @@ window.I18N = {
       intro: `<p>The nearest coin parking lots are listed below (all located uphill between the station and the property). Tap an address to open it in Google Maps. Rates may change — please check the sign at the lot.</p><ul><li><strong>Times Tsurumi Teraya No. 3</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%E7%AC%AC3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-6" target="_blank" rel="noopener">Teraya 2-6, Tsurumi-ku</a>. 4 min walk (290m). ¥220/30min. Max ¥1,000/24h; max ¥440 for 19:00–8:00 (max stay 48h).</li><li><strong>Shinkou Park Tsurumi Teraya</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%B3%E3%82%B3%E3%82%A6%E3%83%91%E3%83%BC%E3%82%AF%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-1-21" target="_blank" rel="noopener">Teraya 2-1-21</a>. 4 min walk (290m). ¥200/30min. Max ¥900 for 9:00–18:00; max ¥400 for 18:00–9:00.</li><li><strong>Times Tsurumi Teraya</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-3&amp;query_place_id=ChIJc75tnRJeGGARwiIxxipn0bg" target="_blank" rel="noopener">Teraya 1-3</a>. 4 min walk (350m). ¥200/20min. Max ¥1,200/24h; max ¥500 for 19:00–8:00.</li><li><strong>Time Parking Tsurumi</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E9%B6%B4%E8%A6%8B%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E9%B6%B4%E8%A6%8B2-3-45" target="_blank" rel="noopener">Tsurumi 2-3-45</a>. 4 min walk (230m), steep stairs. 8:00–20:00: ¥300/30min, max ¥1,200/12h. 20:00–8:00: ¥100/1h, max ¥400/12h.</li></ul>`
     },
     trouble: {
-      keypad: `<p><strong>Entrance keypad not working:</strong> there is a box next to the entrance that contains a spare key. If the keypad isn't working, please contact us via Airbnb chat and we'll send you the box code.</p>`,
+      keypad: `<p><strong>Electronic lock not working:</strong> take the key from the key box at the gas meter on the <strong>{keyboxSide}</strong> side of the door and use it. The code is the same as the electronic lock passcode (there are two key boxes — either one will work). If it still won't open, please contact us via Airbnb message.</p>`,
       hotwater: `<p><strong>No hot water in the shower room:</strong> press the power button at the upper left of the hot water control panel. If the green light on the power button is lit, hot water is being supplied even if no numbers are displayed.</p>`,
       power: `<p><strong>Power outage:</strong> the breaker is located at the entrance. Open the cover and lift the switch bar up.</p>`,
       lostFound: `<p><strong>Lost something?</strong> Please message us on the reservation platform. Our cleaning staff will check for it, and if found, we'll send it to you cash-on-delivery. If we don't hear from you within 3 days of checkout, items will be disposed of without notice. Low-value items (umbrellas, towels, etc.) are disposed of without notice.</p>`
@@ -175,7 +178,7 @@ window.I18N = {
       side: { left: `左`, right: `右` },
       backHome: `ホームに戻る`
     },
-    nav: { home: `ホーム`, wifi: `Wi-Fi`, checkout: `入退室`, emergency: `緊急` },
+    nav: { home: `ホーム`, wifi: `Wi-Fi`, checkout: `チェックイン/アウト`, emergency: `緊急` },
     home: {
       greeting: `YOKOHAMA Still Retreatへようこそ`,
       subtitle: `横浜・鶴見での静かなご滞在をお楽しみください。`,
@@ -207,7 +210,7 @@ window.I18N = {
       mapIntro: `<p>下の住所をタップするとGoogleマップが開きます。</p>`,
       haneda: `<p><strong>羽田空港</strong>から電車で京急鶴見駅まで約20分。京急鶴見駅から施設までは徒歩約18分です。</p>`,
       narita: `<p><strong>成田空港</strong>から電車でJR鶴見駅まで約90分。JR鶴見駅から施設までは徒歩約12分です。</p>`,
-      taxi: `<p>タクシーをご利用の場合は、運転手さんに下の住所を見せてください。</p><ul><li>羽田空港から：約30分、およそ6,000〜7,000円</li><li>JR鶴見駅から：約3分、およそ500円</li><li>22時〜翌5時は深夜割増料金（2割増）がかかります</li></ul><p><strong>重要：</strong>地図の赤丸の地点で右折するよう運転手さんにお伝えください。そのまま大通りを直進してしまうと、建物まで階段を上る必要があります。</p>`,
+      taxi: `<p>タクシーをご利用の場合は、運転手さんに下の住所を見せてください。</p><ul><li>羽田空港から：約30分、およそ6,000〜7,000円</li><li>JR鶴見駅から：約3分、およそ500円</li><li>22時〜翌5時は深夜割増料金（2割増）がかかります</li></ul><p><strong>重要：</strong>大通りをそのまま直進すると、建物まで階段を上ることになります。運転手さんに住所を見せて、<strong>建物の前まで車で行ける道</strong>を通るようお伝えください。</p>`,
       taxiStandKeikyu: `<p><strong>京急鶴見駅のタクシー乗り場：</strong>西口を出て左に曲がり、階段を下りると「TAXI」の看板が見えます。</p>`,
       taxiStandJR: `<p><strong>JR鶴見駅のタクシー乗り場：</strong>階段下の横断歩道を渡って左に曲がると「TAXI」の看板が見えます。</p>`,
       exterior: `<p>建物の外観です。</p>`
@@ -215,13 +218,16 @@ window.I18N = {
     checkin: {
       intro: `<p>スタッフが常駐しないセルフチェックイン方式です。事前に下記の手順をご確認ください。</p>`,
       times: `<p><strong>チェックイン：</strong>16:00〜<br><strong>チェックアウト：</strong>〜10:00</p><p>清掃スタッフは10:10に到着しますので、10:00までにお部屋を出ていただくようお願いします。10:00を過ぎてのチェックアウトは、延泊料金が発生する場合があります。</p>`,
+      checkout: `<p><strong>チェックアウト前のお願い（10:00まで）</strong></p><ul><li>エアコン・照明を消してください。</li><li>窓を閉めてください。</li><li>ゴミは分別して、お部屋のゴミ箱に入れたままで構いません（<a href="#/garbage">ゴミの出し方</a>）。</li><li>キーボックスの鍵を使った場合は、キーボックスに戻してください。</li><li>ドアを出たら、電子錠で施錠してください。</li></ul>`,
+      checkoutProjector: `<p>201号室のプロジェクターでYouTube・Netflixなどにログインした場合は、必ずログアウトしてください（<a href="#/projector/logout">ログアウトの方法</a>）。</p>`,
       steps: `<p>お部屋は<strong>{room}号室</strong>、{floor}階です。ドアの鍵は電子錠です。</p><ul><li>パスワードを入力して解錠ボタンを押してください（パスワードはチェックイン当日の朝にAirbnbメッセージでお送りします）。</li></ul>`,
       stepsLock: `<p>外出時・チェックアウト時は必ず施錠をお願いします。</p>`,
       keybox: `<p>電子錠がうまく作動しない場合は、キーボックスから鍵を取り出してお使いください。キーボックスはドアの<strong>{keyboxSide}側</strong>のガスメーターのところにあります。キーボックスは2つありますが、どちらでも構いません。キーボックスの暗証番号は電子錠と同じです。</p>`
     },
     wifi: {
       title: `Wi-Fi`,
-      scanOrType: `QRコードを読み取るか、下記の情報を入力してください。`
+      scanOrType: `QRコードを読み取るか、下記の情報を入力してください。`,
+      tip: `迷ったら<strong>5GHz（名前の最後が「-A」）</strong>につないでください。つながらない・電波が弱いときは<strong>2.4GHz（名前の最後が「-G」）</strong>をお試しください。`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -292,7 +298,7 @@ window.I18N = {
       intro: `<p>最寄りのコインパーキングです（いずれも駅から施設に向かって坂を上る途中にあります）。住所をタップするとGoogleマップが開きます。料金は変更されることがありますので、現地の看板をご確認ください。</p><ul><li><strong>タイムズ鶴見寺谷第3</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%E7%AC%AC3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-6" target="_blank" rel="noopener">鶴見区寺谷2-6</a>。徒歩4分（290m）。220円/30分。最大1,000円/24h、19:00〜8:00は最大440円（最大駐車48h）。</li><li><strong>シンコウパーク鶴見寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%B3%E3%82%B3%E3%82%A6%E3%83%91%E3%83%BC%E3%82%AF%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-1-21" target="_blank" rel="noopener">寺谷2-1-21</a>。徒歩4分（290m）。200円/30分。9:00〜18:00は最大900円、18:00〜9:00は最大400円。</li><li><strong>タイムズ鶴見寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-3&amp;query_place_id=ChIJc75tnRJeGGARwiIxxipn0bg" target="_blank" rel="noopener">寺谷1-3</a>。徒歩4分（350m）。200円/20分。最大1,200円/24h、19:00〜8:00は最大500円。</li><li><strong>タイムパーキング鶴見</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E9%B6%B4%E8%A6%8B%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E9%B6%B4%E8%A6%8B2-3-45" target="_blank" rel="noopener">鶴見2-3-45</a>。徒歩4分（230m）、急な階段あり。8:00〜20:00：300円/30分 最大1,200円/12h。20:00〜8:00：100円/1h 最大400円/12h。</li></ul>`
     },
     trouble: {
-      keypad: `<p><strong>玄関の電子錠が動かないとき：</strong>玄関脇に鍵が入ったボックスがあります。電子錠が作動しない場合はAirbnbメッセージでご連絡ください。ボックスの暗証番号をお送りします。</p>`,
+      keypad: `<p><strong>玄関の電子錠が動かないとき：</strong>ドアの<strong>{keyboxSide}側</strong>のガスメーターのところにあるキーボックスから鍵を取り出してお使いください。暗証番号は電子錠と同じです（キーボックスは2つありますが、どちらでも構いません）。それでも開かない場合は、Airbnbメッセージでご連絡ください。</p>`,
       hotwater: `<p><strong>シャワールームのお湯が出ないとき：</strong>給湯パネル左上の電源ボタンを押してください。電源ボタンの緑ランプが点灯していれば、数字が表示されていなくてもお湯は出ています。</p>`,
       power: `<p><strong>停電したとき：</strong>ブレーカーは玄関にあります。カバーを開けてレバーを上に上げてください。</p>`,
       lostFound: `<p><strong>忘れ物をしたとき：</strong>予約サイトのメッセージでご連絡ください。清掃スタッフが確認し、見つかった場合は着払いでお送りします。チェックアウトから3日以内にご連絡がない場合、忘れ物は予告なく処分させていただきます。傘やタオルなど安価な物は予告なく処分いたします。</p>`
@@ -325,7 +331,7 @@ window.I18N = {
       side: { left: `左`, right: `右` },
       backHome: `回到首页`
     },
-    nav: { home: `首页`, wifi: `Wi-Fi`, checkout: `入住退房`, emergency: `紧急` },
+    nav: { home: `首页`, wifi: `Wi-Fi`, checkout: `入住/退房`, emergency: `紧急` },
     home: {
       greeting: `欢迎入住 YOKOHAMA Still Retreat`,
       subtitle: `祝您在横滨鹤见度过宁静舒适的时光。`,
@@ -357,7 +363,7 @@ window.I18N = {
       mapIntro: `<p>点击下方地址即可打开Google地图。</p>`,
       haneda: `<p>从<strong>羽田机场</strong>搭电车到京急鹤见站约需20分钟。从京急鹤见站步行到本住宿约18分钟。</p>`,
       narita: `<p>从<strong>成田机场</strong>搭电车到JR鹤见站约需90分钟。从JR鹤见站步行到本住宿约12分钟。</p>`,
-      taxi: `<p>搭乘出租车时，请将下方地址出示给司机看。</p><ul><li>从羽田机场出发：约30分钟，车费约6,000〜7,000日圆</li><li>从JR鹤见站出发：约3分钟，车费约500日圆</li><li>22:00〜翌5:00会加收两成深夜加成费用</li></ul><p><strong>重要提醒：</strong>请告知司机在地图上红色圈起处右转。若直接沿大马路直行，需要走楼梯才能抵达建筑物。</p>`,
+      taxi: `<p>搭乘出租车时，请将下方地址出示给司机看。</p><ul><li>从羽田机场出发：约30分钟，车费约6,000〜7,000日圆</li><li>从JR鹤见站出发：约3分钟，车费约500日圆</li><li>22:00〜翌5:00会加收两成深夜加成费用</li></ul><p><strong>重要提醒：</strong>若沿大马路直行，需要走楼梯才能抵达建筑物。请向司机出示地址，并告知请走<strong>车子能直接开到建筑物前的路线</strong>。</p>`,
       taxiStandKeikyu: `<p><strong>京急鹤见站出租车乘车点：</strong>从西口出站后左转，走下楼梯即可看到「TAXI」的招牌。</p>`,
       taxiStandJR: `<p><strong>JR鹤见站出租车乘车点：</strong>走下楼梯后穿越斑马线并左转，即可看到「TAXI」的招牌。</p>`,
       exterior: `<p>建筑物外观。</p>`
@@ -365,13 +371,16 @@ window.I18N = {
     checkin: {
       intro: `<p>本住宿采自助入住，现场无工作人员常驻，请提前确认以下步骤。</p>`,
       times: `<p><strong>入住：</strong>16:00起<br><strong>退房：</strong>10:00前</p><p>清洁人员将于10:10抵达，请于10:00前退房。若逾10:00退房，可能会加收一晚的费用。</p>`,
+      checkout: `<p><strong>退房前请您配合（10:00前）</strong></p><ul><li>请关闭空调和照明。</li><li>请关好窗户。</li><li>垃圾请分类后，直接留在房间的垃圾桶内即可（<a href="#/garbage">垃圾丢弃方式</a>）。</li><li>若使用了钥匙盒中的钥匙，请放回钥匙盒。</li><li>出门后，请用电子锁上锁。</li></ul>`,
+      checkoutProjector: `<p>若您在201号房的投影仪上登录了YouTube、Netflix等，请务必退出登录（<a href="#/projector/logout">退出登录的方法</a>）。</p>`,
       steps: `<p>您的房间是<strong>{room}号房</strong>，位于{floor}楼。房门为电子锁。</p><ul><li>输入密码并按下解锁按钮（密码会在入住当天早上通过Airbnb消息发送给您）。</li></ul>`,
       stepsLock: `<p>外出或退房时请务必将门锁上。</p>`,
       keybox: `<p>若电子锁无法使用，可从钥匙盒中取出钥匙使用。钥匙盒位于房门<strong>{keyboxSide}侧</strong>的燃气表处。共有两个钥匙盒，使用任一个皆可。钥匙盒密码与电子锁相同。</p>`
     },
     wifi: {
       title: `Wi-Fi`,
-      scanOrType: `请扫描QR code，或直接输入下方信息连接。`
+      scanOrType: `请扫描QR code，或直接输入下方信息连接。`,
+      tip: `不确定选哪个时，请连接<strong>5GHz（名称以「-A」结尾）</strong>。若连不上或信号较弱，请试试<strong>2.4GHz（名称以「-G」结尾）</strong>。`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -442,7 +451,7 @@ window.I18N = {
       intro: `<p>以下为邻近的投币式停车场（皆位于车站往本住宿的上坡路段）。点击地址即可打开Google地图。费用可能调整，请以现场告示为准。</p><ul><li><strong>Times鹤见寺谷第3</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%E7%AC%AC3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-6" target="_blank" rel="noopener">鹤见区寺谷2-6</a>。步行4分钟（290米）。220日圆/30分。最高1,000日圆/24小时，19:00〜8:00最高440日圆（最长可停48小时）。</li><li><strong>Shinkou Park鹤见寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%B3%E3%82%B3%E3%82%A6%E3%83%91%E3%83%BC%E3%82%AF%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-1-21" target="_blank" rel="noopener">寺谷2-1-21</a>。步行4分钟（290米）。200日圆/30分。9:00〜18:00最高900日圆，18:00〜9:00最高400日圆。</li><li><strong>Times鹤见寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-3&amp;query_place_id=ChIJc75tnRJeGGARwiIxxipn0bg" target="_blank" rel="noopener">寺谷1-3</a>。步行4分钟（350米）。200日圆/20分。最高1,200日圆/24小时，19:00〜8:00最高500日圆。</li><li><strong>Time Parking鹤见</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E9%B6%B4%E8%A6%8B%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E9%B6%B4%E8%A6%8B2-3-45" target="_blank" rel="noopener">鹤见2-3-45</a>。步行4分钟（230米），有陡峭楼梯。8:00〜20:00：300日圆/30分，最高1,200日圆/12小时。20:00〜8:00：100日圆/1小时，最高400日圆/12小时。</li></ul>`
     },
     trouble: {
-      keypad: `<p><strong>玄关电子锁无法使用时：</strong>玄关旁有一个放置备用钥匙的盒子。若电子锁故障，请通过Airbnb聊天室联系我们，我们会提供盒子的密码。</p>`,
+      keypad: `<p><strong>玄关电子锁无法使用时：</strong>请从房门<strong>{keyboxSide}侧</strong>燃气表处的钥匙盒中取出钥匙使用。密码与电子锁相同（共有两个钥匙盒，使用任一个皆可）。若仍无法打开，请通过Airbnb消息联系我们。</p>`,
       hotwater: `<p><strong>淋浴间没有热水时：</strong>请按下热水控制面板左上方的电源按钮。若电源按钮的绿灯亮起，即使没有显示数字，热水仍在供应中。</p>`,
       power: `<p><strong>停电时：</strong>电源总开关位于玄关处，请打开盖子并将开关往上扳起。</p>`,
       lostFound: `<p><strong>遗失物品时：</strong>请通过预订平台传消息联系我们，清洁人员会协助确认，若寻获会以货到付款方式为您寄送。退房后3天内若未收到您的联系，遗失物将不另行通知径行处理。雨伞、毛巾等低价值物品将不另行通知直接处理。</p>`
@@ -475,7 +484,7 @@ window.I18N = {
       side: { left: `左`, right: `右` },
       backHome: `回到首頁`
     },
-    nav: { home: `首頁`, wifi: `Wi-Fi`, checkout: `入住退房`, emergency: `緊急` },
+    nav: { home: `首頁`, wifi: `Wi-Fi`, checkout: `入住/退房`, emergency: `緊急` },
     home: {
       greeting: `歡迎入住 YOKOHAMA Still Retreat`,
       subtitle: `祝您在橫濱鶴見度過寧靜舒適的時光。`,
@@ -507,7 +516,7 @@ window.I18N = {
       mapIntro: `<p>點選下方住址即可開啟Google地圖。</p>`,
       haneda: `<p>從<strong>羽田機場</strong>搭電車到京急鶴見站約需20分鐘。從京急鶴見站步行到本住宿約18分鐘。</p>`,
       narita: `<p>從<strong>成田機場</strong>搭電車到JR鶴見站約需90分鐘。從JR鶴見站步行到本住宿約12分鐘。</p>`,
-      taxi: `<p>搭乘計程車時，請將下方住址出示給司機看。</p><ul><li>從羽田機場出發：約30分鐘，車資約6,000〜7,000日圓</li><li>從JR鶴見站出發：約3分鐘，車資約500日圓</li><li>22:00〜翌5:00會加收兩成深夜加成費用</li></ul><p><strong>重要提醒：</strong>請告知司機在地圖上紅色圈起處右轉。若直接沿大馬路直行，需要走樓梯才能抵達建築物。</p>`,
+      taxi: `<p>搭乘計程車時，請將下方住址出示給司機看。</p><ul><li>從羽田機場出發：約30分鐘，車資約6,000〜7,000日圓</li><li>從JR鶴見站出發：約3分鐘，車資約500日圓</li><li>22:00〜翌5:00會加收兩成深夜加成費用</li></ul><p><strong>重要提醒：</strong>若沿大馬路直行，需要走樓梯才能抵達建築物。請向司機出示住址，並告知請走<strong>車子能直接開到建築物前的路線</strong>。</p>`,
       taxiStandKeikyu: `<p><strong>京急鶴見站計程車招呼站：</strong>從西口出站後左轉，走下樓梯即可看到「TAXI」的招牌。</p>`,
       taxiStandJR: `<p><strong>JR鶴見站計程車招呼站：</strong>走下樓梯後穿越斑馬線並左轉，即可看到「TAXI」的招牌。</p>`,
       exterior: `<p>建築物外觀。</p>`
@@ -515,13 +524,16 @@ window.I18N = {
     checkin: {
       intro: `<p>本住宿採自助入住，現場無工作人員常駐，請提前確認以下步驟。</p>`,
       times: `<p><strong>入住：</strong>16:00起<br><strong>退房：</strong>10:00前</p><p>清潔人員將於10:10抵達，請於10:00前退房。若逾10:00退房，可能會加收一晚的費用。</p>`,
+      checkout: `<p><strong>退房前請您配合（10:00前）</strong></p><ul><li>請關閉冷氣和照明。</li><li>請關好窗戶。</li><li>垃圾請分類後，直接留在房間的垃圾桶內即可（<a href="#/garbage">垃圾丟棄方式</a>）。</li><li>若使用了鑰匙盒中的鑰匙，請放回鑰匙盒。</li><li>出門後，請用電子鎖上鎖。</li></ul>`,
+      checkoutProjector: `<p>若您在201號房的投影機上登入了YouTube、Netflix等，請務必登出（<a href="#/projector/logout">登出方法</a>）。</p>`,
       steps: `<p>您的房間是<strong>{room}號房</strong>，位於{floor}樓。房門為電子鎖。</p><ul><li>輸入密碼並按下解鎖按鈕（密碼會在入住當天早上透過Airbnb訊息傳送給您）。</li></ul>`,
       stepsLock: `<p>外出或退房時請務必將門鎖上。</p>`,
       keybox: `<p>若電子鎖無法使用，可從鑰匙盒中取出鑰匙使用。鑰匙盒位於房門<strong>{keyboxSide}側</strong>的瓦斯錶處。共有兩個鑰匙盒，使用任一個皆可。鑰匙盒密碼與電子鎖相同。</p>`
     },
     wifi: {
       title: `Wi-Fi`,
-      scanOrType: `請掃描QR code，或直接輸入下方資訊連線。`
+      scanOrType: `請掃描QR code，或直接輸入下方資訊連線。`,
+      tip: `不確定選哪個時，請連接<strong>5GHz（名稱以「-A」結尾）</strong>。若連不上或訊號較弱，請試試<strong>2.4GHz（名稱以「-G」結尾）</strong>。`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -592,7 +604,7 @@ window.I18N = {
       intro: `<p>以下為鄰近的投幣式停車場（皆位於車站往本住宿的上坡路段）。點選地址即可開啟Google地圖。費用可能調整，請以現場告示為準。</p><ul><li><strong>Times鶴見寺谷第3</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%E7%AC%AC3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-6" target="_blank" rel="noopener">鶴見區寺谷2-6</a>。步行4分鐘（290公尺）。220日圓/30分。最高1,000日圓/24小時，19:00〜8:00最高440日圓（最長可停48小時）。</li><li><strong>Shinkou Park鶴見寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%B3%E3%82%B3%E3%82%A6%E3%83%91%E3%83%BC%E3%82%AF%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-1-21" target="_blank" rel="noopener">寺谷2-1-21</a>。步行4分鐘（290公尺）。200日圓/30分。9:00〜18:00最高900日圓，18:00〜9:00最高400日圓。</li><li><strong>Times鶴見寺谷</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-3&amp;query_place_id=ChIJc75tnRJeGGARwiIxxipn0bg" target="_blank" rel="noopener">寺谷1-3</a>。步行4分鐘（350公尺）。200日圓/20分。最高1,200日圓/24小時，19:00〜8:00最高500日圓。</li><li><strong>Time Parking鶴見</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E9%B6%B4%E8%A6%8B%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E9%B6%B4%E8%A6%8B2-3-45" target="_blank" rel="noopener">鶴見2-3-45</a>。步行4分鐘（230公尺），有陡峭樓梯。8:00〜20:00：300日圓/30分，最高1,200日圓/12小時。20:00〜8:00：100日圓/1小時，最高400日圓/12小時。</li></ul>`
     },
     trouble: {
-      keypad: `<p><strong>玄關電子鎖無法使用時：</strong>玄關旁有一個放置備用鑰匙的盒子。若電子鎖故障，請透過Airbnb聊天室聯絡我們，我們會提供盒子的密碼。</p>`,
+      keypad: `<p><strong>玄關電子鎖無法使用時：</strong>請從房門<strong>{keyboxSide}側</strong>瓦斯錶處的鑰匙盒中取出鑰匙使用。密碼與電子鎖相同（共有兩個鑰匙盒，使用任一個皆可）。若仍無法開啟，請透過Airbnb訊息聯絡我們。</p>`,
       hotwater: `<p><strong>淋浴間沒有熱水時：</strong>請按下熱水控制面板左上方的電源按鈕。若電源按鈕的綠燈亮起，即使沒有顯示數字，熱水仍在供應中。</p>`,
       power: `<p><strong>停電時：</strong>電源總開關位於玄關處，請打開蓋子並將開關往上扳起。</p>`,
       lostFound: `<p><strong>遺失物品時：</strong>請透過訂房平台傳訊息聯絡我們，清潔人員會協助確認，若尋獲會以貨到付款方式為您寄送。退房後3天內若未收到您的聯絡，遺失物將不另行通知逕行處理。雨傘、毛巾等低價值物品將不另行通知直接處理。</p>`
@@ -625,7 +637,7 @@ window.I18N = {
       side: { left: `왼쪽`, right: `오른쪽` },
       backHome: `홈으로 돌아가기`
     },
-    nav: { home: `홈`, wifi: `Wi-Fi`, checkout: `체크인`, emergency: `긴급` },
+    nav: { home: `홈`, wifi: `Wi-Fi`, checkout: `체크인/아웃`, emergency: `긴급` },
     home: {
       greeting: `YOKOHAMA Still Retreat에 오신 것을 환영합니다`,
       subtitle: `요코하마 쓰루미에서 조용하고 편안한 시간을 보내시길 바랍니다.`,
@@ -657,7 +669,7 @@ window.I18N = {
       mapIntro: `<p>아래 주소를 탭하면 구글 지도가 열립니다.</p>`,
       haneda: `<p><strong>하네다 공항</strong>에서 전철로 게이큐 쓰루미역까지 약 20분. 게이큐 쓰루미역에서 숙소까지는 도보 약 18분입니다.</p>`,
       narita: `<p><strong>나리타 공항</strong>에서 전철로 JR 쓰루미역까지 약 90분. JR 쓰루미역에서 숙소까지는 도보 약 12분입니다.</p>`,
-      taxi: `<p>택시를 이용하실 경우 아래 주소를 기사님께 보여주세요.</p><ul><li>하네다 공항에서: 약 30분, 약 6,000〜7,000엔</li><li>JR 쓰루미역에서: 약 3분, 약 500엔</li><li>22시〜다음날 5시에는 심야 할증(20%)이 적용됩니다</li></ul><p><strong>중요:</strong> 지도에 빨간 원으로 표시된 지점에서 우회전하도록 기사님께 말씀해 주세요. 그대로 큰길을 직진하면 건물까지 계단을 올라가야 합니다.</p>`,
+      taxi: `<p>택시를 이용하실 경우 아래 주소를 기사님께 보여주세요.</p><ul><li>하네다 공항에서: 약 30분, 약 6,000〜7,000엔</li><li>JR 쓰루미역에서: 약 3분, 약 500엔</li><li>22시〜다음날 5시에는 심야 할증(20%)이 적용됩니다</li></ul><p><strong>중요:</strong> 큰길을 그대로 직진하면 건물까지 계단을 올라가야 합니다. 기사님께 주소를 보여드리고, <strong>건물 앞까지 차로 갈 수 있는 길</strong>로 가 달라고 말씀해 주세요.</p>`,
       taxiStandKeikyu: `<p><strong>게이큐 쓰루미역 택시 승강장:</strong> 서쪽 출구로 나와 왼쪽으로 돌아 계단을 내려가면 'TAXI' 표지판이 보입니다.</p>`,
       taxiStandJR: `<p><strong>JR 쓰루미역 택시 승강장:</strong> 계단 아래 횡단보도를 건너 왼쪽으로 돌면 'TAXI' 표지판이 보입니다.</p>`,
       exterior: `<p>건물 외관입니다.</p>`
@@ -665,13 +677,16 @@ window.I18N = {
     checkin: {
       intro: `<p>상주 직원이 없는 셀프 체크인 숙소입니다. 아래 절차를 미리 확인해 주세요.</p>`,
       times: `<p><strong>체크인:</strong> 16:00부터<br><strong>체크아웃:</strong> 10:00까지</p><p>청소 스태프가 10:10에 도착하므로 10:00까지 퇴실해 주세요. 10:00 이후 체크아웃 시 추가 숙박 요금이 발생할 수 있습니다.</p>`,
+      checkout: `<p><strong>체크아웃 전 부탁드립니다(10:00까지)</strong></p><ul><li>에어컨과 조명을 꺼 주세요.</li><li>창문을 닫아 주세요.</li><li>쓰레기는 분리해서 객실 쓰레기통에 그대로 두셔도 됩니다(<a href="#/garbage">쓰레기 배출 방법</a>).</li><li>키박스의 열쇠를 사용하셨다면 키박스에 다시 넣어 주세요.</li><li>문을 나선 뒤에는 전자 잠금장치로 잠가 주세요.</li></ul>`,
+      checkoutProjector: `<p>201호 프로젝터에서 YouTube, Netflix 등에 로그인하셨다면 반드시 로그아웃해 주세요(<a href="#/projector/logout">로그아웃 방법</a>).</p>`,
       steps: `<p>객실은 <strong>{room}호</strong>, {floor}층입니다. 출입문은 전자 잠금장치입니다.</p><ul><li>비밀번호를 입력하고 잠금 해제 버튼을 눌러주세요 (비밀번호는 체크인 당일 아침에 Airbnb 메시지로 전달드립니다).</li></ul>`,
       stepsLock: `<p>외출 시와 체크아웃 시에는 반드시 문을 잠가주세요.</p>`,
       keybox: `<p>전자 잠금장치가 작동하지 않을 경우, 키박스에서 열쇠를 꺼내 사용하실 수 있습니다. 키박스는 문 <strong>{keyboxSide}편</strong>의 가스 계량기 쪽에 있습니다. 키박스는 두 개가 있으며 어느 쪽을 사용하셔도 됩니다. 키박스 비밀번호는 전자 잠금장치와 동일합니다.</p>`
     },
     wifi: {
       title: `Wi-Fi`,
-      scanOrType: `QR코드를 스캔하시거나 아래 정보를 직접 입력해 주세요.`
+      scanOrType: `QR코드를 스캔하시거나 아래 정보를 직접 입력해 주세요.`,
+      tip: `어느 쪽인지 고민되면 <strong>5GHz(이름이 「-A」로 끝남)</strong>에 연결해 주세요. 연결이 안 되거나 신호가 약하면 <strong>2.4GHz(이름이 「-G」로 끝남)</strong>를 이용해 보세요.`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -742,7 +757,7 @@ window.I18N = {
       intro: `<p>가장 가까운 코인 주차장은 다음과 같습니다 (모두 역에서 숙소로 가는 오르막길에 위치). 주소를 누르면 Google 지도가 열립니다. 요금은 변경될 수 있으니 현장 안내판을 확인해 주세요.</p><ul><li><strong>타임즈 쓰루미데라야 제3</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%E7%AC%AC3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-6" target="_blank" rel="noopener">쓰루미구 데라야2-6</a>. 도보 4분(290m). 220엔/30분. 최대 1,000엔/24시간, 19:00〜8:00는 최대 440엔(최대 48시간 주차 가능).</li><li><strong>신코파크 쓰루미데라야</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B7%E3%83%B3%E3%82%B3%E3%82%A6%E3%83%91%E3%83%BC%E3%82%AF%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B72-1-21" target="_blank" rel="noopener">데라야2-1-21</a>. 도보 4분(290m). 200엔/30분. 9:00〜18:00는 최대 900엔, 18:00〜9:00는 최대 400엔.</li><li><strong>타임즈 쓰루미데라야</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E9%B6%B4%E8%A6%8B%E5%AF%BA%E8%B0%B7%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%AF%BA%E8%B0%B71-3&amp;query_place_id=ChIJc75tnRJeGGARwiIxxipn0bg" target="_blank" rel="noopener">데라야1-3</a>. 도보 4분(350m). 200엔/20분. 최대 1,200엔/24시간, 19:00〜8:00는 최대 500엔.</li><li><strong>타임파킹 쓰루미</strong> — <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E9%B6%B4%E8%A6%8B%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E9%B6%B4%E8%A6%8B2-3-45" target="_blank" rel="noopener">쓰루미2-3-45</a>. 도보 4분(230m), 가파른 계단 있음. 8:00〜20:00: 300엔/30분 최대 1,200엔/12시간. 20:00〜8:00: 100엔/1시간 최대 400엔/12시간.</li></ul>`
     },
     trouble: {
-      keypad: `<p><strong>현관 키패드가 작동하지 않을 때:</strong> 현관 옆에 여분의 열쇠가 들어있는 박스가 있습니다. 키패드가 작동하지 않으면 Airbnb 채팅으로 연락해 주세요. 박스의 비밀번호를 보내드립니다.</p>`,
+      keypad: `<p><strong>현관 전자 잠금장치가 작동하지 않을 때:</strong> 문 <strong>{keyboxSide}편</strong>의 가스 계량기 쪽에 있는 키박스에서 열쇠를 꺼내 사용해 주세요. 비밀번호는 전자 잠금장치와 동일합니다(키박스는 두 개가 있으며 어느 쪽을 사용하셔도 됩니다). 그래도 열리지 않으면 Airbnb 메시지로 연락해 주세요.</p>`,
       hotwater: `<p><strong>샤워실에 온수가 나오지 않을 때:</strong> 온수 조절판 왼쪽 위의 전원 버튼을 눌러주세요. 전원 버튼의 초록 불이 켜져 있으면 숫자가 표시되지 않아도 온수가 공급되고 있는 것입니다.</p>`,
       power: `<p><strong>정전 시:</strong> 차단기는 현관에 있습니다. 덮개를 열고 스위치 막대를 위로 올려주세요.</p>`,
       lostFound: `<p><strong>분실물이 있을 때:</strong> 예약 플랫폼 메시지로 연락해 주세요. 청소 스태프가 확인하며, 발견 시 착불로 보내드립니다. 체크아웃 후 3일 이내에 연락이 없을 경우 분실물은 예고 없이 처분됩니다. 우산, 수건 등 저가 물품은 예고 없이 처분됩니다.</p>`

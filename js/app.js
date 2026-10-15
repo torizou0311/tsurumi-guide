@@ -314,6 +314,7 @@
       var qr24 = qrCombo ? null : (room.photos && room.photos.wifiQr24);
       body = '' +
         '<p class="section-lead">' + esc(d.wifi.scanOrType) + '</p>' +
+        '<p class="section-lead">' + d.wifi.tip + '</p>' +
         (qrCombo ? '<div class="guide-photo guide-photo--qr"><img src="' + esc(qrCombo) + '" alt="Wi-Fi QR" loading="lazy"></div>' : '') +
         '<div class="wifi-card">' +
           '<div class="wifi-card__title">5GHz</div>' +

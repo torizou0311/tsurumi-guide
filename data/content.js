@@ -42,8 +42,10 @@ window.SECTIONS = [
     blocks: [
       { key: 'intro' },
       { key: 'times' },
-      { key: 'steps', image: 'images/common/unlock1.png' },
-      { key: 'stepsLock', image: 'images/common/unlock2.png' },
+      { key: 'checkout' },
+      { key: 'checkoutProjector', rooms: ['201'] },
+      { key: 'steps', image: 'images/common/unlock1.jpg' },
+      { key: 'stepsLock', image: 'images/common/unlock2.jpg' },
       { key: 'keybox', image: 'images/common/keybox.jpg' }
     ]
   },
@@ -164,7 +166,7 @@ window.SECTIONS = [
     icon: 'parking',
     inMenu: true,
     blocks: [
-      { key: 'intro', image: 'images/common/parking1.png' }
+      { key: 'intro', image: 'images/common/parking1.jpg' }
     ]
   },
   {
@@ -174,7 +176,7 @@ window.SECTIONS = [
     blocks: [
       { key: 'keypad', image: 'images/common/keybox-troubleshoot.jpg' },
       { key: 'hotwater', image: 'images/common/hotwater-panel.png' },
-      { key: 'power', image: 'images/common/breaker.png' },
+      { key: 'power', image: 'images/common/breaker.jpg' },
       { key: 'lostFound' }
     ]
   },
