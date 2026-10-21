@@ -499,18 +499,71 @@ button { font-family: inherit; }
 }
 .block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-.block-heading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* 目次（見出しが2つ以上あるページの冒頭）。各項目へのページ内リンク */
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 14px 16px 8px;
+  margin-bottom: 26px;
+  scroll-margin-top: 124px;
+}
+.toc__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 15px;
-  font-family: var(--font-sans);
+  color: var(--accent-ink);
+  margin-bottom: 4px;
+}
+.toc__list { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+.toc__list li { counter-increment: toc; border-top: 1px solid var(--line-soft); }
+.toc__list li:first-child { border-top: none; }
+.toc__link {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 10px 2px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.toc__link::before {
+  content: counter(toc);
+  flex: none;
+  min-width: 1.4em;
   font-weight: 700;
   color: var(--accent-ink);
-  margin-bottom: 10px;
 }
+.toc__link:active { color: var(--accent-ink); }
 
-/* 項目（各家電）の見出し。ページ内リンクにもなっている */
+/* 見出しから次の見出しまでのまとまり */
+.item {
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.item > .block:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+/* 「目次に戻る」ボタン（各まとまりの最後） */
+.toc-back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 14px 0 0 auto;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.toc-back .icon { width: 16px; height: 16px; }
+
+/* 項目の見出し。ページ内リンクにもなっている */
 .item-heading {
   font-family: var(--font-heading);
   font-size: 19px;

@@ -79,7 +79,8 @@
     pin: '<path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/>',
     translate: '<path d="M3 6h10"/><path d="M8 3.5V6"/><path d="M11 6c-.8 3.6-3.4 6.6-7.5 8.5"/><path d="M5.5 9.5c1.3 2.2 3.3 3.9 6 5"/><path d="m12.5 20.5 4.2-9.5 4.3 9.5"/><path d="M14 17.3h5.5"/>',
     projector: '<rect x="3" y="8" width="18" height="8.5" rx="2"/><circle cx="15.5" cy="12.25" r="2.6"/><path d="M6.5 12.25h2.5"/><path d="M6 16.5v1.8M18 16.5v1.8"/>',
-    globe: '<circle cx="12" cy="12" r="8.3"/><path d="M3.7 12h16.6"/><path d="M12 3.7c2.4 2.3 3.7 5.3 3.7 8.3s-1.3 6-3.7 8.3c-2.4-2.3-3.7-5.3-3.7-8.3S9.6 6 12 3.7Z"/>'
+    globe: '<circle cx="12" cy="12" r="8.3"/><path d="M3.7 12h16.6"/><path d="M12 3.7c2.4 2.3 3.7 5.3 3.7 8.3s-1.3 6-3.7 8.3c-2.4-2.3-3.7-5.3-3.7-8.3S9.6 6 12 3.7Z"/>',
+    up: '<path d="M6 14.5 12 8.5l6 6"/>'
   };
   function icon(name, cls) {
     var body = ICONS[name] || '';
@@ -210,7 +211,8 @@
       { id: 'checkin', route: '#/checkin', icon: 'key', label: d.nav.checkout },
       { id: 'emergency', route: '#/emergency', icon: 'emergency', label: d.nav.emergency }
     ];
-    var norm = hash === '' || hash === '#' ? '#/' : hash;
+    // 「#/checkin/times」のように項目名が付いていても、ページ（#/checkin）として扱う
+    var norm = hash === '' || hash === '#' ? '#/' : '#/' + hash.replace('#/', '').split('/')[0];
     var html = items.map(function (it) {
       var active = norm === it.route ? ' is-active' : '';
       return '<a class="bottom-nav__item' + active + '" href="' + it.route + '">' + icon(it.icon) + '<span>' + esc(it.label) + '</span></a>';
@@ -351,13 +353,20 @@
     var lang = state.lang;
     var dict = d[section.id] || {};
 
-    var blocksHtml = section.blocks.map(function (block) {
-      if (block.rooms && block.rooms.indexOf(room.id) === -1) return '';
+    // 見出し（anchor）ごとに、次の見出しまでのブロックを1つのまとまり（item）にする。
+    // まとまりは目次・「目次に戻る」ボタン・アクセス計測（どの項目が読まれたか）に使う
+    var groups = [];  // { anchor, title, html }。anchor が null のものは最初の見出しより前の部分
+    var current = { anchor: null, title: '', html: '' };
+    groups.push(current);
+
+    section.blocks.forEach(function (block) {
+      if (block.rooms && block.rooms.indexOf(room.id) === -1) return;
 
       // checkin.keybox / trouble.keypad は「部屋のキーボックス情報が未確定」の場合、
       // 通常文の代わりに「準備中」メッセージを出す
       if (section.id === 'checkin' && block.key === 'keybox' && !room.keyboxSide) {
-        return '<div class="block"><div class="notice">' + esc(d.common.pendingInfo) + '</div></div>';
+        current.html += '<div class="block"><div class="notice">' + esc(d.common.pendingInfo) + '</div></div>';
+        return;
       }
 
       var raw = dict[block.key] || '';
@@ -368,31 +377,48 @@
       // medium: true の項目は、小さめの図が画面いっぱいに引き伸ばされてぼやけないよう中くらいで出す
       if (block.medium) photo = photo.replace('class="guide-photo', 'class="guide-photo guide-photo--medium');
 
-      if (block.heading) {
-        return '<div class="block"><h3 class="block-heading"><span class="h-dot"></span>' + esc(text) + '</h3></div>';
-      }
-      if (block.showAddress) {
-        return '<div class="block">' +
-          '<div class="block-text">' + text + '</div>' +
-          addressBlock(lang, room, section.id === 'emergency') +
-          photo +
-        '</div>';
-      }
-      // anchor 付きの項目（各家電）: 家電名の見出しを出す。見出しはその項目へのページ内リンクにもなる
+      // anchor 付きの項目: 見出しを出し、新しいまとまりを始める。見出しはその項目へのページ内リンクにもなる
       var headingHtml = '';
       if (block.anchor) {
         var title = (dict.titles && dict.titles[block.anchor]) || '';
+        current = { anchor: block.anchor, title: title, html: '' };
+        groups.push(current);
         headingHtml = '<h2 class="item-heading" id="item-' + esc(block.anchor) + '">' +
           '<a href="#/' + esc(section.id) + '/' + esc(block.anchor) + '">' + esc(title) + '</a></h2>';
       }
       var textHtml = text ? '<div class="block-text">' + text + '</div>' : '';
-      return '<div class="block">' + headingHtml + textHtml + photo + '</div>';
+      if (block.showAddress) {
+        current.html += '<div class="block">' + headingHtml + textHtml +
+          addressBlock(lang, room, section.id === 'emergency') + photo + '</div>';
+        return;
+      }
+      current.html += '<div class="block">' + headingHtml + textHtml + photo + '</div>';
+    });
+
+    var items = groups.filter(function (g) { return g.anchor; });
+    // 見出しが2つ以上あるページだけ、冒頭に目次と「目次に戻る」ボタンを出す
+    var withToc = items.length >= 2;
+    var tocHtml = withToc
+      ? '<nav class="toc" id="toc" aria-label="' + esc(d.common.toc) + '">' +
+          '<div class="toc__title">' + esc(d.common.toc) + '</div>' +
+          '<ol class="toc__list">' + items.map(function (g) {
+            return '<li><a class="toc__link" href="#/' + esc(section.id) + '/' + esc(g.anchor) + '">' + esc(g.title) + '</a></li>';
+          }).join('') + '</ol>' +
+        '</nav>'
+      : '';
+    var backHtml = withToc
+      ? '<button type="button" class="toc-back" data-action="to-toc">' + icon('up') + '<span>' + esc(d.common.backToToc) + '</span></button>'
+      : '';
+
+    var bodyHtml = groups.map(function (g) {
+      if (!g.anchor) return g.html;
+      return '<div class="item" data-item="' + esc(g.anchor) + '">' + g.html + backHtml + '</div>';
     }).join('');
 
     return '' +
       '<div class="page page--section">' +
         sectionHeader(d.menu[section.id], icon(section.icon)) +
-        '<div class="section-body">' + blocksHtml + '</div>' +
+        '<div class="section-body">' + tocHtml + bodyHtml + '</div>' +
       '</div>';
   }
 
@@ -414,6 +440,7 @@
 
     if (!room) {
       app.innerHTML = renderHeader(null) + renderRoomSelect();
+      shownView = null;
       bindGlobalEvents();
       window.scrollTo(0, 0);
       trackPage(null, 'roomselect');
@@ -439,15 +466,33 @@
       anchorId = hashParts[1] || null;
       var section = window.SECTIONS.filter(function (s) { return s.id === sectionId; })[0];
       if (section && !sectionVisible(section, room)) section = null; // その部屋に無いセクションはホームを表示
-      body = section ? renderSection(section, room) : renderHome(room);
       if (section) pageId = section.id;
+      // 目次や見出しのリンクで同じページの中を移動するときは、描き直さずにスクロールだけする
+      if (section && shownView === viewKey(room, pageId)) {
+        if (anchorId && document.getElementById('item-' + anchorId)) {
+          scrollToItem(anchorId);
+          trackPage(room.id, pageId, anchorId);
+        } else {
+          window.scrollTo(0, 0);
+        }
+        return;
+      }
+      body = section ? renderSection(section, room) : renderHome(room);
     }
 
     app.innerHTML = renderHeader(room) + '<main class="main">' + body + '</main>' + renderBottomNav(hash);
+    shownView = viewKey(room, pageId);
     bindGlobalEvents();
     window.scrollTo(0, 0);
     if (anchorId) scrollToItem(anchorId);
-    trackPage(room.id, pageId);
+    trackPage(room.id, pageId, anchorId && document.getElementById('item-' + anchorId) ? anchorId : null);
+    watchItems(room.id, pageId);
+  }
+
+  // いま表示しているページ（言語・部屋・ページ）。同じページの中の移動かどうかの判定に使う
+  var shownView = null;
+  function viewKey(room, pageId) {
+    return state.lang + '|' + room.id + '|' + pageId;
   }
 
   // 項目（家電など）の見出しの位置までスクロールする。QRコードから直接開いたとき用。
@@ -472,10 +517,45 @@
   }
 
   // アクセス計測（js/analytics.js）。計測が無効・読み込み失敗でも表示には影響させない
-  function trackPage(roomId, pageId) {
+  // itemId は目次・見出しのリンクやQRで開いた項目（anchor の名前）。無いときは null
+  function trackPage(roomId, pageId, itemId) {
     try {
-      if (window.trackPage) window.trackPage(state.lang, roomId, pageId);
+      if (window.trackPage) window.trackPage(state.lang, roomId, pageId, itemId);
     } catch (e) { /* ignore */ }
+  }
+
+  // 「どの項目が読まれたか」の計測。項目のまとまりが画面のまん中に3秒以上あったら、
+  // 1回の表示につき1度だけ js/analytics.js の trackItemView に知らせる
+  // （目次を使わずにスクロールして読んだ人も数えるため）
+  var READ_MS = 3000;
+  var itemObserver = null;
+  var itemTimers = {};
+  function watchItems(roomId, pageId) {
+    if (itemObserver) { itemObserver.disconnect(); itemObserver = null; }
+    Object.keys(itemTimers).forEach(function (k) { window.clearTimeout(itemTimers[k]); });
+    itemTimers = {};
+    if (!window.IntersectionObserver || !window.trackItemView) return;
+    var els = document.querySelectorAll('.item[data-item]');
+    if (!els.length) return;
+    var lang = state.lang;
+    var timers = itemTimers;
+    var sent = {};
+    itemObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var id = en.target.getAttribute('data-item');
+        if (sent[id]) return;
+        if (en.isIntersecting) {
+          timers[id] = window.setTimeout(function () {
+            sent[id] = true;
+            try { window.trackItemView(lang, roomId, pageId, id); } catch (e) { /* ignore */ }
+          }, READ_MS);
+        } else if (timers[id]) {
+          window.clearTimeout(timers[id]);
+          delete timers[id];
+        }
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' }); // 画面の縦のまん中の線にかかっているかどうか
+    for (var i = 0; i < els.length; i++) itemObserver.observe(els[i]);
   }
 
   // ---------- イベント ----------
@@ -508,6 +588,15 @@
         setRoomInUrl(roomId);
         window.location.hash = '#/';
         render();
+      });
+    }
+
+    // 「目次に戻る」ボタン: URLは変えずに目次の位置までスクロールする
+    var tocBtns = app.querySelectorAll('[data-action="to-toc"]');
+    for (var m = 0; m < tocBtns.length; m++) {
+      tocBtns[m].addEventListener('click', function () {
+        var toc = document.getElementById('toc');
+        if (toc) toc.scrollIntoView({ behavior: 'smooth' });
       });
     }
 

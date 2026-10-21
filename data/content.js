@@ -9,6 +9,11 @@
 //     ・全部屋共通の写真 … 'images/common/ファイル名' のように、場所を直接書く
 //     ・部屋ごとに違う写真 … 'room:xxx' と書く（写真の場所は data/rooms.js の photos に書く）
 //   rooms: [...] を付けると、その部屋だけに出す項目になります（例: rooms: ['202']）
+//   anchor: 小見出しを付ける項目に書く名前です。見出しの文字は js/i18n.js の各セクションの titles に書きます。
+//     ・見出しが2つ以上あるページには、冒頭に自動で「目次」が出ます（目次から各見出しへ飛べます）
+//     ・URL の最後に「/anchorの名前」を付けると、その見出しの位置を直接開けます（例: #/appliances/washer）
+//     ・アクセス計測（GA4）では、この名前ごとに「どの項目が見られたか」を数えます
+//     ・QRコードやリンクに使っているので、一度決めた anchor の名前は変えないでください
 //
 // 新しいセクションを足したいときは、この配列に1項目追加してください。
 
@@ -26,15 +31,15 @@ window.SECTIONS = [
     icon: 'map',
     inMenu: true,
     blocks: [
-      { key: 'mapIntro', showAddress: true },
-      { key: 'haneda' },
-      { key: 'narita' },
+      { key: 'mapIntro', anchor: 'address', showAddress: true },
+      { key: 'haneda', anchor: 'haneda' },
+      { key: 'narita', anchor: 'narita' },
       { key: 'naritaA' },
       { key: 'naritaB' },
-      { key: 'taxi' },
+      { key: 'taxi', anchor: 'taxi' },
       { key: 'taxiStandKeikyu' },
       { key: 'taxiStandJR' },
-      { key: 'exterior', image: 'images/common/exterior.jpg' }
+      { key: 'exterior', anchor: 'exterior', image: 'images/common/exterior.jpg' }
     ]
   },
   {
@@ -59,12 +64,12 @@ window.SECTIONS = [
     inMenu: true,
     blocks: [
       { key: 'intro' },
-      { key: 'times' },
-      { key: 'checkout' },
+      { key: 'times', anchor: 'times' },
+      { key: 'checkout', anchor: 'checkout' },
       { key: 'checkoutProjector', rooms: ['201'] },
-      { key: 'steps', image: 'images/common/unlock1.jpg' },
+      { key: 'steps', anchor: 'entry', image: 'images/common/unlock1.jpg' },
       { key: 'stepsLock', image: 'images/common/unlock2.jpg' },
-      { key: 'keybox', image: 'images/common/keybox.jpg' }
+      { key: 'keybox', anchor: 'keybox', image: 'images/common/keybox.jpg' }
     ]
   },
   {
@@ -160,15 +165,11 @@ window.SECTIONS = [
     icon: 'rules',
     inMenu: true,
     blocks: [
-      { key: 'packages' },
-      { key: 'neighborsTitle', heading: true },
-      { key: 'neighbors' },
-      { key: 'fireTitle', heading: true },
-      { key: 'fire' },
-      { key: 'prohibitedTitle', heading: true },
-      { key: 'prohibitedList' },
-      { key: 'penaltyTitle', heading: true },
-      { key: 'penaltyList' }
+      { key: 'packages', anchor: 'packages' },
+      { key: 'neighbors', anchor: 'neighbors' },
+      { key: 'fire', anchor: 'fire' },
+      { key: 'prohibitedList', anchor: 'prohibited' },
+      { key: 'penaltyList', anchor: 'penalty' }
     ]
   },
   {
@@ -192,10 +193,10 @@ window.SECTIONS = [
     icon: 'help',
     inMenu: true,
     blocks: [
-      { key: 'keypad', image: 'images/common/keybox-troubleshoot.jpg' },
-      { key: 'hotwater', image: 'images/common/hotwater-panel.png' },
-      { key: 'power', image: 'images/common/breaker.jpg' },
-      { key: 'lostFound' }
+      { key: 'keypad', anchor: 'lock', image: 'images/common/keybox-troubleshoot.jpg' },
+      { key: 'hotwater', anchor: 'hotwater', image: 'images/common/hotwater-panel.png' },
+      { key: 'power', anchor: 'power', image: 'images/common/breaker.jpg' },
+      { key: 'lostFound', anchor: 'lostfound' }
     ]
   },
   {
