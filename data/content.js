@@ -64,7 +64,8 @@ window.SECTIONS = [
     inMenu: true,
     blocks: [
       { key: 'intro' },
-      { key: 'times', anchor: 'times' },
+      { key: 'times', anchor: 'times', rooms: ['103', '202'] },
+      { key: 'times201', anchor: 'times', rooms: ['201'] }, // 当面、201だけチェックイン15時。戻すときはこの行を消し、上の rooms を消す
       { key: 'checkout', anchor: 'checkout' },
       { key: 'checkoutProjector', rooms: ['201'] },
       { key: 'steps', anchor: 'entry', image: 'images/common/unlock1.jpg' },
