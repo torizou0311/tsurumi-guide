@@ -579,6 +579,7 @@ button { font-family: inherit; }
 
 .block-text p:last-child { margin-bottom: 0; }
 .block-text strong { color: var(--ink); }
+.block-text .btn--block + ul { margin-top: 14px; } /* ボタンのすぐ下の箇条書き（アクセスのタクシー）との間をあける */
 
 .notice {
   background: var(--tint);

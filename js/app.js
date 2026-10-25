@@ -149,19 +149,22 @@
       '</div>';
   }
 
-  function addressBlock(lang, room, withRoomSuffix) {
+  // localOnly: 表示中の言語の住所とGoogleマップだけを出す（アクセスのページ。日本語の住所は「運転手さんへ」ページにある）
+  function addressBlock(lang, room, withRoomSuffix, localOnly) {
     var d = t(lang);
     var jaLine = withRoomSuffix ? (JP_ADDRESS_SHORT + ' ' + room.id + '号室') : JP_ADDRESS_FULL;
-    return '' +
-      '<div class="address-block">' +
-        '<div class="address-block__local">' + esc(d.common.addressLocal) + '</div>' +
+    var jaPart = localOnly ? '' :
         '<div class="address-block__ja-label">' + esc(d.common.addressJaLabel) + '</div>' +
         '<div class="copy-row">' +
           '<div class="copy-row__text">' +
             '<div class="copy-row__value address-block__ja" id="addr-ja-val">' + esc(jaLine) + '</div>' +
           '</div>' +
           '<button type="button" class="copy-btn" data-copy-target="addr-ja-val" aria-label="' + esc(d.common.copy) + '">' + icon('copy') + '</button>' +
-        '</div>' +
+        '</div>';
+    return '' +
+      '<div class="address-block">' +
+        '<div class="address-block__local">' + esc(d.common.addressLocal) + '</div>' +
+        jaPart +
         '<a class="btn btn--outline btn--block" href="' + MAPS_URL + '" target="_blank" rel="noopener">' +
           icon('pin') + '<span>' + esc(d.common.openMaps) + '</span>' + icon('external') +
         '</a>' +
@@ -389,7 +392,7 @@
       var textHtml = text ? '<div class="block-text">' + text + '</div>' : '';
       if (block.showAddress) {
         current.html += '<div class="block">' + headingHtml + textHtml +
-          addressBlock(lang, room, section.id === 'emergency') + photo + '</div>';
+          addressBlock(lang, room, section.id === 'emergency', block.showAddress === 'local') + photo + '</div>';
         return;
       }
       current.html += '<div class="block">' + headingHtml + textHtml + photo + '</div>';

@@ -31,7 +31,7 @@ window.SECTIONS = [
     icon: 'map',
     inMenu: true,
     blocks: [
-      { key: 'mapIntro', anchor: 'address', showAddress: true },
+      { key: 'mapIntro', anchor: 'address', showAddress: 'local' }, // 'local' = 表示中の言語の住所とGoogleマップだけ（日本語の住所は「運転手さんへ」ページ）
       { key: 'haneda', anchor: 'haneda' },
       { key: 'narita', anchor: 'narita' },
       { key: 'naritaA' },

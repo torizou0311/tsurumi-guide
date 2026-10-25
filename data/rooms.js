@@ -6,7 +6,7 @@ window.ROOMS = [
     id: '103',
     floor: 1,
     keyboxSide: 'right', // ドアに向かって右側
-    hero: 'images/listing/103/03.jpg', // トップ画面に大きく出す部屋写真
+    hero: 'images/listing/103/hero.jpg', // トップ画面に大きく出す部屋写真
     wifi: {
       ssid5: 'BCW720J-57CBA-A',
       ssid24: 'BCW720J-57CBA-G',
