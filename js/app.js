@@ -171,16 +171,22 @@
       '</div>';
   }
 
-  // コインパーキングのボタン。lot = content.js の parking: { place, placeId }
-  // 車での道順（今いる場所から駐車場へ）と、駐車場から部屋までの徒歩ルートを Googleマップで開く
+  // コインパーキングのボタン。lot = content.js の parking: { place, placeId, status }
+  // 車での道順（今いる場所から駐車場へ）と、駐車場から部屋までの徒歩ルートを Googleマップで開く。
+  // status（満車・空車がわかる公式ページのURL）がある駐車場だけ「空き状況を見る」ボタンと読み方の説明も出す
   function parkingButtons(lot, dict) {
+    var status = lot.status
+      ? '<a class="btn btn--outline btn--block" href="' + esc(lot.status) + '" target="_blank" rel="noopener">' +
+          '<span>' + esc(dict.statusBtn) + '</span>' + icon('external') + '</a>' +
+        '<p class="parking-lot__hint">' + dict.statusHint + '</p>'
+      : '';
     var base = 'https://www.google.com/maps/dir/?api=1';
     var drive = base + '&destination=' + encodeURIComponent(lot.place) +
       (lot.placeId ? '&destination_place_id=' + lot.placeId : '') + '&travelmode=driving';
     var walk = base + '&origin=' + encodeURIComponent(lot.place) +
       (lot.placeId ? '&origin_place_id=' + lot.placeId : '') +
       '&destination=' + encodeURIComponent('神奈川県横浜市鶴見区寺谷1-7-40') + '&travelmode=walking';
-    return '' +
+    return status +
       '<a class="btn btn--outline btn--block" href="' + esc(drive) + '" target="_blank" rel="noopener">' +
         icon('pin') + '<span>' + esc(dict.driveBtn) + '</span>' + icon('external') + '</a>' +
       '<a class="btn btn--outline btn--block" href="' + esc(walk) + '" target="_blank" rel="noopener">' +

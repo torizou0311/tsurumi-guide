@@ -1011,3 +1011,8 @@ button { font-family: inherit; }
   white-space: nowrap;
 }
 .parking-lot .guide-photo { margin: 0 0 10px; }
+.parking-lot__hint {
+  margin: 6px 2px 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}

@@ -190,10 +190,15 @@ window.SECTIONS = [
       // 写真は看板の料金が今の料金と合うものだけ使う。シンコウパーク（parking4、看板700円）・タイムズ鶴見寺谷（parking6、看板1,100円）・
       // タイムパーキング鶴見（parking8、看板は昼30分200円で本文の300円と不一致）は撮り直すまで写真なし（2026-10-25 オーナー判断）
       { key: 'intro' },
-      { key: 'times3', anchor: 'times3', image: 'images/common/parking1.jpg', parking: { place: 'タイムズ鶴見寺谷第3 神奈川県横浜市鶴見区寺谷2-6' } },
+      // status = 満車・空車がわかるタイムズ公式のページ（日本語のみ。ページ上部に「空車／混雑／満車」と時刻が出る）
+      { key: 'times3', anchor: 'times3', image: 'images/common/parking1.jpg', parking: { place: 'タイムズ鶴見寺谷第3 神奈川県横浜市鶴見区寺谷2-6', status: 'https://times-info.net/P14-kanagawa/C101/park-detail-BUK0043230/' } },
       { key: 'shinko', anchor: 'shinko', parking: { place: 'シンコウパーク鶴見寺谷 神奈川県横浜市鶴見区寺谷2-1-21' } },
-      { key: 'times', anchor: 'times', parking: { place: 'タイムズ鶴見寺谷 神奈川県横浜市鶴見区寺谷1-3', placeId: 'ChIJc75tnRJeGGARwiIxxipn0bg' } },
-      { key: 'timeparking', anchor: 'timeparking', parking: { place: 'タイムパーキング鶴見 神奈川県横浜市鶴見区鶴見2-3-45' } }
+      { key: 'times', anchor: 'times', parking: { place: 'タイムズ鶴見寺谷 神奈川県横浜市鶴見区寺谷1-3', placeId: 'ChIJc75tnRJeGGARwiIxxipn0bg', status: 'https://times-info.net/P14-kanagawa/C101/park-detail-BUK0018575/' } },
+      { key: 'timeparking', anchor: 'timeparking', parking: { place: 'タイムパーキング鶴見 神奈川県横浜市鶴見区鶴見2-3-45' } },
+      // リビングパーク寺谷第5（2026-10-25追加）。住所は NAVITIME では寺谷1-22-2、Googleマップでは寺谷1-14-29 と食い違うので、名前と町名だけで探す
+      { key: 'livingpark', anchor: 'livingpark', parking: { place: 'リビングパーク寺谷第5 神奈川県横浜市鶴見区寺谷1丁目' } },
+      // ナビパーク寺谷第1（2026-10-25追加）。料金は NAVITIME と特Pで食い違う（24時間最大700円／600円）ので NAVITIME の数字で載せ、現地の看板で確認するよう注記
+      { key: 'navipark', anchor: 'navipark', parking: { place: 'ナビパーク寺谷第1 神奈川県横浜市鶴見区寺谷2丁目17' } }
     ]
   },
   {
