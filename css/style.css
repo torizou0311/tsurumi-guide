@@ -986,3 +986,28 @@ button { font-family: inherit; }
 .taxi-card__warn { margin-top: 6px; font-size: 20px; font-weight: 800; }
 .taxi-card__warn p { font-size: 20px; margin: 0; }
 .taxi-photo-cap { font-size: 17px; font-weight: 700; margin: 0 0 6px; }
+
+/* コインパーキングのカード（parking のページ。駐車場ごとの料金表） */
+.lot-facts {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.lot-facts th,
+.lot-facts td {
+  text-align: left;
+  vertical-align: top;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line, rgba(0, 0, 0, 0.08));
+}
+.lot-facts tr:last-child th,
+.lot-facts tr:last-child td { border-bottom: 0; }
+.lot-facts th {
+  width: 6.5em;
+  padding-right: 10px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.parking-lot .guide-photo { margin: 0 0 10px; }

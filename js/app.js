@@ -171,6 +171,22 @@
       '</div>';
   }
 
+  // コインパーキングのボタン。lot = content.js の parking: { place, placeId }
+  // 車での道順（今いる場所から駐車場へ）と、駐車場から部屋までの徒歩ルートを Googleマップで開く
+  function parkingButtons(lot, dict) {
+    var base = 'https://www.google.com/maps/dir/?api=1';
+    var drive = base + '&destination=' + encodeURIComponent(lot.place) +
+      (lot.placeId ? '&destination_place_id=' + lot.placeId : '') + '&travelmode=driving';
+    var walk = base + '&origin=' + encodeURIComponent(lot.place) +
+      (lot.placeId ? '&origin_place_id=' + lot.placeId : '') +
+      '&destination=' + encodeURIComponent('神奈川県横浜市鶴見区寺谷1-7-40') + '&travelmode=walking';
+    return '' +
+      '<a class="btn btn--outline btn--block" href="' + esc(drive) + '" target="_blank" rel="noopener">' +
+        icon('pin') + '<span>' + esc(dict.driveBtn) + '</span>' + icon('external') + '</a>' +
+      '<a class="btn btn--outline btn--block" href="' + esc(walk) + '" target="_blank" rel="noopener">' +
+        '<span>' + esc(dict.walkBtn) + '</span>' + icon('external') + '</a>';
+  }
+
   // ---------- ヘッダー ----------
   function renderHeader(room) {
     var d = t(state.lang);
@@ -390,6 +406,12 @@
           '<a href="#/' + esc(section.id) + '/' + esc(block.anchor) + '">' + esc(title) + '</a></h2>';
       }
       var textHtml = text ? '<div class="block-text">' + text + '</div>' : '';
+      // コインパーキングのカード: 写真 → 料金表 → 「駐車場へ行く」「部屋までの歩き方」ボタン
+      if (block.parking) {
+        current.html += '<div class="block parking-lot">' + headingHtml + photo + textHtml +
+          parkingButtons(block.parking, dict) + '</div>';
+        return;
+      }
       if (block.showAddress) {
         current.html += '<div class="block">' + headingHtml + textHtml +
           addressBlock(lang, room, section.id === 'emergency', block.showAddress === 'local') + photo + '</div>';

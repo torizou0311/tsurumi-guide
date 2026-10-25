@@ -186,7 +186,14 @@ window.SECTIONS = [
     icon: 'parking',
     inMenu: true,
     blocks: [
-      { key: 'intro', image: 'images/common/parking1.jpg' }
+      // 駐車場ごとのカード（見出し・写真・料金表・Googleマップのボタン2つ）。place は Googleマップで探す文字、placeId は検索結果が紛れる所だけ
+      // 写真は看板の料金が今の料金と合うものだけ使う。シンコウパーク（parking4、看板700円）・タイムズ鶴見寺谷（parking6、看板1,100円）・
+      // タイムパーキング鶴見（parking8、看板は昼30分200円で本文の300円と不一致）は撮り直すまで写真なし（2026-10-25 オーナー判断）
+      { key: 'intro' },
+      { key: 'times3', anchor: 'times3', image: 'images/common/parking1.jpg', parking: { place: 'タイムズ鶴見寺谷第3 神奈川県横浜市鶴見区寺谷2-6' } },
+      { key: 'shinko', anchor: 'shinko', parking: { place: 'シンコウパーク鶴見寺谷 神奈川県横浜市鶴見区寺谷2-1-21' } },
+      { key: 'times', anchor: 'times', parking: { place: 'タイムズ鶴見寺谷 神奈川県横浜市鶴見区寺谷1-3', placeId: 'ChIJc75tnRJeGGARwiIxxipn0bg' } },
+      { key: 'timeparking', anchor: 'timeparking', parking: { place: 'タイムパーキング鶴見 神奈川県横浜市鶴見区鶴見2-3-45' } }
     ]
   },
   {
