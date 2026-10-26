@@ -189,8 +189,13 @@ window.SECTIONS = [
       // 駐車場ごとのカード（見出し・写真・料金表・Googleマップのボタン2つ）。place は Googleマップで探す文字、placeId は検索結果が紛れる所だけ
       // 写真は看板の料金が今の料金と合うものだけ使う。シンコウパーク（parking4、看板700円）・タイムズ鶴見寺谷（parking6、看板1,100円）・
       // タイムパーキング鶴見（parking8、看板は昼30分200円で本文の300円と不一致）は撮り直すまで写真なし（2026-10-25 オーナー判断）
+      // 大見出し「特P」「コインパーキング」（group。文字は i18n.js の parking.groups）の下に駐車場ごとのカードを並べる
       { key: 'intro' },
-      // status = 満車・空車がわかるタイムズ公式のページ（日本語のみ。ページ上部に「空車／混雑／満車」と時刻が出る）
+      // 特P（予約制）。予約はゲスト自身が特Pのサイトで行う（オーナー方針 2026-10-25。予約が難しそうなゲストにはオーナーがメッセージで代理予約を提案する。ガイドには書かない）
+      { group: 'tokup', key: 'tokupIntro' },
+      { key: 'tokup', anchor: 'tokup', parking: { place: '神奈川県横浜市鶴見区寺谷1-8-24', book: 'https://toku-p.earth-car.com/parking-detail/310025885', noWalk: true } },
+      { group: 'coin', key: 'coinIntro' },
+      // status =満車・空車がわかるタイムズ公式のページ（日本語のみ。ページ上部に「空車／混雑／満車」と時刻が出る）
       { key: 'times3', anchor: 'times3', image: 'images/common/parking1.jpg', parking: { place: 'タイムズ鶴見寺谷第3 神奈川県横浜市鶴見区寺谷2-6', status: 'https://times-info.net/P14-kanagawa/C101/park-detail-BUK0043230/' } },
       { key: 'shinko', anchor: 'shinko', parking: { place: 'シンコウパーク鶴見寺谷 神奈川県横浜市鶴見区寺谷2-1-21' } },
       { key: 'times', anchor: 'times', parking: { place: 'タイムズ鶴見寺谷 神奈川県横浜市鶴見区寺谷1-3', placeId: 'ChIJc75tnRJeGGARwiIxxipn0bg', status: 'https://times-info.net/P14-kanagawa/C101/park-detail-BUK0018575/' } },

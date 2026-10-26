@@ -1016,3 +1016,19 @@ button { font-family: inherit; }
   font-size: 13px;
   color: var(--ink-soft);
 }
+
+/* 大見出し（駐車場の「特P」「コインパーキング」など。content.js の group） */
+.group-heading {
+  margin: 28px 0 12px;
+  padding: 10px 14px;
+  font-size: 19px;
+  background: var(--tint);
+  border-radius: var(--radius-s);
+  color: var(--ink);
+}
+.toc__list li.toc__group {
+  counter-increment: none;
+  padding: 12px 0 4px;
+  font-weight: 700;
+  color: var(--ink);
+}

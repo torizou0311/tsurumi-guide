@@ -58,7 +58,7 @@ window.I18N = {
       garbage: `Taking Out the Trash`,
       rules: `House Rules`,
       nearby: `Nearby Stores`,
-      parking: `Coin Parking`,
+      parking: `Nearby Parking (Paid)`,
       trouble: `If Something Goes Wrong`,
       emergency: `Emergency Contacts & Evacuation`,
       taxi: `Show to Your Taxi Driver`
@@ -166,8 +166,13 @@ window.I18N = {
       intro: `<p>Walking times below are from JR Tsurumi Station, and from the accommodation.</p><ul><li><strong>FamilyMart Tsurumi Nishiguchi</strong> (24h) — 2 min from JR Tsurumi Sta. / 8 min from the property</li><li><strong>Lawson Tsurumi-Eki Nishiguchi</strong> (24h) — 1 min from JR Tsurumi Sta. / 9 min from the property</li><li><strong>7-Eleven Yokohama Toyooka-cho Chuo</strong> (24h) — 2 min from JR Tsurumi Sta. / 9 min from the property</li><li><strong>Supermarket SEIYU Tsurumi</strong> (9:00 AM–11:00 PM) — 2 min from JR Tsurumi Sta. / 9 min from the property</li><li><strong>Supermarket Keikyu Store Tsurumi-Nishi</strong> (weekdays 10:00 AM–11:00 PM, holidays 10:00 AM–9:00 PM) — 1 min from JR Tsurumi Sta. / 10 min from the property</li></ul>`
     },
     parking: {
-      titles: { times3: `Times Tsurumi Teraya No. 3`, shinko: `Shinkou Park Tsurumi Teraya`, times: `Times Tsurumi Teraya`, timeparking: `Time Parking Tsurumi`, livingpark: `Living Park Teraya No. 5`, navipark: `Navi Park Teraya No. 1` },
-      intro: `<p>If you come by car, please use one of the nearby coin parking lots below. Each is about a 4–8 minute walk from the room. The overnight maximum rate is ¥300–440 at all of them.</p><p>Rates may change. Please check the sign at the lot before parking.</p>`,
+      titles: { tokup: `Teraya 1-8-24 Parking`, times3: `Times Tsurumi Teraya No. 3`, shinko: `Shinkou Park Tsurumi Teraya`, times: `Times Tsurumi Teraya`, timeparking: `Time Parking Tsurumi`, livingpark: `Living Park Teraya No. 5`, navipark: `Navi Park Teraya No. 1` },
+      groups: { tokup: `Toku-P (reservation required)`, coin: `Coin parking (no reservation)` },
+      intro: `<p>There are paid parking lots near the room. You can choose from the following two types.</p><ul><li><strong>Toku-P</strong>: reserve in advance. One space right next to the building.</li><li><strong>Coin parking</strong>: no reservation needed. Park if there is a free space.</li></ul>`,
+      tokupIntro: `<p>Toku-P is a service for reserving parking spaces online. Please make the reservation yourself on the Toku-P website or app (membership registration is required, and the website is in Japanese).</p>`,
+      tokup: `<table class="lot-facts"><tr><th>Walk to room</th><td>1 min (50 m), right next to the building</td></tr><tr><th>Rate</th><td>¥800 per day (0:00–24:00); ¥1,000 on some days</td></tr><tr><th>Spaces</th><td>1</td></tr><tr><th>Booking</th><td>From 30 days before the day you want to park</td></tr><tr><th>Note</th><td>Reservations are made per calendar day (0:00–24:00). Even for one night, if you park in the evening and leave the next morning, you need to book 2 days. Space size: width 270 cm, length 620 cm.</td></tr></table>`,
+      bookBtn: `Book on Toku-P`,
+      coinIntro: `<p>If you come by car, please use one of the nearby coin parking lots below. Each is about a 4–8 minute walk from the room. The overnight maximum rate is ¥300–440 at all of them.</p><p>Rates may change. Please check the sign at the lot before parking.</p>`,
       driveBtn: `Directions to this parking lot`,
       walkBtn: `Walking route to the room`,
       statusBtn: `Check if spaces are free (Times website)`,
@@ -237,7 +242,7 @@ window.I18N = {
       garbage: `ゴミの出し方`,
       rules: `ハウスルール・禁止事項`,
       nearby: `周辺のお店`,
-      parking: `コインパーキング`,
+      parking: `近隣の駐車場（有料）`,
       trouble: `困ったとき`,
       emergency: `緊急連絡先・避難場所`,
       taxi: `タクシーの運転手さんへ`
@@ -345,8 +350,13 @@ window.I18N = {
       intro: `<p>下記はJR鶴見駅からの徒歩時間と、施設からの徒歩時間です。</p><ul><li><strong>ファミリーマート鶴見西口店</strong>（24時間）— JR鶴見駅から2分／施設から8分</li><li><strong>ローソン鶴見駅西口店</strong>（24時間）— JR鶴見駅から1分／施設から9分</li><li><strong>セブンイレブン横浜豊岡町中央店</strong>（24時間）— JR鶴見駅から2分／施設から9分</li><li><strong>スーパー西友鶴見店</strong>（9:00〜23:00）— JR鶴見駅から2分／施設から9分</li><li><strong>スーパー京急ストア鶴見西口店</strong>（平日10:00〜23:00、休日10:00〜21:00）— JR鶴見駅から1分／施設から10分</li></ul>`
     },
     parking: {
-      titles: { times3: `タイムズ鶴見寺谷第3`, shinko: `シンコウパーク鶴見寺谷`, times: `タイムズ鶴見寺谷`, timeparking: `タイムパーキング鶴見`, livingpark: `リビングパーク寺谷第5`, navipark: `ナビパーク寺谷第1` },
-      intro: `<p>車でお越しの方は、下の近くのコインパーキングをご利用ください。どこも部屋まで歩いて4〜8分ほどです。夜から朝までの最大料金は、どこも300〜440円です。</p><p>料金は変わることがあります。停める前に現地の看板で確認してください。</p>`,
+      titles: { tokup: `寺谷1-8-24駐車場`, times3: `タイムズ鶴見寺谷第3`, shinko: `シンコウパーク鶴見寺谷`, times: `タイムズ鶴見寺谷`, timeparking: `タイムパーキング鶴見`, livingpark: `リビングパーク寺谷第5`, navipark: `ナビパーク寺谷第1` },
+      groups: { tokup: `特P（予約制）`, coin: `コインパーキング（予約なし）` },
+      intro: `<p>部屋の近くにある有料の駐車場です。次の2種類から選べます。</p><ul><li><strong>特P</strong>：前もって予約する駐車場です。建物のすぐ隣に1台分あります。</li><li><strong>コインパーキング</strong>：予約はいりません。空いていれば停められます。</li></ul>`,
+      tokupIntro: `<p>特Pは、インターネットで駐車場を予約できるサービスです。特Pのサイトかアプリから、ご自身で予約してください（会員登録が必要です）。</p>`,
+      tokup: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩1分（50m）・建物のすぐ隣</td></tr><tr><th>料金</th><td>1日（0時〜24時）800円。日によって1,000円</td></tr><tr><th>台数</th><td>1台</td></tr><tr><th>予約</th><td>停めたい日の30日前から</td></tr><tr><th>ご注意</th><td>予約は日付ごと（0時〜24時）です。1泊で夕方に停めて翌朝出す場合も、2日分の予約が必要です。駐車スペースは幅270cm・長さ620cmです。</td></tr></table>`,
+      bookBtn: `特Pで予約する`,
+      coinIntro: `<p>車でお越しの方は、下の近くのコインパーキングをご利用ください。どこも部屋まで歩いて4〜8分ほどです。夜から朝までの最大料金は、どこも300〜440円です。</p><p>料金は変わることがあります。停める前に現地の看板で確認してください。</p>`,
       driveBtn: `この駐車場への道順`,
       walkBtn: `ここから部屋までの歩き方`,
       statusBtn: `空き状況を見る（タイムズ公式）`,
@@ -416,7 +426,7 @@ window.I18N = {
       garbage: `垃圾丢弃方式`,
       rules: `住宿规则与禁止事项`,
       nearby: `附近店家`,
-      parking: `投币式停车场`,
+      parking: `附近的停车场（收费）`,
       trouble: `常见问题排解`,
       emergency: `紧急联络方式・避难地点`,
       taxi: `给出租车司机看`
@@ -524,8 +534,13 @@ window.I18N = {
       intro: `<p>以下为从JR鹤见站及从本住宿出发的步行时间。</p><ul><li><strong>全家便利店 鹤见西口店</strong>（24小时）— 距JR鹤见站2分钟／距本住宿8分钟</li><li><strong>罗森 鹤见站西口店</strong>（24小时）— 距JR鹤见站1分钟／距本住宿9分钟</li><li><strong>7-Eleven 横滨丰冈町中央店</strong>（24小时）— 距JR鹤见站2分钟／距本住宿9分钟</li><li><strong>SEIYU超市 鹤见店</strong>（9:00〜23:00）— 距JR鹤见站2分钟／距本住宿9分钟</li><li><strong>京急超市 鹤见西口店</strong>（平日10:00〜23:00，假日10:00〜21:00）— 距JR鹤见站1分钟／距本住宿10分钟</li></ul>`
     },
     parking: {
-      titles: { times3: `Times鹤见寺谷第3`, shinko: `Shinkou Park鹤见寺谷`, times: `Times鹤见寺谷`, timeparking: `Time Parking鹤见`, livingpark: `Living Park寺谷第5`, navipark: `Navi Park寺谷第1` },
-      intro: `<p>开车前来的客人，请使用下方附近的投币式停车场。每处步行到住宿约4〜8分钟。夜间到早上的最高收费都在300〜440日圆。</p><p>收费可能调整，停车前请以现场告示为准。</p>`,
+      titles: { tokup: `寺谷1-8-24停车场`, times3: `Times鹤见寺谷第3`, shinko: `Shinkou Park鹤见寺谷`, times: `Times鹤见寺谷`, timeparking: `Time Parking鹤见`, livingpark: `Living Park寺谷第5`, navipark: `Navi Park寺谷第1` },
+      groups: { tokup: `特P（需预约）`, coin: `投币式停车场（无需预约）` },
+      intro: `<p>以下为住宿附近的收费停车场，可从以下两种中选择。</p><ul><li><strong>特P</strong>：需事先预约的停车场。建筑物旁边有1个车位。</li><li><strong>投币式停车场</strong>：无需预约，有空位即可停车。</li></ul>`,
+      tokupIntro: `<p>特P是可在网上预约停车位的服务。请自行通过特P的网站或App预约（需注册会员，网站为日文）。</p>`,
+      tokup: `<table class="lot-facts"><tr><th>到住宿</th><td>步行1分钟（50米），就在建筑物旁边</td></tr><tr><th>收费</th><td>每天（0:00〜24:00）800日圆，部分日期为1,000日圆</td></tr><tr><th>车位</th><td>1个</td></tr><tr><th>预约</th><td>停车日的30天前起可预约</td></tr><tr><th>注意</th><td>预约以日期为单位（0:00〜24:00）。即使只住1晚，傍晚停车、隔天早上离开，也需要预约2天。车位尺寸：宽270厘米，长620厘米。</td></tr></table>`,
+      bookBtn: `在特P预约`,
+      coinIntro: `<p>开车前来的客人，请使用下方附近的投币式停车场。每处步行到住宿约4〜8分钟。夜间到早上的最高收费都在300〜440日圆。</p><p>收费可能调整，停车前请以现场告示为准。</p>`,
       driveBtn: `前往这个停车场的路线`,
       walkBtn: `从这里步行到住宿的路线`,
       statusBtn: `查看空位情况（Times官网）`,
@@ -595,7 +610,7 @@ window.I18N = {
       garbage: `垃圾丟棄方式`,
       rules: `住宿規則與禁止事項`,
       nearby: `附近店家`,
-      parking: `投幣式停車場`,
+      parking: `附近的停車場（收費）`,
       trouble: `常見問題排解`,
       emergency: `緊急聯絡方式・避難地點`,
       taxi: `給計程車司機看`
@@ -703,8 +718,13 @@ window.I18N = {
       intro: `<p>以下為從JR鶴見站及從本住宿出發的步行時間。</p><ul><li><strong>全家便利商店 鶴見西口店</strong>（24小時）— 距JR鶴見站2分鐘／距本住宿8分鐘</li><li><strong>羅森 鶴見站西口店</strong>（24小時）— 距JR鶴見站1分鐘／距本住宿9分鐘</li><li><strong>7-Eleven 橫濱豐岡町中央店</strong>（24小時）— 距JR鶴見站2分鐘／距本住宿9分鐘</li><li><strong>SEIYU超市 鶴見店</strong>（9:00〜23:00）— 距JR鶴見站2分鐘／距本住宿9分鐘</li><li><strong>京急超市 鶴見西口店</strong>（平日10:00〜23:00，假日10:00〜21:00）— 距JR鶴見站1分鐘／距本住宿10分鐘</li></ul>`
     },
     parking: {
-      titles: { times3: `Times鶴見寺谷第3`, shinko: `Shinkou Park鶴見寺谷`, times: `Times鶴見寺谷`, timeparking: `Time Parking鶴見`, livingpark: `Living Park寺谷第5`, navipark: `Navi Park寺谷第1` },
-      intro: `<p>開車前來的旅客，請使用下方附近的投幣式停車場。每處步行到住宿約4〜8分鐘。夜間到早上的最高收費都在300〜440日圓。</p><p>收費可能調整，停車前請以現場告示為準。</p>`,
+      titles: { tokup: `寺谷1-8-24停車場`, times3: `Times鶴見寺谷第3`, shinko: `Shinkou Park鶴見寺谷`, times: `Times鶴見寺谷`, timeparking: `Time Parking鶴見`, livingpark: `Living Park寺谷第5`, navipark: `Navi Park寺谷第1` },
+      groups: { tokup: `特P（需預約）`, coin: `投幣式停車場（免預約）` },
+      intro: `<p>以下為住宿附近的收費停車場，可從以下兩種中選擇。</p><ul><li><strong>特P</strong>：需事先預約的停車場。建築物旁邊有1個車位。</li><li><strong>投幣式停車場</strong>：免預約，有空位即可停車。</li></ul>`,
+      tokupIntro: `<p>特P是可在網路上預約停車位的服務。請自行透過特P的網站或App預約（需註冊會員，網站為日文）。</p>`,
+      tokup: `<table class="lot-facts"><tr><th>到住宿</th><td>步行1分鐘（50公尺），就在建築物旁邊</td></tr><tr><th>收費</th><td>每天（0:00〜24:00）800日圓，部分日期為1,000日圓</td></tr><tr><th>車位</th><td>1個</td></tr><tr><th>預約</th><td>停車日的30天前起可預約</td></tr><tr><th>注意</th><td>預約以日期為單位（0:00〜24:00）。即使只住1晚，傍晚停車、隔天早上離開，也需要預約2天。車位尺寸：寬270公分，長620公分。</td></tr></table>`,
+      bookBtn: `在特P預約`,
+      coinIntro: `<p>開車前來的旅客，請使用下方附近的投幣式停車場。每處步行到住宿約4〜8分鐘。夜間到早上的最高收費都在300〜440日圓。</p><p>收費可能調整，停車前請以現場告示為準。</p>`,
       driveBtn: `前往這個停車場的路線`,
       walkBtn: `從這裡步行到住宿的路線`,
       statusBtn: `查看空位狀況（Times官網）`,
@@ -774,7 +794,7 @@ window.I18N = {
       garbage: `쓰레기 배출 방법`,
       rules: `하우스 룰・금지 사항`,
       nearby: `주변 편의시설`,
-      parking: `코인 주차장`,
+      parking: `근처 주차장 (유료)`,
       trouble: `문제 해결`,
       emergency: `긴급 연락처・대피 장소`,
       taxi: `택시 기사님께 보여주세요`
@@ -882,8 +902,13 @@ window.I18N = {
       intro: `<p>아래는 JR 쓰루미역, 그리고 숙소로부터의 도보 시간입니다.</p><ul><li><strong>훼미리마트 쓰루미니시구치점</strong> (24시간) — JR 쓰루미역에서 2분 / 숙소에서 8분</li><li><strong>로손 쓰루미역니시구치점</strong> (24시간) — JR 쓰루미역에서 1분 / 숙소에서 9분</li><li><strong>세븐일레븐 요코하마 도요오카초 주오점</strong> (24시간) — JR 쓰루미역에서 2분 / 숙소에서 9분</li><li><strong>슈퍼마켓 세이유 쓰루미점</strong> (9:00〜23:00) — JR 쓰루미역에서 2분 / 숙소에서 9분</li><li><strong>슈퍼마켓 게이큐스토어 쓰루미니시점</strong> (평일 10:00〜23:00, 휴일 10:00〜21:00) — JR 쓰루미역에서 1분 / 숙소에서 10분</li></ul>`
     },
     parking: {
-      titles: { times3: `타임즈 쓰루미데라야 제3`, shinko: `신코파크 쓰루미데라야`, times: `타임즈 쓰루미데라야`, timeparking: `타임파킹 쓰루미`, livingpark: `리빙파크 데라야 제5`, navipark: `나비파크 데라야 제1` },
-      intro: `<p>차로 오시는 분은 아래의 가까운 코인 주차장을 이용해 주세요. 모두 숙소까지 걸어서 4〜8분 정도입니다. 밤부터 아침까지의 최대 요금은 모두 300〜440엔입니다.</p><p>요금은 바뀔 수 있습니다. 주차하기 전에 현장 안내판을 확인해 주세요.</p>`,
+      titles: { tokup: `데라야 1-8-24 주차장`, times3: `타임즈 쓰루미데라야 제3`, shinko: `신코파크 쓰루미데라야`, times: `타임즈 쓰루미데라야`, timeparking: `타임파킹 쓰루미`, livingpark: `리빙파크 데라야 제5`, navipark: `나비파크 데라야 제1` },
+      groups: { tokup: `특P (예약제)`, coin: `코인 주차장 (예약 불필요)` },
+      intro: `<p>숙소 근처의 유료 주차장입니다. 다음 두 가지 중에서 선택할 수 있습니다.</p><ul><li><strong>특P</strong>: 미리 예약하는 주차장입니다. 건물 바로 옆에 1대분이 있습니다.</li><li><strong>코인 주차장</strong>: 예약이 필요 없습니다. 빈자리가 있으면 주차할 수 있습니다.</li></ul>`,
+      tokupIntro: `<p>특P(토쿠피)는 인터넷으로 주차장을 예약하는 서비스입니다. 특P 웹사이트나 앱에서 직접 예약해 주세요 (회원 가입 필요, 웹사이트는 일본어).</p>`,
+      tokup: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 1분(50m), 건물 바로 옆</td></tr><tr><th>요금</th><td>하루(0:00〜24:00) 800엔, 날짜에 따라 1,000엔</td></tr><tr><th>주차 대수</th><td>1대</td></tr><tr><th>예약</th><td>주차할 날짜의 30일 전부터</td></tr><tr><th>주의</th><td>예약은 날짜 단위(0:00〜24:00)입니다. 1박이라도 저녁에 주차하고 다음 날 아침에 나가는 경우 2일분을 예약해야 합니다. 주차 공간 크기: 폭 270cm, 길이 620cm.</td></tr></table>`,
+      bookBtn: `특P에서 예약하기`,
+      coinIntro: `<p>차로 오시는 분은 아래의 가까운 코인 주차장을 이용해 주세요. 모두 숙소까지 걸어서 4〜8분 정도입니다. 밤부터 아침까지의 최대 요금은 모두 300〜440엔입니다.</p><p>요금은 바뀔 수 있습니다. 주차하기 전에 현장 안내판을 확인해 주세요.</p>`,
       driveBtn: `이 주차장까지 길 안내`,
       walkBtn: `여기서 숙소까지 걷는 길`,
       statusBtn: `빈자리 확인 (타임즈 공식)`,

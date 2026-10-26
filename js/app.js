@@ -174,7 +174,12 @@
   // コインパーキングのボタン。lot = content.js の parking: { place, placeId, status }
   // 車での道順（今いる場所から駐車場へ）と、駐車場から部屋までの徒歩ルートを Googleマップで開く。
   // status（満車・空車がわかる公式ページのURL）がある駐車場だけ「空き状況を見る」ボタンと読み方の説明も出す
+  // book（予約ページのURL）があれば「予約する」ボタンを先頭に、noWalk なら徒歩ルートのボタンを出さない（部屋のすぐ隣の駐車場）
   function parkingButtons(lot, dict) {
+    var book = lot.book
+      ? '<a class="btn btn--outline btn--block" href="' + esc(lot.book) + '" target="_blank" rel="noopener">' +
+          '<span>' + esc(dict.bookBtn) + '</span>' + icon('external') + '</a>'
+      : '';
     var status = lot.status
       ? '<a class="btn btn--outline btn--block" href="' + esc(lot.status) + '" target="_blank" rel="noopener">' +
           '<span>' + esc(dict.statusBtn) + '</span>' + icon('external') + '</a>' +
@@ -186,11 +191,12 @@
     var walk = base + '&origin=' + encodeURIComponent(lot.place) +
       (lot.placeId ? '&origin_place_id=' + lot.placeId : '') +
       '&destination=' + encodeURIComponent('神奈川県横浜市鶴見区寺谷1-7-40') + '&travelmode=walking';
-    return status +
+    return book + status +
       '<a class="btn btn--outline btn--block" href="' + esc(drive) + '" target="_blank" rel="noopener">' +
         icon('pin') + '<span>' + esc(dict.driveBtn) + '</span>' + icon('external') + '</a>' +
+      (lot.noWalk ? '' :
       '<a class="btn btn--outline btn--block" href="' + esc(walk) + '" target="_blank" rel="noopener">' +
-        '<span>' + esc(dict.walkBtn) + '</span>' + icon('external') + '</a>';
+        '<span>' + esc(dict.walkBtn) + '</span>' + icon('external') + '</a>');
   }
 
   // ---------- ヘッダー ----------
@@ -270,12 +276,14 @@
       '</div>';
   }
 
-  // メニューのラベル。長いときは「・」の後ろで改行し、単語の途中では切れないようにする
+  // メニューのラベル。長いときは「・」の後ろか「（」の前で改行し、単語の途中では切れないようにする
+  // （例:「近隣の駐車場（有料）」→「近隣の駐車場」「（有料）」）
   function labelHtml(text) {
-    var parts = String(text).split('・');
+    var parts = String(text).replace(/・/g, '・\u0000').replace(/（/g, '\u0000（').split('\u0000')
+      .filter(function (p) { return p; });
     if (parts.length < 2) return esc(text);
-    return parts.map(function (p, i) {
-      return '<span class="label-chunk">' + esc(p) + (i < parts.length - 1 ? '・' : '') + '</span>';
+    return parts.map(function (p) {
+      return '<span class="label-chunk">' + esc(p) + '</span>';
     }).join('');
   }
 
@@ -380,12 +388,21 @@
 
     // 見出し（anchor）ごとに、次の見出しまでのブロックを1つのまとまり（item）にする。
     // まとまりは目次・「目次に戻る」ボタン・アクセス計測（どの項目が読まれたか）に使う
-    var groups = [];  // { anchor, title, html }。anchor が null のものは最初の見出しより前の部分
+    var groups = [];  // { anchor, title, html, groupTitle }。anchor が null のものは最初の見出しより前の部分
     var current = { anchor: null, title: '', html: '' };
     groups.push(current);
+    var groupTitle = ''; // 大見出し（block.group）の文字。その後の項目は目次でこの大見出しの下に並ぶ
 
     section.blocks.forEach(function (block) {
       if (block.rooms && block.rooms.indexOf(room.id) === -1) return;
+
+      // group 付きのブロック: 大見出し（例: 駐車場の「特P」「コインパーキング」）を出す。文字は i18n の groups
+      if (block.group) {
+        groupTitle = (dict.groups && dict.groups[block.group]) || '';
+        current = { anchor: null, title: '', html: '' };
+        groups.push(current);
+        current.html += '<h2 class="group-heading" id="group-' + esc(block.group) + '">' + esc(groupTitle) + '</h2>';
+      }
 
       // checkin.keybox / trouble.keypad は「部屋のキーボックス情報が未確定」の場合、
       // 通常文の代わりに「準備中」メッセージを出す
@@ -406,7 +423,7 @@
       var headingHtml = '';
       if (block.anchor) {
         var title = (dict.titles && dict.titles[block.anchor]) || '';
-        current = { anchor: block.anchor, title: title, html: '' };
+        current = { anchor: block.anchor, title: title, html: '', groupTitle: groupTitle };
         groups.push(current);
         headingHtml = '<h2 class="item-heading" id="item-' + esc(block.anchor) + '">' +
           '<a href="#/' + esc(section.id) + '/' + esc(block.anchor) + '">' + esc(title) + '</a></h2>';
@@ -429,11 +446,18 @@
     var items = groups.filter(function (g) { return g.anchor; });
     // 見出しが2つ以上あるページだけ、冒頭に目次と「目次に戻る」ボタンを出す
     var withToc = items.length >= 2;
+    var lastGroupTitle = '';
     var tocHtml = withToc
       ? '<nav class="toc" id="toc" aria-label="' + esc(d.common.toc) + '">' +
           '<div class="toc__title">' + esc(d.common.toc) + '</div>' +
           '<ol class="toc__list">' + items.map(function (g) {
-            return '<li><a class="toc__link" href="#/' + esc(section.id) + '/' + esc(g.anchor) + '">' + esc(g.title) + '</a></li>';
+            // 大見出しが変わったところで、目次にも大見出しの行（番号なし）を入れる
+            var groupRow = '';
+            if (g.groupTitle && g.groupTitle !== lastGroupTitle) {
+              groupRow = '<li class="toc__group">' + esc(g.groupTitle) + '</li>';
+              lastGroupTitle = g.groupTitle;
+            }
+            return groupRow + '<li><a class="toc__link" href="#/' + esc(section.id) + '/' + esc(g.anchor) + '">' + esc(g.title) + '</a></li>';
           }).join('') + '</ol>' +
         '</nav>'
       : '';
