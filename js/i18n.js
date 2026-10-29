@@ -90,7 +90,7 @@ window.I18N = {
     checkin: {
       titles: { times: `Check-in & check-out times`, checkout: `Before you check out`, entry: `How to get in`, keybox: `If the smart lock won't open` },
       intro: `<p>This is a self check-in property with no staff on site, so please review the steps below in advance.</p>`,
-      times: `<p><strong>Check-in:</strong> from 4:00 PM<br><strong>Check-out:</strong> until 10:00 AM</p><p>Our cleaning staff arrive at 10:10 AM, so please vacate the room by 10:00 AM. Checking out later than 10:00 AM may result in an additional night's fee.</p>`,
+      times: `<p><strong>Check-in:</strong> 4:00 PM – 9:00 PM<br><strong>Check-out:</strong> until 10:00 AM</p><p>Check-in is from 4:00 PM to 9:00 PM. If you expect to arrive after 9:00 PM, please let us know in advance by message. As this is a residential area, please keep noise down after you arrive.</p><p>Our cleaning staff arrive at 10:10 AM, so please vacate the room by 10:00 AM. Checking out later than 10:00 AM may result in an additional night's fee.</p>`,
       times201: `<p><strong>Check-in:</strong> from 3:00 PM<br><strong>Check-out:</strong> until 10:00 AM</p><p>Our cleaning staff arrive at 10:10 AM, so please vacate the room by 10:00 AM. Checking out later than 10:00 AM may result in an additional night's fee.</p>`, // 201号室だけ当面15時（2026-10-22までの予約が15時の約束のため）
       checkout: `<ul><li>If you used the spare pillows or futons from the closet, please do not put them back in the closet. Leave them in the living room.</li><li>Please put used towels in the washing machine basket.</li><li>You can leave your trash in the room (<a href="#/garbage">How to dispose of trash</a>).</li><li>If you used the key from the key box, please put it back in the key box.</li><li>When you leave, please lock the door by pressing the <strong>lock mark</strong> on the electronic lock.</li></ul>`,
       checkoutProjector: `<p>If you logged in to YouTube, Netflix, etc. on the Room 201 projector, be sure to log out (<a href="#/projector/logout">How to log out</a>).</p>`,
@@ -274,7 +274,7 @@ window.I18N = {
     checkin: {
       titles: { times: `チェックイン・チェックアウトの時間`, checkout: `チェックアウト前のお願い`, entry: `お部屋の入り方`, keybox: `電子錠が開かないとき` },
       intro: `<p>スタッフが常駐しないセルフチェックイン方式です。事前に下記の手順をご確認ください。</p>`,
-      times: `<p><strong>チェックイン：</strong>16:00〜<br><strong>チェックアウト：</strong>〜10:00</p><p>清掃スタッフは10:10に到着しますので、10:00までにお部屋を出ていただくようお願いします。10:00を過ぎてのチェックアウトは、延泊料金が発生する場合があります。</p>`,
+      times: `<p><strong>チェックイン：</strong>16:00〜21:00<br><strong>チェックアウト：</strong>〜10:00</p><p>チェックインは16時〜21時でお願いしています。21時を過ぎる場合は、事前にメッセージでお知らせください。住宅街のため、到着後はお静かにお過ごしいただけるようご協力をお願いします。</p><p>清掃スタッフは10:10に到着しますので、10:00までにお部屋を出ていただくようお願いします。10:00を過ぎてのチェックアウトは、延泊料金が発生する場合があります。</p>`,
       times201: `<p><strong>チェックイン：</strong>15:00〜<br><strong>チェックアウト：</strong>〜10:00</p><p>清掃スタッフは10:10に到着しますので、10:00までにお部屋を出ていただくようお願いします。10:00を過ぎてのチェックアウトは、延泊料金が発生する場合があります。</p>`, // 201号室だけ当面15時（2026-10-22までの予約が15時の約束のため）
       checkout: `<ul><li>クローゼットの予備の枕や布団を使った場合は、クローゼットに戻さず、リビングに置いておいてください。</li><li>使ったタオルは、洗濯機のかごに入れてください。</li><li>ゴミはお部屋に置いたままで大丈夫です（<a href="#/garbage">ゴミの出し方</a>）。</li><li>キーボックスの鍵を使った場合は、キーボックスに戻してください。</li><li>お部屋を出るときは、電子錠の<strong>鍵マーク</strong>を押して施錠してください。</li></ul>`,
       checkoutProjector: `<p>201号室のプロジェクターでYouTube・Netflixなどにログインした場合は、必ずログアウトしてください（<a href="#/projector/logout">ログアウトの方法</a>）。</p>`,
@@ -458,7 +458,7 @@ window.I18N = {
     checkin: {
       titles: { times: `入住与退房时间`, checkout: `退房前请您配合`, entry: `如何进入房间`, keybox: `电子锁打不开时` },
       intro: `<p>本住宿采自助入住，现场无工作人员常驻，请提前确认以下步骤。</p>`,
-      times: `<p><strong>入住：</strong>16:00起<br><strong>退房：</strong>10:00前</p><p>清洁人员将于10:10抵达，请于10:00前退房。若逾10:00退房，可能会加收一晚的费用。</p>`,
+      times: `<p><strong>入住：</strong>16:00–21:00<br><strong>退房：</strong>10:00前</p><p>入住时间为16:00至21:00。若预计21:00以后到达，请提前通过消息告知我们。由于这里是住宅区，抵达后请保持安静，感谢您的配合。</p><p>清洁人员将于10:10抵达，请于10:00前退房。若逾10:00退房，可能会加收一晚的费用。</p>`,
       times201: `<p><strong>入住：</strong>15:00起<br><strong>退房：</strong>10:00前</p><p>清洁人员将于10:10抵达，请于10:00前退房。若逾10:00退房，可能会加收一晚的费用。</p>`, // 201号室だけ当面15時（2026-10-22までの予約が15時の約束のため）
       checkout: `<ul><li>如果使用了衣柜里的备用枕头或被子，请不要放回衣柜，留在客厅即可。</li><li>用过的毛巾请放入洗衣机的篮子里。</li><li>垃圾直接留在房间里即可（<a href="#/garbage">垃圾丢弃方式</a>）。</li><li>若使用了钥匙盒中的钥匙，请放回钥匙盒。</li><li>离开房间时，请按电子锁上的<strong>锁形图标</strong>上锁。</li></ul>`,
       checkoutProjector: `<p>若您在201号房的投影仪上登录了YouTube、Netflix等，请务必退出登录（<a href="#/projector/logout">退出登录的方法</a>）。</p>`,
@@ -642,7 +642,7 @@ window.I18N = {
     checkin: {
       titles: { times: `入住與退房時間`, checkout: `退房前請您配合`, entry: `如何進入房間`, keybox: `電子鎖打不開時` },
       intro: `<p>本住宿採自助入住，現場無工作人員常駐，請提前確認以下步驟。</p>`,
-      times: `<p><strong>入住：</strong>16:00起<br><strong>退房：</strong>10:00前</p><p>清潔人員將於10:10抵達，請於10:00前退房。若逾10:00退房，可能會加收一晚的費用。</p>`,
+      times: `<p><strong>入住：</strong>16:00–21:00<br><strong>退房：</strong>10:00前</p><p>入住時間為16:00至21:00。若預計21:00以後到達，請提前透過訊息告知我們。由於這裡是住宅區，抵達後請保持安靜，感謝您的配合。</p><p>清潔人員將於10:10抵達，請於10:00前退房。若逾10:00退房，可能會加收一晚的費用。</p>`,
       times201: `<p><strong>入住：</strong>15:00起<br><strong>退房：</strong>10:00前</p><p>清潔人員將於10:10抵達，請於10:00前退房。若逾10:00退房，可能會加收一晚的費用。</p>`, // 201号室だけ当面15時（2026-10-22までの予約が15時の約束のため）
       checkout: `<ul><li>如果使用了衣櫃裡的備用枕頭或被子，請不要放回衣櫃，留在客廳即可。</li><li>用過的毛巾請放入洗衣機的籃子裡。</li><li>垃圾直接留在房間裡即可（<a href="#/garbage">垃圾丟棄方式</a>）。</li><li>若使用了鑰匙盒中的鑰匙，請放回鑰匙盒。</li><li>離開房間時，請按電子鎖上的<strong>鎖形圖示</strong>上鎖。</li></ul>`,
       checkoutProjector: `<p>若您在201號房的投影機上登入了YouTube、Netflix等，請務必登出（<a href="#/projector/logout">登出方法</a>）。</p>`,
@@ -826,7 +826,7 @@ window.I18N = {
     checkin: {
       titles: { times: `체크인·체크아웃 시간`, checkout: `체크아웃 전 부탁드립니다`, entry: `객실 들어가는 방법`, keybox: `전자 잠금장치가 열리지 않을 때` },
       intro: `<p>상주 직원이 없는 셀프 체크인 숙소입니다. 아래 절차를 미리 확인해 주세요.</p>`,
-      times: `<p><strong>체크인:</strong> 16:00부터<br><strong>체크아웃:</strong> 10:00까지</p><p>청소 스태프가 10:10에 도착하므로 10:00까지 퇴실해 주세요. 10:00 이후 체크아웃 시 추가 숙박 요금이 발생할 수 있습니다.</p>`,
+      times: `<p><strong>체크인:</strong> 16:00~21:00<br><strong>체크아웃:</strong> 10:00까지</p><p>체크인은 16시부터 21시까지입니다. 21시 이후에 도착하실 경우 사전에 메시지로 알려 주세요. 주택가이므로 도착 후에는 조용히 지내 주시기 바랍니다.</p><p>청소 스태프가 10:10에 도착하므로 10:00까지 퇴실해 주세요. 10:00 이후 체크아웃 시 추가 숙박 요금이 발생할 수 있습니다.</p>`,
       times201: `<p><strong>체크인:</strong> 15:00부터<br><strong>체크아웃:</strong> 10:00까지</p><p>청소 스태프가 10:10에 도착하므로 10:00까지 퇴실해 주세요. 10:00 이후 체크아웃 시 추가 숙박 요금이 발생할 수 있습니다.</p>`, // 201号室だけ当面15時（2026-10-22までの予約が15時の約束のため）
       checkout: `<ul><li>옷장의 여분 베개나 이불을 사용하셨다면 옷장에 다시 넣지 말고 거실에 두세요.</li><li>사용한 수건은 세탁기 바구니에 넣어 주세요.</li><li>쓰레기는 객실에 그대로 두셔도 됩니다(<a href="#/garbage">쓰레기 배출 방법</a>).</li><li>키박스의 열쇠를 사용하셨다면 키박스에 다시 넣어 주세요.</li><li>객실을 나가실 때는 전자 잠금장치의 <strong>열쇠 표시</strong>를 눌러 잠가 주세요.</li></ul>`,
       checkoutProjector: `<p>201호 프로젝터에서 YouTube, Netflix 등에 로그인하셨다면 반드시 로그아웃해 주세요(<a href="#/projector/logout">로그아웃 방법</a>).</p>`,
