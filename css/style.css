@@ -1080,3 +1080,6 @@ button { font-family: inherit; }
 .pmap__num { flex: none; box-shadow: none; }
 .pmap__star { flex: none; width: 28px; text-align: center; font-size: 24px; line-height: 1; color: #e0a800; }
 .pmap__stairs { flex: none; width: 28px; height: 0; border-top: 3px dashed rgb(190, 60, 60); }
+
+/* 緊急ページの電話で伝える住所（ローマ字は単語の途中で改行しない） */
+#addr-call-val { word-break: normal; overflow-wrap: break-word; }

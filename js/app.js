@@ -152,6 +152,17 @@
   // localOnly: 表示中の言語の住所とGoogleマップだけを出す（アクセスのページ。日本語の住所は「運転手さんへ」ページにある）
   function addressBlock(lang, room, withRoomSuffix, localOnly) {
     var d = t(lang);
+    // 緊急のページ: 119・110に電話で伝える住所だけを出す（日本語の住所欄・タクシーの案内は出さない。2026-11-04 オーナー指示）
+    // 文言は i18n.js の common.addressCallLabel / addressCall（{room} は部屋番号）
+    if (withRoomSuffix) {
+      return '<div class="address-block">' +
+        '<div class="address-block__ja-label">' + esc(d.common.addressCallLabel) + '</div>' +
+        '<div class="copy-row"><div class="copy-row__text">' +
+          '<div class="copy-row__value address-block__ja" id="addr-call-val">' + esc(d.common.addressCall.replace('{room}', room.id)) + '</div>' +
+        '</div>' +
+        '<button type="button" class="copy-btn" data-copy-target="addr-call-val" aria-label="' + esc(d.common.copy) + '">' + icon('copy') + '</button>' +
+        '</div></div>';
+    }
     var jaLine = withRoomSuffix ? (JP_ADDRESS_SHORT + ' ' + room.id + '号室') : JP_ADDRESS_FULL;
     var jaPart = localOnly ? '' :
         '<div class="address-block__ja-label">' + esc(d.common.addressJaLabel) + '</div>' +
