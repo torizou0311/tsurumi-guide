@@ -199,6 +199,33 @@
         '<span>' + esc(dict.walkBtn) + '</span>' + icon('external') + '</a>');
   }
 
+  // 駐車場ページ冒頭の地図。画像の上に番号の丸（押すとその駐車場のカードへ）を重ね、下に同じ内容の一覧を出す。
+  // map = content.js の parkingMap: { image, room: {x, y}, pins: [{ anchor, n, x, y, px, py }] }（x, y は左上からの%）
+  // x, y = 丸を置く位置、px, py = 実際の駐車場の位置（ずらして置いた丸から細い線で結んだ点は画像に描いてある）
+  // 同じページの中のリンクなので、既存の処理（render の shownView）でスクロールだけが行われる
+  function parkingMapHtml(map, dict) {
+    var titles = dict.titles || {};
+    var pins = map.pins.map(function (p) {
+      var name = titles[p.anchor] || p.anchor;
+      return '<a class="pmap__pin' + (p.anchor === 'tokup' ? ' pmap__pin--reserve' : '') + '" href="#/parking/' + esc(p.anchor) +
+        '" style="left:' + p.x + '%;top:' + p.y + '%" aria-label="' + esc(name) + '">' + p.n + '</a>';
+    }).join('');
+    var list = map.pins.map(function (p) {
+      return '<li><a class="pmap__row" href="#/parking/' + esc(p.anchor) + '">' +
+        '<span class="pmap__num' + (p.anchor === 'tokup' ? ' pmap__pin--reserve' : '') + '">' + p.n + '</span>' +
+        '<span>' + esc(titles[p.anchor] || p.anchor) + '</span></a></li>';
+    }).join('');
+    return '<div class="pmap">' +
+        '<div class="pmap__frame"><img src="' + esc(map.image) + '" alt="' + esc(dict.mapAlt || '') + '" width="1000" height="511">' +
+          pins + '</div>' +
+        '<ul class="pmap__legend">' +
+          '<li class="pmap__room"><span class="pmap__star" aria-hidden="true">★</span><span>' + esc(dict.mapRoom || '') + '</span></li>' +
+          '<li class="pmap__room"><span class="pmap__stairs" aria-hidden="true"></span><span>' + esc(dict.mapStairs || '') + '</span></li>' +
+          list +
+        '</ul>' +
+      '</div>';
+  }
+
   // ---------- ヘッダー ----------
   function renderHeader(room) {
     var d = t(state.lang);
@@ -429,6 +456,11 @@
           '<a href="#/' + esc(section.id) + '/' + esc(block.anchor) + '">' + esc(title) + '</a></h2>';
       }
       var textHtml = text ? '<div class="block-text">' + text + '</div>' : '';
+      // 駐車場の地図（番号の丸と一覧）。見出し（anchor）は無いので目次には影響しない
+      if (block.parkingMap) {
+        current.html += '<div class="block">' + textHtml + parkingMapHtml(block.parkingMap, dict) + '</div>';
+        return;
+      }
       // コインパーキングのカード: 写真 → 料金表 → 「駐車場へ行く」「部屋までの歩き方」ボタン
       if (block.parking) {
         current.html += '<div class="block parking-lot">' + headingHtml + photo + textHtml +

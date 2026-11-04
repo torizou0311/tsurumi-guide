@@ -1032,3 +1032,51 @@ button { font-family: inherit; }
   font-weight: 700;
   color: var(--ink);
 }
+
+/* 駐車場ページ冒頭の地図（番号の丸は app.js の parkingMapHtml が画像の上に重ねる） */
+.pmap__frame {
+  position: relative;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f4f1ea;
+}
+.pmap__frame img { display: block; width: 100%; height: auto; }
+.pmap__pin, .pmap__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+.pmap__pin { position: absolute; transform: translate(-50%, -50%); }
+.pmap__pin:active { transform: translate(-50%, -50%) scale(.92); }
+.pmap__pin--reserve { background: #1f6fd0; }
+@media (prefers-color-scheme: dark) {
+  .pmap__pin, .pmap__num { color: #17191b; }
+  .pmap__pin--reserve { background: #7fb2ee; }
+}
+.pmap__legend { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 4px; }
+.pmap__row, .pmap__room {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 4px 8px;
+  border-radius: var(--radius-s);
+  color: var(--ink);
+  text-decoration: none;
+}
+.pmap__row { background: var(--tint); }
+.pmap__num { flex: none; box-shadow: none; }
+.pmap__star { flex: none; width: 28px; text-align: center; font-size: 24px; line-height: 1; color: #e0a800; }
+.pmap__stairs { flex: none; width: 28px; height: 0; border-top: 3px dashed rgb(190, 60, 60); }

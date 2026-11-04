@@ -190,6 +190,18 @@ window.SECTIONS = [
       // 写真は「全体＋料金看板」を横に並べた1枚（parking-*.jpg）。2026-11-04 オーナーが現地で撮影。料金は看板どおり
       // 大見出し「特P」「コインパーキング」（group。文字は i18n.js の parking.groups）の下に駐車場ごとのカードを並べる
       { key: 'intro' },
+      // 地図（images/common/parking-map.png は python tools/make-parking-map.py で作る）。番号の丸は app.js が画像の上に重ねる
+      // x, y = 丸の位置（左上からの%）。px, py = 実際の駐車場の位置（近い所は丸をずらし、画像の小さな点と線で結んでいる）。番号はカードの並び順
+      { key: 'mapIntro', parkingMap: { image: 'images/common/parking-map.png', pins: [
+        { anchor: 'tokup', n: 1, x: 48.7, y: 43.5, px: 48.7, py: 43.5 },
+        { anchor: 'times3', n: 2, x: 64.2, y: 21.3, px: 64.2, py: 21.3 },
+        { anchor: 'shinko', n: 3, x: 74.9, y: 22.4, px: 75.9, py: 34.1 },
+        { anchor: 'times', n: 4, x: 87.0, y: 32.9, px: 82.5, py: 41.7 },
+        { anchor: 'timeparking', n: 5, x: 51.4, y: 72.0, px: 51.4, py: 72.0 },
+        { anchor: 'livingpark', n: 6, x: 16.4, y: 46.0, px: 16.4, py: 46.0 },
+        { anchor: 'paraca', n: 7, x: 74.7, y: 57.7, px: 81.7, py: 46.9 },
+        { anchor: 'toyooka17', n: 8, x: 90.7, y: 53.6, px: 84.2, py: 45.8 }
+      ] } },
       // 特P（予約制）。予約はゲスト自身が特Pのサイトで行う（オーナー方針 2026-10-25。予約が難しそうなゲストにはオーナーがメッセージで代理予約を提案する。ガイドには書かない）
       { group: 'tokup', key: 'tokupIntro' },
       { key: 'tokup', anchor: 'tokup', parking: { place: '神奈川県横浜市鶴見区寺谷1-8-24', book: 'https://toku-p.earth-car.com/parking-detail/310025885', noWalk: true } },
