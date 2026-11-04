@@ -166,13 +166,13 @@ window.I18N = {
       intro: `<p>Walking times below are from JR Tsurumi Station, and from the accommodation.</p><ul><li><strong>FamilyMart Tsurumi Nishiguchi</strong> (24h) — 2 min from JR Tsurumi Sta. / 8 min from the property</li><li><strong>Lawson Tsurumi-Eki Nishiguchi</strong> (24h) — 1 min from JR Tsurumi Sta. / 9 min from the property</li><li><strong>7-Eleven Yokohama Toyooka-cho Chuo</strong> (24h) — 2 min from JR Tsurumi Sta. / 9 min from the property</li><li><strong>Supermarket SEIYU Tsurumi</strong> (9:00 AM–11:00 PM) — 2 min from JR Tsurumi Sta. / 9 min from the property</li><li><strong>Supermarket Keikyu Store Tsurumi-Nishi</strong> (weekdays 10:00 AM–11:00 PM, holidays 10:00 AM–9:00 PM) — 1 min from JR Tsurumi Sta. / 10 min from the property</li></ul>`
     },
     parking: {
-      titles: { tokup: `Teraya 1-8-24 Parking`, times3: `Times Tsurumi Teraya No. 3`, shinko: `Shinkou Park Tsurumi Teraya`, times: `Times Tsurumi Teraya`, timeparking: `Time Parking Tsurumi`, livingpark: `Living Park Teraya No. 5`, navipark: `Navi Park Teraya No. 1` },
+      titles: { tokup: `Teraya 1-8-24 Parking`, times3: `Times Tsurumi Teraya No. 3`, shinko: `Shinkou Park Tsurumi Teraya`, times: `Times Tsurumi Teraya`, timeparking: `Time Parking Tsurumi`, livingpark: `Living Park Teraya No. 5`, paraca: `Paraca Yokohama-shi Teraya No. 1`, toyooka17: `Times Toyookacho No. 17` },
       groups: { tokup: `Toku-P (reservation required)`, coin: `Coin parking (no reservation)` },
       intro: `<p>There are paid parking lots near the room. You can choose from the following two types.</p><ul><li><strong>Toku-P</strong>: reserve in advance. One space right next to the building.</li><li><strong>Coin parking</strong>: no reservation needed. Park if there is a free space.</li></ul>`,
       tokupIntro: `<p>Toku-P is a service for reserving parking spaces online. Please make the reservation yourself on the Toku-P website or app (membership registration is required, and the website is in Japanese).</p>`,
       tokup: `<table class="lot-facts"><tr><th>Walk to room</th><td>1 min (50 m), right next to the building</td></tr><tr><th>Rate</th><td>¥800 per day (0:00–24:00); ¥1,000 on some days</td></tr><tr><th>Spaces</th><td>1</td></tr><tr><th>Booking</th><td>From 30 days before the day you want to park</td></tr><tr><th>Note</th><td>Reservations are made per calendar day (0:00–24:00). Even for one night, if you park in the evening and leave the next morning, you need to book 2 days. Space size: width 270 cm, length 620 cm.</td></tr></table>`,
       bookBtn: `Book on Toku-P`,
-      coinIntro: `<p>If you come by car, please use one of the nearby coin parking lots below. Each is about a 4–8 minute walk from the room. The overnight maximum rate is ¥300–440 at all of them.</p><p>Rates may change. Please check the sign at the lot before parking.</p>`,
+      coinIntro: `<p>If you come by car, please use one of the nearby coin parking lots below. Each is about a 4–6 minute walk from the room. The overnight maximum rate is ¥300–500 at most of them.</p><p>Rates may change. Please check the sign at the lot before parking.</p>`,
       driveBtn: `Directions to this parking lot`,
       walkBtn: `Walking route to the room`,
       statusBtn: `Check if spaces are free (Times website)`,
@@ -180,9 +180,10 @@ window.I18N = {
       times3: `<table class="lot-facts"><tr><th>Walk to room</th><td>4 min (290 m), uphill</td></tr><tr><th>Rate</th><td>¥220 / 30 min</td></tr><tr><th>Maximum</th><td>¥1,000 for 24 hours<br>¥440 from 7 PM to 8 AM</td></tr><tr><th>Note</th><td>You can park for up to 48 hours in a row.</td></tr></table>`,
       shinko: `<table class="lot-facts"><tr><th>Walk to room</th><td>4 min (290 m), uphill</td></tr><tr><th>Rate</th><td>¥200 / 30 min</td></tr><tr><th>Maximum</th><td>¥900 from 9 AM to 6 PM<br>¥400 from 6 PM to 9 AM</td></tr></table>`,
       times: `<table class="lot-facts"><tr><th>Walk to room</th><td>4 min (350 m), uphill</td></tr><tr><th>Rate</th><td>¥200 / 20 min</td></tr><tr><th>Maximum</th><td>¥1,300 for 24 hours<br>¥400 from 7 PM to 8 AM</td></tr></table>`,
-      timeparking: `<table class="lot-facts"><tr><th>Walk to room</th><td>4 min (230 m), steep stairs</td></tr><tr><th>Rate</th><td>8 AM–8 PM: ¥300 / 30 min<br>8 PM–8 AM: ¥100 / 60 min</td></tr><tr><th>Maximum</th><td>¥1,200 from 8 AM to 8 PM<br>¥400 from 8 PM to 8 AM</td></tr><tr><th>Note</th><td>We have not been able to confirm the latest rates for this lot. Please check the sign at the lot. If you have a lot of luggage, another lot without stairs is easier.</td></tr></table>`,
-      livingpark: `<table class="lot-facts"><tr><th>Walk to room</th><td>5 min (350 m)</td></tr><tr><th>Rate</th><td>8 AM–7 PM: ¥200 / 20 min<br>7 PM–8 AM: ¥100 / 60 min</td></tr><tr><th>Maximum</th><td>¥1,500 for 24 hours<br>¥300 from 7 PM to 8 AM</td></tr><tr><th>Note</th><td>Credit cards are not accepted. The only banknote accepted is ¥1,000.</td></tr></table>`,
-      navipark: `<table class="lot-facts"><tr><th>Walk to room</th><td>8 min (500 m)</td></tr><tr><th>Rate</th><td>¥200 / 30 min</td></tr><tr><th>Maximum</th><td>¥700 for 24 hours<br>¥300 from 7 PM to 8 AM</td></tr><tr><th>Note</th><td>A small lot with only 4 spaces. Rates differ between websites, so please check the sign at the lot.</td></tr></table>`
+      timeparking: `<table class="lot-facts"><tr><th>Walk to room</th><td>4 min (230 m), steep stairs</td></tr><tr><th>Rate</th><td>8 AM–8 PM: ¥200 / 30 min<br>8 PM–8 AM: ¥100 / 60 min</td></tr><tr><th>Maximum</th><td>¥1,200 for 12 hours<br>¥400 from 8 PM to 8 AM</td></tr><tr><th>Note</th><td>Each maximum rate can be used only once (it does not repeat). If you have a lot of luggage, another lot without stairs is easier.</td></tr></table>`,
+      livingpark: `<table class="lot-facts"><tr><th>Walk to room</th><td>5 min (350 m)</td></tr><tr><th>Rate</th><td>8 AM–7 PM: ¥200 / 20 min<br>7 PM–8 AM: ¥100 / 60 min</td></tr><tr><th>Maximum</th><td>¥1,500 for 24 hours<br>¥300 from 7 PM to 8 AM</td></tr><tr><th>Note</th><td>Please park in a space marked with white lines (10 spaces). The other spaces are monthly-rented. Credit cards are not accepted. The only banknote accepted is ¥1,000. QR code payments such as PayPay are accepted.</td></tr></table>`,
+      paraca: `<table class="lot-facts"><tr><th>Walk to room</th><td>6 min (350 m)</td></tr><tr><th>Rate</th><td>¥200 / 30 min</td></tr><tr><th>Maximum</th><td>¥1,100 for 24 hours after parking<br>¥500 if you park between 7 PM and 9 AM</td></tr><tr><th>Note</th><td>A small lot with only 4 spaces. Credit cards may not be accepted, so please bring cash.</td></tr></table>`,
+      toyooka17: `<table class="lot-facts"><tr><th>Walk to room</th><td>6 min (350 m)</td></tr><tr><th>Rate</th><td>8 AM–12 AM: ¥220 / 30 min<br>12 AM–8 AM: ¥110 / 60 min</td></tr><tr><th>Maximum</th><td>¥770 per 6 hours after parking (repeats)<br>Up to ¥3,080 for 24 hours</td></tr><tr><th>Note</th><td>A small lot with only 2 spaces. There is no cheap overnight maximum.</td></tr></table>`
     },
     trouble: {
       titles: { lock: `If the door lock doesn't work`, hotwater: `No hot water in the shower`, power: `Power outage`, lostfound: `Lost something?` },
@@ -350,13 +351,13 @@ window.I18N = {
       intro: `<p>下記はJR鶴見駅からの徒歩時間と、施設からの徒歩時間です。</p><ul><li><strong>ファミリーマート鶴見西口店</strong>（24時間）— JR鶴見駅から2分／施設から8分</li><li><strong>ローソン鶴見駅西口店</strong>（24時間）— JR鶴見駅から1分／施設から9分</li><li><strong>セブンイレブン横浜豊岡町中央店</strong>（24時間）— JR鶴見駅から2分／施設から9分</li><li><strong>スーパー西友鶴見店</strong>（9:00〜23:00）— JR鶴見駅から2分／施設から9分</li><li><strong>スーパー京急ストア鶴見西口店</strong>（平日10:00〜23:00、休日10:00〜21:00）— JR鶴見駅から1分／施設から10分</li></ul>`
     },
     parking: {
-      titles: { tokup: `寺谷1-8-24駐車場`, times3: `タイムズ鶴見寺谷第3`, shinko: `シンコウパーク鶴見寺谷`, times: `タイムズ鶴見寺谷`, timeparking: `タイムパーキング鶴見`, livingpark: `リビングパーク寺谷第5`, navipark: `ナビパーク寺谷第1` },
+      titles: { tokup: `寺谷1-8-24駐車場`, times3: `タイムズ鶴見寺谷第3`, shinko: `シンコウパーク鶴見寺谷`, times: `タイムズ鶴見寺谷`, timeparking: `タイムパーキング鶴見`, livingpark: `リビングパーク寺谷第5`, paraca: `パラカ横浜市寺谷第1`, toyooka17: `タイムズ豊岡町第17` },
       groups: { tokup: `特P（予約制）`, coin: `コインパーキング（予約なし）` },
       intro: `<p>部屋の近くにある有料の駐車場です。次の2種類から選べます。</p><ul><li><strong>特P</strong>：前もって予約する駐車場です。建物のすぐ隣に1台分あります。</li><li><strong>コインパーキング</strong>：予約はいりません。空いていれば停められます。</li></ul>`,
       tokupIntro: `<p>特Pは、インターネットで駐車場を予約できるサービスです。特Pのサイトかアプリから、ご自身で予約してください（会員登録が必要です）。</p>`,
       tokup: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩1分（50m）・建物のすぐ隣</td></tr><tr><th>料金</th><td>1日（0時〜24時）800円。日によって1,000円</td></tr><tr><th>台数</th><td>1台</td></tr><tr><th>予約</th><td>停めたい日の30日前から</td></tr><tr><th>ご注意</th><td>予約は日付ごと（0時〜24時）です。1泊で夕方に停めて翌朝出す場合も、2日分の予約が必要です。駐車スペースは幅270cm・長さ620cmです。</td></tr></table>`,
       bookBtn: `特Pで予約する`,
-      coinIntro: `<p>車でお越しの方は、下の近くのコインパーキングをご利用ください。どこも部屋まで歩いて4〜8分ほどです。夜から朝までの最大料金は、どこも300〜440円です。</p><p>料金は変わることがあります。停める前に現地の看板で確認してください。</p>`,
+      coinIntro: `<p>車でお越しの方は、下の近くのコインパーキングをご利用ください。どこも部屋まで歩いて4〜6分ほどです。夜から朝までの最大料金は、多くの駐車場で300〜500円です。</p><p>料金は変わることがあります。停める前に現地の看板で確認してください。</p>`,
       driveBtn: `この駐車場への道順`,
       walkBtn: `ここから部屋までの歩き方`,
       statusBtn: `空き状況を見る（タイムズ公式）`,
@@ -364,9 +365,10 @@ window.I18N = {
       times3: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩4分（290m）・上り坂</td></tr><tr><th>料金</th><td>30分 220円</td></tr><tr><th>最大料金</th><td>24時間 1,000円<br>夜19時〜朝8時 440円</td></tr><tr><th>ご注意</th><td>続けて停められるのは48時間までです。</td></tr></table>`,
       shinko: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩4分（290m）・上り坂</td></tr><tr><th>料金</th><td>30分 200円</td></tr><tr><th>最大料金</th><td>9時〜18時 900円<br>18時〜翌9時 400円</td></tr></table>`,
       times: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩4分（350m）・上り坂</td></tr><tr><th>料金</th><td>20分 200円</td></tr><tr><th>最大料金</th><td>24時間 1,300円<br>夜19時〜朝8時 400円</td></tr></table>`,
-      timeparking: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩4分（230m）・急な階段あり</td></tr><tr><th>料金</th><td>8時〜20時 30分 300円<br>20時〜翌8時 60分 100円</td></tr><tr><th>最大料金</th><td>8時〜20時 1,200円<br>20時〜翌8時 400円</td></tr><tr><th>ご注意</th><td>この駐車場の最新の料金は確認できていません。現地の看板で確認してください。荷物が多いときは、階段のないほかの駐車場が便利です。</td></tr></table>`,
-      livingpark: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩5分（350m）</td></tr><tr><th>料金</th><td>8時〜19時 20分 200円<br>19時〜翌8時 60分 100円</td></tr><tr><th>最大料金</th><td>24時間 1,500円<br>夜19時〜朝8時 300円</td></tr><tr><th>ご注意</th><td>クレジットカードは使えません。お札は千円札だけ使えます。</td></tr></table>`,
-      navipark: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩8分（500m）</td></tr><tr><th>料金</th><td>30分 200円</td></tr><tr><th>最大料金</th><td>24時間 700円<br>夜19時〜朝8時 300円</td></tr><tr><th>ご注意</th><td>4台だけの小さな駐車場です。料金は情報サイトによって違うので、現地の看板で確認してください。</td></tr></table>`
+      timeparking: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩4分（230m）・急な階段あり</td></tr><tr><th>料金</th><td>8時〜20時 30分 200円<br>20時〜翌8時 60分 100円</td></tr><tr><th>最大料金</th><td>12時間 1,200円<br>夜20時〜朝8時 400円</td></tr><tr><th>ご注意</th><td>最大料金は、それぞれ1回だけ使えます（くり返しはありません）。荷物が多いときは、階段のないほかの駐車場が便利です。</td></tr></table>`,
+      livingpark: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩5分（350m）</td></tr><tr><th>料金</th><td>8時〜19時 20分 200円<br>19時〜翌8時 60分 100円</td></tr><tr><th>最大料金</th><td>24時間 1,500円<br>夜19時〜朝8時 300円</td></tr><tr><th>ご注意</th><td>白い線の区画（10台分）に停めてください。それ以外は月決めの区画です。クレジットカードは使えません。お札は千円札だけです。PayPayなどのQRコード決済は使えます。</td></tr></table>`,
+      paraca: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩6分（350m）</td></tr><tr><th>料金</th><td>30分 200円</td></tr><tr><th>最大料金</th><td>停めてから24時間 1,100円<br>夜19時〜朝9時に停めた場合 500円</td></tr><tr><th>ご注意</th><td>4台だけの小さな駐車場です。クレジットカードが使えないことがあるので、現金をご用意ください。</td></tr></table>`,
+      toyooka17: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩6分（350m）</td></tr><tr><th>料金</th><td>8時〜24時 30分 220円<br>0時〜8時 60分 110円</td></tr><tr><th>最大料金</th><td>停めてから6時間ごとに 770円（くり返し）<br>24時間なら最大 3,080円</td></tr><tr><th>ご注意</th><td>2台だけの小さな駐車場です。夜だけの安い最大料金はありません。</td></tr></table>`
     },
     trouble: {
       titles: { lock: `玄関の電子錠が動かないとき`, hotwater: `シャワーのお湯が出ないとき`, power: `停電したとき`, lostfound: `忘れ物をしたとき` },
@@ -534,13 +536,13 @@ window.I18N = {
       intro: `<p>以下为从JR鹤见站及从本住宿出发的步行时间。</p><ul><li><strong>全家便利店 鹤见西口店</strong>（24小时）— 距JR鹤见站2分钟／距本住宿8分钟</li><li><strong>罗森 鹤见站西口店</strong>（24小时）— 距JR鹤见站1分钟／距本住宿9分钟</li><li><strong>7-Eleven 横滨丰冈町中央店</strong>（24小时）— 距JR鹤见站2分钟／距本住宿9分钟</li><li><strong>SEIYU超市 鹤见店</strong>（9:00〜23:00）— 距JR鹤见站2分钟／距本住宿9分钟</li><li><strong>京急超市 鹤见西口店</strong>（平日10:00〜23:00，假日10:00〜21:00）— 距JR鹤见站1分钟／距本住宿10分钟</li></ul>`
     },
     parking: {
-      titles: { tokup: `寺谷1-8-24停车场`, times3: `Times鹤见寺谷第3`, shinko: `Shinkou Park鹤见寺谷`, times: `Times鹤见寺谷`, timeparking: `Time Parking鹤见`, livingpark: `Living Park寺谷第5`, navipark: `Navi Park寺谷第1` },
+      titles: { tokup: `寺谷1-8-24停车场`, times3: `Times鹤见寺谷第3`, shinko: `Shinkou Park鹤见寺谷`, times: `Times鹤见寺谷`, timeparking: `Time Parking鹤见`, livingpark: `Living Park寺谷第5`, paraca: `Paraca横滨市寺谷第1`, toyooka17: `Times丰冈町第17` },
       groups: { tokup: `特P（需预约）`, coin: `投币式停车场（无需预约）` },
       intro: `<p>以下为住宿附近的收费停车场，可从以下两种中选择。</p><ul><li><strong>特P</strong>：需事先预约的停车场。建筑物旁边有1个车位。</li><li><strong>投币式停车场</strong>：无需预约，有空位即可停车。</li></ul>`,
       tokupIntro: `<p>特P是可在网上预约停车位的服务。请自行通过特P的网站或App预约（需注册会员，网站为日文）。</p>`,
       tokup: `<table class="lot-facts"><tr><th>到住宿</th><td>步行1分钟（50米），就在建筑物旁边</td></tr><tr><th>收费</th><td>每天（0:00〜24:00）800日圆，部分日期为1,000日圆</td></tr><tr><th>车位</th><td>1个</td></tr><tr><th>预约</th><td>停车日的30天前起可预约</td></tr><tr><th>注意</th><td>预约以日期为单位（0:00〜24:00）。即使只住1晚，傍晚停车、隔天早上离开，也需要预约2天。车位尺寸：宽270厘米，长620厘米。</td></tr></table>`,
       bookBtn: `在特P预约`,
-      coinIntro: `<p>开车前来的客人，请使用下方附近的投币式停车场。每处步行到住宿约4〜8分钟。夜间到早上的最高收费都在300〜440日圆。</p><p>收费可能调整，停车前请以现场告示为准。</p>`,
+      coinIntro: `<p>开车前来的客人，请使用下方附近的投币式停车场。每处步行到住宿约4〜6分钟。夜间到早上的最高收费多数在300〜500日圆。</p><p>收费可能调整，停车前请以现场告示为准。</p>`,
       driveBtn: `前往这个停车场的路线`,
       walkBtn: `从这里步行到住宿的路线`,
       statusBtn: `查看空位情况（Times官网）`,
@@ -548,9 +550,10 @@ window.I18N = {
       times3: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分钟（290米），上坡</td></tr><tr><th>收费</th><td>30分钟 220日圆</td></tr><tr><th>最高收费</th><td>24小时 1,000日圆<br>19:00〜8:00 440日圆</td></tr><tr><th>注意</th><td>最长可连续停车48小时。</td></tr></table>`,
       shinko: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分钟（290米），上坡</td></tr><tr><th>收费</th><td>30分钟 200日圆</td></tr><tr><th>最高收费</th><td>9:00〜18:00 900日圆<br>18:00〜翌日9:00 400日圆</td></tr></table>`,
       times: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分钟（350米），上坡</td></tr><tr><th>收费</th><td>20分钟 200日圆</td></tr><tr><th>最高收费</th><td>24小时 1,300日圆<br>19:00〜8:00 400日圆</td></tr></table>`,
-      timeparking: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分钟（230米），有陡峭楼梯</td></tr><tr><th>收费</th><td>8:00〜20:00 30分钟 300日圆<br>20:00〜翌日8:00 60分钟 100日圆</td></tr><tr><th>最高收费</th><td>8:00〜20:00 1,200日圆<br>20:00〜翌日8:00 400日圆</td></tr><tr><th>注意</th><td>我们尚未确认此停车场的最新收费，请以现场告示为准。行李较多时，建议使用没有楼梯的其他停车场。</td></tr></table>`,
-      livingpark: `<table class="lot-facts"><tr><th>到住宿</th><td>步行5分钟（350米）</td></tr><tr><th>收费</th><td>8:00〜19:00 20分钟 200日圆<br>19:00〜翌日8:00 60分钟 100日圆</td></tr><tr><th>最高收费</th><td>24小时 1,500日圆<br>19:00〜8:00 300日圆</td></tr><tr><th>注意</th><td>不能使用信用卡。纸币只能使用1,000日圆。</td></tr></table>`,
-      navipark: `<table class="lot-facts"><tr><th>到住宿</th><td>步行8分钟（500米）</td></tr><tr><th>收费</th><td>30分钟 200日圆</td></tr><tr><th>最高收费</th><td>24小时 700日圆<br>19:00〜8:00 300日圆</td></tr><tr><th>注意</th><td>只有4个车位的小型停车场。各网站刊登的收费不同，请以现场告示为准。</td></tr></table>`
+      timeparking: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分钟（230米），有陡峭楼梯</td></tr><tr><th>收费</th><td>8:00〜20:00 30分钟 200日圆<br>20:00〜翌日8:00 60分钟 100日圆</td></tr><tr><th>最高收费</th><td>12小时 1,200日圆<br>20:00〜8:00 400日圆</td></tr><tr><th>注意</th><td>各最高收费只能使用一次（不会重复计算）。行李较多时，建议使用没有楼梯的其他停车场。</td></tr></table>`,
+      livingpark: `<table class="lot-facts"><tr><th>到住宿</th><td>步行5分钟（350米）</td></tr><tr><th>收费</th><td>8:00〜19:00 20分钟 200日圆<br>19:00〜翌日8:00 60分钟 100日圆</td></tr><tr><th>最高收费</th><td>24小时 1,500日圆<br>19:00〜8:00 300日圆</td></tr><tr><th>注意</th><td>请停在白线划出的车位（10个车位）。其他为包月车位。不能使用信用卡。纸币只能使用1,000日圆。可以使用PayPay等二维码支付。</td></tr></table>`,
+      paraca: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分钟（350米）</td></tr><tr><th>收费</th><td>30分钟 200日圆</td></tr><tr><th>最高收费</th><td>停车后24小时 1,100日圆<br>19:00〜9:00之间停车 500日圆</td></tr><tr><th>注意</th><td>只有4个车位的小型停车场。可能无法使用信用卡，请准备现金。</td></tr></table>`,
+      toyooka17: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分钟（350米）</td></tr><tr><th>收费</th><td>8:00〜24:00 30分钟 220日圆<br>0:00〜8:00 60分钟 110日圆</td></tr><tr><th>最高收费</th><td>停车后每6小时 770日圆（重复计算）<br>24小时最高 3,080日圆</td></tr><tr><th>注意</th><td>只有2个车位的小型停车场。没有夜间专用的低价最高收费。</td></tr></table>`
     },
     trouble: {
       titles: { lock: `玄关电子锁无法使用时`, hotwater: `淋浴间没有热水时`, power: `停电时`, lostfound: `遗失物品时` },
@@ -718,13 +721,13 @@ window.I18N = {
       intro: `<p>以下為從JR鶴見站及從本住宿出發的步行時間。</p><ul><li><strong>全家便利商店 鶴見西口店</strong>（24小時）— 距JR鶴見站2分鐘／距本住宿8分鐘</li><li><strong>羅森 鶴見站西口店</strong>（24小時）— 距JR鶴見站1分鐘／距本住宿9分鐘</li><li><strong>7-Eleven 橫濱豐岡町中央店</strong>（24小時）— 距JR鶴見站2分鐘／距本住宿9分鐘</li><li><strong>SEIYU超市 鶴見店</strong>（9:00〜23:00）— 距JR鶴見站2分鐘／距本住宿9分鐘</li><li><strong>京急超市 鶴見西口店</strong>（平日10:00〜23:00，假日10:00〜21:00）— 距JR鶴見站1分鐘／距本住宿10分鐘</li></ul>`
     },
     parking: {
-      titles: { tokup: `寺谷1-8-24停車場`, times3: `Times鶴見寺谷第3`, shinko: `Shinkou Park鶴見寺谷`, times: `Times鶴見寺谷`, timeparking: `Time Parking鶴見`, livingpark: `Living Park寺谷第5`, navipark: `Navi Park寺谷第1` },
+      titles: { tokup: `寺谷1-8-24停車場`, times3: `Times鶴見寺谷第3`, shinko: `Shinkou Park鶴見寺谷`, times: `Times鶴見寺谷`, timeparking: `Time Parking鶴見`, livingpark: `Living Park寺谷第5`, paraca: `Paraca橫濱市寺谷第1`, toyooka17: `Times豐岡町第17` },
       groups: { tokup: `特P（需預約）`, coin: `投幣式停車場（免預約）` },
       intro: `<p>以下為住宿附近的收費停車場，可從以下兩種中選擇。</p><ul><li><strong>特P</strong>：需事先預約的停車場。建築物旁邊有1個車位。</li><li><strong>投幣式停車場</strong>：免預約，有空位即可停車。</li></ul>`,
       tokupIntro: `<p>特P是可在網路上預約停車位的服務。請自行透過特P的網站或App預約（需註冊會員，網站為日文）。</p>`,
       tokup: `<table class="lot-facts"><tr><th>到住宿</th><td>步行1分鐘（50公尺），就在建築物旁邊</td></tr><tr><th>收費</th><td>每天（0:00〜24:00）800日圓，部分日期為1,000日圓</td></tr><tr><th>車位</th><td>1個</td></tr><tr><th>預約</th><td>停車日的30天前起可預約</td></tr><tr><th>注意</th><td>預約以日期為單位（0:00〜24:00）。即使只住1晚，傍晚停車、隔天早上離開，也需要預約2天。車位尺寸：寬270公分，長620公分。</td></tr></table>`,
       bookBtn: `在特P預約`,
-      coinIntro: `<p>開車前來的旅客，請使用下方附近的投幣式停車場。每處步行到住宿約4〜8分鐘。夜間到早上的最高收費都在300〜440日圓。</p><p>收費可能調整，停車前請以現場告示為準。</p>`,
+      coinIntro: `<p>開車前來的旅客，請使用下方附近的投幣式停車場。每處步行到住宿約4〜6分鐘。夜間到早上的最高收費多數在300〜500日圓。</p><p>收費可能調整，停車前請以現場告示為準。</p>`,
       driveBtn: `前往這個停車場的路線`,
       walkBtn: `從這裡步行到住宿的路線`,
       statusBtn: `查看空位狀況（Times官網）`,
@@ -732,9 +735,10 @@ window.I18N = {
       times3: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分鐘（290公尺），上坡</td></tr><tr><th>收費</th><td>30分鐘 220日圓</td></tr><tr><th>最高收費</th><td>24小時 1,000日圓<br>19:00〜8:00 440日圓</td></tr><tr><th>注意</th><td>最長可連續停車48小時。</td></tr></table>`,
       shinko: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分鐘（290公尺），上坡</td></tr><tr><th>收費</th><td>30分鐘 200日圓</td></tr><tr><th>最高收費</th><td>9:00〜18:00 900日圓<br>18:00〜翌日9:00 400日圓</td></tr></table>`,
       times: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分鐘（350公尺），上坡</td></tr><tr><th>收費</th><td>20分鐘 200日圓</td></tr><tr><th>最高收費</th><td>24小時 1,300日圓<br>19:00〜8:00 400日圓</td></tr></table>`,
-      timeparking: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分鐘（230公尺），有陡峭樓梯</td></tr><tr><th>收費</th><td>8:00〜20:00 30分鐘 300日圓<br>20:00〜翌日8:00 60分鐘 100日圓</td></tr><tr><th>最高收費</th><td>8:00〜20:00 1,200日圓<br>20:00〜翌日8:00 400日圓</td></tr><tr><th>注意</th><td>我們尚未確認此停車場的最新收費，請以現場告示為準。行李較多時，建議使用沒有樓梯的其他停車場。</td></tr></table>`,
-      livingpark: `<table class="lot-facts"><tr><th>到住宿</th><td>步行5分鐘（350公尺）</td></tr><tr><th>收費</th><td>8:00〜19:00 20分鐘 200日圓<br>19:00〜翌日8:00 60分鐘 100日圓</td></tr><tr><th>最高收費</th><td>24小時 1,500日圓<br>19:00〜8:00 300日圓</td></tr><tr><th>注意</th><td>不能使用信用卡。紙鈔只能使用1,000日圓。</td></tr></table>`,
-      navipark: `<table class="lot-facts"><tr><th>到住宿</th><td>步行8分鐘（500公尺）</td></tr><tr><th>收費</th><td>30分鐘 200日圓</td></tr><tr><th>最高收費</th><td>24小時 700日圓<br>19:00〜8:00 300日圓</td></tr><tr><th>注意</th><td>只有4個車位的小型停車場。各網站刊登的收費不同，請以現場告示為準。</td></tr></table>`
+      timeparking: `<table class="lot-facts"><tr><th>到住宿</th><td>步行4分鐘（230公尺），有陡峭樓梯</td></tr><tr><th>收費</th><td>8:00〜20:00 30分鐘 200日圓<br>20:00〜翌日8:00 60分鐘 100日圓</td></tr><tr><th>最高收費</th><td>12小時 1,200日圓<br>20:00〜8:00 400日圓</td></tr><tr><th>注意</th><td>各最高收費只能使用一次（不會重複計算）。行李較多時，建議使用沒有樓梯的其他停車場。</td></tr></table>`,
+      livingpark: `<table class="lot-facts"><tr><th>到住宿</th><td>步行5分鐘（350公尺）</td></tr><tr><th>收費</th><td>8:00〜19:00 20分鐘 200日圓<br>19:00〜翌日8:00 60分鐘 100日圓</td></tr><tr><th>最高收費</th><td>24小時 1,500日圓<br>19:00〜8:00 300日圓</td></tr><tr><th>注意</th><td>請停在白線劃出的車位（10個車位）。其他為月租車位。不能使用信用卡。紙鈔只能使用1,000日圓。可以使用PayPay等QR碼支付。</td></tr></table>`,
+      paraca: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分鐘（350公尺）</td></tr><tr><th>收費</th><td>30分鐘 200日圓</td></tr><tr><th>最高收費</th><td>停車後24小時 1,100日圓<br>19:00〜9:00之間停車 500日圓</td></tr><tr><th>注意</th><td>只有4個車位的小型停車場。可能無法使用信用卡，請準備現金。</td></tr></table>`,
+      toyooka17: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分鐘（350公尺）</td></tr><tr><th>收費</th><td>8:00〜24:00 30分鐘 220日圓<br>0:00〜8:00 60分鐘 110日圓</td></tr><tr><th>最高收費</th><td>停車後每6小時 770日圓（重複計算）<br>24小時最高 3,080日圓</td></tr><tr><th>注意</th><td>只有2個車位的小型停車場。沒有夜間專用的低價最高收費。</td></tr></table>`
     },
     trouble: {
       titles: { lock: `玄關電子鎖無法使用時`, hotwater: `淋浴間沒有熱水時`, power: `停電時`, lostfound: `遺失物品時` },
@@ -902,13 +906,13 @@ window.I18N = {
       intro: `<p>아래는 JR 쓰루미역, 그리고 숙소로부터의 도보 시간입니다.</p><ul><li><strong>훼미리마트 쓰루미니시구치점</strong> (24시간) — JR 쓰루미역에서 2분 / 숙소에서 8분</li><li><strong>로손 쓰루미역니시구치점</strong> (24시간) — JR 쓰루미역에서 1분 / 숙소에서 9분</li><li><strong>세븐일레븐 요코하마 도요오카초 주오점</strong> (24시간) — JR 쓰루미역에서 2분 / 숙소에서 9분</li><li><strong>슈퍼마켓 세이유 쓰루미점</strong> (9:00〜23:00) — JR 쓰루미역에서 2분 / 숙소에서 9분</li><li><strong>슈퍼마켓 게이큐스토어 쓰루미니시점</strong> (평일 10:00〜23:00, 휴일 10:00〜21:00) — JR 쓰루미역에서 1분 / 숙소에서 10분</li></ul>`
     },
     parking: {
-      titles: { tokup: `데라야 1-8-24 주차장`, times3: `타임즈 쓰루미데라야 제3`, shinko: `신코파크 쓰루미데라야`, times: `타임즈 쓰루미데라야`, timeparking: `타임파킹 쓰루미`, livingpark: `리빙파크 데라야 제5`, navipark: `나비파크 데라야 제1` },
+      titles: { tokup: `데라야 1-8-24 주차장`, times3: `타임즈 쓰루미데라야 제3`, shinko: `신코파크 쓰루미데라야`, times: `타임즈 쓰루미데라야`, timeparking: `타임파킹 쓰루미`, livingpark: `리빙파크 데라야 제5`, paraca: `파라카 요코하마시 데라야 제1`, toyooka17: `타임즈 도요오카초 제17` },
       groups: { tokup: `특P (예약제)`, coin: `코인 주차장 (예약 불필요)` },
       intro: `<p>숙소 근처의 유료 주차장입니다. 다음 두 가지 중에서 선택할 수 있습니다.</p><ul><li><strong>특P</strong>: 미리 예약하는 주차장입니다. 건물 바로 옆에 1대분이 있습니다.</li><li><strong>코인 주차장</strong>: 예약이 필요 없습니다. 빈자리가 있으면 주차할 수 있습니다.</li></ul>`,
       tokupIntro: `<p>특P(토쿠피)는 인터넷으로 주차장을 예약하는 서비스입니다. 특P 웹사이트나 앱에서 직접 예약해 주세요 (회원 가입 필요, 웹사이트는 일본어).</p>`,
       tokup: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 1분(50m), 건물 바로 옆</td></tr><tr><th>요금</th><td>하루(0:00〜24:00) 800엔, 날짜에 따라 1,000엔</td></tr><tr><th>주차 대수</th><td>1대</td></tr><tr><th>예약</th><td>주차할 날짜의 30일 전부터</td></tr><tr><th>주의</th><td>예약은 날짜 단위(0:00〜24:00)입니다. 1박이라도 저녁에 주차하고 다음 날 아침에 나가는 경우 2일분을 예약해야 합니다. 주차 공간 크기: 폭 270cm, 길이 620cm.</td></tr></table>`,
       bookBtn: `특P에서 예약하기`,
-      coinIntro: `<p>차로 오시는 분은 아래의 가까운 코인 주차장을 이용해 주세요. 모두 숙소까지 걸어서 4〜8분 정도입니다. 밤부터 아침까지의 최대 요금은 모두 300〜440엔입니다.</p><p>요금은 바뀔 수 있습니다. 주차하기 전에 현장 안내판을 확인해 주세요.</p>`,
+      coinIntro: `<p>차로 오시는 분은 아래의 가까운 코인 주차장을 이용해 주세요. 모두 숙소까지 걸어서 4〜6분 정도입니다. 밤부터 아침까지의 최대 요금은 대부분 300〜500엔입니다.</p><p>요금은 바뀔 수 있습니다. 주차하기 전에 현장 안내판을 확인해 주세요.</p>`,
       driveBtn: `이 주차장까지 길 안내`,
       walkBtn: `여기서 숙소까지 걷는 길`,
       statusBtn: `빈자리 확인 (타임즈 공식)`,
@@ -916,9 +920,10 @@ window.I18N = {
       times3: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 4분(290m), 오르막</td></tr><tr><th>요금</th><td>30분 220엔</td></tr><tr><th>최대 요금</th><td>24시간 1,000엔<br>19:00〜8:00 440엔</td></tr><tr><th>주의</th><td>연속 주차는 최대 48시간까지입니다.</td></tr></table>`,
       shinko: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 4분(290m), 오르막</td></tr><tr><th>요금</th><td>30분 200엔</td></tr><tr><th>최대 요금</th><td>9:00〜18:00 900엔<br>18:00〜다음날 9:00 400엔</td></tr></table>`,
       times: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 4분(350m), 오르막</td></tr><tr><th>요금</th><td>20분 200엔</td></tr><tr><th>최대 요금</th><td>24시간 1,300엔<br>19:00〜8:00 400엔</td></tr></table>`,
-      timeparking: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 4분(230m), 가파른 계단 있음</td></tr><tr><th>요금</th><td>8:00〜20:00 30분 300엔<br>20:00〜다음날 8:00 60분 100엔</td></tr><tr><th>최대 요금</th><td>8:00〜20:00 1,200엔<br>20:00〜다음날 8:00 400엔</td></tr><tr><th>주의</th><td>이 주차장의 최신 요금은 확인하지 못했습니다. 현장 안내판을 확인해 주세요. 짐이 많을 때는 계단이 없는 다른 주차장이 편합니다.</td></tr></table>`,
-      livingpark: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 5분(350m)</td></tr><tr><th>요금</th><td>8:00〜19:00 20분 200엔<br>19:00〜다음날 8:00 60분 100엔</td></tr><tr><th>최대 요금</th><td>24시간 1,500엔<br>19:00〜8:00 300엔</td></tr><tr><th>주의</th><td>신용카드는 사용할 수 없습니다. 지폐는 1,000엔권만 사용할 수 있습니다.</td></tr></table>`,
-      navipark: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 8분(500m)</td></tr><tr><th>요금</th><td>30분 200엔</td></tr><tr><th>최대 요금</th><td>24시간 700엔<br>19:00〜8:00 300엔</td></tr><tr><th>주의</th><td>4대만 주차할 수 있는 작은 주차장입니다. 사이트마다 요금 정보가 다르니 현장 안내판을 확인해 주세요.</td></tr></table>`
+      timeparking: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 4분(230m), 가파른 계단 있음</td></tr><tr><th>요금</th><td>8:00〜20:00 30분 200엔<br>20:00〜다음날 8:00 60분 100엔</td></tr><tr><th>최대 요금</th><td>12시간 1,200엔<br>20:00〜8:00 400엔</td></tr><tr><th>주의</th><td>각 최대 요금은 1회만 적용됩니다(반복되지 않습니다). 짐이 많을 때는 계단이 없는 다른 주차장이 편합니다.</td></tr></table>`,
+      livingpark: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 5분(350m)</td></tr><tr><th>요금</th><td>8:00〜19:00 20분 200엔<br>19:00〜다음날 8:00 60분 100엔</td></tr><tr><th>최대 요금</th><td>24시간 1,500엔<br>19:00〜8:00 300엔</td></tr><tr><th>주의</th><td>흰 선으로 구획된 자리(10대분)에 주차해 주세요. 그 외는 월 정기 주차 자리입니다. 신용카드는 사용할 수 없습니다. 지폐는 1,000엔권만 사용할 수 있습니다. PayPay 등 QR코드 결제는 사용할 수 있습니다.</td></tr></table>`,
+      paraca: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 6분(350m)</td></tr><tr><th>요금</th><td>30분 200엔</td></tr><tr><th>최대 요금</th><td>주차 후 24시간 1,100엔<br>19:00〜9:00 사이에 주차한 경우 500엔</td></tr><tr><th>주의</th><td>4대만 주차할 수 있는 작은 주차장입니다. 신용카드를 사용할 수 없는 경우가 있으니 현금을 준비해 주세요.</td></tr></table>`,
+      toyooka17: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 6분(350m)</td></tr><tr><th>요금</th><td>8:00〜24:00 30분 220엔<br>0:00〜8:00 60분 110엔</td></tr><tr><th>최대 요금</th><td>주차 후 6시간마다 770엔(반복)<br>24시간 최대 3,080엔</td></tr><tr><th>주의</th><td>2대만 주차할 수 있는 작은 주차장입니다. 밤 시간대 전용의 저렴한 최대 요금은 없습니다.</td></tr></table>`
     },
     trouble: {
       titles: { lock: `현관 전자 잠금장치가 작동하지 않을 때`, hotwater: `샤워실에 온수가 나오지 않을 때`, power: `정전 시`, lostfound: `분실물이 있을 때` },
