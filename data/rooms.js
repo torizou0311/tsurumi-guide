@@ -18,6 +18,7 @@ window.ROOMS = [
       wifiQr5: 'images/103/wifi-qr-5g.png',
       applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceMicrowave: 'images/common/appliance-microwave-nitori-{lang}.png', // ニトリ BK2G02（103と201で共通）
+      applianceCoffee: 'images/202/appliance-coffee.png', // ドリップパックの使い方の写真は202のものを共用（2026-11-05）
       wifiQr24: 'images/103/wifi-qr-24g.png'
     }
   },

@@ -103,7 +103,8 @@ window.SECTIONS = [
       { key: 'kettle', anchor: 'kettle', image: 'room:applianceKettle' },
       { key: 'kettleNitori', rooms: ['103', '202'] },
       { key: 'kettleIris', rooms: ['201'], image: 'images/201/appliance-kettle-level.png', medium: true },
-      { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
+      // ドリップコーヒーは103・202（201はドルチェ グスト）。103・202もドルチェ グストに替えたら rooms を見直す
+      { key: 'coffee', anchor: 'coffee', rooms: ['103', '202'], image: 'room:applianceCoffee' },
       // 炊飯器は全室にある（2026-11-05 オーナー確認）。103・201は写真がまだないので「写真は準備中」と出る。撮ったら rooms.js の photos.applianceRiceCooker に入れる
       { key: 'riceCooker', anchor: 'ricecooker', image: 'room:applianceRiceCooker' },
       // ドラム式洗濯乾燥機。全部屋共通（103・201はシャープ ES-S7G、202は ES-S7F。操作パネルと使い方は同じ）。図は tools/make-washer-panel.py で作る
