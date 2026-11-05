@@ -39,7 +39,7 @@ Room 202: SSID BCW720J-0FF68-A (5GHz) / BCW720J-0FF68-G (2.4GHz), PASS 8478c44ea
 - Microwave. (Room 103 only confirmed: Power 200W (defrost) / 500W, 700W (warm up). Inner dial: timer, outer dial: defrost weight.)
 - Electric kettle. Warning: when water boils, the body of the kettle (except the handle) also becomes hot.
 - Coffee drip bag stand in the kitchen. Enjoy drip coffee!
-- Rice cooker (Room 202 only)
+- Rice cooker (all rooms. Confirmed by the owner 2026-11-05)
 - Washing machine with washing and drying function.
 - Wire in the room for drying clothes.
 - Air circulator: ceilings are high, so cold air collects below and warm air above. If the air conditioner doesn't feel effective, run the circulator.

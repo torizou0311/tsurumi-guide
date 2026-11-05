@@ -12,7 +12,7 @@ window.ROOMS = [
       ssid24: 'BCW720J-57CBA-G',
       pass: '8f358f7fc3ee4'
     },
-    hasRiceCooker: false,
+    hasRiceCooker: true,
     microwaveWattageKnown: true, // 103号室のみ、レンジのワット数を確認済み
     photos: {
       wifiQr5: 'images/103/wifi-qr-5g.png',
@@ -53,7 +53,7 @@ window.ROOMS = [
       ssid24: 'BCW720J-F04F6-G',
       pass: '8e8aaa7a4383a'
     },
-    hasRiceCooker: false,
+    hasRiceCooker: true,
     microwaveWattageKnown: false,
     // TODO: エアコン・IH以外の家電は写真がまだ無いため、201では項目ごと非表示にしています
     //       （写真を追加したら、ここに登録し、data/content.js の rooms に '201' を足してください）
