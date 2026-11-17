@@ -103,8 +103,8 @@ window.SECTIONS = [
       { key: 'kettle', anchor: 'kettle', image: 'room:applianceKettle' },
       { key: 'kettleNitori', rooms: ['103', '202'] },
       { key: 'kettleIris', rooms: ['201'], image: 'images/201/appliance-kettle-level.png', medium: true },
-      // ドリップコーヒーは103・202（201はドルチェ グスト）。103・202もドルチェ グストに替えたら rooms を見直す
-      { key: 'coffee', anchor: 'coffee', rooms: ['103', '202'], image: 'room:applianceCoffee' },
+      // ドリップコーヒーは202だけ（201・103はドルチェ グスト。103は2026-11-17に交換）。202もドルチェ グストに替えたら rooms を見直す
+      { key: 'coffee', anchor: 'coffee', rooms: ['202'], image: 'room:applianceCoffee' },
       // 炊飯器は全室にある（2026-11-05 オーナー確認）。103・201は写真がまだないので「写真は準備中」と出る。撮ったら rooms.js の photos.applianceRiceCooker に入れる
       { key: 'riceCooker', anchor: 'ricecooker', image: 'room:applianceRiceCooker' },
       // ドラム式洗濯乾燥機。全部屋共通（103・201はシャープ ES-S7G、202は ES-S7F。操作パネルと使い方は同じ）。図は tools/make-washer-panel.py で作る
@@ -122,16 +122,16 @@ window.SECTIONS = [
       // 玄関の照明の人感センサー（全部屋共通。スイッチは左＝切・真ん中＝人感・右＝常時点灯）。写真は撮影待ちなので今は文章だけ（2026-11-17追加）
       { key: 'motionLight', anchor: 'light' },
       { key: 'iron', anchor: 'iron', rooms: ['202'], image: 'room:applianceIron' },
-      // 201のカプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（電源と目盛りの図だけ、図の中の文字を4言語で入れてある）。
+      // 201・103のカプセル式コーヒーメーカー（103は2026-11-17追加。機種は201と同じなので図は images/201/ を共用）（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（電源と目盛りの図だけ、図の中の文字を4言語で入れてある）。
       // narrow: true は図を小さめに、medium: true は中くらいに出す指定（小さい図が引き伸ばされてぼやけるのを防ぐ）
-      { key: 'dolceIntro', anchor: 'dolcegusto', rooms: ['201'], image: 'room:dolceMachine', narrow: true },
-      { key: 'dolceWater', rooms: ['201'], image: 'room:dolceWater', medium: true },
-      { key: 'dolcePower', rooms: ['201'], image: 'room:dolcePower', medium: true },
-      { key: 'dolceCup', rooms: ['201'] },
-      { key: 'dolceLevel', rooms: ['201'], image: 'room:dolceLevel', medium: true },
-      { key: 'dolceCapsule', rooms: ['201'], image: 'room:dolceCapsule', medium: true },
-      { key: 'dolceBrew', rooms: ['201'], image: 'room:dolceBrew', narrow: true },
-      { key: 'dolceFinish', rooms: ['201'], image: 'room:dolceFinish', narrow: true }
+      { key: 'dolceIntro', anchor: 'dolcegusto', rooms: ['201', '103'], image: 'room:dolceMachine', narrow: true },
+      { key: 'dolceWater', rooms: ['201', '103'], image: 'room:dolceWater', medium: true },
+      { key: 'dolcePower', rooms: ['201', '103'], image: 'room:dolcePower', medium: true },
+      { key: 'dolceCup', rooms: ['201', '103'] },
+      { key: 'dolceLevel', rooms: ['201', '103'], image: 'room:dolceLevel', medium: true },
+      { key: 'dolceCapsule', rooms: ['201', '103'], image: 'room:dolceCapsule', medium: true },
+      { key: 'dolceBrew', rooms: ['201', '103'], image: 'room:dolceBrew', narrow: true },
+      { key: 'dolceFinish', rooms: ['201', '103'], image: 'room:dolceFinish', narrow: true }
     ]
   },
   {

@@ -18,7 +18,14 @@ window.ROOMS = [
       wifiQr5: 'images/103/wifi-qr-5g.png',
       applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceMicrowave: 'images/common/appliance-microwave-nitori-{lang}.png', // ニトリ BK2G02（103と201で共通）
-      applianceCoffee: 'images/202/appliance-coffee.png', // ドリップパックの使い方の写真は202のものを共用（2026-11-05）
+      // ドルチェ グスト（2026-11-17に103にも設置。201と同じ機種なので201の図を共用）
+      dolceMachine: 'images/201/dolcegusto-machine.png',
+      dolceWater: 'images/201/dolcegusto-fig-water.png',
+      dolcePower: 'images/201/dolcegusto-fig-power-{lang}.png',
+      dolceLevel: 'images/201/dolcegusto-fig-level-{lang}.png',
+      dolceCapsule: 'images/201/dolcegusto-fig-capsule.png',
+      dolceBrew: 'images/201/dolcegusto-fig-brew.png',
+      dolceFinish: 'images/201/dolcegusto-fig-finish.png',
       wifiQr24: 'images/103/wifi-qr-24g.png'
     }
   },
