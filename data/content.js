@@ -114,10 +114,10 @@ window.SECTIONS = [
       { key: 'washerDetergent', image: 'images/common/appliance-washer-detergent.png', narrow: true },
       { key: 'washerAdjust', image: 'images/common/appliance-washer-sub-{lang}.png' },
       { key: 'washerNotes' },
-      // 洗濯機のエラー表示と乾燥フィルター（2026-11-17追加。langs: ['ja'] ＝日本語のみ。他言語を訳したら langs を消す）。図は tools/make-washer-filter.py
-      { key: 'washerTrouble', anchor: 'washertrouble', langs: ['ja'] },
-      { key: 'washerFilter', image: 'images/common/appliance-washer-filter-{lang}.png', langs: ['ja'] },
-      { key: 'washerNoError', langs: ['ja'] },
+      // 洗濯機のエラー表示と乾燥フィルター（2026-11-17追加。5言語対応済み）。図は tools/make-washer-filter.py
+      { key: 'washerTrouble', anchor: 'washertrouble' },
+      { key: 'washerFilter', image: 'images/common/appliance-washer-filter-{lang}.png' },
+      { key: 'washerNoError' },
       // 室内物干しワイヤー（Remarks Japan）。全部屋共通。図は tools/make-wire-figure.py で作る（番号だけなので全言語で同じ図）
       { key: 'wire', anchor: 'wire', image: 'images/common/appliance-wire.png' },
       { key: 'wireSteps' },
@@ -237,8 +237,8 @@ window.SECTIONS = [
       { key: 'hotwater', anchor: 'hotwater', image: 'images/common/hotwater-panel.png' },
       { key: 'power', anchor: 'power', image: 'images/common/breaker.jpg' },
       { key: 'lostFound', anchor: 'lostfound' },
-      // 洗濯機のエラーは家電のページ（#/appliances/washertrouble）へ案内。日本語のみ（他言語は訳したら langs を消す）
-      { key: 'washerError', anchor: 'washer', langs: ['ja'] }
+      // 洗濯機のエラーは家電のページ（#/appliances/washertrouble）へ案内。5言語対応済み
+      { key: 'washerError', anchor: 'washer' }
     ]
   },
   {

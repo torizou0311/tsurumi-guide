@@ -6,7 +6,7 @@
 #   images/common/washer-filter-lift-base.png  … 乾燥フィルターを真上に引き上げる図
 #   images/common/washer-filter-cover-base.png … 底のカバーを開いた図
 # 作られる図: images/common/appliance-washer-filter-{lang}.png
-#   今は ja だけ作る（他言語は訳が決まってから LABELS の空欄を埋めると作られる）
+#   5言語分を作る（LABELS の文を直して実行すると作り直せる）
 #
 #   python tools/make-washer-filter.py
 # ①② の番号は「作業の順番」です（LABELS の文には書かず、自動で付きます）。
@@ -27,10 +27,10 @@ LABELS = {
         'lift': ['真上に', '引き上げる'],
         'open': ['底のカバーを', '開く'],
     },
-    'en': {'font': 'meiryob.ttc', 'where': ['', ''], 'lift': ['', ''], 'open': ['', '']},
-    'zh-Hant': {'font': 'msjhbd.ttc', 'where': ['', ''], 'lift': ['', ''], 'open': ['', '']},
-    'zh-Hans': {'font': 'msyhbd.ttc', 'where': ['', ''], 'lift': ['', ''], 'open': ['', '']},
-    'ko': {'font': 'malgunbd.ttf', 'where': ['', ''], 'lift': ['', ''], 'open': ['', '']},
+    'en': {'font': 'meiryob.ttc', 'where': ['Drying filter', 'Top of machine, back right'], 'lift': ['Lift it', 'straight up'], 'open': ['Open the', 'bottom cover']},
+    'zh-Hant': {'font': 'msjhbd.ttc', 'where': ['烘乾濾網', '機身頂面的右後方'], 'lift': ['垂直向上', '拉起取出'], 'open': ['打開底部', '的蓋子']},
+    'zh-Hans': {'font': 'msyhbd.ttc', 'where': ['烘干滤网', '机身顶面的右后方'], 'lift': ['垂直向上', '拉起取出'], 'open': ['打开底部', '的盖子']},
+    'ko': {'font': 'malgunbd.ttf', 'where': ['건조 필터', '본체 윗면 오른쪽 안쪽'], 'lift': ['바로 위로', '들어 올리기'], 'open': ['바닥 덮개를', '열기']},
 }
 
 W = 1040
