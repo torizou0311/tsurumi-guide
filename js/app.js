@@ -433,6 +433,7 @@
 
     section.blocks.forEach(function (block) {
       if (block.rooms && block.rooms.indexOf(room.id) === -1) return;
+      if (block.langs && block.langs.indexOf(lang) === -1) return; // 未翻訳の項目は対象の言語だけに出す
 
       // group 付きのブロック: 大見出し（例: 駐車場の「特P」「コインパーキング」）を出す。文字は i18n の groups
       if (block.group) {
