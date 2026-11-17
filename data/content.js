@@ -119,6 +119,8 @@ window.SECTIONS = [
       // サーキュレーター（アイリスオーヤマ PCF-SCC15T）。全部屋共通。図は tools/make-circulator-panel.py で作る
       { key: 'circulator', anchor: 'circulator', image: 'images/common/appliance-circulator-{lang}.png' },
       { key: 'circulatorSteps' },
+      // 玄関の照明の人感センサー（全部屋共通。スイッチは左＝切・真ん中＝人感・右＝常時点灯）。写真は撮影待ちなので今は文章だけ（2026-11-17追加）
+      { key: 'motionLight', anchor: 'light' },
       { key: 'iron', anchor: 'iron', rooms: ['202'], image: 'room:applianceIron' },
       // 201のカプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）。図は公式の取扱説明書からイラスト部分だけを切り出したもの（電源と目盛りの図だけ、図の中の文字を4言語で入れてある）。
       // narrow: true は図を小さめに、medium: true は中くらいに出す指定（小さい図が引き伸ばされてぼやけるのを防ぐ）

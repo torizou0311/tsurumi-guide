@@ -107,7 +107,7 @@ window.I18N = {
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
-      titles: { ac: `Air conditioner`, induction: `Induction cooktop`, microwave: `Microwave`, kettle: `Electric kettle`, coffee: `Drip coffee`, ricecooker: `Rice cooker`, washer: `Washing machine`, wire: `Indoor drying wire`, circulator: `Air circulator`, iron: `Steam iron`, dolcegusto: `Capsule coffee machine (Nescafé Dolce Gusto Genio 2)` },
+      titles: { ac: `Air conditioner`, induction: `Induction cooktop`, microwave: `Microwave`, kettle: `Electric kettle`, coffee: `Drip coffee`, ricecooker: `Rice cooker`, washer: `Washing machine`, wire: `Indoor drying wire`, circulator: `Air circulator`, iron: `Steam iron`, dolcegusto: `Capsule coffee machine (Nescafé Dolce Gusto Genio 2)`, light: `Entrance light (motion sensor)` },
       ac: `<p>Operate using the remote control provided.</p>`,
       induction: `<p>In the kitchen. The picture below shows the control panel.</p>`,
       inductionSteps: `<p><strong>How to use</strong></p><ul><li>Place a pan in the centre of the cooktop (it will not heat without a pan).</li><li><strong>① Power:</strong> press and hold for at least 2 seconds.</li><li><strong>② Heating ON / OFF:</strong> press it, then press <strong>③ ◀ or ▶</strong> to start heating.</li><li>Use ◀ ▶ to adjust the heat (5 levels: 弱 = low, 1, 2, 3, 強 = high).</li><li>When finished, press “Heating ON / OFF” to stop, then press “Power” to switch off.</li></ul><p><strong>Suitable pans:</strong> flat-bottomed pans that a magnet sticks to, such as iron or stainless steel (base about 12–24 cm across). Clay pots, glass, aluminium and copper pans do not work. If all the heat-level lamps blink and nothing heats, the pan is unsuitable or not in the centre.</p><p><strong>Caution:</strong> the cooktop stays hot after use. Do not touch it until the “Hot surface” lamp (高温注意) goes off. Do not leave it unattended while cooking.</p>`,
@@ -129,6 +129,7 @@ window.I18N = {
       wireSteps: `<p><strong>How to use</strong></p><ul><li><strong>①</strong> Hold the round knob at the end of the wire and pull the wire out of the white unit on the wall.</li><li><strong>②</strong> Hook the knob into the hole of the plate on the opposite wall.</li><li><strong>③</strong> Turn the round knob on the unit towards LOCK to hold the wire tight.</li></ul><p><strong>To put it away:</strong> turn the knob on the unit the other way to unlock, unhook the end from the plate, and let the wire go back into the unit slowly.</p><p><strong>Caution:</strong> do not hang more than about 20 kg on the wire, and do not pull down or hang on it.</p>`,
       circulator: `<p>The ceilings are high, so cool air tends to settle near the floor while warm air rises. If the air conditioner doesn't feel effective, run the circulator to help circulate the air.</p>`,
       circulatorSteps: `<p><strong>How to use</strong></p><ul><li><strong>① Power (電源 切/入):</strong> press to start; press again to stop.</li><li><strong>② Fan speed (風量):</strong> press &lt; or &gt; to change the strength (5 levels; the strongest is ターボ = turbo).</li><li><strong>③ Swing (首ふり):</strong> each press switches between up-down (上下), left-right (左右), both, and off. The lamps show which is on.</li><li>Off timer (切タイマー): stops automatically after 1, 2 or 4 hours.</li><li>Rhythm (リズム): the strength changes gently, like a natural breeze.</li></ul><p><strong>Caution:</strong> do not move the head by hand. To change the direction, press Swing (首ふり) to let it move, then press again to stop it where you like.</p>`,
+      motionLight: `<p>The entrance light has a motion sensor. You can change how it works with the 3-position switch on the wall by the entrance.</p><ul><li><strong>Left:</strong> off.</li><li><strong>Middle:</strong> motion sensor. The light turns on when someone comes near and turns off by itself after a while.</li><li><strong>Right:</strong> always on.</li></ul><p>If the light turning on and off bothers you, set the switch to the right (always on) or the left (off).</p>`,
       iron: `<p>A <strong>steam iron</strong> is on the shelf in the bathroom. Please use the ironing board in the bathroom when ironing.</p>`,
       dolceIntro: `<p>Insert a capsule and push the lever to make coffee, one cup at a time. Follow steps 1–7 below.</p>`,
       dolceWater: `<p><strong>1. Fill the water tank</strong></p><ul><li>Remove the water tank from the back of the machine and fill it with tap water. <strong>Do not fill above the “MAX” line.</strong></li><li>Put the tank back on the machine.</li><li>Do not put in anything other than water (no hot water, milk, etc.).</li></ul>`,
@@ -298,7 +299,7 @@ window.I18N = {
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
-      titles: { ac: `エアコン`, induction: `IHクッキングヒーター`, microwave: `電子レンジ`, kettle: `電気ケトル`, coffee: `ドリップコーヒー`, ricecooker: `炊飯器`, washer: `洗濯機`, wire: `室内物干しワイヤー`, circulator: `サーキュレーター`, iron: `スチームアイロン`, dolcegusto: `カプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）` },
+      titles: { ac: `エアコン`, induction: `IHクッキングヒーター`, microwave: `電子レンジ`, kettle: `電気ケトル`, coffee: `ドリップコーヒー`, ricecooker: `炊飯器`, washer: `洗濯機`, wire: `室内物干しワイヤー`, circulator: `サーキュレーター`, iron: `スチームアイロン`, dolcegusto: `カプセル式コーヒーメーカー（ネスカフェ ドルチェ グスト ジェニオ2）`, light: `玄関の照明（人感センサー）` },
       ac: `<p>付属のリモコンで操作してください。</p>`,
       induction: `<p>キッチンにあります。下の図は操作パネルです。</p>`,
       inductionSteps: `<p><strong>使い方</strong></p><ul><li>鍋をプレートの中央に置きます（鍋を置かないと加熱できません）。</li><li><strong>「電源」</strong>を2秒以上長押しします。</li><li><strong>「加熱 入/切」</strong>を押し、続けて <strong>◀ か ▶</strong> を押すと加熱が始まります。</li><li>◀ ▶ で火力を調節します（弱・1・2・3・強の5段階）。</li><li>終わったら「加熱 入/切」を押して止め、「電源」を押して切ります。</li></ul><p><strong>使える鍋：</strong>鉄やステンレスなど磁石がつく、底が平らな鍋（底の直径 約12〜24cm）。土鍋・ガラス・アルミ・銅の鍋は使えません。火力のランプが全部点滅して加熱されないときは、鍋が合っていないか、中央に置かれていません。</p><p><strong>ご注意：</strong>使用後もプレートは熱くなっています。「高温注意」ランプが消えるまで触らないでください。使用中はそばを離れないでください。</p>`,
@@ -320,6 +321,7 @@ window.I18N = {
       wireSteps: `<p><strong>使い方</strong></p><ul><li><strong>①</strong> ワイヤーの先の丸いつまみを持って、壁の白い本体からワイヤーを引き出します。</li><li><strong>②</strong> 反対側の壁にあるプレートの穴に、つまみを引っ掛けます。</li><li><strong>③</strong> 本体の丸いつまみを「LOCK」の向きに回して、ワイヤーを固定します。</li></ul><p><strong>しまうとき：</strong>本体のつまみを反対に回してロックを外し、プレートからつまみを外して、ゆっくり本体に戻します。</p><p><strong>ご注意：</strong>掛けられる重さは約20kgまでです。ワイヤーを下に引っ張ったり、ぶら下がったりしないでください。</p>`,
       circulator: `<p>天井が高いため、冷たい空気は下に、暖かい空気は上にたまりやすくなっています。エアコンの効きが弱く感じるときは、サーキュレーターで空気を循環させてください。</p>`,
       circulatorSteps: `<p><strong>使い方</strong></p><ul><li><strong>「電源 切/入」</strong>を押すと動きます。もう一度押すと止まります。</li><li><strong>「＜ 風量 ＞」</strong>で風の強さを変えます（5段階。いちばん強いのが「ターボ」）。</li><li><strong>「首ふり」</strong>を押すたびに、上下・左右・両方・止まる、が切り替わります。どれになっているかはランプでわかります。</li><li>「切タイマー」を押すと、1・2・4時間後に自動で止まります。</li><li>「リズム」は、風の強さがゆっくり変わる、自然の風に近いモードです。</li></ul><p><strong>ご注意：</strong>向きを手で動かさないでください。向きを変えたいときは「首ふり」を押して動かし、好きな位置でもう一度押して止めてください。</p>`,
+      motionLight: `<p>玄関の照明は人感センサー付きです。玄関の壁にある3段階のスイッチで切り替えられます。</p><ul><li><strong>左：</strong>消灯</li><li><strong>真ん中：</strong>人感センサー。人が近づくと点き、しばらくすると自動で消えます。</li><li><strong>右：</strong>常に点灯</li></ul><p>センサーで点いたり消えたりするのが気になるときは、右（常に点灯）か左（消灯）にしてください。</p>`,
       iron: `<p>浴室の棚にスチームアイロンがあります。ご使用の際は浴室内のアイロン台をお使いください。</p>`,
       dolceIntro: `<p>専用カプセルをセットしてレバーを倒すだけで、コーヒーを1杯ずつ作れます。下の ①〜⑦ の順にお使いください。</p>`,
       dolceWater: `<p><strong>① 水を入れる</strong></p><ul><li>本体の後ろにある給水タンクを取り外し、水道水を入れます。<strong>「MAX」の線を超えないように</strong>入れてください。</li><li>タンクを本体に戻します。</li><li>お湯や牛乳など、水以外のものは入れないでください。</li></ul>`,
@@ -489,7 +491,7 @@ window.I18N = {
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
-      titles: { ac: `空调`, induction: `IH电磁炉`, microwave: `微波炉`, kettle: `电热水壶`, coffee: `挂耳式咖啡`, ricecooker: `电饭煲`, washer: `洗衣机`, wire: `室内晒衣绳`, circulator: `循环扇`, iron: `蒸汽熨斗`, dolcegusto: `胶囊咖啡机（雀巢 Dolce Gusto Genio 2）` },
+      titles: { ac: `空调`, induction: `IH电磁炉`, microwave: `微波炉`, kettle: `电热水壶`, coffee: `挂耳式咖啡`, ricecooker: `电饭煲`, washer: `洗衣机`, wire: `室内晒衣绳`, circulator: `循环扇`, iron: `蒸汽熨斗`, dolcegusto: `胶囊咖啡机（雀巢 Dolce Gusto Genio 2）`, light: `玄关照明（人体感应）` },
       ac: `<p>请使用附赠的遥控器操作。</p>`,
       induction: `<p>位于厨房。下图为操作面板。</p>`,
       inductionSteps: `<p><strong>使用方法</strong></p><ul><li>将锅子放在面板中央（没有放锅子时无法加热）。</li><li><strong>① 电源：</strong>长按2秒以上。</li><li><strong>② 加热 开／关：</strong>按下后，再按 <strong>③ ◀ 或 ▶</strong> 即开始加热。</li><li>用 ◀ ▶ 调整火力（共5段：弱、1、2、3、强）。</li><li>使用完毕后，按「加热 开／关」停止，再按「电源」关闭。</li></ul><p><strong>可使用的锅具：</strong>磁铁可吸附的平底锅，例如铁锅、不锈钢锅（锅底直径约12～24厘米）。砂锅、玻璃、铝、铜制锅具无法使用。若火力指示灯全部闪烁且无法加热，表示锅具不适用或没有放在中央。</p><p><strong>注意：</strong>使用后面板仍然很烫，请在「高温注意」（高温注意）指示灯熄灭前不要触摸。使用中请勿离开。</p>`,
@@ -519,6 +521,7 @@ window.I18N = {
       wireSteps: `<p><strong>使用方法</strong></p><ul><li><strong>①</strong> 握住钢丝绳前端的圆形旋钮，从墙上的白色主机拉出钢丝绳。</li><li><strong>②</strong> 将旋钮挂入对面墙上固定片的孔中。</li><li><strong>③</strong> 把主机上的圆形旋钮转向「LOCK」，将钢丝绳固定。</li></ul><p><strong>收纳时：</strong>将主机的旋钮往反方向转以解除锁定，把前端从固定片取下，再让钢丝绳慢慢收回主机。</p><p><strong>注意：</strong>承重约20公斤为止。请勿向下拉扯钢丝绳或悬挂在上面。</p>`,
       circulator: `<p>由于天花板较高，冷空气容易堆积在下方、暖空气则聚集在上方。若感觉空调效果不佳，可打开循环扇帮助空气循环。</p>`,
       circulatorSteps: `<p><strong>使用方法</strong></p><ul><li><strong>① 电源（電源 切/入）：</strong>按一下启动，再按一下停止。</li><li><strong>② 风量（風量）：</strong>按 &lt; 或 &gt; 调整风力（共5段，最强为「ターボ」＝涡轮）。</li><li><strong>③ 摆头（首ふり）：</strong>每按一次，会在上下（上下）、左右（左右）、同时、停止之间切换。可由指示灯确认目前状态。</li><li>关机定时（切タイマー）：1、2或4小时后自动停止。</li><li>自然风（リズム）：风力会缓慢变化，接近自然的风。</li></ul><p><strong>注意：</strong>请勿用手扳动机头。想改变方向时，请按「首ふり」让它摆动，到想要的位置再按一次停止。</p>`,
+      motionLight: `<p>玄关的照明附有人体感应器，可以用玄关墙上的三段式开关切换。</p><ul><li><strong>左：</strong>关灯。</li><li><strong>中间：</strong>人体感应。有人靠近时会亮灯，过一段时间后自动熄灭。</li><li><strong>右：</strong>常亮。</li></ul><p>如果在意灯光因感应而忽亮忽灭，请将开关切到右边（常亮）或左边（关灯）。</p>`,
       iron: `<p>浴室层架上备有蒸汽熨斗，使用时请搭配浴室内的烫衣板。</p>`
     },
     projector: {
@@ -680,7 +683,7 @@ window.I18N = {
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
-      titles: { ac: `冷氣`, induction: `IH電磁爐`, microwave: `微波爐`, kettle: `電熱水壺`, coffee: `掛耳式咖啡`, ricecooker: `電子鍋`, washer: `洗衣機`, wire: `室內曬衣繩`, circulator: `循環扇`, iron: `蒸氣熨斗`, dolcegusto: `膠囊咖啡機（雀巢 Dolce Gusto Genio 2）` },
+      titles: { ac: `冷氣`, induction: `IH電磁爐`, microwave: `微波爐`, kettle: `電熱水壺`, coffee: `掛耳式咖啡`, ricecooker: `電子鍋`, washer: `洗衣機`, wire: `室內曬衣繩`, circulator: `循環扇`, iron: `蒸氣熨斗`, dolcegusto: `膠囊咖啡機（雀巢 Dolce Gusto Genio 2）`, light: `玄關照明（人體感應）` },
       ac: `<p>請使用附贈的遙控器操作。</p>`,
       induction: `<p>位於廚房。下圖為操作面板。</p>`,
       inductionSteps: `<p><strong>使用方法</strong></p><ul><li>將鍋子放在面板中央（沒有放鍋子時無法加熱）。</li><li><strong>① 電源：</strong>長按2秒以上。</li><li><strong>② 加熱 開／關：</strong>按下後，再按 <strong>③ ◀ 或 ▶</strong> 即開始加熱。</li><li>用 ◀ ▶ 調整火力（共5段：弱、1、2、3、強）。</li><li>使用完畢後，按「加熱 開／關」停止，再按「電源」關閉。</li></ul><p><strong>可使用的鍋具：</strong>磁鐵可吸附的平底鍋，例如鐵鍋、不鏽鋼鍋（鍋底直徑約12～24公分）。砂鍋、玻璃、鋁、銅製鍋具無法使用。若火力指示燈全部閃爍且無法加熱，表示鍋具不適用或沒有放在中央。</p><p><strong>注意：</strong>使用後面板仍然很燙，請在「高溫注意」（高温注意）指示燈熄滅前不要觸摸。使用中請勿離開。</p>`,
@@ -710,6 +713,7 @@ window.I18N = {
       wireSteps: `<p><strong>使用方法</strong></p><ul><li><strong>①</strong> 握住鋼索前端的圓形旋鈕，從牆上的白色主機拉出鋼索。</li><li><strong>②</strong> 將旋鈕掛入對面牆上固定片的孔中。</li><li><strong>③</strong> 把主機上的圓形旋鈕轉向「LOCK」，將鋼索固定。</li></ul><p><strong>收納時：</strong>將主機的旋鈕往反方向轉以解除鎖定，把前端從固定片取下，再讓鋼索慢慢收回主機。</p><p><strong>注意：</strong>承重約20公斤為止。請勿向下拉扯鋼索或懸掛在上面。</p>`,
       circulator: `<p>由於天花板較高，冷空氣容易堆積在下方、暖空氣則聚集在上方。若感覺冷氣效果不佳，可開啟循環扇幫助空氣循環。</p>`,
       circulatorSteps: `<p><strong>使用方法</strong></p><ul><li><strong>① 電源（電源 切/入）：</strong>按一下啟動，再按一下停止。</li><li><strong>② 風量（風量）：</strong>按 &lt; 或 &gt; 調整風力（共5段，最強為「ターボ」＝渦輪）。</li><li><strong>③ 擺頭（首ふり）：</strong>每按一次，會在上下（上下）、左右（左右）、同時、停止之間切換。可由指示燈確認目前狀態。</li><li>關機定時（切タイマー）：1、2或4小時後自動停止。</li><li>自然風（リズム）：風力會緩慢變化，接近自然的風。</li></ul><p><strong>注意：</strong>請勿用手扳動機頭。想改變方向時，請按「首ふり」讓它擺動，到想要的位置再按一次停止。</p>`,
+      motionLight: `<p>玄關的照明附有人體感應器，可以用玄關牆上的三段式開關切換。</p><ul><li><strong>左：</strong>關燈。</li><li><strong>中間：</strong>人體感應。有人靠近時會亮燈，過一段時間後自動熄滅。</li><li><strong>右：</strong>常亮。</li></ul><p>如果在意燈光因感應而忽亮忽滅，請將開關切到右邊（常亮）或左邊（關燈）。</p>`,
       iron: `<p>浴室層架上備有蒸氣熨斗，使用時請搭配浴室內的燙衣板。</p>`
     },
     projector: {
@@ -871,7 +875,7 @@ window.I18N = {
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
-      titles: { ac: `에어컨`, induction: `인덕션 쿡탑`, microwave: `전자레인지`, kettle: `전기 주전자`, coffee: `드립 커피`, ricecooker: `전기밥솥`, washer: `세탁기`, wire: `실내 빨랫줄`, circulator: `서큘레이터`, iron: `스팀다리미`, dolcegusto: `캡슐 커피 머신（네스카페 돌체구스토 지니오 2）` },
+      titles: { ac: `에어컨`, induction: `인덕션 쿡탑`, microwave: `전자레인지`, kettle: `전기 주전자`, coffee: `드립 커피`, ricecooker: `전기밥솥`, washer: `세탁기`, wire: `실내 빨랫줄`, circulator: `서큘레이터`, iron: `스팀다리미`, dolcegusto: `캡슐 커피 머신（네스카페 돌체구스토 지니오 2）`, light: `현관 조명（동작 감지 센서）` },
       ac: `<p>제공된 리모컨으로 작동하세요.</p>`,
       induction: `<p>주방에 있습니다. 아래 그림은 조작 패널입니다.</p>`,
       inductionSteps: `<p><strong>사용 방법</strong></p><ul><li>냄비를 상판 중앙에 올려놓습니다（냄비가 없으면 가열되지 않습니다）.</li><li><strong>① 전원:</strong> 2초 이상 길게 누릅니다.</li><li><strong>② 가열 켜기 / 끄기:</strong> 누른 다음 <strong>③ ◀ 또는 ▶</strong> 를 누르면 가열이 시작됩니다.</li><li>◀ ▶ 로 화력을 조절합니다（5단계: 弱 = 약, 1, 2, 3, 強 = 강）.</li><li>사용이 끝나면 「가열 켜기 / 끄기」를 눌러 멈추고, 「전원」을 눌러 끕니다.</li></ul><p><strong>사용할 수 있는 냄비:</strong> 자석이 붙는 바닥이 평평한 냄비（철, 스테인리스 등, 바닥 지름 약 12~24cm）. 뚝배기, 유리, 알루미늄, 구리 냄비는 사용할 수 없습니다. 화력 램프가 모두 깜빡이고 가열되지 않으면 냄비가 맞지 않거나 중앙에 놓이지 않은 것입니다.</p><p><strong>주의:</strong> 사용 후에도 상판은 뜨겁습니다. 「고온 주의」（高温注意） 램프가 꺼질 때까지 만지지 마세요. 사용 중에는 자리를 비우지 마세요.</p>`,
@@ -901,6 +905,7 @@ window.I18N = {
       wireSteps: `<p><strong>사용 방법</strong></p><ul><li><strong>①</strong> 와이어 끝의 둥근 손잡이를 잡고, 벽의 흰색 본체에서 와이어를 당겨 꺼냅니다.</li><li><strong>②</strong> 맞은편 벽에 있는 플레이트의 구멍에 손잡이를 겁니다.</li><li><strong>③</strong> 본체의 둥근 다이얼을 「LOCK」 방향으로 돌려 와이어를 고정합니다.</li></ul><p><strong>정리할 때:</strong> 본체의 다이얼을 반대로 돌려 잠금을 풀고, 플레이트에서 손잡이를 빼낸 뒤 와이어를 천천히 본체로 되돌립니다.</p><p><strong>주의:</strong> 걸 수 있는 무게는 약 20kg까지입니다. 와이어를 아래로 잡아당기거나 매달리지 마세요.</p>`,
       circulator: `<p>천장이 높아 찬 공기는 아래로, 따뜻한 공기는 위로 모이기 쉽습니다. 에어컨 효과가 약하게 느껴지면 서큘레이터로 공기를 순환시켜 주세요.</p>`,
       circulatorSteps: `<p><strong>사용 방법</strong></p><ul><li><strong>① 전원（電源 切/入）:</strong> 누르면 작동하고, 다시 누르면 멈춥니다.</li><li><strong>② 풍량（風量）:</strong> &lt; 또는 &gt; 를 눌러 바람 세기를 바꿉니다（5단계, 가장 강한 것이 「ターボ」= 터보）.</li><li><strong>③ 회전（首ふり）:</strong> 누를 때마다 상하（上下）, 좌우（左右）, 둘 다, 정지로 바뀝니다. 램프로 현재 상태를 확인할 수 있습니다.</li><li>꺼짐 타이머（切タイマー）: 1, 2 또는 4시간 뒤에 자동으로 멈춥니다.</li><li>리듬풍（リズム）: 바람 세기가 천천히 바뀌는, 자연 바람에 가까운 모드입니다.</li></ul><p><strong>주의:</strong> 손으로 머리 부분의 방향을 움직이지 마세요. 방향을 바꾸려면 「首ふり」를 눌러 움직이게 한 뒤, 원하는 위치에서 다시 눌러 멈춰 주세요.</p>`,
+      motionLight: `<p>현관 조명에는 동작 감지 센서가 달려 있습니다. 현관 벽에 있는 3단 스위치로 바꿀 수 있습니다.</p><ul><li><strong>왼쪽:</strong> 꺼짐.</li><li><strong>가운데:</strong> 동작 감지 센서. 사람이 가까이 오면 켜지고, 잠시 후 자동으로 꺼집니다.</li><li><strong>오른쪽:</strong> 항상 켜짐.</li></ul><p>센서 때문에 불이 켜졌다 꺼졌다 하는 것이 신경 쓰이시면, 스위치를 오른쪽（항상 켜짐）이나 왼쪽（꺼짐）으로 해 주세요.</p>`,
       iron: `<p>욕실 선반에 스팀다리미가 있습니다. 사용하실 때는 욕실 내 다리미판을 이용해 주세요.</p>`
     },
     projector: {
