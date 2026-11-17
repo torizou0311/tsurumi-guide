@@ -12,6 +12,7 @@
 - 部屋: 103(1F) / 201(2F) / 202(2F)。URL `?room=103` で部屋が決まる。なしなら部屋選択画面
 - 建物共通の文章は `js/i18n.js` に1か所だけ。部屋ごとの差分は `data/rooms.js`、セクション構成と写真の紐付けは `data/content.js`
 - 写真は `images/common/`（全部屋共通。チェックイン/困ったときの写真 unlock1・unlock2・keybox・keybox-troubleshoot・hotwater-panel・breaker、共通家電の appliance-ac-{lang}・appliance-induction-{lang}（どちらも言語別）、ゴミ置き場 garbage.jpg も1組だけここ）, `images/103/`, `images/202/`, `images/201/`（部屋別: Wi-Fi QR・家電）
+- Wi-FiのQR（2026-11-17 103・202を作り直し）: 全部屋とも 5GHz（SSIDの末尾 -A）と 2.4GHz（末尾 -G）を別々のQRにして、`images/{部屋}/wifi-qr-5g.png`・`wifi-qr-24g.png`（rooms.js の `wifiQr5`・`wifiQr24`）。中身は `WIFI:T:WPA;S:SSID;P:パスワード;;`（rooms.js の ssid5/ssid24/pass と同じ）。103 は以前ファイル名と中身の周波数が逆になっていたので、202 と一緒に rooms.js の値から作り直した。202 の旧画像（2つ並んだ wifi-qr.png）は未使用
 - content.js の写真指定: 共通は `images/common/…` を直接書く／部屋別だけ `room:xxx`／特定部屋だけに出す項目は `rooms: [...]`
 - ホームの「よく使う情報」は、メニュー一覧の一部を上に並べているだけ（2026-10-02変更）。出す項目は `data/content.js` 末尾の `QUICK_SECTIONS`（セクションidの配列、6個で2行×3列のタイル表示）。当面はオーナー指定の6個（access/checkin/wifi/garbage/trouble/emergency の順）。GA4のデータが溜まったら、よく見られているページに入れ替える方針
 - 家電ごとの見出しとQR用リンク（2026-10-06追加）: `data/content.js` の家電の項目に `anchor: '名前'` を付けると、家電名の見出し（文字は `js/i18n.js` の `appliances.titles`）が出て、`…/index.html?room=201#/appliances/名前` でその家電の位置を直接開ける。家電のそばに貼るQRはこのURLで作る（部屋番号 `?room=` も必ず入れる）。**anchor の名前は貼ったQRが使えなくなるので変えない**。現在の名前: ac / induction / microwave / kettle / coffee / ricecooker / washer / wire / circulator / iron / dolcegusto / light（玄関の人感センサー照明、2026-11-17追加。写真は撮影待ちで文章だけ。撮ったら content.js の motionLight に image を付ける）

@@ -42,7 +42,8 @@ window.ROOMS = [
     hasRiceCooker: true,
     microwaveWattageKnown: false,
     photos: {
-      wifiQr: 'images/202/wifi-qr.png',
+      wifiQr5: 'images/202/wifi-qr-5g.png', // 2026-11-17 部屋データ（SSID・パスワード）から作り直し
+      wifiQr24: 'images/202/wifi-qr-24g.png',
       applianceMicrowave: 'images/202/appliance-microwave-{lang}.png', // アイリスオーヤマ IMB-T178（{lang} は表示中の言語に置き換わる）
       applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceCoffee: 'images/202/appliance-coffee.png',
