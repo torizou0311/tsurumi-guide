@@ -103,7 +103,11 @@ window.I18N = {
     wifi: {
       title: `Wi-Fi`,
       scanOrType: `Scan the QR code, or enter the details below.`,
-      tip: `Not sure which to choose? Connect to <strong>5GHz (name ends with "-A")</strong>. If it won't connect or the signal is weak, try <strong>2.4GHz (name ends with "-G")</strong>.`
+      tip: `Not sure which to choose? Connect to <strong>5GHz (name ends with "-A")</strong>. If it won't connect or the signal is weak, try <strong>2.4GHz (name ends with "-G")</strong>.`,
+      troubleTitle: `If you can't connect to Wi-Fi`,
+      trouble: `<p>First, check which of these applies to you.</p><p><strong>① The Wi-Fi name doesn't appear in the list</strong></p><ul><li>Turn your phone's Wi-Fi off, then back on.</li><li>If "-A" (5GHz) doesn't appear, look for "-G" (2.4GHz). Older devices and game consoles may not support 5GHz.</li><li>If neither appears, the router may be switched off. Please try "Restarting the router" below.</li></ul><p><strong>② The name appears, but it won't connect (it says the password is wrong)</strong></p><ul><li>If you type the password by hand, watch out for uppercase and lowercase letters. Scanning the QR code or using the "Copy" button on this page is the most reliable way.</li><li>If you previously tried to connect to the same name with different details, go to your phone's Wi-Fi settings, choose "Forget This Network" (iPhone) or "Forget" (Android), and then connect again.</li></ul><p><strong>③ It connects to Wi-Fi, but there is no internet</strong> (it shows "No Internet Connection" or similar)</p><ul><li>Please try "Restarting the router" below.</li><li>If only one device can't get online, restart that device. If you are using a VPN app, turn it off once.</li></ul><p><strong>④ It connects, but it is slow or keeps dropping</strong></p><ul><li>"-A" (5GHz) is fast, but it is weaker through walls and over distance. Far from the router, "-G" (2.4GHz) may be more stable.</li></ul>`,
+      restart: `<p><strong>Restarting the router</strong></p><p>The router is on the wall by the window.</p>`,
+      restartSteps: `<ol><li>Unplug the router's power cord from the outlet.</li><li>Wait about 10 seconds, then plug it back in.</li><li>Wait about 5 minutes before trying to connect again (it will not connect right away).</li></ol><p><strong>If it still doesn't work</strong></p><p>Please message the host on Airbnb. If you tell us which of ① to ④ above applies and whether you restarted the router, we can help you faster.</p>`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -196,7 +200,8 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>Walk to room</th><td>6 min (350 m)</td></tr><tr><th>Rate</th><td>8 AM–12 AM: ¥220 / 30 min<br>12 AM–8 AM: ¥110 / 60 min</td></tr><tr><th>Maximum</th><td>¥770 per 6 hours after parking (repeats)<br>Up to ¥3,080 for 24 hours</td></tr><tr><th>Note</th><td>A small lot with only 2 spaces. There is no cheap overnight maximum.</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `If the door lock doesn't work`, hotwater: `No hot water in the shower`, power: `Power outage`, lostfound: `Lost something?`, washer: `If the washing machine shows an error` },
+      titles: { lock: `If the door lock doesn't work`, hotwater: `No hot water in the shower`, power: `Power outage`, wifi: `If you can't connect to Wi-Fi`, lostfound: `Lost something?`, washer: `If the washing machine shows an error` },
+      wifiTrouble: `<p>If the Wi-Fi name doesn't appear or you can't get online, the <a href="#/wifi/trouble">"If you can't connect to Wi-Fi" section of the Wi-Fi page</a> explains what to do for each situation and how to restart the router.</p>`,
       keypad: `<p>First, try again, pressing the buttons slowly and firmly (hold the unlock button a little longer). If that doesn't work, take the key from the key box at the gas meter on the <strong>{keyboxSide}</strong> side of the door and use it. The code is the same as the electronic lock passcode (there are two key boxes — either one will work). If it still won't open, please contact us via Airbnb message.</p>`,
       hotwater: `<p>Press the power button at the upper left of the hot water control panel. If the green light on the power button is lit, hot water is being supplied even if no numbers are displayed.</p>`,
       power: `<p>The breaker is located at the entrance. Open the cover and lift the switch bar up.</p>`,
@@ -299,7 +304,11 @@ window.I18N = {
     wifi: {
       title: `Wi-Fi`,
       scanOrType: `QRコードを読み取るか、下記の情報を入力してください。`,
-      tip: `迷ったら<strong>5GHz（名前の最後が「-A」）</strong>につないでください。つながらない・電波が弱いときは<strong>2.4GHz（名前の最後が「-G」）</strong>をお試しください。`
+      tip: `迷ったら<strong>5GHz（名前の最後が「-A」）</strong>につないでください。つながらない・電波が弱いときは<strong>2.4GHz（名前の最後が「-G」）</strong>をお試しください。`,
+      troubleTitle: `Wi-Fiにつながらないとき`,
+      trouble: `<p>まず、どれに当てはまるか確認してください。</p><p><strong>① Wi-Fiの名前が一覧に出てこない</strong></p><ul><li>スマホのWi-Fiを一度オフにして、オンに戻してください。</li><li>「-A」（5GHz）が出ないときは「-G」（2.4GHz）を探してください。古い機器やゲーム機などは、5GHzに対応していないことがあります。</li><li>それでも出てこないときは、ルーターの電源が切れている可能性があります。下の「ルーターの再起動」をお試しください。</li></ul><p><strong>② 名前は出るが、つながらない（パスワードが違うと表示される）</strong></p><ul><li>手で入力するときは、大文字・小文字の違いに気をつけてください。QRコードの読み取りか、このページの「コピー」ボタンを使うと確実です。</li><li>以前、別の情報で同じ名前に接続しようとした場合は、スマホのWi-Fi設定でこのネットワークを「削除（このネットワーク設定を削除）」してから、もう一度つないでください。</li></ul><p><strong>③ Wi-Fiにはつながるが、インターネットが使えない</strong>（「インターネット未接続」などと表示される）</p><ul><li>下の「ルーターの再起動」をお試しください。</li><li>1台だけ使えない場合は、その端末を再起動してください。VPNアプリを使っている場合は、一度オフにしてください。</li></ul><p><strong>④ つながるが、遅い・途切れる</strong></p><ul><li>「-A」（5GHz）は速いですが、壁や距離に弱いです。ルーターから離れた場所では「-G」（2.4GHz）のほうが安定することがあります。</li></ul>`,
+      restart: `<p><strong>ルーターの再起動</strong></p><p>ルーターは、窓際の壁のところにあります。</p>`,
+      restartSteps: `<ol><li>ルーターの電源コードをコンセントから抜きます。</li><li>10秒ほど待ってから、差し直します。</li><li>5分ほど待ってから、もう一度つないでください（すぐにはつながりません）。</li></ol><p><strong>それでも解決しないとき</strong></p><p>Airbnbのメッセージでご連絡ください。上の①〜④のどれに当てはまったか、ルーターの再起動をしたかを教えていただけると、早く対応できます。</p>`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -392,7 +401,8 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩6分（350m）</td></tr><tr><th>料金</th><td>8時〜24時 30分 220円<br>0時〜8時 60分 110円</td></tr><tr><th>最大料金</th><td>停めてから6時間ごとに 770円（くり返し）<br>24時間なら最大 3,080円</td></tr><tr><th>ご注意</th><td>2台だけの小さな駐車場です。夜だけの安い最大料金はありません。</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `玄関の電子錠が動かないとき`, hotwater: `シャワーのお湯が出ないとき`, power: `停電したとき`, lostfound: `忘れ物をしたとき`, washer: `洗濯機にエラーが出たとき` },
+      titles: { lock: `玄関の電子錠が動かないとき`, hotwater: `シャワーのお湯が出ないとき`, power: `停電したとき`, wifi: `Wi-Fiにつながらないとき`, lostfound: `忘れ物をしたとき`, washer: `洗濯機にエラーが出たとき` },
+      wifiTrouble: `<p>Wi-Fiの名前が出てこない・インターネットが使えないなどのときは、<a href="#/wifi/trouble">Wi-Fiのページ「Wi-Fiにつながらないとき」</a>に、状況ごとの対処とルーターの再起動のしかたを載せています。</p>`,
       keypad: `<p>まず、ボタンをゆっくり、しっかり押し直してください（解錠ボタンは少し長めに）。それでも開かない場合は、ドアの<strong>{keyboxSide}側</strong>のガスメーターのところにあるキーボックスから鍵を取り出してお使いください。暗証番号は電子錠と同じです（キーボックスは2つありますが、どちらでも構いません）。鍵でも開かない場合は、Airbnbメッセージでご連絡ください。</p>`,
       hotwater: `<p>給湯パネル左上の電源ボタンを押してください。電源ボタンの緑ランプが点灯していれば、数字が表示されていなくてもお湯は出ています。</p>`,
       power: `<p>ブレーカーは玄関にあります。カバーを開けてレバーを上に上げてください。</p>`,
@@ -495,7 +505,11 @@ window.I18N = {
     wifi: {
       title: `Wi-Fi`,
       scanOrType: `请扫描QR code，或直接输入下方信息连接。`,
-      tip: `不确定选哪个时，请连接<strong>5GHz（名称以「-A」结尾）</strong>。若连不上或信号较弱，请试试<strong>2.4GHz（名称以「-G」结尾）</strong>。`
+      tip: `不确定选哪个时，请连接<strong>5GHz（名称以「-A」结尾）</strong>。若连不上或信号较弱，请试试<strong>2.4GHz（名称以「-G」结尾）</strong>。`,
+      troubleTitle: `无法连接 Wi-Fi 时`,
+      trouble: `<p>请先确认您属于下面哪种情况。</p><p><strong>① 列表中找不到 Wi-Fi 名称</strong></p><ul><li>请先关闭手机的 Wi-Fi，再重新打开。</li><li>如果找不到「-A」（5GHz），请找找「-G」（2.4GHz）。较旧的设备或游戏机可能不支持 5GHz。</li><li>如果仍然找不到，可能是路由器的电源已关闭。请试试下面的「重启路由器」。</li></ul><p><strong>② 能看到名称，但连不上（提示密码错误）</strong></p><ul><li>手动输入时，请注意大小写。扫描二维码或使用本页的「复制」按钮最为可靠。</li><li>如果之前曾用其他信息连接过同一名称，请在手机的 Wi-Fi 设置中选择「忽略此网络」（iPhone）或「取消保存」（Android），然后重新连接。</li></ul><p><strong>③ 已连接 Wi-Fi，但无法上网</strong>（显示「无互联网连接」等）</p><ul><li>请试试下面的「重启路由器」。</li><li>如果只有一台设备无法上网，请重启该设备。如果正在使用 VPN 应用，请先将其关闭。</li></ul><p><strong>④ 能连接，但速度慢或经常断线</strong></p><ul><li>「-A」（5GHz）速度快，但容易受墙壁和距离影响。在远离路由器的地方，「-G」（2.4GHz）可能更稳定。</li></ul>`,
+      restart: `<p><strong>重启路由器</strong></p><p>路由器在靠窗的墙边。</p>`,
+      restartSteps: `<ol><li>将路由器的电源线从插座上拔下。</li><li>等待约 10 秒后，重新插上。</li><li>等待约 5 分钟后，再重新连接（不会立刻连上）。</li></ol><p><strong>仍然无法解决时</strong></p><p>请通过 Airbnb 消息联系我们。如果能告诉我们符合上面①〜④中的哪一项，以及是否已重启路由器，我们就能更快为您处理。</p>`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -588,7 +602,8 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分钟（350米）</td></tr><tr><th>收费</th><td>8:00〜24:00 30分钟 220日圆<br>0:00〜8:00 60分钟 110日圆</td></tr><tr><th>最高收费</th><td>停车后每6小时 770日圆（重复计算）<br>24小时最高 3,080日圆</td></tr><tr><th>注意</th><td>只有2个车位的小型停车场。没有夜间专用的低价最高收费。</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `玄关电子锁无法使用时`, hotwater: `淋浴间没有热水时`, power: `停电时`, lostfound: `遗失物品时`, washer: `洗衣机出现错误显示时` },
+      titles: { lock: `玄关电子锁无法使用时`, hotwater: `淋浴间没有热水时`, power: `停电时`, wifi: `无法连接 Wi-Fi 时`, lostfound: `遗失物品时`, washer: `洗衣机出现错误显示时` },
+      wifiTrouble: `<p>如果找不到 Wi-Fi 名称或无法上网，请查看 <a href="#/wifi/trouble">Wi-Fi 页面的「无法连接 Wi-Fi 时」</a>，其中按不同情况介绍了处理方法和路由器的重启方式。</p>`,
       keypad: `<p>请先慢慢地、用力重新按一次按钮（解锁按钮稍微按久一点）。如果还是打不开，请从房门<strong>{keyboxSide}侧</strong>燃气表处的钥匙盒中取出钥匙使用。密码与电子锁相同（共有两个钥匙盒，使用任一个皆可）。若仍无法打开，请通过Airbnb消息联系我们。</p>`,
       hotwater: `<p>请按下热水控制面板左上方的电源按钮。若电源按钮的绿灯亮起，即使没有显示数字，热水仍在供应中。</p>`,
       power: `<p>电源总开关位于玄关处，请打开盖子并将开关往上扳起。</p>`,
@@ -691,7 +706,11 @@ window.I18N = {
     wifi: {
       title: `Wi-Fi`,
       scanOrType: `請掃描QR code，或直接輸入下方資訊連線。`,
-      tip: `不確定選哪個時，請連接<strong>5GHz（名稱以「-A」結尾）</strong>。若連不上或訊號較弱，請試試<strong>2.4GHz（名稱以「-G」結尾）</strong>。`
+      tip: `不確定選哪個時，請連接<strong>5GHz（名稱以「-A」結尾）</strong>。若連不上或訊號較弱，請試試<strong>2.4GHz（名稱以「-G」結尾）</strong>。`,
+      troubleTitle: `無法連接 Wi-Fi 時`,
+      trouble: `<p>請先確認您屬於下面哪種情況。</p><p><strong>① 清單中找不到 Wi-Fi 名稱</strong></p><ul><li>請先關閉手機的 Wi-Fi，再重新開啟。</li><li>如果找不到「-A」（5GHz），請找找「-G」（2.4GHz）。較舊的裝置或遊戲機可能不支援 5GHz。</li><li>如果仍然找不到，可能是路由器的電源已關閉。請試試下面的「重新啟動路由器」。</li></ul><p><strong>② 看得到名稱，但連不上（顯示密碼錯誤）</strong></p><ul><li>手動輸入時，請注意大小寫。掃描 QR code 或使用本頁的「複製」按鈕最為可靠。</li><li>如果之前曾用其他資訊連接過同一名稱，請在手機的 Wi-Fi 設定中選擇「忽略此網路」（iPhone）或「取消儲存」（Android），然後重新連接。</li></ul><p><strong>③ 已連上 Wi-Fi，但無法上網</strong>（顯示「無網際網路連線」等）</p><ul><li>請試試下面的「重新啟動路由器」。</li><li>如果只有一台裝置無法上網，請重新啟動該裝置。如果正在使用 VPN 應用程式，請先將其關閉。</li></ul><p><strong>④ 能連接，但速度慢或經常斷線</strong></p><ul><li>「-A」（5GHz）速度快，但容易受牆壁和距離影響。在遠離路由器的地方，「-G」（2.4GHz）可能更穩定。</li></ul>`,
+      restart: `<p><strong>重新啟動路由器</strong></p><p>路由器在靠窗的牆邊。</p>`,
+      restartSteps: `<ol><li>將路由器的電源線從插座上拔下。</li><li>等待約 10 秒後，重新插上。</li><li>等待約 5 分鐘後，再重新連接（不會立刻連上）。</li></ol><p><strong>仍然無法解決時</strong></p><p>請透過 Airbnb 訊息聯絡我們。若能告訴我們符合上面①〜④中的哪一項，以及是否已重新啟動路由器，我們就能更快為您處理。</p>`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -784,7 +803,8 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分鐘（350公尺）</td></tr><tr><th>收費</th><td>8:00〜24:00 30分鐘 220日圓<br>0:00〜8:00 60分鐘 110日圓</td></tr><tr><th>最高收費</th><td>停車後每6小時 770日圓（重複計算）<br>24小時最高 3,080日圓</td></tr><tr><th>注意</th><td>只有2個車位的小型停車場。沒有夜間專用的低價最高收費。</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `玄關電子鎖無法使用時`, hotwater: `淋浴間沒有熱水時`, power: `停電時`, lostfound: `遺失物品時`, washer: `洗衣機出現錯誤顯示時` },
+      titles: { lock: `玄關電子鎖無法使用時`, hotwater: `淋浴間沒有熱水時`, power: `停電時`, wifi: `無法連接 Wi-Fi 時`, lostfound: `遺失物品時`, washer: `洗衣機出現錯誤顯示時` },
+      wifiTrouble: `<p>如果找不到 Wi-Fi 名稱或無法上網，請查看 <a href="#/wifi/trouble">Wi-Fi 頁面的「無法連接 Wi-Fi 時」</a>，其中依不同情況介紹了處理方法和路由器的重新啟動方式。</p>`,
       keypad: `<p>請先慢慢地、確實地重新按一次按鈕（解鎖按鈕稍微按久一點）。如果還是打不開，請從房門<strong>{keyboxSide}側</strong>瓦斯錶處的鑰匙盒中取出鑰匙使用。密碼與電子鎖相同（共有兩個鑰匙盒，使用任一個皆可）。若仍無法開啟，請透過Airbnb訊息聯絡我們。</p>`,
       hotwater: `<p>請按下熱水控制面板左上方的電源按鈕。若電源按鈕的綠燈亮起，即使沒有顯示數字，熱水仍在供應中。</p>`,
       power: `<p>電源總開關位於玄關處，請打開蓋子並將開關往上扳起。</p>`,
@@ -887,7 +907,11 @@ window.I18N = {
     wifi: {
       title: `Wi-Fi`,
       scanOrType: `QR코드를 스캔하시거나 아래 정보를 직접 입력해 주세요.`,
-      tip: `어느 쪽인지 고민되면 <strong>5GHz(이름이 「-A」로 끝남)</strong>에 연결해 주세요. 연결이 안 되거나 신호가 약하면 <strong>2.4GHz(이름이 「-G」로 끝남)</strong>를 이용해 보세요.`
+      tip: `어느 쪽인지 고민되면 <strong>5GHz(이름이 「-A」로 끝남)</strong>에 연결해 주세요. 연결이 안 되거나 신호가 약하면 <strong>2.4GHz(이름이 「-G」로 끝남)</strong>를 이용해 보세요.`,
+      troubleTitle: `Wi-Fi에 연결되지 않을 때`,
+      trouble: `<p>먼저 아래 중 어디에 해당하는지 확인해 주세요.</p><p><strong>① Wi-Fi 이름이 목록에 나타나지 않는다</strong></p><ul><li>스마트폰의 Wi-Fi를 한 번 껐다가 다시 켜 주세요.</li><li>「-A」(5GHz)가 보이지 않으면 「-G」(2.4GHz)를 찾아보세요. 오래된 기기나 게임기는 5GHz를 지원하지 않을 수 있습니다.</li><li>그래도 나타나지 않으면 공유기 전원이 꺼져 있을 수 있습니다. 아래의 「공유기 재시작」을 시도해 보세요.</li></ul><p><strong>② 이름은 보이지만 연결되지 않는다 (비밀번호가 틀렸다고 표시됨)</strong></p><ul><li>직접 입력할 때는 대문자와 소문자를 구분해 주세요. QR 코드를 스캔하거나 이 페이지의 「복사」 버튼을 사용하면 가장 확실합니다.</li><li>이전에 다른 정보로 같은 이름에 연결을 시도한 적이 있다면, 스마트폰의 Wi-Fi 설정에서 이 네트워크를 「이 네트워크 지우기」(iPhone) 또는 「삭제」(Android)한 뒤 다시 연결해 주세요.</li></ul><p><strong>③ Wi-Fi에는 연결되지만 인터넷을 쓸 수 없다</strong> (「인터넷에 연결되지 않음」 등이 표시됨)</p><ul><li>아래의 「공유기 재시작」을 시도해 보세요.</li><li>한 기기만 안 될 때는 그 기기를 재시작해 주세요. VPN 앱을 사용 중이라면 한 번 꺼 주세요.</li></ul><p><strong>④ 연결은 되지만 느리거나 자주 끊긴다</strong></p><ul><li>「-A」(5GHz)는 빠르지만 벽이나 거리에 약합니다. 공유기에서 먼 곳에서는 「-G」(2.4GHz)가 더 안정적일 수 있습니다.</li></ul>`,
+      restart: `<p><strong>공유기 재시작</strong></p><p>공유기는 창가 쪽 벽에 있습니다.</p>`,
+      restartSteps: `<ol><li>공유기의 전원 코드를 콘센트에서 뽑습니다.</li><li>약 10초 기다린 후 다시 꽂습니다.</li><li>약 5분 기다린 후 다시 연결해 주세요 (바로는 연결되지 않습니다).</li></ol><p><strong>그래도 해결되지 않을 때</strong></p><p>Airbnb 메시지로 연락해 주세요. 위 ①〜④ 중 어디에 해당하는지, 공유기를 재시작했는지 알려 주시면 더 빠르게 도와드릴 수 있습니다.</p>`
     },
     appliances: {
       // 各家電の見出し（data/content.js の anchor と対応。見出しはページ内リンクにもなる）
@@ -980,7 +1004,8 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 6분(350m)</td></tr><tr><th>요금</th><td>8:00〜24:00 30분 220엔<br>0:00〜8:00 60분 110엔</td></tr><tr><th>최대 요금</th><td>주차 후 6시간마다 770엔(반복)<br>24시간 최대 3,080엔</td></tr><tr><th>주의</th><td>2대만 주차할 수 있는 작은 주차장입니다. 밤 시간대 전용의 저렴한 최대 요금은 없습니다.</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `현관 전자 잠금장치가 작동하지 않을 때`, hotwater: `샤워실에 온수가 나오지 않을 때`, power: `정전 시`, lostfound: `분실물이 있을 때`, washer: `세탁기에 오류가 표시될 때` },
+      titles: { lock: `현관 전자 잠금장치가 작동하지 않을 때`, hotwater: `샤워실에 온수가 나오지 않을 때`, power: `정전 시`, wifi: `Wi-Fi에 연결되지 않을 때`, lostfound: `분실물이 있을 때`, washer: `세탁기에 오류가 표시될 때` },
+      wifiTrouble: `<p>Wi-Fi 이름이 보이지 않거나 인터넷을 쓸 수 없을 때는 <a href="#/wifi/trouble">Wi-Fi 페이지의 「Wi-Fi에 연결되지 않을 때」</a>에 상황별 대처 방법과 공유기 재시작 방법이 나와 있습니다.</p>`,
       keypad: `<p>먼저 버튼을 천천히, 꾹 눌러 다시 시도해 주세요(잠금 해제 버튼은 조금 길게). 그래도 열리지 않으면 문 <strong>{keyboxSide}편</strong>의 가스 계량기 쪽에 있는 키박스에서 열쇠를 꺼내 사용해 주세요. 비밀번호는 전자 잠금장치와 동일합니다(키박스는 두 개가 있으며 어느 쪽을 사용하셔도 됩니다). 그래도 열리지 않으면 Airbnb 메시지로 연락해 주세요.</p>`,
       hotwater: `<p>온수 조절판 왼쪽 위의 전원 버튼을 눌러주세요. 전원 버튼의 초록 불이 켜져 있으면 숫자가 표시되지 않아도 온수가 공급되고 있는 것입니다.</p>`,
       power: `<p>차단기는 현관에 있습니다. 덮개를 열고 스위치 막대를 위로 올려주세요.</p>`,

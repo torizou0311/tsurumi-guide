@@ -400,6 +400,15 @@
           (qr24 ? '<div class="guide-photo guide-photo--qr"><img src="' + esc(qr24) + '" alt="Wi-Fi QR 2.4GHz" loading="lazy"></div>' : '<div class="guide-photo guide-photo--pending guide-photo--qr"><span>' + esc(d.common.photoPending) + '</span></div>') +
           copyRow(d.common.ssid24, room.wifi.ssid24, state.lang) +
           copyRow(d.common.password, room.wifi.pass, state.lang) +
+        '</div>' +
+        // つながらないとき（全部屋共通の文章。#/wifi/trouble で直接この位置を開ける）
+        // ルーターの写真は撮影待ち。撮れたら下の true を 'images/common/wifi-router.jpg' に変える
+        '<div class="item" data-item="trouble">' +
+          '<h2 class="item-heading" id="item-trouble"><a href="#/wifi/trouble">' + esc(d.wifi.troubleTitle) + '</a></h2>' +
+          '<div class="block"><div class="block-text">' + d.wifi.trouble + '</div></div>' +
+          '<div class="block"><div class="block-text">' + d.wifi.restart + '</div>' +
+            photoHtml(true, room, state.lang, d.wifi.troubleTitle) +
+            '<div class="block-text">' + d.wifi.restartSteps + '</div></div>' +
         '</div>';
     }
     return '' +
@@ -552,7 +561,18 @@
     var pageId = 'home';
     if (hash === '#/' || hash === '#/home') {
       body = renderHome(room);
-    } else if (hash === '#/wifi') {
+    } else if (hash === '#/wifi' || hash.indexOf('#/wifi/') === 0) {
+      // 「#/wifi/trouble」のように項目名が付いたら、その位置まで移動する
+      anchorId = hash.split('/')[2] || null;
+      if (shownView === viewKey(room, 'wifi')) {
+        if (anchorId && document.getElementById('item-' + anchorId)) {
+          scrollToItem(anchorId);
+          trackPage(room.id, 'wifi', anchorId);
+        } else {
+          window.scrollTo(0, 0);
+        }
+        return;
+      }
       body = renderWifiSection(room);
       pageId = 'wifi';
     } else if (hash === '#/roomselect') {
