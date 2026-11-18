@@ -385,7 +385,22 @@
       var qrCombo = room.photos && room.photos.wifiQr;
       var qr5 = qrCombo ? null : (room.photos && room.photos.wifiQr5);
       var qr24 = qrCombo ? null : (room.photos && room.photos.wifiQr24);
+      // 見出し2つ（接続情報・つながらないとき）と冒頭の目次。ほかのページの目次と同じ見た目。
+      // anchor の名前（connect / trouble）は現地に貼るQRのURL（#/wifi/trouble など）に使うので変えない
+      var backHtml = '<button type="button" class="toc-back" data-action="to-toc">' + icon('up') + '<span>' + esc(d.common.backToToc) + '</span></button>';
+      var itemHead = function (anchor, title) {
+        return '<h2 class="item-heading" id="item-' + anchor + '"><a href="#/wifi/' + anchor + '">' + esc(title) + '</a></h2>';
+      };
       body = '' +
+        '<nav class="toc" id="toc" aria-label="' + esc(d.common.toc) + '">' +
+          '<div class="toc__title">' + esc(d.common.toc) + '</div>' +
+          '<ol class="toc__list">' +
+            '<li><a class="toc__link" href="#/wifi/connect">' + esc(d.wifi.connectTitle) + '</a></li>' +
+            '<li><a class="toc__link" href="#/wifi/trouble">' + esc(d.wifi.troubleTitle) + '</a></li>' +
+          '</ol>' +
+        '</nav>' +
+        '<div class="item" data-item="connect">' +
+        itemHead('connect', d.wifi.connectTitle) +
         '<p class="section-lead">' + esc(d.wifi.scanOrType) + '</p>' +
         '<p class="section-lead">' + d.wifi.tip + '</p>' +
         (qrCombo ? '<div class="guide-photo guide-photo--qr"><img src="' + esc(qrCombo) + '" alt="Wi-Fi QR" loading="lazy"></div>' : '') +
@@ -401,14 +416,17 @@
           copyRow(d.common.ssid24, room.wifi.ssid24, state.lang) +
           copyRow(d.common.password, room.wifi.pass, state.lang) +
         '</div>' +
+        backHtml +
+        '</div>' +
         // つながらないとき（全部屋共通の文章。#/wifi/trouble で直接この位置を開ける）
         // ルーターの写真は撮影待ち。撮れたら下の true を 'images/common/wifi-router.jpg' に変える
         '<div class="item" data-item="trouble">' +
-          '<h2 class="item-heading" id="item-trouble"><a href="#/wifi/trouble">' + esc(d.wifi.troubleTitle) + '</a></h2>' +
+          itemHead('trouble', d.wifi.troubleTitle) +
           '<div class="block"><div class="block-text">' + d.wifi.trouble + '</div></div>' +
           '<div class="block"><div class="block-text">' + d.wifi.restart + '</div>' +
             photoHtml(true, room, state.lang, d.wifi.troubleTitle) +
             '<div class="block-text">' + d.wifi.restartSteps + '</div></div>' +
+          backHtml +
         '</div>';
     }
     return '' +
