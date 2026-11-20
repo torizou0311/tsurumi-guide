@@ -419,12 +419,12 @@
         backHtml +
         '</div>' +
         // つながらないとき（全部屋共通の文章。#/wifi/trouble で直接この位置を開ける）
-        // ルーターの写真は撮影待ち。撮れたら下の true を 'images/common/wifi-router.jpg' に変える
+        // ルーターの写真は全部屋共通（3部屋とも窓際の壁。2026-11-20撮影）
         '<div class="item" data-item="trouble">' +
           itemHead('trouble', d.wifi.troubleTitle) +
           '<div class="block"><div class="block-text">' + d.wifi.trouble + '</div></div>' +
           '<div class="block"><div class="block-text">' + d.wifi.restart + '</div>' +
-            photoHtml(true, room, state.lang, d.wifi.troubleTitle) +
+            photoHtml('images/common/wifi-router.jpg', room, state.lang, d.wifi.troubleTitle).replace('class="guide-photo', 'class="guide-photo guide-photo--narrow') +
             '<div class="block-text">' + d.wifi.restartSteps + '</div></div>' +
           backHtml +
         '</div>';
