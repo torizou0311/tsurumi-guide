@@ -199,8 +199,9 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>Walk to room</th><td>6 min (350 m)</td></tr><tr><th>Rate</th><td>8 AM–12 AM: ¥220 / 30 min<br>12 AM–8 AM: ¥110 / 60 min</td></tr><tr><th>Maximum</th><td>¥770 per 6 hours after parking (repeats)<br>Up to ¥3,080 for 24 hours</td></tr><tr><th>Note</th><td>A small lot with only 2 spaces. There is no cheap overnight maximum.</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `If the door lock doesn't work`, hotwater: `No hot water in the shower`, power: `Power outage`, wifi: `If you can't connect to Wi-Fi`, lostfound: `Lost something?`, washer: `If the washing machine shows an error` },
+      titles: { lock: `If the door lock doesn't work`, hotwater: `No hot water in the shower`, power: `Power outage`, wifi: `If you can't connect to Wi-Fi`, lostfound: `Lost something?`, washer: `If the washing machine shows an error`, light: `If the entrance light keeps turning on and off` },
       wifiTrouble: `<p>If the Wi-Fi name doesn't appear or you can't get online, the <a href="#/wifi/trouble">"If you can't connect to Wi-Fi" section of the Wi-Fi page</a> explains what to do for each situation and how to restart the router.</p>`,
+      lightTrouble: `<p>The entrance light has a motion sensor, so it turns on when someone passes by and turns off by itself after a while. If this bothers you, you can switch it to always on or off with the switch on the wall by the entrance. See <a href="#/appliances/light">“Entrance light (motion sensor)” on the Appliances & Facilities page</a> for how to do it.</p>`,
       keypad: `<p>First, try again, pressing the buttons slowly and firmly (hold the unlock button a little longer). If that doesn't work, take the key from the key box at the gas meter on the <strong>{keyboxSide}</strong> side of the door and use it. The code is the same as the electronic lock passcode (there are two key boxes — either one will work). If it still won't open, please contact us by message.</p>`,
       hotwater: `<p>Press the power button at the upper left of the hot water control panel. If the green light on the power button is lit, hot water is being supplied even if no numbers are displayed.</p>`,
       power: `<p>The breaker is located at the entrance. Open the cover and lift the switch bar up.</p>`,
@@ -400,8 +401,9 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>部屋まで</th><td>徒歩6分（350m）</td></tr><tr><th>料金</th><td>8時〜24時 30分 220円<br>0時〜8時 60分 110円</td></tr><tr><th>最大料金</th><td>停めてから6時間ごとに 770円（くり返し）<br>24時間なら最大 3,080円</td></tr><tr><th>ご注意</th><td>2台だけの小さな駐車場です。夜だけの安い最大料金はありません。</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `玄関の電子錠が動かないとき`, hotwater: `シャワーのお湯が出ないとき`, power: `停電したとき`, wifi: `Wi-Fiにつながらないとき`, lostfound: `忘れ物をしたとき`, washer: `洗濯機にエラーが出たとき` },
+      titles: { lock: `玄関の電子錠が動かないとき`, hotwater: `シャワーのお湯が出ないとき`, power: `停電したとき`, wifi: `Wi-Fiにつながらないとき`, lostfound: `忘れ物をしたとき`, washer: `洗濯機にエラーが出たとき`, light: `玄関の照明が勝手についたり消えたりするとき` },
       wifiTrouble: `<p>Wi-Fiの名前が出てこない・インターネットが使えないなどのときは、<a href="#/wifi/trouble">Wi-Fiのページ「Wi-Fiにつながらないとき」</a>に、状況ごとの対処とルーターの再起動のしかたを載せています。</p>`,
+      lightTrouble: `<p>玄関の照明は人感センサー付きなので、人が通ると点き、しばらくすると自動で消えます。気になるときは、玄関の壁のスイッチで「常に点灯」か「消灯」に切り替えられます。切り替え方は<a href="#/appliances/light">家電のページ「玄関の照明（人感センサー）」</a>をご覧ください。</p>`,
       keypad: `<p>まず、ボタンをゆっくり、しっかり押し直してください（解錠ボタンは少し長めに）。それでも開かない場合は、ドアの<strong>{keyboxSide}側</strong>のガスメーターのところにあるキーボックスから鍵を取り出してお使いください。暗証番号は電子錠と同じです（キーボックスは2つありますが、どちらでも構いません）。鍵でも開かない場合は、メッセージでご連絡ください。</p>`,
       hotwater: `<p>給湯パネル左上の電源ボタンを押してください。電源ボタンの緑ランプが点灯していれば、数字が表示されていなくてもお湯は出ています。</p>`,
       power: `<p>ブレーカーは玄関にあります。カバーを開けてレバーを上に上げてください。</p>`,
@@ -601,8 +603,9 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分钟（350米）</td></tr><tr><th>收费</th><td>8:00〜24:00 30分钟 220日圆<br>0:00〜8:00 60分钟 110日圆</td></tr><tr><th>最高收费</th><td>停车后每6小时 770日圆（重复计算）<br>24小时最高 3,080日圆</td></tr><tr><th>注意</th><td>只有2个车位的小型停车场。没有夜间专用的低价最高收费。</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `玄关电子锁无法使用时`, hotwater: `淋浴间没有热水时`, power: `停电时`, wifi: `无法连接 Wi-Fi 时`, lostfound: `遗失物品时`, washer: `洗衣机出现错误显示时` },
+      titles: { lock: `玄关电子锁无法使用时`, hotwater: `淋浴间没有热水时`, power: `停电时`, wifi: `无法连接 Wi-Fi 时`, lostfound: `遗失物品时`, washer: `洗衣机出现错误显示时`, light: `玄关照明自己忽亮忽灭时` },
       wifiTrouble: `<p>如果找不到 Wi-Fi 名称或无法上网，请查看 <a href="#/wifi/trouble">Wi-Fi 页面的「无法连接 Wi-Fi 时」</a>，其中按不同情况介绍了处理方法和路由器的重启方式。</p>`,
+      lightTrouble: `<p>玄关的照明附有人体感应器，有人经过时会亮灯，过一段时间后自动熄灭。如果介意，可以用玄关墙上的开关切换为「常亮」或「关灯」。切换方法请查看<a href="#/appliances/light">「家电与设备」页面的「玄关照明（人体感应）」</a>。</p>`,
       keypad: `<p>请先慢慢地、用力重新按一次按钮（解锁按钮稍微按久一点）。如果还是打不开，请从房门<strong>{keyboxSide}侧</strong>燃气表处的钥匙盒中取出钥匙使用。密码与电子锁相同（共有两个钥匙盒，使用任一个皆可）。若仍无法打开，请通过消息联系我们。</p>`,
       hotwater: `<p>请按下热水控制面板左上方的电源按钮。若电源按钮的绿灯亮起，即使没有显示数字，热水仍在供应中。</p>`,
       power: `<p>电源总开关位于玄关处，请打开盖子并将开关往上扳起。</p>`,
@@ -802,8 +805,9 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>到住宿</th><td>步行6分鐘（350公尺）</td></tr><tr><th>收費</th><td>8:00〜24:00 30分鐘 220日圓<br>0:00〜8:00 60分鐘 110日圓</td></tr><tr><th>最高收費</th><td>停車後每6小時 770日圓（重複計算）<br>24小時最高 3,080日圓</td></tr><tr><th>注意</th><td>只有2個車位的小型停車場。沒有夜間專用的低價最高收費。</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `玄關電子鎖無法使用時`, hotwater: `淋浴間沒有熱水時`, power: `停電時`, wifi: `無法連接 Wi-Fi 時`, lostfound: `遺失物品時`, washer: `洗衣機出現錯誤顯示時` },
+      titles: { lock: `玄關電子鎖無法使用時`, hotwater: `淋浴間沒有熱水時`, power: `停電時`, wifi: `無法連接 Wi-Fi 時`, lostfound: `遺失物品時`, washer: `洗衣機出現錯誤顯示時`, light: `玄關照明自己忽亮忽滅時` },
       wifiTrouble: `<p>如果找不到 Wi-Fi 名稱或無法上網，請查看 <a href="#/wifi/trouble">Wi-Fi 頁面的「無法連接 Wi-Fi 時」</a>，其中依不同情況介紹了處理方法和路由器的重新啟動方式。</p>`,
+      lightTrouble: `<p>玄關的照明附有人體感應器，有人經過時會亮燈，過一段時間後自動熄滅。如果介意，可以用玄關牆上的開關切換為「常亮」或「關燈」。切換方法請查看<a href="#/appliances/light">「家電與設備」頁面的「玄關照明（人體感應）」</a>。</p>`,
       keypad: `<p>請先慢慢地、確實地重新按一次按鈕（解鎖按鈕稍微按久一點）。如果還是打不開，請從房門<strong>{keyboxSide}側</strong>瓦斯錶處的鑰匙盒中取出鑰匙使用。密碼與電子鎖相同（共有兩個鑰匙盒，使用任一個皆可）。若仍無法開啟，請透過訊息聯絡我們。</p>`,
       hotwater: `<p>請按下熱水控制面板左上方的電源按鈕。若電源按鈕的綠燈亮起，即使沒有顯示數字，熱水仍在供應中。</p>`,
       power: `<p>電源總開關位於玄關處，請打開蓋子並將開關往上扳起。</p>`,
@@ -1003,8 +1007,9 @@ window.I18N = {
       toyooka17: `<table class="lot-facts"><tr><th>숙소까지</th><td>도보 6분(350m)</td></tr><tr><th>요금</th><td>8:00〜24:00 30분 220엔<br>0:00〜8:00 60분 110엔</td></tr><tr><th>최대 요금</th><td>주차 후 6시간마다 770엔(반복)<br>24시간 최대 3,080엔</td></tr><tr><th>주의</th><td>2대만 주차할 수 있는 작은 주차장입니다. 밤 시간대 전용의 저렴한 최대 요금은 없습니다.</td></tr></table>`
     },
     trouble: {
-      titles: { lock: `현관 전자 잠금장치가 작동하지 않을 때`, hotwater: `샤워실에 온수가 나오지 않을 때`, power: `정전 시`, wifi: `Wi-Fi에 연결되지 않을 때`, lostfound: `분실물이 있을 때`, washer: `세탁기에 오류가 표시될 때` },
+      titles: { lock: `현관 전자 잠금장치가 작동하지 않을 때`, hotwater: `샤워실에 온수가 나오지 않을 때`, power: `정전 시`, wifi: `Wi-Fi에 연결되지 않을 때`, lostfound: `분실물이 있을 때`, washer: `세탁기에 오류가 표시될 때`, light: `현관 조명이 저절로 켜졌다 꺼졌다 할 때` },
       wifiTrouble: `<p>Wi-Fi 이름이 보이지 않거나 인터넷을 쓸 수 없을 때는 <a href="#/wifi/trouble">Wi-Fi 페이지의 「Wi-Fi에 연결되지 않을 때」</a>에 상황별 대처 방법과 공유기 재시작 방법이 나와 있습니다.</p>`,
+      lightTrouble: `<p>현관 조명에는 동작 감지 센서가 있어서, 사람이 지나가면 켜지고 잠시 후 자동으로 꺼집니다. 신경 쓰이시면 현관 벽의 스위치로 「항상 켜짐」 또는 「꺼짐」으로 바꿀 수 있습니다. 바꾸는 방법은 <a href="#/appliances/light">가전・시설 페이지의 “현관 조명（동작 감지 센서）”</a>을 참고해 주세요.</p>`,
       keypad: `<p>먼저 버튼을 천천히, 꾹 눌러 다시 시도해 주세요(잠금 해제 버튼은 조금 길게). 그래도 열리지 않으면 문 <strong>{keyboxSide}편</strong>의 가스 계량기 쪽에 있는 키박스에서 열쇠를 꺼내 사용해 주세요. 비밀번호는 전자 잠금장치와 동일합니다(키박스는 두 개가 있으며 어느 쪽을 사용하셔도 됩니다). 그래도 열리지 않으면 메시지로 연락해 주세요.</p>`,
       hotwater: `<p>온수 조절판 왼쪽 위의 전원 버튼을 눌러주세요. 전원 버튼의 초록 불이 켜져 있으면 숫자가 표시되지 않아도 온수가 공급되고 있는 것입니다.</p>`,
       power: `<p>차단기는 현관에 있습니다. 덮개를 열고 스위치 막대를 위로 올려주세요.</p>`,

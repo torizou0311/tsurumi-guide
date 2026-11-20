@@ -237,6 +237,8 @@ window.SECTIONS = [
       { key: 'keypad', anchor: 'lock', image: 'images/common/keybox-troubleshoot.jpg' },
       { key: 'hotwater', anchor: 'hotwater', image: 'images/common/hotwater-panel.png' },
       { key: 'power', anchor: 'power', image: 'images/common/breaker.jpg' },
+      // 玄関の照明が勝手についたり消えたりする（過去にゲストから何度か問い合わせ）。家電のページ（#/appliances/light）へ案内（2026-11-20追加）
+      { key: 'lightTrouble', anchor: 'light' },
       // Wi-Fiのトラブルは Wi-Fi のページ（#/wifi/trouble）へ案内（2026-11-18追加）
       { key: 'wifiTrouble', anchor: 'wifi' },
       { key: 'lostFound', anchor: 'lostfound' },
