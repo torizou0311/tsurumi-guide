@@ -222,7 +222,7 @@ for i in range(10):
     pts.append(((bx + r * math.cos(a)) * S, (by + r * math.sin(a)) * S))
 d.polygon(pts, fill=(255, 196, 0), outline=(150, 90, 0))
 tag((bx - 90, by - 70), '③ ここ（目的地）\n寺谷1-7-40', 25, (20, 130, 70))
-tag((bx - 128, by + 8), '突き当たりの広い場所\n（ここで転回できます）', 19, (90, 90, 100))
+tag((bx - 128, by + 8), '突き当たりの広い場所', 19, (90, 90, 100))
 d.line([((bx - 28) * S, (by + 6) * S), ((bx - 16) * S, (by + 4) * S)], fill=(90, 90, 100), width=3 * S)
 
 # 階段付近: 赤い×

@@ -45,7 +45,6 @@ window.SECTIONS = [
   },
   {
     // 「運転手さんへ」ページ。タクシーの運転手さんにスマホ画面を見せるための専用ページ（メニューには出さず、アクセスのページからリンク）
-    // ④の写真（建物前の転回場所）は未撮影。撮れたら turn に image: 'images/common/taxi-4-turn.jpg' を足す
     id: 'taxi',
     icon: 'pin',
     inMenu: false,
@@ -55,7 +54,6 @@ window.SECTIONS = [
       { key: 'p1', image: 'images/common/taxi-1-approach.jpg' },
       { key: 'p2', image: 'images/common/taxi-2-turn.jpg' },
       { key: 'p3', image: 'images/common/taxi-3-lane.jpg' },
-      { key: 'turn' },
       { key: 'map', image: 'images/common/taxi-map.png' }
     ]
   },

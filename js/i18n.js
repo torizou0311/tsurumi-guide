@@ -6,11 +6,10 @@
 // 自動で部屋ごとの値に置き換わります（js/app.js が置き換えます）。
 // 「運転手さんへ」ページ（#/taxi）の日本語。運転手さんに見せる部分なので、どの言語でも同じ日本語を使う
 var TAXI_JA = {
-  card: `<div class="taxi-card" lang="ja"><p class="taxi-card__title">運転手さんへ</p><p class="taxi-card__dest"><span class="taxi-card__label">行き先</span>横浜市鶴見区寺谷1-7-40（レイズ寺谷）</p><p>鶴見獅子ヶ谷通りを上り、<strong>On cuesta（オンクエスタ、ピンクの建物）</strong>の信号を過ぎてすぐ右。<strong>白いマンションと茶色いマンションの間の細い上り坂</strong>に入ってください（入口は見落としやすいです）。</p><p>道なりに<strong>約300m</strong>、突き当たりの広い場所が建物の前です（転回できます）。</p><div class="notice notice--warn taxi-card__warn"><p>⚠ 大通り（鶴見獅子ヶ谷通り）では降ろさないでください。下からは急な階段になります。</p></div></div>`,
+  card: `<div class="taxi-card" lang="ja"><p class="taxi-card__title">運転手さんへ</p><p class="taxi-card__dest"><span class="taxi-card__label">行き先</span>横浜市鶴見区寺谷1-7-40（レイズ寺谷）</p><p>鶴見獅子ヶ谷通りを上り、<strong>On cuesta（オンクエスタ、ピンクの建物）</strong>の信号を過ぎてすぐ右。<strong>白いマンションと茶色いマンションの間の細い上り坂</strong>に入ってください（入口は見落としやすいです）。</p><p>道なりに<strong>約300m</strong>、突き当たりの広い場所が建物の前です。</p><div class="notice notice--warn taxi-card__warn"><p>⚠ 大通り（鶴見獅子ヶ谷通り）では降ろさないでください。下からは急な階段になります。</p></div></div>`,
   p1: `<p class="taxi-photo-cap" lang="ja">① 大通りを上ってくると、右に白いマンション（生垣）、その先に茶色いマンションが見えます。</p>`,
   p2: `<p class="taxi-photo-cap" lang="ja">② 生垣が終わったところで、右へ上がる細い坂に入ります。</p>`,
   p3: `<p class="taxi-photo-cap" lang="ja">③ 細い道を、道なりに約300m進みます。</p>`,
-  turn: `<p class="taxi-photo-cap" lang="ja">④ 突き当たりの広い場所が建物の前です。ここで転回して、元の道を戻れます。</p>`,
   map: `<p class="taxi-photo-cap" lang="ja">地図（青い線が行き方、赤い×は降ろさない場所）</p>`
 };
 
@@ -71,7 +70,6 @@ window.I18N = {
       p1: TAXI_JA.p1,
       p2: TAXI_JA.p2,
       p3: TAXI_JA.p3,
-      turn: TAXI_JA.turn,
       map: TAXI_JA.map
     },
     translation: {
@@ -273,7 +271,6 @@ window.I18N = {
       p1: TAXI_JA.p1,
       p2: TAXI_JA.p2,
       p3: TAXI_JA.p3,
-      turn: TAXI_JA.turn,
       map: TAXI_JA.map
     },
     translation: {
@@ -475,7 +472,6 @@ window.I18N = {
       p1: TAXI_JA.p1,
       p2: TAXI_JA.p2,
       p3: TAXI_JA.p3,
-      turn: TAXI_JA.turn,
       map: TAXI_JA.map
     },
     translation: {
@@ -677,7 +673,6 @@ window.I18N = {
       p1: TAXI_JA.p1,
       p2: TAXI_JA.p2,
       p3: TAXI_JA.p3,
-      turn: TAXI_JA.turn,
       map: TAXI_JA.map
     },
     translation: {
@@ -879,7 +874,6 @@ window.I18N = {
       p1: TAXI_JA.p1,
       p2: TAXI_JA.p2,
       p3: TAXI_JA.p3,
-      turn: TAXI_JA.turn,
       map: TAXI_JA.map
     },
     translation: {

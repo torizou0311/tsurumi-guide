@@ -48,8 +48,8 @@ window.ROOMS = [
       applianceKettle: 'images/common/appliance-kettle-nitori-{lang}.png', // ニトリ AB2G01（103と202で共通）
       applianceCoffee: 'images/202/appliance-coffee.png',
       applianceRiceCooker: 'images/202/appliance-ricecooker.jpg',
-      applianceWasher: 'images/202/appliance-washer.png'
-      // 注: アイロンの写真は元サイトに見つかりませんでした（準備中と表示されます）
+      applianceWasher: 'images/202/appliance-washer.png',
+      applianceIron: 'images/202/appliance-iron.jpg' // ニトリ スチームアイロン ランス2 ES-2350（ホワイト）。ニトリネット公式の商品画像（2026-11-20）
     }
   },
   {
